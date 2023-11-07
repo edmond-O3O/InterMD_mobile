@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> Inter MD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+<script src="../../js/plugins/swiper_3.3.1.js"></script>
+<script src="../../js/ui_script_m.js"></script>
+
+<body>
+
+<!-- S: 풀페이지 스와이프 -->
+<div class="tutorial swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="tutorial__item">
+                <div class="tutorial__itemInner">
+                    <div class="tutorial__itemCont">
+                        <div class="img img01"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <div class="tutorial__item">
+                <div class="tutorial__itemInner">
+                    <div class="tutorial__itemCont">
+                        <div class="img img02"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <div class="tutorial__item">
+                <div class="tutorial__itemInner">
+                    <div class="tutorial__itemCont">
+                        <div class="img img03"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tutorial__pagination"></div>
+    <div class="tutorial__btn">
+        <button class="btnLt" onclick="alert('다시보지않기');">다시 보지 않기</button>
+        <button class="btnRt" onclick="alert('닫기');">닫기</button>
+    </div>
+</div>
+<script>
+    $(function(){
+        var swiperRank = new Swiper('.tutorial', {
+            slidesPerView: 'auto',
+            preventClicks: true,
+            preventClicksPropagation: false,
+            observer: true,
+            observeParents: true,
+            loop: false,
+            pagination: '.tutorial__pagination',
+            paginationClickable: false,
+            resistanceRatio: 0,
+        });
+    })
+</script>
+<!-- E: 풀페이지 스와이프 -->
+
+
+<!-- <div class="test-wrap">
+    <div class="test-inner">
+        <div class="test-item"></div>
+    </div>
+</div> -->
+
+</body>
+</html>

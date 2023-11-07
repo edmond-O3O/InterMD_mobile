@@ -1,0 +1,242 @@
+<h1 class="blind">검색</h1>
+<div class="search__header">
+    <div class="searchHeader__field">
+        <form action="#">
+            <input type="search" name="" id="" placeholder="검색어를 입력하세요" class="searchHeader__input" onfocus="">
+            <button class="searchHeader__btnClear"><i class="xi-close"></i><span class="blind">검색어 지우기</span></button>
+        </form>
+        <script>
+            $(function(){
+                var $searchInput = $('.searchHeader__input');
+                var $searchClearBtn = $('.searchHeader__btnClear');
+                $searchInput.focus(function(){
+                    $('body').addClass('rank--active');
+                    $('html').not('.searchHeader__field').bind('touchstart',function(){
+                        $searchInput.blur();
+                    })
+                    /* 모바일검색 개선 */
+                    searchHistory();
+                    /* //모바일검색 개선 */
+                })
+                .focusout(function(){
+                    $searchInput.unbind('touchstart');
+                })
+                .keyup(function(){
+                    if ($(this).val().length > 0) {
+                        $searchClearBtn.addClass('on')
+                    }else if ($(this).val().length == 0){
+                        $searchClearBtn.removeClass('on')
+                    }
+                })
+                $('.searchHeader__btnClose').click(function(){
+                    $('body').removeClass('rank--active');
+                    return false;
+                })
+                $searchClearBtn.click(function(){
+                    $searchInput.val('').trigger('focus');
+                    $(this).removeClass('on');
+                    return false;
+                });
+
+                // 최근, 인기검색어 swiper
+                var swiperRank = new Swiper('.rank__listBox', {
+                    slidesPerView: 'auto',
+                    preventClicks: true,
+                    preventClicksPropagation: false,
+                    observer: true,
+                    observeParents: true,
+                });
+                var $lankTitle = $('.rank__title');
+                $lankTitle.click(function(){
+                    var targetIdx = $(this).index();
+                    $lankTitle.removeClass('on')
+                    $(this).addClass('on');
+                    swiperRank.slideTo(targetIdx);
+                })
+                swiperRank.on('onSlideChangeStart',function(){
+                    var index = swiperRank.activeIndex;
+                    $lankTitle.removeClass('on');
+                    $lankTitle.eq(index).addClass('on');
+                })
+
+                /* 모바일검색 개선 */
+                searchHistory();
+
+                function searchHistory(){
+                    let listLength = $('.swiper-wrapper').children().eq(0).children('.rank__item').length;
+                    if(listLength <= 0) {
+                        $('.rank__title').eq(1).trigger('click');
+                    }
+                }
+                /* //모바일검색 개선 */
+            })
+        </script>
+    </div>
+    <a href="#" class="searchHeader__btnBack">나가기</a>
+    <button class="searchHeader__btnClose">취소</button>
+</div>
+<!-- S: 검색 랭킹 -->
+<div class="search__rank">
+    <div class="rank__titleBox">
+        <strong class="rank__title on">최근 검색어</strong>
+        <strong class="rank__title">인기 검색어</strong>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper-container rank__listBox">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide rank__list"></div>
+            
+            <!-- <div class="swiper-slide rank__list">
+                <div class="rank__item">
+                    <a href="#" class="rank__link">
+                        <span class="rank__text">의사</span>
+                        <span class="rank__date">3분전</span>
+                    </a>
+                    <button class="rank__del"><i class="xi-close"></i><span class="blind">검색어 삭제</span></button>
+                </div>
+                <div class="rank__item">
+                    <a href="#" class="rank__link">
+                        <span class="rank__text">인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디 </span>
+                        <span class="rank__date">2019.05.14</span>
+                    </a>
+                    <button class="rank__del"><i class="xi-close"></i><span class="blind">검색어 삭제</span></button>
+                </div>
+                <div class="rank__item">
+                    <a href="#" class="rank__link">
+                        <span class="rank__text">인터엠디</span>
+                        <span class="rank__date">2019.05.14</span>
+                    </a>
+                    <button class="rank__del"><i class="xi-close"></i><span class="blind">검색어 삭제</span></button>
+                </div>
+                <div class="rank__item">
+                    <a href="#" class="rank__link">
+                        <span class="rank__text">친구초대</span>
+                        <span class="rank__date">2019.05.14</span>
+                    </a>
+                    <button class="rank__del"><i class="xi-close"></i><span class="blind">검색어 삭제</span></button>
+                </div>
+                <div class="rank__item">
+                    <a href="#" class="rank__link">
+                        <span class="rank__text">개원</span>
+                        <span class="rank__date">2019.05.14</span>
+                    </a>
+                    <button class="rank__del"><i class="xi-close"></i><span class="blind">검색어 삭제</span></button>
+                </div>
+                <div class="rank__item">
+                    <a href="#" class="rank__link">
+                        <span class="rank__text">개원</span>
+                        <span class="rank__date">2019.05.14</span>
+                    </a>
+                    <button class="rank__del"><i class="xi-close"></i><span class="blind">검색어 삭제</span></button>
+                </div>
+                <div class="rank__item">
+                    <a href="#" class="rank__link">
+                        <span class="rank__text">개원</span>
+                        <span class="rank__date">2019.05.14</span>
+                    </a>
+                    <button class="rank__del"><i class="xi-close"></i><span class="blind">검색어 삭제</span></button>
+                </div>
+                <button class="rank__allDel">모두삭제</button>
+            </div> -->
+            
+            <div class="swiper-slide rank__list -popular">
+                <div class="rank__item">
+                    <a href="#" class="rank__link">
+                        <span class="rank__text">대상포진</span>
+                    </a>
+                </div>
+                <div class="rank__item">
+                    <a href="#" class="rank__link">
+                        <span class="rank__text">영상</span>
+                    </a>
+                </div>
+                <div class="rank__item">
+                    <a href="#" class="rank__link">
+                        <span class="rank__text">개원</span>
+                    </a>
+                </div>
+                <div class="rank__item">
+                    <a href="#" class="rank__link">
+                        <span class="rank__text">삭센다</span>
+                    </a>
+                </div>
+                <div class="rank__item">
+                    <a href="#" class="rank__link">
+                        <span class="rank__text">태반조기박리</span>
+                    </a>
+                </div>
+                <div class="rank__item">
+                    <a href="#" class="rank__link">
+                        <span class="rank__text">수족구</span>
+                    </a>
+                </div>
+                <div class="rank__item">
+                    <a href="#" class="rank__link">
+                        <span class="rank__text">벌</span>
+                    </a>
+                </div>
+                <div class="rank__item">
+                    <a href="#" class="rank__link">
+                        <span class="rank__text">공보의</span>
+                    </a>
+                </div>
+                <div class="rank__item">
+                    <a href="#" class="rank__link">
+                        <span class="rank__text">산부인과</span>
+                    </a>
+                </div>
+                <div class="rank__item">
+                    <a href="#" class="rank__link">
+                        <span class="rank__text">화상</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- S: category -->
+<div id="my_sub_nv" class="searchNavi">
+    <div class="searchNavi__wrap">
+        <div class="searchNavi__item ">
+            <a href="javascript:fn_goSearchTop('mobile/search/total', '');">통합검색</a>
+        </div>
+        <div class="searchNavi__item ">
+            <a href="javascript:fn_goSearchTop('mobile/search/qna', 'Q');">Q&amp;A</a>
+        </div>
+        <div class="searchNavi__item ">
+            <a href="javascript:fn_goSearchTop('mobile/search/posting', 'P');">Posting</a>
+        </div>        
+        <div class="searchNavi__item ">
+            <a href="javascript:fn_goSearchTop('mobile/search/poll', 'L');">Poll</a>
+        </div>
+        <div class="searchNavi__item ">
+            <a href="javascript:fn_goSearchTop('mobile/search/connect', 'C');">Connect</a>
+        </div>
+        <div class="searchNavi__item ">
+            <a href="javascript:fn_goSearchTop('mobile/search/connect', 'C');">Media</a>
+        </div>
+        <div class="searchNavi__item ">
+            <a href="javascript:fn_goSearchTop('mobile/search/faq', 'F');">FAQ</a>
+        </div>
+        <div class="searchNavi__item ">
+            <a href="javascript:fn_goSearchTop('mobile/search/event', 'E');">이벤트</a>
+        </div>
+        <div class="searchNavi__item ">
+            <a href="javascript:fn_goSearchTop('mobile/search/noti', 'N');">공지사항</a>
+        </div>
+        <div class="searchNavi__item ">
+            <a href="#">채용공고</a>
+        </div>
+        <div class="searchNavi__item ">
+            <a href="#">진로상담</a>
+        </div>
+    </div>
+</div>
+
+<!-- 모바일검색 개선 -->
+<!-- bottom fix -->
+<div class="fixBtm">
+    <a href="#top" class="goToTop hide" onclick="$('html').stop().animate({ scrollTop:0 }, 800 );return false;"><span class="blind">맨 위로 이동</span></a>
+</div>
+<!-- // bottom fix -->
+<!-- //모바일검색 개선 -->

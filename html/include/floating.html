@@ -1,0 +1,171 @@
+<!-- S: 플로팅 배너 -->
+<style>
+    /* .fltBanner__wrapper{
+        background-image: url('../../img/banner/fb-12together-bg.png');
+    } */
+</style>
+
+<!-- S: 230130_2월체험미션 -->
+<div class="floatingBanner floatingBanner__expEvt">
+    <a href="#" class="fltBanner__wrapper">
+        <div class="floatingBanner__expEvtNumber">
+            <img class="fltBanner__tilt" src="../../img/banner/fb_expbanner_number.png" alt="2">
+        </div>
+        <div class="floatingBanner__expEvtBanner">                
+            <div class="floatingBanner__expEvtCoin">
+                <img class="fltBanner__float" src="../../img/banner/fb_expbanner_coin.png" alt="">
+            </div>
+            <img src="../../img/banner/fb_expbanner_text.png" alt="2렇게나 풍성해? 참여할 수록 2득!">
+        </div>
+    </a>
+    
+    <div class="fltBanner__btn">
+        <button class="fltBanner__close" onclick="$('.floatingBanner').hide();">
+            <span class="closeTxt">
+                <i class="xi-close"></i>
+            </span>
+        </button>
+    </div>
+    <script>
+    var lastScrollTop = 0;
+    $(window).scroll(function(e){
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop){
+            if(st - lastScrollTop>30){
+                $('.floatingBanner').addClass('fltBanner__blind');
+            }
+        } else {
+            if(lastScrollTop - st>10){
+                $('.floatingBanner').removeClass('fltBanner__blind');   
+            }
+        }
+        lastScrollTop = st;
+    });
+    </script>
+</div>
+<!-- E: 230130_2월체험미션 -->
+
+<!-- S: 의대생 Q&A 이벤트 -->
+<div class="floatingBanner studentQnaBanner">
+    <a href="" class="fltBanner__wrapper">
+        <div class="fltBanner__box">
+            <img class="fltBanner__tilt" src="../../img/banner/fb_student_qna_img.png" alt="의대생 Q&A 이벤트 이미지">
+        </div>
+        <div class="fltBanner__text">
+            <img src="../../img/banner/fb_student_qna_text.png" alt="의대생만을 위한 의대생 Q&A 서비스 신규 오픈">
+        </div>
+    </a>
+
+    <div class="fltBanner__btn">
+        <button class="fltBanner__close" onclick="$('.floatingBanner').hide();">
+            <!-- <span class="close"></span> -->
+            <span class="closeTxt">
+                <i class="xi-close"></i>
+            </span>
+        </button>
+    </div>
+    <script>
+    var lastScrollTop = 0;
+    $(window).scroll(function(e){
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop){
+            if(st - lastScrollTop>30){
+                $('.floatingBanner').addClass('fltBanner__blind');
+            }
+        } else {
+            if(lastScrollTop - st>10){
+                $('.floatingBanner').removeClass('fltBanner__blind');   
+            }
+        }
+        lastScrollTop = st;
+    });
+    </script>
+</div>
+<!-- E: 의대생 Q&A 이벤트 -->
+
+<!-- S:마케팅이벤트 -->
+<div class="floatingBanner">
+    <!-- 마케팅수신동의 -->
+    <a href="#" class="fltBanner__wrapper marketingAgree">
+        <div class="fltBanner__box ">
+            <img class="fltBanner__float" src="../../img/banner/fb-marketingAgree-item.png" alt="랜덤박스 이벤트 랜덤박스">
+            <div class="shadow">
+                <div class="shadowItem"></div>
+            </div>
+        </div>
+        <div class="fltBanner__text">
+            <img src="../../img/banner/fb-marketingAgree-text.png" alt="랜덤박스 이벤트 텍스트">
+        </div>
+    </a>
+    
+    <div class="fltBanner__btn">
+        <button class="fltBanner__close" onclick="$('.floatingBanner').hide();">
+            <!-- <span class="close"></span> -->
+            <span class="closeTxt">
+                <i class="xi-close"></i>
+            </span>
+        </button>
+    </div>
+    <script>
+    var lastScrollTop = 0;
+    $(window).scroll(function(e){
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop){
+            if(st - lastScrollTop>30){
+                $('.floatingBanner').addClass('fltBanner__blind');
+            }
+        } else {
+            if(lastScrollTop - st>10){
+                $('.floatingBanner').removeClass('fltBanner__blind');   
+            }
+        }
+        lastScrollTop = st;
+    });
+    </script>
+</div>
+<!-- E:마케팅이벤트 -->
+
+
+<!-- S:시크릿이벤트 -->
+<div class="floatingBanner">
+    <a href="#" class="fltBanner__wrapper secreEvt">
+        <div class="fltBanner__box ">
+            <img class="fltBanner__shake" src="../../img/banner/fb-secreEvt-item1.png" alt="랜덤박스 이벤트 랜덤박스">
+            <div class="shadow"></div>
+        </div>
+        <div class="fltBanner__box second">
+            <img class="fltBanner__shake" src="../../img/banner/fb-secreEvt-item2.png" alt="랜덤박스 이벤트 랜덤박스">
+        </div>
+        <div class="fltBanner__text">
+            <img src="../../img/banner/fb-secreEvt-text.png" alt="랜덤박스 이벤트 텍스트">
+        </div>
+    </a>
+
+    <div class="fltBanner__btn">
+        <button class="fltBanner__close" onclick="$('.floatingBanner').hide();">
+            <!-- <span class="close"></span> -->
+            <span class="closeTxt">
+                <i class="xi-close"></i>
+            </span>
+        </button>
+    </div>
+    <script>
+    var lastScrollTop = 0;
+    $(window).scroll(function(e){
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop){
+            if(st - lastScrollTop>30){
+                $('.floatingBanner').addClass('fltBanner__blind');
+            }
+        } else {
+            if(lastScrollTop - st>10){
+                $('.floatingBanner').removeClass('fltBanner__blind');   
+            }
+        }
+        lastScrollTop = st;
+    });
+    </script>
+</div>
+<!-- E:시크릿이벤트 -->
+<!-- E: 플로팅 배너 -->
+

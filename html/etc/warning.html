@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title> Inter MD</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+	<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+
+	<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/style.css?v=202001210">
+	<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/framework.css?v=20200121">
+
+	<!-- Link Swiper's CSS -->
+	<link rel="stylesheet" href="https://www.intermd.co.kr/mobile/styles/swiper.min.css">
+	<!--font-->
+	<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/xeicon/xeicon.min.css">
+	<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--custom-->
+	<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/partner.css?v=20200121">
+	<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/base.css?v=20200121">
+	<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/custom.css?v=20200121">  
+	<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/sub.css?v=20200121">  
+	<!-- <link rel="stylesheet" type="text/css" href="../../css/sub.css?v=20200121">   -->
+	<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/styles/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" type="text/css" href="../../styles/style_mobile.css">
+	<!-- <link rel="stylesheet" type="text/css" media="all" href="https://www.intermd.co.kr/mobile/css/common.css?v=20200121"> -->
+	<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+	<script src="../../js/plugins/jquery-3.2.1.js"></script>
+	<script src="../../js/plugins/swiper_3.3.1.js"></script>
+	<script src="../../js/ui_script_m.js"></script>
+</head>
+<body class="join resume resume_edit notify">
+
+    <div id="page-wrap">
+
+        <div id="page-content" class="page-content bg_fff" style="padding-bottom: 0px; min-height: 956px;">
+           <div class="jobs-top50">
+               <a href="javascript:fn_goPrePage();"><i class="xi-angle-left"></i></a>
+               <!-- <h2>질문 신고하기</h2> -->
+               <h2>신고하기</h2>
+               </div>
+            <div id="page-content-scroll" style="padding-top: 50px; padding-bottom: 0px;"><!--Enables this element to be scrolled --> 		
+                <div class="content_container marginTop10">
+                    <div class="profileWrap bg_fff">
+                        <div class="historyWrap_01 l_r_padding">
+                        <form name="frmSave" id="frmSave" method="post">
+                            <input type="hidden" id="shareType" name="shareType" value="CS">
+                            
+                            <input type="hidden" name="memberMajorsCd" value="0">
+                            
+                            <input type="hidden" name="type" value="questionPseq">
+                            
+                            <input type="hidden" name="memberOsInfo" value="A">
+                            
+                            <input type="hidden" name="memberPseq" value="19063">
+                            
+                            <input type="hidden" name="seq" value="20639">
+                            
+                            <input type="hidden" name="questionPseq" value="20639">
+                            
+                            <!-- <h3>신고하기</h3> -->
+                            <div class="notifyWrap notify-answersWrap">
+                                <p class="font-13">설문형 Q&amp;A 임시저장</p>
+                            </div>
+                            <h3>카테고리</h3>
+                            <select id="warningType" name="warningType" class="full-type marginBottom10">
+                                <option value="">선택</option>
+                                <option value="욕설 및 비방">욕설 및 비방</option>
+                                <option value="스팸">스팸</option>
+                                <option value="부적절한 글">부적절한 글</option>
+                                <option value="허위사실 유포">허위사실 유포</option>
+                                <option value="정책위반">정책위반</option>
+                                <option value="기타">기타</option>
+                            </select>
+                            <h3>신고내용</h3>
+                            <textarea name="warningContent" id="warningContent" cols="30" rows="10" placeholder="상세내용을 입력하세요."></textarea>
+                            <!-- S: 230125_신고하기 하단 문구 추가  -->
+                            <div class="warningMsg">
+                                <p>
+                                    신고가 접수된 게시물에 대해서는 관리자가 24시간 이내에 "숨김"등의 적절한 조치를 시행하게 되며, 
+                                    3회 이상 신고가 접수된 게시물은 자동으로 "숨김"처리가 진행됩니다.<br><br>
+                                    기능개발 및 운영에 관련된 추가적인 문의가 있는 경우<br>
+                                    "<a href="" style="color: #1b64bc;">1:1 문의 게시판</a>"을 이용해 주세요.
+                                </p>
+                            </div>
+                            <!-- E: 230125_신고하기 하단 문구 추가  -->
+                            <div class="fixed-btnWrap">
+                                <div class="center-btn">
+                                    <a href="javascript:fn_save();" class="btn btn-blue">제출하기</a>
+                                </div>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--E:page-content-scroll-->
+        </div>
+        <!--E:page-content-->
+                
+        <a href="#" class="back-to-top-badge back-to-top-small"><i class="fa fa-angle-up"></i>Back to Top</a>
+        
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<nav class="nav fix_footer">
+    <div class="nav__menu">
+        <a href="#" class="nav__home"><span>홈</span></a>
+        <a href="#" class="nav__qna on"><span>Q&amp;A</span></a>
+        <a href="#" class="nav__posting"><span>Posting</span></a>
+        <a href="#" class="nav__seminar"><span>웹 세미나</span></a>
+        <a href="#" class="nav__more" onclick="$('.navMoreMenu').toggleClass('on');$(this).toggleClass('on');return false;"><span>더보기</span></a>
+    </div>
+</nav>
+
+<div class="navMoreMenu">
+    <div class="navMoreMenu__swiper swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="#" class="navMoreMenu__poll"><span>Poll</span></a>
+                <a href="#" class="navMoreMenu__career"><span>Career</span></a>
+                <!-- <a href="#" class="navMoreMenu__EMR"><span>EMR</span></a> -->
+                <a href="#" class="navMoreMenu__utility"><span>Channel</span></a>
+                <a href="#" class="navMoreMenu__schedule"><span>연수교육 일정</span></a>
+                <a href="#" class="navMoreMenu__event"><span>이벤트</span></a>
+                <a href="#" class="navMoreMenu__mypoint"><span>내 포인트</span></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#" class="navMoreMenu__my"><span>마이페이지</span></a>
+                <a href="#" class="navMoreMenu__notice"><span>공지사항</span></a>
+                <a href="#" class="navMoreMenu__cs"><span>1:1문의</span></a>
+                <a href="#" class="navMoreMenu__faq"><span>FAQ</span></a>
+            </div>
+        </div>
+        <div class="navMoreMenu__pagination"></div>
+    </div>
+    <div class="navMoreMenu__dim" ontouchstart="$('.navMoreMenu').removeClass('on');$('.nav__more').removeClass('on');return false;"></div>
+</div>
+
+<script>
+var swiperNavMoreMenu = new Swiper('.navMoreMenu__swiper', {
+    slidesPerView: 'auto',
+    preventClicks: true,
+    preventClicksPropagation: false,
+    observer: true,
+    observeParents: true,
+    pagination: '.navMoreMenu__pagination',
+    paginationClickable: true,
+});
+// 더보기 터치시 첫번째 슬라이트로 이동
+$('.nav__more').click(function(){
+    swiperNavMoreMenu.slideTo(0);
+})
+</script>

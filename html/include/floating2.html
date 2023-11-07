@@ -1,0 +1,86 @@
+<!-- S: 플로팅 배너 -->
+<style>
+    /* .fltBanner__wrapper{
+        background-image: url('../../img/banner/fb-12together-bg.png');
+    } */
+</style>
+
+<!-- S: 230207_추천게시물배너 -->
+<div class="floatingBanner floatingBanner__posting">
+    <a href="#" class="fltBanner__wrapper">
+        <div class="floatingBanner__postingTxt">      
+            <img src="../../img/banner/fb_posting_txt.png" alt="이달의 콘텐츠에 답글을 남겨보세요!">
+            <div class="floatingBanner__postingCoin">
+                <img src="../../img/banner/fb_posting_coin.png" alt="" class="fltBanner__float">
+            </div>
+            <div class="floatingBanner__postingIcon">
+                <img src="../../img/banner/fb_posting_icon.png" alt="추천게시물 답글 이벤트" class="fltBanner__float">
+            </div>
+        </div>
+    </a>
+    
+    <div class="fltBanner__btn">
+        <button class="fltBanner__close" onclick="$('.floatingBanner').hide();">
+            <span class="closeTxt">
+                <i class="xi-close"></i>
+            </span>
+        </button>
+    </div>
+    <script>
+    var lastScrollTop = 0;
+    $(window).scroll(function(e){
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop){
+            if(st - lastScrollTop>30){
+                $('.floatingBanner').addClass('fltBanner__blind');
+            }
+        } else {
+            if(lastScrollTop - st>10){
+                $('.floatingBanner').removeClass('fltBanner__blind');   
+            }
+        }
+        lastScrollTop = st;
+    });
+    </script>
+</div>
+<!-- E: 230207_event배너 -->
+
+<!-- S: 230207_vpick배너 -->
+<div class="floatingBanner floatingBanner__vPick">
+    <a href="#" class="fltBanner__wrapper">
+        <div class="floatingBanner__vPickIcon">
+            <img class="fltBanner__float" src="../../img/banner/fb_vpick_icon.png" alt="2">
+        </div>
+        <div class="floatingBanner__vPickTxt">      
+            <img src="../../img/banner/fb_vpick_txt.png" alt="개원의를 위한 면역항암치료의 소개">
+        </div>
+    </a>
+    
+    <div class="fltBanner__btn">
+        <button class="fltBanner__close" onclick="$('.floatingBanner').hide();">
+            <span class="closeTxt">
+                <i class="xi-close"></i>
+            </span>
+        </button>
+    </div>
+    <script>
+    var lastScrollTop = 0;
+    $(window).scroll(function(e){
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop){
+            if(st - lastScrollTop>30){
+                $('.floatingBanner').addClass('fltBanner__blind');
+            }
+        } else {
+            if(lastScrollTop - st>10){
+                $('.floatingBanner').removeClass('fltBanner__blind');   
+            }
+        }
+        lastScrollTop = st;
+    });
+    </script>
+</div>
+<!-- E: 230207_vpick배너 -->
+
+<!-- E: 플로팅 배너 -->
+

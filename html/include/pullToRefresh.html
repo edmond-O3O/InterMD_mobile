@@ -1,0 +1,11 @@
+<!-- S: 당겨서 새로고침 <div id="ptrMain"> .. </div> 영역에서 작동합니다. -->
+<script src="../../js/plugins/pullToRefresh.js"></script>
+<script>
+    PullToRefresh.init({
+        mainElement: '#ptrMain',
+        onRefresh: function() { 
+            alert('refresh') 
+        }
+    });
+</script>
+<!-- E: 당겨서 새로고침 -->

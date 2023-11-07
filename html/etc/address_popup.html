@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> Inter MD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+<script src="../../js/plugins/swiper_3.3.1.js"></script>
+<script src="../../js/ui_script_m.js"></script>
+
+<body>
+
+<!-- S: 주소검색 팝업 -->
+<div class="adrPopup">
+    <div class="adrPopup__inner">       
+        <div class="adr__searchField">
+            <form class="adr__searchBox">
+                <input type="search" class="adr__searchIpt" placeholder="도로명주소, 건물명 또는 지번입력" value="">
+                <button class="adr__searchBtn" type="button"><span class="blind">검색</span><img src="../../img/page/search.png"></button>
+            </form>
+            <p class="text">검색어 예 : 도로명(반포대로 58), 건물명(독립기념관), 지번(삼성동 25)</p>
+        </div> 
+        <div class="adr__content no-data" style="display: none;">
+            <span class="excMark">!</span>
+            <div class="adr__detail">
+                <p class="explain">
+                    보다 정확한 검색을 위하여 다음 권장사항을 확인하여 주시기 바랍니다.
+                </p>
+                <ul class="adr_example">
+                    <li class="adr_exampleList">
+                        <p class="black">시/도, 시/군/구 + 도로명 주소</p>
+                        <p class="blue">예) 종로구 사진로 161</p>
+                    </li>
+                    <li class="adr_exampleList">
+                        <p class="black">시/도, 시/군/구, 읍/면/동 + 지번</p>
+                        <p class="blue">예) 종로구 관훈동 198-1</p>
+                    </li>
+                    <li class="adr_exampleList">
+                        <p class="black">시/도, 시/군/구 + 건물명</p>
+                        <p class="blue">예) 역삼동 737</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="adr__content">
+            <div class="adr__searchResult">도로명주소 검색결과 <span class="blue">(9건)</span></div>
+            <ul class="adr__searchList">
+                <li class="adr__searchDetail">
+                    <a class="adr__sDetail" href="#">
+                        <div class="adr__sDetailCase">
+                            <div class="adr__sDetailRoad">
+                                <div class="type"><span class="roadMark">도로명</span></div>
+                                <p class="roadAddress">서울특별시 종로구 북촌로 104 (계동)</p>
+                            </div>
+                            <div class="adr__sDetailPlace">
+                                <div class="type"><span class="placeMark">지번</span></div>
+                                <p class="placeAddress">서울특별시 종로구 계동 1-36 계동빌딩</p>
+                            </div>
+                        </div>
+                        <div class="adr__sDetailNum"><span>03051</span></div>
+                    </a>
+                    <a class="adr__sDetail" href="#">
+                        <div class="adr__sDetailCase">
+                            <div class="adr__sDetailRoad">
+                                <div class="type"><span class="roadMark">도로명</span></div>
+                                <p class="roadAddress">서울특별시 종로구 북촌로 (계동) 서울특별시 종로구 북촌로 (계동) 서울특별시 종로구 북촌로 (계동)</p>
+                            </div>
+                            <div class="adr__sDetailPlace">
+                                <div class="type"><span class="placeMark">지번</span></div>
+                                <p class="placeAddress">서울특별시 종로구 계동빌딩</p>
+                            </div>
+                        </div>
+                        <div class="adr__sDetailNum"><span>03051</span></div>
+                    </a>
+                    <a class="adr__sDetail" href="#">
+                        <div class="adr__sDetailCase">
+                            <div class="adr__sDetailRoad">
+                                <div class="type"><span class="roadMark">도로명</span></div>
+                                <p class="roadAddress">서울특별시 종로구 북촌로</p>
+                            </div>
+                            <div class="adr__sDetailPlace">
+                                <div class="type"><span class="placeMark">지번</span></div>
+                                <p class="placeAddress">서울특별시 계동빌딩</p>
+                            </div>
+                        </div>
+                        <div class="adr__sDetailNum"><span>03051</span></div>
+                    </a>
+                    <a class="adr__sDetail" href="#">
+                        <div class="adr__sDetailCase">
+                            <div class="adr__sDetailRoad">
+                                <div class="type"><span class="roadMark">도로명</span></div>
+                                <p class="roadAddress">서울특별시 종로구 북촌로</p>
+                            </div>
+                            <div class="adr__sDetailPlace">
+                                <div class="type"><span class="placeMark">지번</span></div>
+                                <p class="placeAddress">서울특별시 계동빌딩</p>
+                            </div>
+                        </div>
+                        <div class="adr__sDetailNum"><span>03051</span></div>
+                    </a>
+                    <a class="adr__sDetail" href="#">
+                        <div class="adr__sDetailCase">
+                            <div class="adr__sDetailRoad">
+                                <div class="type"><span class="roadMark">도로명</span></div>
+                                <p class="roadAddress">서울특별시 종로구 북촌로</p>
+                            </div>
+                            <div class="adr__sDetailPlace">
+                                <div class="type"><span class="placeMark">지번</span></div>
+                                <p class="placeAddress">서울특별시 계동빌딩</p>
+                            </div>
+                        </div>
+                        <div class="adr__sDetailNum"><span>03051</span></div>
+                    </a>
+                    <a class="adr__sDetail" href="#">
+                        <div class="adr__sDetailCase">
+                            <div class="adr__sDetailRoad">
+                                <div class="type"><span class="roadMark">도로명</span></div>
+                                <p class="roadAddress">서울특별시 종로구 북촌로</p>
+                            </div>
+                            <div class="adr__sDetailPlace">
+                                <div class="type"><span class="placeMark">지번</span></div>
+                                <p class="placeAddress">서울특별시 계동빌딩</p>
+                            </div>
+                        </div>
+                        <div class="adr__sDetailNum"><span>03051</span></div>
+                    </a>
+                    <a class="adr__sDetail" href="#">
+                        <div class="adr__sDetailCase">
+                            <div class="adr__sDetailRoad">
+                                <div class="type"><span class="roadMark">도로명</span></div>
+                                <p class="roadAddress">서울특별시 종로구 북촌로</p>
+                            </div>
+                            <div class="adr__sDetailPlace">
+                                <div class="type"><span class="placeMark">지번</span></div>
+                                <p class="placeAddress">서울특별시 계동빌딩</p>
+                            </div>
+                        </div>
+                        <div class="adr__sDetailNum"><span>03051</span></div>
+                    </a>
+                    <a class="adr__sDetail" href="#">
+                        <div class="adr__sDetailCase">
+                            <div class="adr__sDetailRoad">
+                                <div class="type"><span class="roadMark">도로명</span></div>
+                                <p class="roadAddress">서울특별시 종로구 북촌로</p>
+                            </div>
+                            <div class="adr__sDetailPlace">
+                                <div class="type"><span class="placeMark">지번</span></div>
+                                <p class="placeAddress">서울특별시 계동빌딩</p>
+                            </div>
+                        </div>
+                        <div class="adr__sDetailNum"><span>03051</span></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="adr__pagination">
+            <button class="arrowL"><img src="../../img/page/left-arrow-blue.png" alt="왼쪽 화살표"></button>
+            <a href="#" class="pageNum on" onclick="changePage(this);">1</a>
+            <a href="#" class="pageNum" onclick="changePage(this);">2</a>
+            <a href="#" class="pageNum" onclick="changePage(this);">3</a>
+            <a href="#" class="pageNum" onclick="changePage(this);">4</a>
+            <a href="#" class="pageNum">...</a>
+            <a href="#" class="pageNum" onclick="changePage(this);">10</a>
+            <button class="arrowR"><img src="../../img/page/right-arrow-blue.png" alt="오른쪽 화살표"></button>
+        </div>
+        <script>
+            function changePage(elm){
+                $('.pageNum').removeClass('on');
+                $(elm).addClass('on');
+                return false;
+            }
+        </script>
+    </div>
+    <div class="adrPopup__dim">
+        <a href="#" class="adrPopup__close" onclick="$('.adrPopup').hide(); return false;"><img src="../../img/page/close.png"><span class="blind">닫기</span></a>
+    </div>
+</div>
+<!-- E: 주소검색 팝업 -->
+
+</body>
+</html>

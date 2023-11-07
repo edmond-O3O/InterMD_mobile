@@ -1,0 +1,171 @@
+<h1 class="blind">검색</h1>
+<div class="search__header">
+    <a href="#" class="searchHeader__btnBack">나가기</a>
+    <div class="searchHeader__field">
+        <form action="#">
+            <input type="search" name="" id="" placeholder="검색어를 입력하세요" class="searchHeader__input" onfocus="">
+            <button class="searchHeader__btnClear">X<span class="blind">검색어 지우기</span></button>
+        </form>
+        <script>
+            $(function(){
+                var $searchInput = $('.searchHeader__input');
+                var $searchClearBtn = $('.searchHeader__btnClear');
+                $searchInput.focus(function(){
+                    $('body').addClass('rank--active');
+                    $('html').not('.searchHeader__field').bind('touchstart',function(){
+                        $searchInput.blur();
+                    })
+                    recentKeywordSwiper.update();
+                })
+                .focusout(function(){
+                    $searchInput.unbind('touchstart');
+                })
+                .keyup(function(){
+                    if ($(this).val().length > 0) {
+                        $searchClearBtn.addClass('on')
+                    }else if ($(this).val().length == 0){
+                        $searchClearBtn.removeClass('on')
+                    }
+                })
+                $('.searchHeader__btnClose').click(function(){
+                    $('body').removeClass('rank--active');
+                    return false;
+                })
+                $searchClearBtn.click(function(){
+                    $searchInput.val('').trigger('focus');
+                    $(this).removeClass('on');
+                    return false;
+                });
+
+                var recentKeywordSwiper = new Swiper('.recentKeyword__swiper', {
+                    slidesPerView: "auto",
+                    freeMode: true,
+                });
+                var searchNaviSwiper = new Swiper('.searchNavi__swiper',{
+                    slidesPerView: "auto",
+                    freeMode: true,
+                });
+            })
+        </script>
+    </div>
+    <button class="searchHeader__btnClose">닫기</button>
+</div>
+<!-- S: 검색 랭킹 -->
+<div class="search__rank">
+    <!-- 최근 검색어 (최근 검색어 없을 시 해당 영역 전체 노출하지 않음) -->
+    <div class="search__rankCon">
+        <h2>최근 검색어<a href="#" class="recentClear">전체 삭제</a></h2>
+        <div class="recentKeyword__swiper swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide recentKeyword__item">
+                    <a href="">금연치료제</a>
+                    <button class="keywordDelBtn">X</button>
+                </div>
+                <div class="swiper-slide recentKeyword__item">
+                    <a href="">복주머니</a>
+                    <button class="keywordDelBtn">X</button>
+                </div>
+                <div class="swiper-slide recentKeyword__item">
+                    <a href="">퀴즈</a>
+                    <button class="keywordDelBtn">X</button>
+                </div>
+                <div class="swiper-slide recentKeyword__item">
+                    <a href="">연말정산</a>
+                    <button class="keywordDelBtn">X</button>
+                </div>
+                <div class="swiper-slide recentKeyword__item">
+                    <a href="">금연</a>
+                    <button class="keywordDelBtn">X</button>
+                </div>
+                <div class="swiper-slide recentKeyword__item">
+                    <a href="">코로나</a>
+                    <button class="keywordDelBtn">X</button>
+                </div>
+                <div class="swiper-slide recentKeyword__item">
+                    <a href="">금연치료</a>
+                    <button class="keywordDelBtn">X</button>
+                </div>
+                <div class="swiper-slide recentKeyword__item">
+                    <a href="">안분정산</a>
+                    <button class="keywordDelBtn">X</button>
+                </div>
+                <div class="swiper-slide recentKeyword__item">
+                    <a href="">박진용</a>
+                    <button class="keywordDelBtn">X</button>
+                </div>
+                <div class="swiper-slide recentKeyword__item">
+                    <a href="">팍스로비드</a>
+                    <button class="keywordDelBtn">X</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //최근 검색어 -->
+    <!-- 인기 검색어 -->
+    <div class="search__rankCon">
+        <h2>인기 검색어</h2>
+        <div class="rankKeyword__list">
+            <ul>
+                <li><a href=""><span>1</span>금연치료제</a></li>
+                <li><a href=""><span>2</span>복주머니</a></li>
+                <li><a href=""><span>3</span>퀴즈</a></li>
+                <li><a href=""><span>4</span>연말정산</a></li>
+                <li><a href=""><span>5</span>금연</a></li>
+                <li><a href=""><span>6</span>코로나</a></li>
+                <li><a href=""><span>7</span>금연치료</a></li>
+                <li><a href=""><span>8</span>안분정산</a></li>
+                <li><a href=""><span>9</span>박진용</a></li>
+                <li><a href=""><span>10</span>팍스로비드</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- //인기 검색어 -->
+</div>
+<!-- S: category -->
+<div id="my_sub_nv" class="searchNavi">
+    <div class="searchNavi__swiper swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide searchNavi__swiperItem ">
+                <a href="javascript:fn_goSearchTop('mobile/search/total', '');" class="active">통합검색</a>
+            </div>
+            <div class="swiper-slide searchNavi__swiperItem ">
+                <a href="javascript:fn_goSearchTop('mobile/search/qna', 'Q');">Q&amp;A</a>
+            </div>
+            <div class="swiper-slide searchNavi__swiperItem ">
+                <a href="javascript:fn_goSearchTop('mobile/search/posting', 'P');">Posting</a>
+            </div>        
+            <div class="swiper-slide searchNavi__swiperItem ">
+                <a href="javascript:fn_goSearchTop('mobile/search/poll', 'L');">Poll</a>
+            </div>
+            <div class="swiper-slide searchNavi__swiperItem ">
+                <a href="javascript:fn_goSearchTop('mobile/search/connect', 'C');">Connect</a>
+            </div>
+            <div class="swiper-slide searchNavi__swiperItem ">
+                <a href="javascript:fn_goSearchTop('mobile/search/connect', 'C');">Media</a>
+            </div>
+            <div class="swiper-slide searchNavi__swiperItem ">
+                <a href="javascript:fn_goSearchTop('mobile/search/faq', 'F');">FAQ</a>
+            </div>
+            <div class="swiper-slide searchNavi__swiperItem ">
+                <a href="javascript:fn_goSearchTop('mobile/search/event', 'E');">이벤트</a>
+            </div>
+            <div class="swiper-slide searchNavi__swiperItem ">
+                <a href="javascript:fn_goSearchTop('mobile/search/noti', 'N');">공지사항</a>
+            </div>
+            <div class="swiper-slide searchNavi__swiperItem ">
+                <a href="#">채용공고</a>
+            </div>
+            <div class="swiper-slide searchNavi__swiperItem ">
+                <a href="#">진로상담</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 모바일검색 개선 -->
+<!-- bottom fix -->
+<div class="fixBtm">
+    <a href="#top" class="goToTop hide" onclick="$('html').stop().animate({ scrollTop:0 }, 800 );return false;"><span class="blind">맨 위로 이동</span></a>
+</div>
+<!-- // bottom fix -->
+<!-- //모바일검색 개선 -->
