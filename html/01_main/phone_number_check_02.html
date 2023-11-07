@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Inter MD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+    <meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+    <link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="../../js/plugins/jquery-3.2.1.js"></script>
+    <script src="../../js/plugins/swiper_3.3.1.js"></script>
+    <script src="../../js/ui_script_m.js"></script>   
+</head>
+<body>
+<div class="myPhoneNumber">
+    <div class="myPhoneNumberWrap">
+        <a href="" class="myPhoneNumberWrap__logout">로그아웃</a>
+        <div class="myPhoneNumber__con">
+            <div class="myPhoneNumber__title">
+                <div class="tit">중복 등록 방지를 위한<br>휴대폰 번호 재등록</div>
+                <p class="desc">
+                    김엠디 선생님의 휴대폰 번호가 중복으로<br>
+                    사용되고 있어 휴대폰 번호 재등록이 필요합니다.<br>
+                    등록이 완료되면 번호의 중복 사용이 불가합니다.
+                </p>
+            </div>
+            
+            <div class="myPhoneNumber__row">
+                <label>휴대폰 번호</label>
+                <input type="text" name="phone" value="01012345678" placeholder="'-' 제외  번호만 입력">
+                <a id="phone_sms" href="javascript:void(null);" class="on">인증요청</a><!-- class에 on 추가 시 활성화 -->
+            </div>
+            <div class="myPhoneNumber__row">
+                <label>인증번호 입력</label>
+                <input name="authPhone" type="number" value="000000" placeholder="인증번호 입력">
+                <span class="authTimer" id="dspRandom">03:00</span><!-- 인증번호 입력 타이머 -->
+            </div>
+        </div>
+
+        <div class="myPhoneNumber__toastMsg">
+            <p>인증번호 오류 또는 유효시간 초과입니다. 다시 시도해 주세요.</p>
+        </div>
+        <script>
+            // 토스트 메시지
+            showToast();
+            function showToast() {
+                var target = $(".myPhoneNumber__toastMsg")
+                target.addClass("show")
+                setTimeout(function(){
+                    target.removeClass("show")
+                }, 2990);
+            }
+        </script>
+
+        <div class="fixed_wrap">
+            <a href="" class="button button-blue">핸드폰 번호 등록하기</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
