@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> Inter MD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/style.css?v=202001210">
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/framework.css?v=20200121">
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://www.intermd.co.kr/mobile/styles/swiper.min.css">
+<!--font-->
+<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/xeicon/xeicon.min.css">
+<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--custom-->
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/partner.css?v=20200121">
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/base.css?v=20200121">
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/custom.css?v=20200121">  
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/sub.css?v=20200121">  
+<!-- <link rel="stylesheet" type="text/css" href="../../css/sub.css?v=20200121">   -->
+<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/styles/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="../../styles/style_mobile.css">
+<!-- <link rel="stylesheet" type="text/css" media="all" href="https://www.intermd.co.kr/mobile/css/common.css?v=20200121"> -->
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+<script src="../../js/plugins/swiper_3.3.1.js"></script>
+<script src="../../js/ui_script_m.js"></script>    
+<body class="modal write_modal_wrap modal-qna">
+    <div id="page-wrap">
+        <div id="page-content" class="page-content bg_fff">
+            <div id="page-content-scroll">
+                <div class="top_fixed_wrap marginBottom20">
+                    <h2>작성하기<a href="javascript:void(0);" class="right" onclick="javascript:fn_goExit();"><i class="xi-close"></i></a></h2> 
+                </div>
+                
+                
+                <div class="write_modal_container surveyInputWrap">
+                    <div class="modal_qna">
+
+                        <p class="surveyWriteRow__tit">Option <span class="sub">(선택사항)</span></p>
+                        <div class="option_chk marginBottom20">
+                            <div class="fac fac-checkbox fac-default inline_style_box harf_style">
+                                <span></span>
+                                <input id="checkboxQuestionAnonymousYn" type="checkbox">
+                                <label for="checkboxQuestionAnonymousYn">익명으로 작성하기</label>
+                            </div>
+                        </div>
+
+                        <p class="surveyWriteRow__tit">Description <span class="star">*</span></p>
+                        <div class="surveyWrite__tit marginBottom10">
+                            <textarea placeholder="제목을 입력하세요."></textarea>
+                        </div>
+                        <div class="modal_text_block">
+                            <div class="text_write_area">
+                                <div>
+                                    <textarea id="questionContent" name="questionContent" placeholder="상세내용을 입력하세요." class="validate-required text auto_area" rows="7"></textarea>
+                                </div>
+                                <div id="qnaFile"><div id="div_attachedqnaFile"><div id="div_uiqnaFile"><ul id="ul_media_qnaFile"></ul></div> <div id="div_qnaFile"></div></div><div class="modal_attach_comment"><span class="file_wrap file"><button type="button"></button></span> <span class="file_txt">사진/영상/파일 최대 10개 가능</span></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fixed_wrap">
+             		
+                    	
+                    		<!-- 새 작성 or 임시저장 글 작성 -->
+                    		<div class="double-type">
+                    			<a href="#" class="button button-teal">임시저장</a>
+                    			<a href="#" class="button button-blue">등록</a>
+                    		</div>
+                    	
+                    	
+                    
+                </div>
+                
+                <div class="textlayer_ty2 save">
+					<div class="text">
+						임시저장 되었습니다.
+					</div>
+				</div>
+				<div class="textlayer_ty2 autoSave">
+					<div class="text">
+						자동 임시저장 되었습니다.
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

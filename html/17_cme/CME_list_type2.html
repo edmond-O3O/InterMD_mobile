@@ -1,0 +1,453 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">    
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> Inter MD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+<script src="../../js/plugins/swiper_3.3.1.js"></script>
+<script src="../../js/ui_script_m.js"></script>    
+<body>
+
+<div class="pageWrap" data-role="page">
+    
+<!-- S: header -->
+<div class="detail__topline">
+    <a href="#" class="detail__btnback"><i class="xi-angle-left"></i></a>
+    <h2>InterMD CME</h2>
+</div>
+<!-- E: header -->
+<div class="cme__listBody">
+    <!-- S: 상단 배너 -->
+    <div class="banner cme__listBanner">
+        <a href=""><img src="https://placeimg.com/750/115/arch" alt=""></a>
+    </div>
+    <!-- E: 상단 배너 -->
+    <!-- S: CME 리스트 (내 강좌) -->
+    <div class="cme__listCont cme__myCmeCont cme__contBottomLine">
+        <div class="cme__listTitle">
+            <h3>내 강좌</h3>
+            <div class="cme__listTitleAside">
+                <a href="" class="cme__listMore">전체보기<i class="xi-angle-right"></i></a>
+            </div>
+        </div>
+        <div class="cme__listMyCme">
+            <div class="myCme__swiper swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide myCme__slide myCme__type01">
+                        <a href="" class="myCme__slideCard">
+                            <div class="myCme__tit">센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템 센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템 센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템</div>
+                            <div class="myCme__period">
+                                <span class="desc">시청기간</span>
+                                <div class="date">2022.09.13 ~ 2022.09.30</div>
+                            </div>
+                            <div class="myCme__btn">
+                                <span class="myCme__btnTxt">강좌 시청</span>
+                            </div>
+                        </a>
+                        <div class="myCme__menuBox">
+                            <a href="" class="myCme__menu"><span class="dot"></span></a>
+                            <ul class="myCme__select">
+                                <li><a href="" target="_blank">카탈로그</a></li>
+                                <li><a href="">등록 취소</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cme__listMyCmeAside">
+                <div class="bannerBox">
+                    인터엠디만의<br>
+                    교육강좌를<br>
+                    시청해보세요!
+                </div>
+            </div>
+            <script>
+                $(document).ready(function(){
+                    var myCmeSwiper = new Swiper('.myCme__swiper', {
+                        slidesPerView: '1.62',
+                        spaceBetween: 10,
+                    });
+                    $(".myCme__menu").click(function(e){
+                        e.preventDefault();
+                        if(!$(this).next().hasClass("active")){
+                            $(".myCme__menuBox").find(".myCme__select").removeClass("active"); 
+                            $(this).next().addClass("active");
+                        }else {
+                            $(this).next().removeClass("active");
+                        }
+                    });
+                });
+            </script>
+        </div>
+    </div>
+    <!-- E: CME 리스트 (내 강좌) -->
+    <!-- S: CME 리스트 (전체 강좌) -->
+    <div class="cme__listCont cme__contBottomLine cme__contTopLine">
+        <div class="cme__listTitle">
+            <h3>전체 강좌</h3>
+            <div class="cme__listTitleAside">
+                <a href="" class="cme__listFilter"><i class="ico"></i>전체 강좌</a>
+            </div>
+        </div>
+        <ul>
+            <li class="cme__list cme__type01">
+                <a href="">
+                    <div class="cme__topInfo">
+                        <span class="cme__status">등록 가능</span>
+                        <div class="cme__tit">센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템 센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템 센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템</div>
+                    </div>
+                    <div class="cme__bottomInfo">
+                        <span class="desc">강연자(기관)</span>
+                        <div class="cme__lecturerList">
+                            <ul>
+                                <li class="cme__lecturer">
+                                    <div class="img" style="background-image:url(https://placeimg.com/72/72/animals);"></div>
+                                    <div class="cme__lecturerInfo">
+                                        <div class="name">최의사</div>
+                                        <span class="hospital">서울아산병원 내과</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                <div class="cme__slideThumb"><img src="https://placeimg.com/686/716/arch" alt=""></div>
+            </li>
+            <li class="cme__list cme__type02">
+                <a href="">
+                    <div class="cme__topInfo">
+                        <span class="cme__status">등록 예정</span>
+                        <div class="cme__tit">센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템 센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템 센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템</div>
+                    </div>
+                    <div class="cme__bottomInfo">
+                        <span class="desc">강연자(기관)</span>
+                        <div class="cme__lecturerList">
+                            <ul>
+                                <li class="cme__lecturer">
+                                    <div class="img" style="background-image:url(https://placeimg.com/72/72/animals);"></div>
+                                    <div class="cme__lecturerInfo">
+                                        <div class="name">서울대학교병원</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                <div class="cme__slideThumb"><img src="https://placeimg.com/686/442/nature" alt=""></div>
+            </li>
+            <li class="cme__list cme__type02">
+                <a href="">
+                    <div class="cme__topInfo">
+                        <span class="cme__status">등록 예정</span>
+                        <div class="cme__tit">센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템 센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템 센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템</div>
+                    </div>
+                    <div class="cme__bottomInfo">
+                        <span class="desc">강연자(기관)</span>
+                        <div class="cme__lecturerList">
+                            <ul>
+                                <li class="cme__lecturer">
+                                    <div class="img" style="background-image:url(https://placeimg.com/72/72/animals);"></div>
+                                </li>
+                                <li class="cme__lecturer">
+                                    <div class="img" style="background-image:url(https://placeimg.com/72/72/animals);"></div>
+                                </li>
+                                <li class="cme__lecturer">
+                                    <div class="img" style="background-image:url(https://placeimg.com/72/72/animals);"></div>
+                                </li>
+                                <li class="cme__lecturer more">+ 1</li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                <div class="cme__slideThumb"><img src="https://placeimg.com/686/442/tech" alt=""></div>
+            </li>
+            <li class="cme__list cme__type03">
+                <a href="">
+                    <div class="cme__topInfo">
+                        <span class="cme__status">등록 마감</span>
+                        <div class="cme__tit">센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템 센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템 센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템</div>
+                    </div>
+                    <div class="cme__bottomInfo">
+                        <span class="desc">강연자(기관)</span>
+                        <div class="cme__lecturerList">
+                            <ul>
+                                <li class="cme__lecturer">
+                                    <div class="img" style="background-image:url(https://placeimg.com/72/72/animals);"></div>
+                                </li>
+                                <li class="cme__lecturer">
+                                    <div class="img" style="background-image:url(https://placeimg.com/72/72/animals);"></div>
+                                </li>
+                                <li class="cme__lecturer">
+                                    <div class="img" style="background-image:url(https://placeimg.com/72/72/animals);"></div>
+                                </li>
+                                <li class="cme__lecturer more">+ 1</li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                <div class="cme__slideThumb"><img src="https://placeimg.com/686/442/tech/grayscale" alt=""></div>
+            </li>
+        </ul>
+    </div>
+    <!-- E: CME 리스트 (전체 강좌) -->
+
+    <!-- S: CME 리스트 (지난 강좌) -->
+    <div class="cme__listCont cme__HistoryCont cme__contTopLine">
+        <div class="cme__listTitle">
+            <h3>지난 강좌 다시보기</h3>
+            <div class="cme__listTitleAside">
+                <a href="" class="cme__listMore">전체보기<i class="xi-angle-right"></i></a>
+            </div>
+        </div>
+        <div class="cme__listHistory">
+            <div class="cmeHistory__swiper swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide cmeHistory__slide">
+                        <ul class="cmeHistory__list">
+                            <li>
+                                <div class="cmeHistory__thumb" style="background-image:url(https://placeimg.com/686/442/arch);"></div>
+                                <a href="">
+                                    <span class="desc">다시보기</span>
+                                    <div class="cmeHistory__tit">센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템 센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템</div>
+                                    <div class="cme__bottomInfo">
+                                        <span class="desc">강연자(기관)</span>
+                                        <div class="cme__lecturerList">
+                                            <ul>
+                                                <li class="cme__lecturer">
+                                                    <div class="img" style="background-image:url(https://placeimg.com/72/72/animals);"></div>
+                                                    <div class="cme__lecturerInfo">
+                                                        <div class="name">최의사</div>
+                                                        <span class="hospital">서울아산병원 내과서울아산병원 내과서울아산병원 내과</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="cmeHistory__thumb" style="background-image:url(https://placeimg.com/686/442/nature);"></div>
+                                <a href="">
+                                    <span class="desc">다시보기</span>
+                                    <div class="cmeHistory__tit">센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템 센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템</div>
+                                    <div class="cme__bottomInfo">
+                                        <span class="desc">강연자(기관)</span>
+                                        <div class="cme__lecturerList">
+                                            <ul>
+                                                <li class="cme__lecturer">
+                                                    <div class="img" style="background-image:url(https://placeimg.com/72/72/animals);"></div>
+                                                    <div class="cme__lecturerInfo">
+                                                        <div class="name">서울대학교병원</div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="cmeHistory__thumb" style="background-image:url(https://placeimg.com/686/442/tech);"></div>
+                                <a href="">
+                                    <span class="desc">다시보기</span>
+                                    <div class="cmeHistory__tit">센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템 센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템</div>
+                                    <div class="cme__bottomInfo">
+                                        <span class="desc">강연자(기관)</span>
+                                        <div class="cme__lecturerList">
+                                            <ul>
+                                                <li class="cme__lecturer">
+                                                    <div class="img" style="background-image:url(https://placeimg.com/72/72/animals);"></div>
+                                                </li>
+                                                <li class="cme__lecturer">
+                                                    <div class="img" style="background-image:url(https://placeimg.com/72/72/animals);"></div>
+                                                </li>
+                                                <li class="cme__lecturer">
+                                                    <div class="img" style="background-image:url(https://placeimg.com/72/72/animals);"></div>
+                                                </li>
+                                                <li class="cme__lecturer more">+ 1</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="cmeHistory__thumb" style="background-image:url(https://placeimg.com/686/442/animals);"></div>
+                                <a href="">
+                                    <span class="desc">다시보기</span>
+                                    <div class="cmeHistory__tit">센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템 센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템</div>
+                                    <div class="cme__bottomInfo">
+                                        <span class="desc">강연자(기관)</span>
+                                        <div class="cme__lecturerList">
+                                            <ul>
+                                                <li class="cme__lecturer">
+                                                    <div class="img" style="background-image:url(https://placeimg.com/72/72/animals);"></div>
+                                                </li>
+                                                <li class="cme__lecturer">
+                                                    <div class="img" style="background-image:url(https://placeimg.com/72/72/animals);"></div>
+                                                </li>
+                                                <li class="cme__lecturer">
+                                                    <div class="img" style="background-image:url(https://placeimg.com/72/72/animals);"></div>
+                                                </li>
+                                                <li class="cme__lecturer more">+ 1</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="swiper-slide cmeHistory__slide">
+                        <ul class="cmeHistory__list">
+                            <li>
+                                <div class="cmeHistory__thumb" style="background-image:url(https://placeimg.com/686/442/arch);"></div>
+                                <a href="">
+                                    <span class="desc">다시보기</span>
+                                    <div class="cmeHistory__tit">센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템 센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템</div>
+                                    <div class="cme__bottomInfo">
+                                        <span class="desc">강연자(기관)</span>
+                                        <div class="cme__lecturerList">
+                                            <ul>
+                                                <li class="cme__lecturer">
+                                                    <div class="img" style="background-image:url(https://placeimg.com/72/72/animals);"></div>
+                                                    <div class="cme__lecturerInfo">
+                                                        <div class="name">최의사</div>
+                                                        <span class="hospital">서울아산병원 내과서울아산병원 내과서울아산병원 내과</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="cmeHistory__thumb" style="background-image:url(https://placeimg.com/686/442/nature);"></div>
+                                <a href="">
+                                    <span class="desc">다시보기</span>
+                                    <div class="cmeHistory__tit">센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템 센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템</div>
+                                    <div class="cme__bottomInfo">
+                                        <span class="desc">강연자(기관)</span>
+                                        <div class="cme__lecturerList">
+                                            <ul>
+                                                <li class="cme__lecturer">
+                                                    <div class="img" style="background-image:url(https://placeimg.com/72/72/animals);"></div>
+                                                    <div class="cme__lecturerInfo">
+                                                        <div class="name">서울대학교병원</div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="cmeHistory__thumb" style="background-image:url(https://placeimg.com/686/442/tech);"></div>
+                                <a href="">
+                                    <span class="desc">다시보기</span>
+                                    <div class="cmeHistory__tit">센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템 센서 퓨전 기술을 이용한 사지 심부 정맥 혈전증의 조기 진단 및 모니터링 시스템</div>
+                                    <div class="cme__bottomInfo">
+                                        <span class="desc">강연자(기관)</span>
+                                        <div class="cme__lecturerList">
+                                            <ul>
+                                                <li class="cme__lecturer">
+                                                    <div class="img" style="background-image:url(https://placeimg.com/72/72/animals);"></div>
+                                                </li>
+                                                <li class="cme__lecturer">
+                                                    <div class="img" style="background-image:url(https://placeimg.com/72/72/animals);"></div>
+                                                </li>
+                                                <li class="cme__lecturer">
+                                                    <div class="img" style="background-image:url(https://placeimg.com/72/72/animals);"></div>
+                                                </li>
+                                                <li class="cme__lecturer more">+ 1</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <script>
+                $(document).ready(function(){
+                    var cmeHistorySwiper = new Swiper('.cmeHistory__swiper', {
+                        slidesPerView: '1.03',
+                        spaceBetween: 10,
+                    });
+                });
+            </script>
+        </div>
+    </div>
+    <!-- E: CME 리스트 (지난 강좌) -->
+
+    <!-- S: CME 리스트 필터 -->
+    <div class="cme__filterLayer">
+        <div class="cme__filterLayerBg"></div>
+        <div class="cme__filterLayerInr">
+            <div class="cme__filterLayerTop">
+                <div class="tit">설정</div>
+                <a href="" class="cme__filterLayerClose"><i class="xi-close-thin"></i></a>
+            </div>
+            <div class="cme__filterLayerCont">
+                <ul class="cme__filterList">
+                    <li>
+                        <label>
+                            <input type="radio" name="cmeFilter">
+                            <span class="txt">전체 강좌</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="cmeFilter">
+                            <span class="txt">등록 가능</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="cmeFilter">
+                            <span class="txt">등록 예정</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="cmeFilter">
+                            <span class="txt">등록 마감</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="cme__filterLayerBottom">
+                <button><i class="xi-check"></i>선택 완료</button>
+            </div>
+        </div>
+    </div>
+    <!-- E: CME 리스트 필터 -->
+    <script>
+        $(document).ready(function(){
+            $(".cme__listFilter").click(function(e){
+                e.preventDefault();
+                $(".cme__filterLayer").addClass("active");
+            });
+            $(".cme__filterLayerBg, .cme__filterLayerClose").click(function(e){
+                e.preventDefault();
+                $(".cme__filterLayer").removeClass("active");
+            });
+        });
+    </script>
+
+    <div class="fixBtm">
+        <a href="#top" class="goToTop hide" onclick="$('html').stop().animate({ scrollTop:0 }, 800 );return false;"><span class="blind">맨 위로 이동</span></a>
+    </div>
+
+</div>
+    
+</div>
+
+</body>
+</html>

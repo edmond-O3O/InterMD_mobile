@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Inter MD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+    <meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+    <link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="../../js/plugins/jquery-3.2.1.js"></script>
+    <script src="../../js/plugins/swiper_3.3.1.js"></script>
+    <script src="../../js/ui_script_m.js"></script>   
+</head>
+<body>
+	
+    <div class="quizInviteWrap">
+        <div class="quizInvite__top">
+            <p class="quizInvite__topName">홍길동 선생님이</p>
+            <p class="quizInvite__topText">인터엠디에<br>초대하였습니다.</p>
+        </div>
+        <div class="quizInvite__con">
+            <div class="quizInvite__conImg"><img src="../../img/todayQuiz/invite/quiz_invite_accept_img_02.png" alt=""></div>
+            <div class="quizInvite__conIptBox">
+                <div class="quizInvite__conIptRow">
+                    <label for="quizInviteName">이름</label>
+                    <input type="text" id="quizInviteName">
+                </div>
+                <div class="quizInvite__conIptRow">
+                    <label for="quizInvitePhone">휴대전화</label>
+                    <input type="text" id="quizInvitePhone">
+                </div>
+            </div>
+            <div class="quizInvite__conImg"><img src="../../img/todayQuiz/invite/quiz_invite_accept_img_03.png" alt=""></div>
+            <div class="quizInvite__conChkBox">
+                <label for="quizInviteChk">
+                    <input type="checkbox" id="quizInviteChk" class="quizInvite__conChk">
+                    <span class="txt">인터엠디 친구 초대 이벤트 알림 수신에 동의합니다.</span>
+                </label>
+            </div>
+            <div class="quizInvite__conImg"><img src="../../img/todayQuiz/invite/quiz_invite_accept_img_04.png" alt=""></div>
+            <div class="quizInvite__conImg"><img src="../../img/todayQuiz/invite/quiz_invite_accept_img_05.png" alt=""></div>
+            <div class="quizInvite__conImg"><img src="../../img/todayQuiz/invite/quiz_invite_accept_img_06.png" alt=""></div>
+            <div class="quizInvite__conImg">
+                <button>
+                    <img src="../../img/todayQuiz/invite/quiz_invite_accept_img_07.png" alt="">
+                </button>
+            </div>
+            <div class="quizInvite__conImg"><img src="../../img/todayQuiz/invite/quiz_invite_accept_img_08.png" alt=""></div>
+            <div class="quizInvite__conImg">
+                <button>
+                    <img src="../../img/todayQuiz/invite/quiz_invite_accept_img_09.png" alt="">
+                </button>
+            </div>
+            <div class="quizInvite__conImg"><img src="../../img/todayQuiz/invite/quiz_invite_accept_img_10.png" alt=""></div>
+        </div>
+    </div>
+
+    <div class="quizInvitePopup active">
+        <div class="quizInvitePopup__con">
+            <div class="quizInvitePopup__text">
+                <p>
+                    <strong>홍길동 선생님</strong><br>
+                    <strong>초대에 응해주셔서 감사합니다!</strong>
+                </p>
+                <p>
+                    30일 이내 회원 가입하시면 가입 축하<br>
+                    선물을 드립니다.
+                </p>
+            </div>
+            <div class="quizInvitePopup__bottom">
+                <button class="quizInvitePopup__btn quizInvitePopup__btnClose">다음에 하기</button>
+                <button class="quizInvitePopup__btn quizInvitePopup__btnJoin">회원가입 하기</button>
+            </div>
+        </div>
+        <div class="quizInvitePopup__bg"></div>
+    </div>
+    
+    <script type="text/javascript">
+        $(".quizInvitePopup__bg, .quizInvitePopup__btnClose").click(function(){
+            $(".quizInvitePopup").removeClass("active");
+        });
+    </script>
+    
+</body>
+</html>

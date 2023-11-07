@@ -1,0 +1,399 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> Inter MD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+<script src="../../js/plugins/swiper_3.3.1.js"></script>
+<script src="../../js/ui_script_m.js"></script>
+</head>
+<body>
+<div class="pageWrap coBuyingOrderBody" data-role="page">
+
+
+    <!-- S: header -->
+    <div class="detail__topline"> 
+        <h2>주문결제</h2>
+        <a href="#" class="detail__rt"><i class="xi-close"></i><span class="blind">닫기</span></a>
+    </div>
+    <!-- E: header -->
+
+<div class="contentBody">
+    
+    <div class="coBuying">
+        <div class="coBuyingOrder">
+            <!-- S: 배송지 정보 -->
+            <div class="coBuyingOrder__con">
+                <h3 class="coBuyingOrderTit">배송지 정보</h3>
+                <div class="coBuyingOrder__conInr">
+                    <div class="orderForm">
+                        <div class="orderFormRow">
+                            <div class="orderFormRow__tit">받는분<i class="essential">*</i></div>
+                            <div class="orderFormRow__con">
+                                <input type="text" value="민성일" class="orderFormRow__conIpt">
+                            </div>
+                        </div>
+                        <div class="orderFormRow">
+                            <div class="orderFormRow__tit">연락처1<i class="essential">*</i></div>
+                            <div class="orderFormRow__con">
+                                <div class="phoneNumber">
+                                    <ul>
+                                        <li>
+                                            <select class="phoneNumberSelect">
+                                                <option value="010">010</option>
+                                                <option value="011">011</option>
+                                                <option value="016">016</option>
+                                                <option value="017">017</option>
+                                                <option value="018">018</option>
+                                                <option value="019">019</option>
+                                            </select>
+                                        </li>
+                                        <li><input type="number" pattern="[0-9]*" class="orderFormRow__conIpt phoneNumberIpt"></li>
+                                        <li><input type="number" pattern="[0-9]*" class="orderFormRow__conIpt phoneNumberIpt"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="orderFormRow">
+                            <div class="orderFormRow__tit">연락처2</div>
+                            <div class="orderFormRow__con">
+                                <div class="phoneNumber">
+                                    <ul>
+                                        <li>
+                                            <select class="phoneNumberSelect">
+                                                <option value="010">010</option>
+                                                <option value="011">011</option>
+                                                <option value="016">016</option>
+                                                <option value="017">017</option>
+                                                <option value="018">018</option>
+                                                <option value="019">019</option>
+                                            </select>
+                                        </li>
+                                        <li><input type="number" pattern="[0-9]*" class="orderFormRow__conIpt phoneNumberIpt"></li>
+                                        <li><input type="number" pattern="[0-9]*" class="orderFormRow__conIpt phoneNumberIpt"></li>
+                                    </ul>                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="orderFormRow">
+                            <div class="orderFormRow__tit">배송지<i class="essential">*</i></div>
+                            <div class="orderFormRow__con">
+                                <div class="zipCode">
+                                    <input type="text" readonly placeholder="우편번호" class="orderFormRow__conIpt zipCodeIpt">
+                                    <a href="" class="zipCodeBtn">주소찾기</a>
+                                </div>
+                                <div class="address">
+                                    <input type="text" placeholder="기본주소" class="orderFormRow__conIpt addressIpt">
+                                    <input type="text" placeholder="상세주소 및 상세건물명" class="orderFormRow__conIpt addressIpt">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="orderFormRow">
+                            <div class="orderFormRow__tit">메모</div>
+                            <div class="orderFormRow__con">
+                                <textarea rows="3" class="orderFormRow__conMemo" placeholder="메모"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- E: 배송지 정보 -->
+            <!-- S: 주문자 정보 -->
+            <div class="coBuyingOrder__con">
+                <h3 class="coBuyingOrderTit">주문자 정보</h3>
+                <div class="coBuyingOrder__conInr">
+                    <div class="userInfo">
+                        <ul>
+                            <li>민의사</li>
+                            <li>010-1234-5678</li>
+                            <li>abcdefg@intermd.co.kr</li>
+                        </ul>
+                        <p class="userInfoNotice">주문자 정보로 결제관련 정보가 제공됩니다.<br>정확한 정보로 등록 되어 있는지 확인해 주세요.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- E: 주문자 정보 -->
+            <!-- S: 주문상품 -->
+            <div class="coBuyingOrder__con">
+                <h3 class="coBuyingOrderTit">주문상품</h3>
+                <div class="coBuyingOrder__conInr coBuyingOrder__conInrPrdInfo">
+                    <div class="prdInfo">
+                        <ul>
+                            <li>
+                                <div class="prdInfo__con">
+                                    <div class="row">
+                                        <div class="prdInfo__prdThumb"><img src="https://placeimg.com/154/154/tech" alt=""></div>
+                                        <div class="prdInfo__txt">
+                                            <p class="prdName">[CERAGEM] 세라젬 마스터 V6 블랙, 화이트, 브라운</p>
+                                            <span class="prdDelivery">무료배송</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <p class="prdInfo__option">화이트(1개)</p>
+                                        <p class="prdInfo__price">4,410,000<span>원</span></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="prdInfo__con">
+                                    <div class="row">
+                                        <div class="prdInfo__prdThumb"><img src="https://placeimg.com/154/154/arch" alt=""></div>
+                                        <div class="prdInfo__txt">
+                                            <p class="prdName">[CERAGEM] 세라젬 마스터 V6 블랙, 화이트, 브라운</p>
+                                            <span class="prdDelivery">무료배송</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <p class="prdInfo__option">브라운(1개)</p>
+                                        <p class="prdInfo__price">4,410,000<span>원</span></p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- E: 주문상품 -->
+            <!-- 220721_추가 포인트 할인  -->
+            <div class="coBuyingOrder__con">
+                <h3 class="coBuyingOrderTit">포인트 할인</h3>
+                <div class="coBuyingOrder__conInr">
+                    <div class="orderForm orderFormPoint">
+                        <div class="orderFormRow">
+                            <div class="orderFormRow__tit">보유</div>
+                            <div class="orderFormRow__con">
+                                <p class="myPoint">8,930<span>원</span></p>
+                            </div>
+                        </div>
+                        <div class="orderFormRow">
+                            <div class="orderFormRow__tit">사용</div>
+                            <div class="orderFormRow__con">
+                                <div class="usePoint">
+                                    <div class="usePoint__inr">
+                                        <input type="text" placeholder="0" class="orderFormRow__conIpt pointDiscountIpt">
+                                        <a href="#" class="pointClearBtn"></a>
+                                    </div>
+                                    <a href="" class="pointDiscountBtn">전액 사용</a>
+                                </div>
+                                <p class="usePoint__desc">3,000 포인트부터 50,000 포인트까지 사용이 가능합니다.</p>
+                            </div>
+                        </div>
+                        <!-- 버튼 비활성 -->
+                        <div class="orderFormRow">
+                            <div class="orderFormRow__tit">사용</div>
+                            <div class="orderFormRow__con">
+                                <div class="usePoint active">
+                                    <div class="usePoint__inr">
+                                        <input type="text" placeholder="0" value="8,930" class="orderFormRow__conIpt pointDiscountIpt">
+                                        <a href="#" class="pointClearBtn"></a>
+                                    </div>
+                                    <a href="" class="pointDiscountBtn disable">전액 사용</a>
+                                </div>
+                                <p class="usePoint__desc">3,000 포인트부터 50,000 포인트까지 사용이 가능합니다.</p>
+                            </div>
+                        </div>
+                        <!-- //버튼 비활성 -->
+                        <!-- 포인트 입력 시 -->
+                        <script>
+                            $(document).ready(function(){
+                                $(".pointDiscountIpt").each(function(){
+                                    $(this).on("keyup",function(){       
+                                        var pointVal = $(this).val().length;                                 
+                                        if(pointVal > 0){
+                                            $(this).parent().parent().addClass("active");
+                                        }else {
+                                            $(this).parent().parent().removeClass("active");
+                                        }
+                                    });
+                                });
+                                
+                                $(".pointClearBtn").click(function(e){
+                                    e.preventDefault();
+                                    $(this).parent().parent().removeClass("active");
+                                    $(this).parent().find(".pointDiscountIpt").val("");
+                                });
+                            });
+                        </script>
+                        <!-- //포인트 입력 시 -->
+                    </div>
+                </div>
+            </div>
+            <!-- 포인트 할인 불가 상품 -->
+            <div class="coBuyingOrder__con">
+                <h3 class="coBuyingOrderTit">포인트 할인</h3>
+                <div class="coBuyingOrder__conInr">
+                    <div class="orderForm orderFormPoint">
+                        <p class="orderFormPoint__unable">포인트 할인이 불가능한 상품입니다.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- //포인트 할인 불가 상품 -->
+            <!-- //220721_추가 포인트 할인 -->
+            <!-- S: 쿠폰할인 -->
+            <div class="coBuyingOrder__con">
+                <h3 class="coBuyingOrderTit">쿠폰할인</h3>
+                <div class="coBuyingOrder__conInr">
+                    <div class="orderForm orderFormCoupon">
+                        <div class="orderFormRow">
+                            <div class="orderFormRow__tit">할인금액</div>
+                            <div class="orderFormRow__con">
+                                <p class="discountPrice">0<span>원</span></p>
+                            </div>
+                        </div>
+                        <div class="orderFormRow">
+                            <div class="orderFormRow__tit">쿠폰등록</div>
+                            <div class="orderFormRow__con">
+                                <div class="couponCode">
+                                    <input type="text" placeholder="쿠폰코드" class="orderFormRow__conIpt couponCodeIpt">
+                                    <a href="" class="couponCodeBtn">등록</a>
+                                </div>
+                                <!-- 쿠폰 입력 시
+                                <div class="couponCodeNumber">
+                                    <p class="code">CODE : UE385TV9</p>
+                                    <a href="" class="codeDeleteBtn"></a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- E: 쿠폰할인 -->
+            <!-- S: 최종 결제 금액 220620 추가 -->
+            <div class="coBuyingOrder__con">
+                <h3 class="coBuyingOrderTit">최종 결제 금액</h3>
+                <div class="coBuyingOrder__conInr">
+                    <div class="orderForm orderFormPrice">
+                        <div class="orderFormRow">
+                            <div class="orderFormRow__tit">상품금액</div>
+                            <div class="orderFormRow__con">
+                                <p class="prdPrice">8,820,000<span>원</span></p>
+                            </div>
+                        </div>
+                        <div class="orderFormRow">
+                            <div class="orderFormRow__tit">배송비</div>
+                            <div class="orderFormRow__con">
+                                <p class="prdPrice">0<span>원</span></p>
+                            </div>
+                        </div>
+                        <!-- 220721_포인트 할인 추가 -->
+                        <div class="orderFormRow">
+                            <div class="orderFormRow__tit">포인트 할인</div>
+                            <div class="orderFormRow__con">
+                                <p class="prdPrice">-3,000<span>원</span></p>
+                            </div>
+                        </div>
+                        <!-- //220721_포인트 할인 추가 -->
+                        <div class="orderFormRow">
+                            <div class="orderFormRow__tit">쿠폰할인</div>
+                            <div class="orderFormRow__con">
+                                <p class="prdPrice">-150,000<span>원</span></p>
+                            </div>
+                        </div>
+                        <div class="orderFormRow orderFormRow__total">
+                            <div class="orderFormRow__tit"><strong>총 결제금액</strong></div>
+                            <div class="orderFormRow__con">
+                                <p class="prdPrice totalPrice">8,670,000<span>원</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- E: 최종 결제 금액 -->
+            <!-- S: 결제정보 -->
+            <div class="coBuyingOrder__con">
+                <h3 class="coBuyingOrderTit">결제정보</h3>
+                <div class="coBuyingOrder__conInr">
+                    <div class="paymentInfo">
+                        <div class="paymentInfo__tab">
+                            <ul>
+                                <li class="active"><a href="">신용카드</a></li>
+                                <li><a href="">계좌이체</a></li>
+                            </ul>
+                        </div>
+                        <div class="paymentInfo__con">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- E: 결제정보 -->
+            <!-- S: 약관동의 -->
+            <div class="coBuyingOrder__con">
+                <h3 class="coBuyingOrderTit">약관동의</h3>
+                <div class="coBuyingOrder__conInr coBuyingOrder__conInrTerms">
+                    <div class="orderTerms">
+                        <ul>
+                            <li>
+                                <div class="orderTerms__toggleTit">[필수] 개인정보 수집 및 이용 동의<i class="toggleTitArrow"></i></div>
+                                <div class="orderTerms__toggleCon">
+                                    <p class="txt">
+                                        1) 수집 목적: 결제/환불 서비스 제공,주문/배송/거래 내역 조회 서비스 제공,고객상담 및 불만처리,전자상거래법 준수,경품수령 의사 확인<br>
+                                        2) 수집 항목: 주문자 정보(이름,이메일,휴대폰번호),수령자 정보(이름, 주소,휴대폰번호),추가 연락처(선택)<br>
+                                        3) 보유 기간: 수집 목적 달성 시까지(단, 관계 법령에 따라 보존해야 하는 경우 해당기간 동안 보존)<br>
+                                        ※ 위의 개인정보 제공에 대한 동의를 거부할 권리가 있으나, 거부할 경우 구매,결제 및 상품 배송에 제한을 받을 수 있습니다.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="orderTerms__toggleTit">[필수] 개인정보 판매자 제공 동의<i class="toggleTitArrow"></i></div>
+                                <div class="orderTerms__toggleCon">
+                                    <p class="txt">
+                                        1) 제공받는 자: 주식회사 인터엠디컴퍼니<br>
+                                        2) 수집 목적: 주문상품 배송, 고객상담 및 불만처리<br>
+                                        3) 수집 항목: 주문자 정보(이름,이메일,휴대폰번호),수령자 정보(이름,이메일,휴대폰번호),추가 연락처(선택)<br>
+                                        4) 보유 기간: 서비스 제공 완료 후 3개월까지<br>
+                                        ※ 위의 개인정보 제공에 대한 동의를 거부할 권리가 있으나, 거부할 경우 구매,결제 및 상품 배송에 제한을 받을 수 있습니다.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="orderTerms__toggleTit">[필수] 주문확인 및 동의<i class="toggleTitArrow"></i></div>
+                                <div class="orderTerms__toggleCon">
+                                    <p class="txt">
+                                        주문할 상품의 상품명, 상품금액, 배송정보를 확인하였으며, 구매에 동의하시겠습니까? (전자상거래법 제8조 제2항)
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="orderTerms__agree">
+                            <label class="chbox">
+                                <input type="checkbox" class="chboxIpt">
+                                <p class="chboxTxt">위 내용을 확인하였으며 결제에 동의합니다.</p>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- E: 약관동의 -->
+            <script>
+                $(function(){
+                    $(".orderTerms__toggleTit").click(function(){
+                        $(this).parent().stop().toggleClass("active");
+                    });
+                });
+            </script>
+
+            <!-- S: 하단 구매하기 버튼 -->
+            <div class="coBuying__bottomButton">
+                <button class="orderBtn">8,820,000원 결제</button>
+            </div>
+            <!-- E: 하단 구매하기 버튼 -->
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+</div>
+</body>
+</html>

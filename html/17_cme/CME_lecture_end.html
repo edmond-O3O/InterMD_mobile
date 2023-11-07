@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">    
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> Inter MD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+<script src="../../js/plugins/swiper_3.3.1.js"></script>
+<script src="../../js/ui_script_m.js"></script>    
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<body>
+
+    <div class="pageWrap" data-role="page">
+        
+        <div class="cme__lectureEndBody">
+            <div class="cme__lectureEnd">
+                <a href="" class="cme__lectureEndClose"><i class="xi-close"></i></a>
+                <div class="tit">축하드립니다!</div>
+                <div class="medal"></div>
+                <div class="lectureTit">미란성 위식도 역류질환의 내시경 진단</div>
+                <div class="desc">강좌의 시청을 완료하였습니다.</div>
+                <button>완료</button>
+            </div>
+            <canvas id="confettiCanvas"></canvas>
+        </div>
+        <script>
+            $(document).ready(function(){
+                cannon();
+                function cannon() {
+                    var canvas = document.getElementById('confettiCanvas');
+
+                    canvas.confetti = canvas.confetti || confetti.create(canvas, { resize: true });
+
+                    canvas.confetti({
+                        particleCount: 30,
+                        spread: 50,
+                        scalar: 1.5,
+                        shapes: 'square',
+                        startVelocity: 65,
+                        gravity: 1.5,
+                        origin: { y: 0.9 },
+                        zIndex: 1
+                    });
+                }
+            });
+        </script>
+
+    </div>
+
+</body>
+</html>
