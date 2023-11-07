@@ -1,0 +1,595 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Inter MD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+    <meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+    <link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="../../js/plugins/jquery-3.2.1.js"></script>
+    <script src="../../js/plugins/swiper_3.3.1.js"></script>
+    <script src="../../js/ui_script_m.js"></script>   
+</head>
+<body>
+<div id="ptrMain">
+
+
+
+	<div class="page_main contentBody">
+		<!-- S: banner -->
+		<div class="main__banner swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><a href="#"><img src="https://file.intermd.co.kr/upload/202003/06/mo홈상단_202003061651431.png" alt=""></a></div>
+				<div class="swiper-slide"><a href="#"><img src="https://file.intermd.co.kr/upload/202002/24/mo_홈상단_202002241706411.png" alt=""></a></div>
+				<div class="swiper-slide"><a href="#"><img src="https://file.intermd.co.kr/upload/202001/07/회원혜택_모바일상단_202001072022011.png" alt=""></a></div>
+				<div class="swiper-slide"><a href="#"><img src="https://file.intermd.co.kr/upload/202002/12/mo_상단_202002121846101.png" alt=""></a></div>
+			</div>
+			<div class="main__pagination"></div>
+		</div>
+		<script>
+			$(function(){
+				var swiperRank = new Swiper('.main__banner', {
+					slidesPerView: 1,
+					preventClicks: true,
+					preventClicksPropagation: false,
+					observer: true,
+					observeParents: true,
+					loop: true,
+					pagination: '.main__pagination',
+					paginationClickable: true,
+					autoplay: 3000
+				});
+			})
+		</script>
+		<!-- E: banner -->
+
+		<!-- S: 주간 인기 Q&A -->
+		<div class="listSec">
+			<h3 class="main__h3"><a href="#">주간 인기 Q&amp;A</a></h3>
+			<div class="listSec__main">
+				<ul class="style__qna">
+					<li class="style__urgent">
+						<!-- QnA설문형 : 구조변경 -->
+						<div class="surveyWrap main">
+							<!-- S: category badge -->
+							<div class="surveyBadge">
+								<div class="surveyBadgeInner">
+									<div class="swiper-wrapper">
+										<span class="swiper-slide surveyBadge__item urgent">URGENT</span>
+										<span class="swiper-slide surveyBadge__item">마취통증의학과</span>
+										<span class="swiper-slide surveyBadge__item">가정의학과</span>
+									</div>
+								</div>
+							</div>
+							<!-- E: category badge -->
+
+							<!-- S: Question Type -->
+							<div class="surveyLabel">
+								<div class="surveyLabel__item">설문형</div>
+								<div class="surveyLabel__item surveyLabel__item--ing">진행형</div>
+							</div>
+							<!-- E: Question Type -->
+						</div>
+						<!-- //QnA설문형 : 구조변경 -->
+						
+						<div class="qnaItem"><a href="#"><span class="qnaItem__desc">근육주사 후 발생한 혈종, 통증 등 부작용을 어떻게 설명하고 계신가요?</span></a></div>
+					</li>
+					<li>
+						<!-- QnA설문형 : 구조변경 -->
+						<div class="surveyWrap main">
+							<!-- S: category badge -->
+							<div class="surveyBadge">
+								<div class="surveyBadgeInner">
+									<div class="swiper-wrapper">
+										<span class="swiper-slide surveyBadge__item">소아청소년과</span>
+										<span class="swiper-slide surveyBadge__item">진로/경력개</span>
+									</div>
+								</div>
+							</div>
+							<!-- E: category badge -->
+
+							<!-- S: Question Type -->
+							<div class="surveyLabel">
+								<div class="surveyLabel__item">설문형</div>
+								<div class="surveyLabel__item surveyLabel__item--end">종료</div>
+							</div>
+							<!-- E: Question Type -->
+						</div>
+						<!-- //QnA설문형 : 구조변경 -->
+
+						<div class="qnaItem"><a href="#"><span class="qnaItem__desc">스타틴 사용 근육통 질문 드립니다.</span></a></div>
+					</li>
+					<li>
+						<!-- QnA설문형 : 구조변경 -->
+						<div class="surveyWrap main">
+							<!-- S: category badge -->
+							<div class="surveyBadge">
+								<div class="surveyBadgeInner">
+									<div class="swiper-wrapper">
+										<span class="swiper-slide surveyBadge__item">내과</span>
+									</div>
+								</div>
+							</div>
+							<!-- E: category badge -->
+							
+							<!-- S: Question Type -->
+							<div class="surveyLabel">
+								<div class="surveyLabel__item">설문형</div>
+								<div class="surveyLabel__item surveyLabel__item--ing">진행형</div>
+							</div>
+							<!-- E: Question Type -->
+						</div>
+						<!-- //QnA설문형 : 구조변경 -->
+						<div class="qnaItem"><a href="#"><span class="qnaItem__desc">검진시 증상 없고 CXR 영상의학과 판독상 폐결핵 의심 소견인 수검자 도말이나 배양검사 후 활동성 폐결핵 확진시에 격리조치하독록 어닝하시나요?</span></a></div>
+					</li>
+				</ul>
+				<!-- QnA설문형 : 추가 -->
+				<script>
+					var swiper = new Swiper(".surveyBadgeInner", {
+						slidesPerView: "auto",
+						freeMode: true,
+					});
+				</script>
+				<!-- //QnA설문형 : 추가 -->
+			</div>
+		</div>
+		<!-- E: 주간 인기 Q&A -->
+		
+		<hr class="line">
+		
+		<!-- S: 전공 미답 질문 -->
+		<a href="">
+			<div class="unanswered">
+				<span class="unanswered__text">제갈공명 선생님, <b>전공 미답 질문</b>이 <b>99건</b> 있습니다.</span>
+				<i class="xi-angle-right"></i>
+			</div>
+		</a>
+		<!-- E: 전공 미답 질문 -->
+
+		<hr class="line">
+
+		<!-- S: 주간 인기 Posting -->
+		<div class="listSec">
+			<h3 class="main__h3"><a href="#">주간 인기 Posting</a></h3>
+			<div class="listSec__main">
+				<div class="mPosting">
+					<!-- S: 221031_논문리뷰 -->
+					<div class="mPosting__item">
+						<a href="#">
+							<span class="mPosting__img review" style="background-image:url('../../img/sample/review_banner_sample01.png')"></span>							
+							<div class="mPosting__profile">
+								<span class="mPosting__name">인터엠디</span><span class="mPosting__career">추천게시물</span>
+							</div>
+						</a>
+					</div>
+					<!-- E: 221031_논문리뷰 -->
+					<div class="mPosting__item">
+						<a href="#">
+							<span class="mPosting__img more" style="background-image:url('https://placeimg.com/750/424/arch')"></span>
+							<!-- <span class="mPosting__img more" style="background-image:url('https://file.intermd.co.kr/Thumb_upload/201904/26/20190425_140758_201904260115331.jpg')"></span> -->
+							<!-- <span class="mPosting__img movie more" style="background-image:url('https://file.intermd.co.kr/Thumb_upload/201904/26/20190425_140758_201904260115331.jpg')"></span> -->
+							<span class="mPosting__desc">소셜 미디어를 통한 정보 공개와 그로 인한 폐해는 세계적인 문제다. 세계의학협회(WMA) 소속 젊은 의사들은 2011년 10월 우루과이에 모여 이 문제에 대해 논의했다. 그리고 '소셜 미디어의 직업적 및 윤리적 사용에 대한 세계의학협회 성명서(WMA statement on the professional and ethical use of social media)'를 채택했다. 성명서에는 환자 정보를 공개할 때 보수적으로 접근할 것, 의대생과 의사의 관심을 끌기 위해 온라인에 올린 글도 대중의 인식에 영향을 미칠 수 있다는 사실에 주목할 것 등 10가지 권고사항이 담겨있다.</span>
+							<div class="mPosting__profile">
+								<span class="mPosting__name">김선생</span><span class="mPosting__career">응급의학과 전문의 20년차</span>
+							</div>
+						</a>
+					</div>
+					<div class="mPosting__item">
+						<a href="#">
+							<span class="mPosting__img movie more" style="background-image:url('https://placeimg.com/750/424/nature')"></span>
+							<span class="mPosting__desc">사건은 2014년 모 대학병원 응급실에서 급성 호흡곤란 환자를 진료하면서 촉발됐다. </span>
+							<div class="mPosting__profile">
+								<span class="mPosting__name">Undefined User</span>
+							</div>
+						</a>
+					</div>
+					<div class="mPosting__item">
+						<a href="#">
+							<span class="mPosting__img" style="background-image:url('https://file.intermd.co.kr/upload/ex2019/P_6726_20191105170523.png')"></span>
+							<span class="mPosting__desc">세계의학협회(WMA) 소속 젊은 의사들은 논의했다.</span>
+							<div class="mPosting__profile">
+								<span class="mPosting__name">김선생</span><span class="mPosting__career">응급의학과 전문의 20년차</span>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- E: 주간 인기 Posting -->
+		
+		<hr class="line">
+
+		<!-- S: 초빙공고 -->
+		<div class="listSec">
+			<h3 class="main__h3"><a href="#">초빙공고</a></h3>
+			<div class="listSec__main">
+				<div class="mCareer">
+					<!-- S: 초빙공고개선 / 추가 -->
+					<div class="careerNewCard">
+						<a href="">
+							<div class="careerNewCard__row">
+								<p class="careerNewCard__hospital">충청남도 공주의료원</p>
+								<ul class="careerNewCard__label">
+									<li class="urgency">긴급초빙</li>
+									<li class="popularity">인기공고</li>
+								</ul>
+							</div>
+							<div class="careerNewCard__row">
+								<p class="careerNewCard__subject">우먼피아 여성병원 소아청소년과 전문의 초빙</p>
+							</div>
+							<div class="careerNewCard__row">
+								<ul class="careerNewCard__cate">
+									<li>전문의</li>
+									<li>소아청소년과</li>
+									<li>경기 의정부시</li>
+									<li>월~토(격주휴무)</li>
+									<li>연봉 Gross 35000이상</li>
+								</ul>
+								<p class="careerNewCard__deadline">마감 D-6</p>
+							</div>
+						</a>
+					</div>
+
+					<div class="careerNewCard">
+						<a href="">
+							<div class="careerNewCard__row">
+								<p class="careerNewCard__hospital">충청남도 공주의료원충청남도 공주의료원충청남도 공주의료원충청남도 공주의료원</p>
+								<ul class="careerNewCard__label">
+									<li class="urgency">긴급초빙</li>
+									<li class="popularity">인기공고</li>
+								</ul>
+							</div>
+							<div class="careerNewCard__row">
+								<p class="careerNewCard__subject">우먼피아 여성병원 소아청소년과 전문의 초빙우먼피아 여성병원 소아청소년과 전문의 초빙</p>
+							</div>
+							<div class="careerNewCard__row">
+								<ul class="careerNewCard__cate">
+									<li>전문의</li>
+									<li>소아청소년과</li>
+									<li>경기 의정부시</li>
+									<li>월~토(격주휴무)</li>
+									<li>연봉 Gross 35000이상</li>
+								</ul>
+								<p class="careerNewCard__deadline">~ 11/10 (수)</p>
+							</div>
+						</a>
+					</div>
+
+					<div class="careerNewCard">
+						<a href="">
+							<div class="careerNewCard__row">
+								<p class="careerNewCard__hospital">충청남도 공주의료원</p>
+								<ul class="careerNewCard__label">
+									<li class="urgency">긴급초빙</li>
+									<li class="popularity">인기공고</li>
+								</ul>
+							</div>
+							<div class="careerNewCard__row">
+								<p class="careerNewCard__subject">우먼피아 여성병원 소아청소년과 전문의 초빙</p>
+							</div>
+							<div class="careerNewCard__row">
+								<ul class="careerNewCard__cate">
+									<li>전문의</li>
+									<li>소아청소년과</li>
+									<li>경기 의정부시</li>
+									<li>월~토(격주휴무)</li>
+									<li>연봉 Gross 35000이상</li>
+								</ul>
+								<p class="careerNewCard__deadline">~ 11/10 (수)</p>
+							</div>
+						</a>
+					</div>
+					<!-- E: 초빙공고개선 / 추가 -->
+
+					<!-- 구버전 -->
+					<!-- <div class="careerCard">
+						<a href="#" class="careerCardLink">
+							<span class="careerCard__hospital">충청남도 공주의료원</span>
+							<span class="careerCard__subject">우먼피아 여성병원 소아청소년과 전문의 초빙</span>
+							<span class="careerCard__cate">
+								<span class="careerCard__cateItem">전문의</span>
+								<span class="careerCard__cateItem">소아청소년과</span>
+								<span class="careerCard__cateItem">충남 공주시</span>
+								<span class="careerCard__cateItem">월-토</span>
+							</span>
+						</a>
+					</div> -->
+				</div>
+			</div>
+		</div>
+		<!-- E: 초빙공고 -->
+
+		<hr class="line">
+		
+		<!-- S: 웹 세미나 -->
+		<div class="listSec">
+			<h3 class="main__h3"><a href="#">웹 세미나</a></h3>
+			<div class="listSec__main mWebinar">
+
+				
+				<article class="webinarItem--home">
+					<a href="#">
+						<div class="webinarItem__top">
+							<span class="webinarItem__date">11.17(목) 13:00 </span>
+							<span class="webinarBadge__VOD">VOD</span>
+							<span class="webinarBadge__live">LIVE</span>
+						</div>
+						<div class="webinarItem__cont">
+							<h1 class="webinarItem__topic">만성B형간염 치료 목표에 따른 HBV 약제 선택 기준과 최신 약제인 베믈리디의 역할</h1>
+							<div class="webinarItem__lecturer">
+								<span class="webinarItem__lecturerName">CHAIR.차봉수 교수, 김유리 교수, 홍경순 교수</span>
+							</div>
+							<div class="webinarItem__linebox">
+								<div class="webinarItem__logo" style="color:#009594">Jardiance</div>
+							</div>
+							<div class="webinarItem__btngroup">
+								<button class="webinarItemBtn__enter"><span>입장하기</span></button>
+								<!-- <button class="webinarItemBtn__enter"><span>상세보기</span></button> -->
+							<!-- <button class="webinarItemBtn__enter"><span>VOD 다시보기</span></button> -->
+							</div>
+						</div>
+					</a>
+				</article>
+				
+				<article class="webinarItem--home">
+					<a href="#">
+						<div class="webinarItem__top">
+							<span class="webinarItem__date">11.17(목) 13:00 </span>
+							<!-- <span class="webinarBadge__VOD">VOD</span> -->
+							<!-- <span class="webinarBadge__live">LIVE</span> -->
+						</div>
+						<div class="webinarItem__cont">
+							<h1 class="webinarItem__topic">만성B형간염 치료 목표에 따른 HBV 약제 선택 기준과 최신 약제인 베믈리디의 역할</h1>
+							<div class="webinarItem__lecturer">
+								<span class="webinarItem__lecturerName">김유리 교수</span>
+							</div>
+							<div class="webinarItem__linebox">
+								<div class="webinarItem__logo" style="color:#d61e31">STOGAR</div>
+							</div>
+							<div class="webinarItem__btngroup">
+								<!-- <button class="webinarItemBtn__enter"><span>입장하기</span></button> -->
+								<button class="webinarItemBtn__enter"><span>상세보기</span></button>
+								<!-- <button class="webinarItemBtn__enter"><span>VOD 다시보기</span></button> -->
+							</div>
+						</div>
+					</a>
+				</article>
+				
+				<article class="webinarItem--home">
+					<a href="#">
+						<div class="webinarItem__top">
+							<span class="webinarItem__date">11.17(목) 13:00 </span>
+							<span class="webinarBadge__VOD">VOD</span>
+							<!-- <span class="webinarBadge__live">LIVE</span> -->
+						</div>
+						<div class="webinarItem__cont">
+							<h1 class="webinarItem__topic">만성B형간염 치료 목표에 따른 HBV 약제 선택 기준과 최신 약제인 베믈리디의 역할 최신 약제인 베믈리디의 역할 최신 약제인 베믈리디의 역할</h1>
+							<div class="webinarItem__lecturer">
+								<span class="webinarItem__lecturerName">CHAIR.차봉수 교수, 김유리 교수, 홍경순 교수</span>
+							</div>
+							<div class="webinarItem__linebox">
+								<div class="webinarItem__logo" style="color:#4ea0f5">InterMD Original</div>
+							</div>
+							<div class="webinarItem__btngroup">
+								<!-- <button class="webinarItemBtn__enter"><span>입장하기</span></button> -->
+								<!-- <button class="webinarItemBtn__enter"><span>상세보기</span></button> -->
+								<button class="webinarItemBtn__enter"><span>VOD 다시보기</span></button>
+							</div>
+						</div>
+					</a>
+				</article>
+			</div>
+		</div>
+		<!-- E: 웹 세미나 -->
+
+		<hr class="line">
+
+		<!-- S: 필수평점 연수교육 -->
+		<div class="listSec">
+			<h3 class="main__h3"><a href="#">필수평점 연수교육</a></h3>
+			<div class="listSec__main">
+				<div class="mSchedule__item recomend"> <!-- 추천일경우 recomend -->
+					<a href="#">
+						<div class="img" style="background-image:url('https://file.intermd.co.kr/upload/201807/03/201807031604071.png')"></div>
+						<div class="mSchedule__textbox">
+							<i class="badge">사전등록중</i>
+							<div class="subject">대한흉부심장혈관외과의사회 2019년 추계학술대회</div>
+							<div class="date">2019.07.22</div>
+							<div class="detail">
+								<span class="region">서울특별시</span>동국대병원 지하 1층 제3세미나실
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="mSchedule__item">
+					<a href="#">
+						<div class="img" style="background-image:url('https://file.intermd.co.kr/upload/201807/03/201807031604071.png')"></div>
+						<div class="mSchedule__textbox">
+							<i class="badge">사전등록중</i>
+							<div class="subject">대한흉부심장혈관외과의사회 2019년 추계학술대회</div>
+							<div class="date">2019.07.22</div>
+							<div class="detail">
+								<span class="region">서울특별시</span>동국대병원 지하 1층 제3세미나실
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="mSchedule__item">
+					<a href="#">
+						<div class="img" style="background-image:url('https://file.intermd.co.kr/upload/201807/03/201807031604071.png')"></div>
+						<div class="mSchedule__textbox">
+							<div class="subject">대한흉부심장혈관외과의사회 2019년 추계학술대회</div>
+							<div class="date">2019.07.22</div>
+							<div class="detail">
+								<span class="region">서울특별시</span>동국대병원 지하 1층 제3세미나실
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- E: 필수평점 연수교육 -->
+
+		
+		<!-- S: banner -->
+		<div class="banner">
+			<a href="#"><img src="http://placehold.it/750x160" alt=""></a>
+		</div>
+		<!-- E: banner -->
+
+		<!-- S: 진행중인 Poll -->
+		<div class="listSec">
+			<h3 class="main__h3"><a href="#">진행중인 Poll</a></h3>
+			<div class="listSec__main">
+				<!-- poll list와 마크업 동일 -->
+				<!-- poll card 진행중 -->
+				<div class="pollCard">
+					<a href="#">
+						<div class="pollCard__textbox">
+							<span class="pollCard__img" style="background-image:url(https://file.intermd.co.kr/Thumb_upload/201902/28/손목시계형심전도_201902281024101.png)"></span>
+							<span class="pollCard__headline">제약사 선호도와 디지털 마케팅</span>
+							<span class="pollCard__point">1,000ⓟ 리워드</span>
+							<h1 class="pollCard__subject">[선착순 100명] 새로운 항응고제 NOAC, 선생님께서는 어떻게 생각하시나요? 어떻게 생각하시나요?</h1>
+							<div class="pollCard__sideInfo">
+								<span class="pollCard__participant">참여수 : <b>330명</b></span>
+								<span class="pollCard__date">~2020.04.30</span>
+							</div>
+						</div>
+						<span class="pollCard__target"><b>설문대상</b> : 경기도, 31세~40세 경기도, 31세~40세, 남자, 전문의(내과), 선착순 300명</span>
+					</a>
+				</div>
+				<!-- // poll card 진행중 -->
+
+				<div class="pollCard">
+					<div class="pollCard__textbox">
+						<span class="pollCard__img" style=""></span> <!-- 이미지 없는경우 style 속성 삭제 (background-image:url()) -->
+						<span class="pollCard__headline">의사 의향 조사</span>
+						<h1 class="pollCard__subject">코로나19 종식 이후 가장 하고 싶은 활동은 무엇인가요? </h1>
+						<div class="pollCard__sideInfo">
+							<span class="pollCard__participant">참여수 : <b>330명</b></span>
+							<span class="pollCard__date">~2020.04.30</span>
+						</div>
+					</div>
+					<span class="pollCard__target"><b>설문대상</b> : 전체</span>
+				</div>
+
+				<!-- poll card 종료 -->
+				<div class="pollCard close">
+					<div class="pollCard__textbox">
+						<span class="pollCard__img" style="background-image:url(https://file.intermd.co.kr/Thumb_upload/201902/28/손목시계형심전도_201902281024101.png)"></span>
+						<span class="pollCard__headline">정책 관련 조사</span>
+						<span class="pollCard__point">500</span>
+						<h1 class="pollCard__subject">전문의약품 광고 규제, 어떻게 생각하십니까?</h1>
+						<div class="pollCard__sideInfo">
+							<span class="pollCard__participant">참여수 : <b>330명</b></span>
+							<span class="pollCard__date">~2020.04.30</span>
+						</div>
+					</div>
+					<span class="pollCard__target"><b>설문대상</b> : 31세~40세, 전문의(내과)</span>
+				</div>
+				<!-- // poll card 종료 -->
+				
+			</div>
+		</div>
+		<!-- E: 진행중인 Poll -->
+		
+		<hr class="line">
+
+		<!-- S: 유틸리티 -->
+		<div class="listSec">
+			<h3 class="main__h3"><a href="#">유틸리티</a></h3>
+			<div class="listSec__main">
+				<div class="mUtility__item">
+					<a href="#">
+						<div class="mUtility__img" style="background-image:url('https://file.intermd.co.kr/upload/201807/03/201807031604071.png')"></div>
+						<div class="mUtility__textbox">
+							<div class="mUtility__subject">국경없는 의사회</div>
+							<div class="mUtility__desc">국제 인도주의 의료 구호 단체</div>
+						</div>
+					</a>
+				</div>
+				<div class="mUtility__item">
+					<a href="#">
+						<div class="mUtility__img" style="background-image:url('https://file.intermd.co.kr/upload/201807/03/201807031604071.png')"></div>
+						<div class="mUtility__textbox">
+							<div class="mUtility__subject">미국의사 조동혁의 100세 건강시대</div>
+							<div class="mUtility__desc">내과 신장내과 전문의 조동혁선생님의 유튜브 채널</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- E: 인터엠디 추천 Connect -->
+	</div>
+
+	<!-- bottom fix -->
+	<div class="fixBtm">
+		<a href="#top" class="goToTop hide" onclick="$('html').stop().animate({ scrollTop:0 }, 800 );return false;"><span class="blind">맨 위로 이동</span></a>
+		
+		<!-- S: 플로팅 배너 -->
+
+		<!-- S: 230217_새내기의사초대배너 -->
+		<div class="floatingBanner floatingBanner__fresher">
+			<a href="#" class="fltBanner__wrapper">
+				<div class="floatingBanner__fresherTxt">      
+					<img src="../../img/banner/2023/02_fresher/fb_fresher_text.png" alt="새내기 의사 초대하고 호텔 식사권 받으세요!">
+					<div class="floatingBanner__fresherIcon">
+						<img src="../../img/banner/2023/02_fresher/fb_fresher_gift.png" alt="시그니엘 서울 식사권">
+						<div class="gradientBox"></div>
+					</div>
+				</div>
+			</a>
+			
+			<div class="fltBanner__btn">
+				<button class="fltBanner__close" onclick="$('.floatingBanner').hide();">
+					<span class="closeTxt">
+						<i class="xi-close"></i>
+					</span>
+				</button>
+			</div>
+			<script>
+			var lastScrollTop = 0;
+			$(window).scroll(function(e){
+				var st = $(this).scrollTop();
+				if (st > lastScrollTop){
+					if(st - lastScrollTop>30){
+						$('.floatingBanner').addClass('fltBanner__blind');
+					}
+				} else {
+					if(lastScrollTop - st>10){
+						$('.floatingBanner').removeClass('fltBanner__blind');   
+					}
+				}
+				lastScrollTop = st;
+			});
+			</script>
+		</div>
+		<!-- E: 230217_새내기의사초대배너 -->
+
+
+		<!-- E: 플로팅 배너 -->
+
+
+	</div>
+	<!-- // bottom fix -->
+
+
+
+</div>
+<!-- S: 당겨서 새로고침 <div id="ptrMain"> .. </div> 영역에서 작동합니다. -->
+<script src="../../js/plugins/pullToRefresh.js"></script>
+<script>
+    PullToRefresh.init({
+        mainElement: '#ptrMain',
+        onRefresh: function() { 
+            alert('refresh') 
+        }
+    });
+</script>
+<!-- E: 당겨서 새로고침 -->   
+</body>
+</html>

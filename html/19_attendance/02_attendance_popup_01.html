@@ -1,0 +1,370 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Inter MD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+    <meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+    <link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="../../js/plugins/jquery-3.2.1.js"></script>
+    <script src="../../js/plugins/swiper_3.3.1.js"></script>
+    <script src="../../js/ui_script_m.js"></script>   
+</head>
+<body>
+
+    <!-- S: header -->
+    <div class="detail__topline">
+        <h2>오늘도 출석체크</h2>
+        <a href="#" class="detail__rt"><i class="xi-close"></i><span class="blind">닫기</span></a>
+    </div>
+    <!-- E: header -->
+
+    <div class="attendanceWrap">
+        <div class="attendanceCont">
+            <div class="attendanceTop">
+                <div class="attendanceTop__title">
+                    <div class="text">
+                        <strong>오늘도 출석체크</strong>버튼<br>
+                        클릭하고<br>
+                        <strong>포인트</strong> 받으세요!
+                    </div>
+                </div>
+                <div class="attendanceTop__pieChart">
+                    <div class="period">8월1일~8월31일</div>
+                    <div class="pieChart">
+                        <!-- attendanceP에 퍼센트 수치 입력 -->
+                        <div class="pie no-round" style="--attendanceP:25;"></div>
+                        <div class="info">
+                            <div class="today">
+                                <p class="todayTit">TODAY</p>
+                                <p class="day">10일</p>
+                            </div>
+                            <div class="point">
+                                <p>110<span>p</span></p>
+                            </div>
+                            <div class="attendanceCheck">
+                                <!-- <div class="attendanceCheck__msg">출석체크 완료!</div> -->
+                                <button class="attendanceCheck__btn">출석체크 하기</button>
+                            </div>
+                            <div class="count"><strong>5</strong>회 출석</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--
+                달력 클래스 종류
+                미도달 : class X 
+                미도달 추가포인트 : point
+
+                출석체크 : check
+                출석체크 포인트 : check point
+
+                당일 : today
+                당일 포인트 : today point
+
+                당일 완료 : today check
+                당일 완료 포인트 : today check point
+
+                미출석 : fail
+                미출석 포인트 : fail point
+            -->
+            <div class="attendanceCalender">
+                <div class="attendanceCalender__topImg">
+                    <img src="../../img/attendance/attendance_calendar_top_img.png" alt="">
+                </div>
+                <div class="attendanceCalender__header">
+                    <div class="item">일</div>
+                    <div class="item">월</div>
+                    <div class="item">화</div>
+                    <div class="item">수</div>
+                    <div class="item">목</div>
+                    <div class="item">금</div>
+                    <div class="item">토</div>
+                </div>
+                <div class="attendanceCalender__cont">
+                    <div class="row ">
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item">
+                            <p class="itemNum">1</p>
+                            <div class="itemImg"></div>
+                        </div>
+                        <div class="item fail">
+                            <p class="itemNum">2</p>
+                            <div class="itemImg"></div>
+                        </div>
+                        <div class="item check">
+                            <p class="itemNum">3</p>
+                            <div class="itemImg"></div>
+                        </div>
+                        <div class="item check point">
+                            <p class="itemNum">4</p>
+                            <div class="itemImg"></div>
+                        </div>
+                        <div class="item">
+                            <p class="itemNum">5</p>
+                            <div class="itemImg"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="item">
+                            <p class="itemNum">6</p>
+                            <div class="itemImg"></div>
+                        </div>
+                        <div class="item">
+                            <p class="itemNum">7</p>
+                            <div class="itemImg"></div>
+                        </div>
+                        <div class="item">
+                            <p class="itemNum">8</p>
+                            <div class="itemImg"></div>
+                        </div>
+                        <div class="item">
+                            <p class="itemNum">9</p>
+                            <div class="itemImg"></div>
+                        </div>
+                        <div class="item">
+                            <p class="itemNum">10</p>
+                            <div class="itemImg"></div>
+                        </div>
+                        <div class="item fail point">
+                            <p class="itemNum">11</p>
+                            <div class="itemImg"></div>
+                        </div>
+                        <div class="item check">
+                            <p class="itemNum">12</p>
+                            <div class="itemImg"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="item check point">
+                            <p class="itemNum">13</p>
+                            <div class="itemImg"></div>
+                        </div>
+                        <div class="item fail point">
+                            <p class="itemNum">14</p>
+                            <div class="itemImg"></div>
+                        </div>
+                        <div class="item fail">
+                            <p class="itemNum">15</p>
+                            <div class="itemImg"></div>
+                        </div>
+                        <div class="item today">
+                            <p class="itemNum">16</p>
+                            <div class="itemImg"></div>
+                        </div>
+                        <div class="item today check">
+                            <p class="itemNum">17</p>
+                            <div class="itemImg"></div>
+                        </div>
+                        <div class="item today point">
+                            <p class="itemNum">18</p>
+                            <div class="itemImg"></div>
+                        </div>
+                        <div class="item today check point">
+                            <p class="itemNum">19</p>
+                            <div class="itemImg"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="item">
+                            <p class="itemNum">20</p>
+                            <div class="itemImg"></div>
+                        </div>
+                        <div class="item">
+                            <p class="itemNum">21</p>
+                            <div class="itemImg"></div>
+                        </div>
+                        <div class="item">
+                            <p class="itemNum">22</p>
+                            <div class="itemImg"></div>
+                        </div>
+                        <div class="item">
+                            <p class="itemNum">23</p>
+                            <div class="itemImg"></div>
+                        </div>
+                        <div class="item">
+                            <p class="itemNum">24</p>
+                            <div class="itemImg"></div>
+                        </div>
+                        <div class="item point">
+                            <p class="itemNum">25</p>
+                            <div class="itemImg"></div>
+                        </div>
+                        <div class="item">
+                            <p class="itemNum">26</p>
+                            <div class="itemImg"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="item">
+                            <p class="itemNum">27</p>
+                            <div class="itemImg"></div>
+                        </div>
+                        <div class="item">
+                            <p class="itemNum">28</p>
+                            <div class="itemImg"></div>
+                        </div>
+                        <div class="item">
+                            <p class="itemNum">29</p>
+                            <div class="itemImg"></div>
+                        </div>
+                        <div class="item">
+                            <p class="itemNum">30</p>
+                            <div class="itemImg"></div>
+                        </div>
+                        <div class="item">
+                            <p class="itemNum">31</p>
+                            <div class="itemImg"></div>
+                        </div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                    </div>
+                </div>
+                <div class="attendanceCalender__toggle">
+                    <button>
+                        <span>달력 펼치기</span>
+                    </button>
+                </div>
+            </div>
+            <script>
+                const toggleButton = document.querySelector(".attendanceCalender__toggle button")
+                const rows = document.querySelectorAll(".attendanceCalender__cont .row")
+                const imgSrcFront = "../../img/attendance/" // 이미지 경로
+                const itemTag = document.querySelectorAll(".attendanceCalender__cont .item")
+                
+                // 오늘 포함된 주 외에 접기
+                rows.forEach(row => {
+                    const todayCell = row.querySelector(".today")
+                    
+                    if (!todayCell) {
+                        if(!row.classList.contains("hide")) {
+                            row.classList.add("hide")
+                        }
+                    }
+                }); 
+
+                // 달력 접기 버튼
+                toggleButton.addEventListener("click", function() {
+                    const buttonText = toggleButton.querySelector("span").textContent;
+                    rows.forEach(row => {
+                        const todayCell = row.querySelector(".today")
+                        
+                        if (!todayCell) {
+                            if(row.classList.contains("hide")) {
+                                row.classList.remove("hide")
+                            }else {
+                                row.classList.add("hide")
+                            }
+                        }
+                    });                
+                    if (buttonText === "달력 접기") {
+                        toggleButton.querySelector("span").textContent = "달력 펼치기";
+                        toggleButton.classList.remove("close");
+                    } else {
+                        toggleButton.querySelector("span").textContent = "달력 접기";
+                        toggleButton.classList.add("close");
+                    }
+                });
+                
+                // 클래스별 이미지 지정
+                itemTag.forEach(item => {
+                    let imgSrc = imgSrcFront;
+                    let imgFileName = "";
+
+                    switch (true) {
+                        case item.classList.contains("point"):
+                            if (item.classList.contains("fail")) {
+                                imgFileName = "attendance_fail_point.png";
+                            } else if (item.classList.contains("check")) {
+                                imgFileName = item.classList.contains("today") ? "attendance_today_check_point.png" : "attendance_check_point.png";
+                            } else if (item.classList.contains("today")) {
+                                imgFileName = "attendance_today_point.png";
+                            } else {
+                                imgFileName = "attendance_point.png";
+                            }
+                            break;
+                        case item.classList.contains("fail"):
+                            imgFileName = "attendance_fail.png";
+                            break;
+                        case item.classList.contains("check"):
+                            imgFileName = item.classList.contains("today") ? "attendance_today_check.png" : "attendance_check.png";
+                            break;
+                        case item.classList.contains("today"):
+                            imgFileName = "attendance_today.png";
+                            break;
+                        default:
+                            imgFileName = "attendance_item.png";
+                    }
+
+                    const itemImgContainer = item.querySelector(".itemImg");
+                    if (itemImgContainer) {
+                        const itemImg = document.createElement("img");
+                        itemImg.src = imgSrc + imgFileName;
+                        itemImgContainer.appendChild(itemImg);
+                    }
+                })
+            </script>
+            <div class="attendanceAlarm">
+                <div class="attendanceAlarm__tit">출석체크 알림</div>
+                <label class="attendanceAlarm__toggle">
+                    <input type="checkbox" class="attendanceAlarm__chk">
+                    <div class="attendanceAlarm__chkBox">
+                        <span class="attendanceAlarm__chkBtn"></span>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="attendanceNotice">
+            <div class="attendanceNotice__tit">유의사항</div>
+            <ul>
+                <li>출석체크하기 버튼을 눌러야 출석이 인정됩니다.</li>
+                <li>출석은 일1회가 가능합니다.</li>
+                <li>특정일 추가지급 포인트는 변경될 수 있습니다.</li>
+                <li>추가지급 포인트 유효기간은 99일 입니다.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="attendancePopup active">
+        <div class="attendancePopup__cont">
+            <button class="attendancePopup__close" onclick="closePopup()"><i class="xi-close-thin"></i></button>
+            <div class="attendancePopup__contInr">
+                <div class="imgCont">
+                    <img src="../../img/attendance/attendance_popup_img_01.png" alt="">
+                    <ul class="imgCont__glitterLeft">
+                        <li><img src="../../img/attendance/glitter_left_01.png" alt=""></li>
+                        <li><img src="../../img/attendance/glitter_left_02.png" alt=""></li>
+                        <li><img src="../../img/attendance/glitter_left_03.png" alt=""></li>
+                    </ul>
+                    <ul class="imgCont__glitterRight">
+                        <li><img src="../../img/attendance/glitter_right_01.png" alt=""></li>
+                        <li><img src="../../img/attendance/glitter_right_02.png" alt=""></li>
+                        <li><img src="../../img/attendance/glitter_right_03.png" alt=""></li>
+                    </ul>
+                </div>
+                <div class="textCont">
+                    <p class="textCont__msg">선생님, 출석체크<br><strong>9회</strong> 달성했어요!</p>
+                    <p class="textCont__msgSub">꼭 챙겨봐야하는<br>웹세미나가 있어요</p>
+                </div>
+            </div>
+            <div class="attendancePopup__bottom">
+                <button>바로 확인하기</button>
+            </div>
+        </div>
+        <div class="attendancePopup__bg" onclick="closePopup()"></div>
+    </div>
+    <script>
+        const attendancePopup = document.querySelector(".attendancePopup")
+        const closePopup = () => {
+            attendancePopup.classList.remove("active");
+        };
+    </script>
+
+</body>
+</html>
