@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title> Inter MD</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+	<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+
+	<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/style.css?v=202001210">
+	<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/framework.css?v=20200121">
+
+	<!-- Link Swiper's CSS -->
+	<link rel="stylesheet" href="https://www.intermd.co.kr/mobile/styles/swiper.min.css">
+	<!--font-->
+	<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/xeicon/xeicon.min.css">
+	<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--custom-->
+	<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/partner.css?v=20200121">
+	<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/base.css?v=20200121">
+	<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/custom.css?v=20200121">  
+	<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/sub.css?v=20200121">  
+	<!-- <link rel="stylesheet" type="text/css" href="../../css/sub.css?v=20200121">   -->
+	<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/styles/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" type="text/css" href="../../styles/style_mobile.css">
+	<!-- <link rel="stylesheet" type="text/css" media="all" href="https://www.intermd.co.kr/mobile/css/common.css?v=20200121"> -->
+	<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+	<script src="../../js/plugins/jquery-3.2.1.js"></script>
+	<script src="../../js/plugins/swiper_3.3.1.js"></script>
+	<script src="../../js/ui_script_m.js"></script> 
+<body class="resume resume_edit">
+
+        <div id="page-wrap" class="myPhoneNumber">	
+            <link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+
+            <div id="page-content" class="page-content bg_fff" style="min-height: 956px;">
+                <div class="jobs-top50"> 
+                   <!-- <a href='javascript:gfn_callSubmit($("#returnUrl").val(), $("#smsForm") );'><i class="xi-angle-left"></i></a> -->
+                   <a href="javascript:goBack();"><i class="xi-angle-left"></i></a>
+                    <h2>휴대폰 번호 변경</h2> 
+                </div>
+                <div id="page-content-scroll">
+                    <!--Enables this element to be scrolled -->
+                    <div class="content_container phone_edit">
+                        <!--S: topic_menu_body_wrap-->
+                        <div class="l_r_padding paddingTop30">
+                            <div class="input-simple-1 has-icon input-green full-bottom">
+                                <em>휴대폰 번호</em>
+                                <input type="text" name="phone" value="01012345678" placeholder="'-' 제외  번호만 입력">
+                                <a id="phone_sms" href="javascript:void(null);" class="btn-20 on">인증요청</a><!-- class에 on 추가 시 활성화 -->
+                            </div>
+                            <div class="input-simple-1 has-icon input-green full-bottom">
+                                <em>인증번호 입력</em>
+                                <input name="authPhone" type="number" value="000000" placeholder="인증번호 입력">
+                                <span class="authTimer" id="dspRandom">03:00</span><!-- 인증번호 입력 타이머 -->
+                            </div>
+
+                            <div class="myPhoneNumber__toastMsg">
+                                <p>인증번호 오류 또는 유효시간 초과입니다. 다시 시도해 주세요.</p>
+                            </div>
+                            <script>
+                                // 토스트 메시지
+                                showToast();
+                                function showToast() {
+                                    var target = $(".myPhoneNumber__toastMsg")
+                                    target.addClass("show")
+                                    setTimeout(function(){
+                                        target.removeClass("show")
+                                    }, 2990);
+                                }
+                            </script>
+                            <div class="fixed_wrap">
+                                <div class="double-type">
+                                    <a href="javascript:goBack();" class="button button-teal">취소</a> 
+                                    <a id="sms_done" href="javascript:void(null);" class="button button-blue">저장</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--E:page-content-->
+                    </div>
+                </div>
+            </div>
+        </div>        
+    
+</body>
+</html>

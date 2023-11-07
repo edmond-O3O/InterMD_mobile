@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> Inter MD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+<script src="../../js/plugins/swiper_3.3.1.js"></script>
+<script src="../../js/ui_script_m.js"></script>    
+<body>
+
+<div class="pageWrapDetail" data-role="page">
+    
+    <!-- S: header -->
+    <div class="detail__topline">
+        <a href="#" class="detail__btnback"><i class="xi-angle-left"></i></a>
+        <h2>MR 관리</h2>
+    </div>
+    <!-- E: header -->
+	
+    <div class="contentBody">
+		<div class="profile_top childTopsticky">
+			<a href="#" class="profile_topSet">편집</a>
+			<button class="profile_topSave">저장</button>
+		</div>
+		<!--S:content_container-->
+		<div class="profile__guideStar">을 누르면 상단고정 가능!</div>
+		<ul class="profile_list">
+			<!-- 전체 케이스 -->
+			<li>
+				<div class="profilefield type_60">
+					<button class="profile__starBtn on" onclick="$(this).toggleClass('on');"><span class="blind">상단고정 버튼</span></button>
+					<a href="javascript:void(0);" onclick="$('.subPage__modal').show();" class="profilefield__link"> <!-- 편집일 경우 <a href="#" class="profileMR__link">..</a> => <span class="profileMR__link">..</span> -->
+						<span class="profilefield__img" style="background-image:url('https://tf20.intermd.co.kr/Thumb_upload/201805/04/201805041149051.jpg')"></span>
+						<span class="profilefield__text">
+							<span class="profilefield__name -star">홍길동 MR</span> <!-- 상단고정일경우 class -star -->
+							<span class="profilefield__desc">인터엠디 보령 화이자 아스트라제네카 호흡기내과</span>
+						</span>
+					</a>
+					<div class="rt">
+						<a href="javascript:void(0);" onclick="$('.subPage__modal').show();" class="btn_myVdtMr"><span class="blind">프로필 보기</span></a>
+						<button type="button" class="btn_line">삭제하기</button>
+					</div>
+				</div>
+				<a href="javascript:void(0);" onclick="$('.subPage__modal').show();"> <!-- 편집일 경우 <a href="#">..</a> 삭제 -->
+					<div class="profile__grayBox">
+						마지막 Detailing
+						<span class="profile__grayBox--bar"></span> 
+						2021.04.01
+					</div>
+				</a>
+			</li>
+			<!-- 디폴트 -->
+			<li>
+				<div class="profilefield type_60">
+					<a href="#" class="profilefield__link">
+						<span class="profilefield__img" style="background-image:url('https://tf20.intermd.co.kr/Thumb_upload/201805/04/201805041149051.jpg')"></span>
+						<span class="profilefield__text">
+							<span class="profilefield__name">홍길동 MR</span>
+							<span class="profilefield__desc">인터엠디 보령 화이자 아스트라제네카 호흡기내과</span>
+						</span>
+					</a>
+					<div class="rt">
+						<a href="#" class="btn_myVdtMr"><span class="blind">프로필 보기</span></a>
+					</div>
+				</div>
+				<a href="#">
+					<div class="profile__grayBox">
+						마지막 Detailing
+						<span class="profile__grayBox--bar"></span> 
+						2021.04.01
+					</div>
+				</a>
+			</li>
+			<!-- 편집 탭 시, 관심설정한 경우 -->
+			<li>
+				<div class="profilefield type_60">
+					<button class="profile__starBtn" onclick="$(this).toggleClass('on');"><span class="blind">상단고정 버튼</span></button>
+					<span class="profilefield__link">
+						<span class="profilefield__img" style="background-image:url('https://tf20.intermd.co.kr/Thumb_upload/201805/04/201805041149051.jpg')"></span>
+						<span class="profilefield__text">
+							<span class="profilefield__name">홍길동 MR</span>
+							<span class="profilefield__desc">인터엠디 보령 화이자 아스트라제네카 호흡기내과</span>
+						</span>
+					</span>
+					<div class="rt">
+						<button type="button" class="btn_line">삭제하기</button>
+					</div>
+				</div>
+				<div class="profile__grayBox">
+					마지막 Detailing
+					<span class="profile__grayBox--bar"></span> 
+					2021.04.01
+				</div>
+			</li>
+			<!-- 저장 후 -->
+			<li>
+				<div class="profilefield type_60">
+					<a href="#" class="profilefield__link">
+						<span class="profilefield__img" style="background-image:url('https://tf20.intermd.co.kr/Thumb_upload/201805/04/201805041149051.jpg')"></span>
+						<span class="profilefield__text">
+							<span class="profilefield__name -star">홍길동 MR</span>
+							<span class="profilefield__desc">인터엠디 보령 화이자 아스트라제네카 호흡기내과</span>
+						</span>
+					</a>
+					<div class="rt">
+						<a href="#" class="btn_myVdtMr"><span class="blind">프로필 보기</span></a>
+					</div>
+				</div>
+				<a href="#">
+					<div class="profile__grayBox">
+						마지막 Detailing
+						<span class="profile__grayBox--bar"></span> 
+						2021.04.01
+					</div>
+				</a>
+			</li>
+		</ul>
+		<!--E:content_container-->
+		
+	</div>
+		
+
+</div>
+
+
+
+<!-- S: MR프로필 레이어 -->
+<div class="subPage__modal pageWrapDetail" data-role="page" style="display: none;">
+	<div class="detail__topline line">
+		<h2>홍길동 MR</h2>
+		<button class="detail__rt" onclick="$('.subPage__modal').hide();"><i class="xi-close"></i><span class="blind">닫기</span></button>
+	</div>
+	
+    <div class="contentBody">
+        <!-- mr 프로필 -->
+        <!-- S: my profile -->
+        <div class="mrProfile">
+            <div class="profilefield type_mrProfile">
+                <span class="profilefield__img" style="background-image:url('https://tf20.intermd.co.kr/Thumb_upload/201805/04/201805041149051.jpg')"></span>
+                <span class="profilefield__text">
+                    <span class="profilefield__name">홍길동 MR</span>
+                    <span class="profilefield__desc">인터엠디 보령 케토톱 영엽</span>
+                </span>
+            </div>
+            <a href="#" class="myDashboard__btnMessage"><span class="blind">메시지 보내기</span></a>
+        </div>
+        <!-- E: my profile -->
+        <div class="mrProfile__cont">
+            <div class="vDtDetail__prfBox">
+                <div class="vDtDetail__prfTit">
+                    담당 의약품
+                </div>
+                <div class="vDtDetail__prfDesc badges">
+                    <span class="vDtList__badge">아스트라제네카</span>
+                    <span class="vDtList__badge">코로나백신</span>
+                    <span class="vDtList__badge">astrazeneca gmb</span>
+                    <span class="vDtList__badge">타이레놀</span>
+                    <span class="vDtList__badge">통증</span>
+                    <span class="vDtList__badge">모나리사</span>
+                    <span class="vDtList__badge">스마트에코</span>
+                    <span class="vDtList__badge">브루팬B</span>
+                </div>
+            </div>
+        </div>
+        <div class="vDtDetail__btnBox">
+            <button class="vDtDetail__bookBtn on">이 MR의 v-Detailing 보기</button>
+        </div>
+	</div>
+</div>
+<!-- E: MR프로필 레이어 -->
+
+
+</body>
+</html>

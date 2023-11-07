@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> Inter MD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+<script src="../../js/plugins/swiper_3.3.1.js"></script>
+<script src="../../js/ui_script_m.js"></script>
+<body>
+
+<!-- S: header -->
+<div class="detail__topline">
+    <a href="#" class="detail__lt"><i class="xi-angle-left"><span class="blind">닫기</span></i></a>
+    <h2>e-Test</h2>
+    <a href="#" class="detail__rt"><i class="icon_share"><span class="blind">공유하기</span></i></a>
+</div>
+<!-- E: header -->
+
+
+<div class="society"> 
+    <!-- S: e-Test 정답확인 -->
+
+    <!-- 1. 60점 미만일때 -->
+    <div class="eTest__result">
+        <div class="eTest__resultTop">
+            <div class="eTest__score">45점</div>
+            <button class="eTest__retestBtn">
+                <span class="eTest__retestTxt">재응시</span>
+            </button>
+        </div>
+        <div class="eTest__resultDesc">
+            60점 미만은 호흡기분과평점이 부여되지 않습니다. 재응시 해주세요.
+        </div>
+    </div>
+
+    <!-- 2.  60점 이상일때 -->
+    <div class="eTest__result">
+        <div class="eTest__resultTop">
+            <div class="eTest__score">80점</div>
+        </div>
+        <div class="eTest__resultDesc">
+            축하합니다. e-Test가 완료 되었습니다.
+        </div>
+    </div>
+        
+    <!-- E: e-Test 정답확인 -->
+
+<!-- 결과화면 -->
+<!-- 
+    정답, 오답표시 문제에 추가
+    pollMarking__o : 정답체크
+    pollMarking__x : 오답체크
+    
+    정답표시 문항에 표시
+    오답인 문제에만 문항 추가
+    pollMarking__check : 정답표시 문항에 추가
+-->
+<div class="pollResult">
+    <h2 class="pollSurvey__title pollMarking__o"><span class="pollSurvey__num">1</span>단일 선택형(텍스트)</h2>
+    <div class="pollSurvey__body">
+        <span class="inputbox__radio"> <label><input type="radio" name="" value="" class=""><span class="text">네</span></label> </span>
+        <span class="inputbox__radio"> <label><input type="radio" name="" value="" class=""><span class="text">네</span></label> </span>
+        <span class="inputbox__radio"> <label><input type="radio" name="" value="" class="" checked><span class="text">네</span></label> </span>
+        <span class="inputbox__radio"> <label><input type="radio" name="" value="" class=""><span class="text">네</span></label> </span>
+        <span class="inputbox__complex">
+            <span class="inputbox__radio"> <label><input type="radio" name="" value=""><span class="text">기타</span></label> </span>
+            <span class="inputbox__text"><input type="text" class="inputbox__short"  name="" value="" placeholder="기타사항을 작성해 주세요."></span>
+        </span>
+    </div>
+
+    <h2 class="pollSurvey__title pollMarking__x"><span class="pollSurvey__num">1</span>단일 선택형(텍스트)</h2>
+    <div class="pollSurvey__body">
+        <span class="inputbox__radio"> <label><input type="radio" name="" value="" class=""><span class="text">네</span></label> </span>
+        <span class="inputbox__radio"> <label><input type="radio" name="" value="" class=""><span class="text">네</span></label> </span>
+        <span class="inputbox__radio"> <label><input type="radio" name="" value="" class="" checked><span class="text">네</span></label> </span>
+        <span class="inputbox__radio pollMarking__check"> <label><input type="radio" name="" value="" class=""><span class="text">네</span></label> </span>
+        <span class="inputbox__complex">
+            <span class="inputbox__radio"> <label><input type="radio" name="" value=""><span class="text">기타</span></label> </span>
+            <span class="inputbox__text"><input type="text" class="inputbox__short"  name="" value="" placeholder="기타사항을 작성해 주세요."></span>
+        </span>
+    </div>
+
+    <h2 class="pollSurvey__title pollMarking__x"><span class="pollSurvey__num">2</span>checkbox 다중선택</h2>
+    <div class="pollSurvey__body">
+        <span class="inputbox__checkbox"> <label><input type="checkbox" name="" value="" class=""><span class="text">네</span></label> </span>
+        <span class="inputbox__checkbox pollMarking__check"> <label><input type="checkbox" name="" value="" class=""><span class="text">네</span></label> </span>
+        <span class="inputbox__checkbox"> <label><input type="checkbox" name="" value="" class=""><span class="text">네</span></label> </span>
+        <span class="inputbox__checkbox"> <label><input type="checkbox" name="" value="" class=""><span class="text">네</span></label> </span>
+        <span class="inputbox__complex">
+            <span class="inputbox__checkbox"> <label><input type="checkbox" name="" value=""><span class="text">기타</span></label> </span>
+            <span class="inputbox__text"><input type="text" class="inputbox__short"  name="" value="" placeholder="기타사항을 작성해 주세요."></span>
+        </span>
+    </div>
+    
+    <h2 class="pollSurvey__title pollMarking__o"><span class="pollSurvey__num">3</span>단일 선택형 (이미지 기본)</h2>
+    <div class="pollSurvey__body">
+        <div class="pollTyImage">
+            <span class="inputbox__radio"> <label><img src="http://placehold.it/173x153" alt="" class="ipt__img"><input type="radio" name="" value="" class=""><span class="text">checkbox</span></label> </span>
+            <span class="inputbox__radio"> <label><img src="http://placehold.it/173x153" alt="" class="ipt__img"><input type="radio" name="" value="" class=""><span class="text">하나의 질환에 대해 연속적인 정보를 얻을 수 있다.</span></label> </span>
+            <span class="inputbox__radio"> <label><img src="http://placehold.it/173x153" alt="" class="ipt__img"><input type="radio" name="" value="" class=""><span class="text">checkbox</span></label> </span>
+            <span class="inputbox__radio"> <label><img src="http://placehold.it/173x153" alt="" class="ipt__img"><input type="radio" name="" value="" class=""><span class="text">checkbox</span></label> </span>
+        </div>
+    </div>
+    
+    <h2 class="pollSurvey__title pollMarking__x"><span class="pollSurvey__num">4</span>다중 선택형 (이미지 기본)</h2>
+    <div class="pollSurvey__body">
+        <div class="pollTyImage">
+            <span class="inputbox__checkbox"> <label><img src="http://placehold.it/173x153" alt="" class="ipt__img"><input type="checkbox" name="" value="" class=""><span class="text">checkbox</span></label> </span>
+            <span class="inputbox__checkbox pollMarking__check"> <label><img src="http://placehold.it/173x153" alt="" class="ipt__img"><input type="checkbox" name="" value="" class=""><span class="text">신형 카니발 내장 공개…기어노브 방식은 두 가지</span></label> </span>
+            <span class="inputbox__checkbox"> <label><img src="http://placehold.it/173x153" alt="" class="ipt__img"><input type="checkbox" name="" value="" class=""><span class="text">checkbox</span></label> </span>
+            <span class="inputbox__checkbox"> <label><img src="http://placehold.it/173x153" alt="" class="ipt__img"><input type="checkbox" name="" value="" class=""><span class="text">checkbox</span></label> </span>
+        </div>
+    </div>
+    
+</div> 
+<!-- // 결과화면 -->
+
+    <div class="eTest__resultBtns">
+        <!-- 1. 60점 미만일때 -->
+        <button class="button blue">재응시</button>
+
+        <!-- 2. 60점 이상일때 -->
+        <button class="button blue">e-Test 결과닫기</button>
+    </div>
+
+</div>
+
+
+<script>
+    // 60점 미만일 때 들어가야하는 스크립트입니다.
+    // 틀린 문제에 대한 답을 가려주는 처리를 위한 스크립트입니다.
+    $('.pollMarking__check').removeClass('pollMarking__check');
+</script>
+
+
+
+</body>
+</html>

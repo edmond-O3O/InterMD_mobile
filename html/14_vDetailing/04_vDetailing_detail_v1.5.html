@@ -1,0 +1,420 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> Inter MD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+<script src="../../js/plugins/swiper_3.3.1.js"></script>
+<script src="../../js/ui_script_m.js"></script>
+<body>
+<div class="pageWrap" data-role="page">
+
+
+    <!-- S: header -->
+    <div class="detail__topline"> 
+        <a href="#" class="detail__btnback"><i class="xi-angle-left"></i></a>
+        <h2>v-Detailing</h2>
+    </div>
+    <!-- E: header -->
+
+<div class="contentBody">
+
+    <!-- S: vDetailng 디테일 -->
+    <div class="vDt__detail">
+        
+
+        <!-- S: 상단 배너 -->
+        <div class="vDtDetail__banner swiper-container">
+            <div class="vDtDetail__bnWrapper swiper-wrapper">
+                <div class="swiper-slide vDtDetail__bnSlide">
+                    <video id="video" autoplay="" loop="" muted="" playsinline="" poster="" controls="true"><!-- 230315 controls="true" 속성 추가 -->
+                        <source src="https://t-vdtf.intermd.co.kr/uploads/PRVOD/1675925995623.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="swiper-slide vDtDetail__bnSlide"><img src="https://via.placeholder.com/700x300" alt=""></div>
+                <div class="swiper-slide vDtDetail__bnSlide"><img src="https://via.placeholder.com/700x300" alt=""></div>
+            </div>
+
+            <!-- Add Pagination -->
+            <div class="vDtDetail__bnPaging swiper-pagination"></div>
+
+            <script>
+                $(function(){
+                    var vDtDetailBanner = new Swiper('.vDtDetail__banner', {
+                        slidesPerView: 'auto',
+                        preventClicks: true,
+                        preventClicksPropagation: false,
+                        observer: true,
+                        observeParents: true,
+                        loop: false,
+                        pagination: '.vDtDetail__bnPaging'
+                    });
+                })
+            </script>
+        </div>
+        <!-- E: 상단 배너 -->
+
+
+
+        <div class="vDtDetail__conts">
+
+            <div class="vDtDetail__member">
+                <div class="vDtDetail__memberTxt">
+                    <span><b>38명의 </b>의사회원이 참여하셨어요!</span>
+                </div>
+            </div>
+
+            <div class="vDtDetail__title">
+                신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다.
+            </div>
+
+            <div id="vDtList__badgeSwiper" class="swiper-container vDtList__badgeSwiper">
+                <div class="swiper-wrapper"> 
+                    <a href="#" class="swiper-slide vDtList__badge">아스트라제네카</a>
+                    <a href="#" class="swiper-slide vDtList__badge">코로나백신</a>
+                    <a href="#" class="swiper-slide vDtList__badge">astrazeneca gmb</a>
+                    <a href="#" class="swiper-slide vDtList__badge">타이레놀</a>
+                    <a href="#" class="swiper-slide vDtList__badge">통증</a>
+                </div>
+                <script>
+                    var badgeSwiper;
+                    var spaceMargin = 6;
+                    $(function(){
+                        badgeSwiper = new Swiper('#vDtList__badgeSwiper', {
+                            slidesPerView: 'auto',
+                            spaceBetween: spaceMargin,
+                            preventClicks: true,
+                            preventClicksPropagation: false,
+                            observer: true,
+                            observeParents: true,
+                            loop: false,
+                            freeMode: true,
+                        });
+                    })
+                    $(document).ready(function() {
+                        var badge = [];
+                        var badgeWidth = 0;
+                        var marginRight = spaceMargin;
+                        badge = $('#vDtList__badgeSwiper .vDtList__badge');
+                        var $wrapper = $('#vDtList__badgeSwiper .swiper-wrapper');
+                        for(var i=0; i<badge.length; i++){
+                            badgeWidth += badge[i].offsetWidth;
+                            badgeWidth += marginRight*badge.length
+                        }
+                        if(badgeWidth > $wrapper[0].offsetWidth){
+                            $('#vDtList__badgeSwiper').addClass('overflow');
+                        }
+                    });
+                </script>
+            </div>
+
+
+            <div class="vDtList__profile">
+                <!-- 220609 : 프로필 팝업 버튼 추가 -->
+                <div class="vDtList__profilePhoto" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg')">
+                    <span class="vDtList__profileViewBtn">
+                        <span class="searchIcon"></span>
+                    </span>
+                </div>
+                <!-- //220609 : 프로필 팝업 버튼 추가 -->
+                                
+                <!-- 220609 : 프로필 팝업 -->
+                <div class="vDtList__profileModal">
+                    <a href="" class="profileModal__closeBtn"><span class="closeIco"></span></a>
+                    <div class="profileModal__profile">
+                        <div class="profileModal__profilePhoto" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg')"></div>
+                        <div class="profileModal__profileName">강서준</div>
+                        <div class="profileModal__profileFrom">화이자제약</div>
+                    </div>
+                    <div class="profileModal__profileMore">
+                        <div class="row row__flex">
+                            <div class="tit">수락률</div>
+                            <div class="desc">100%</div>
+                        </div>
+                        <div class="row">
+                            <div class="tit">담당 브랜드</div>
+                            <div class="desc badges">
+                                <span class="vDtList__badge">아스트라제네카</span>
+                                <span class="vDtList__badge">코로나백신</span>
+                                <span class="vDtList__badge">astrazeneca gmb</span>
+                                <span class="vDtList__badge">타이레놀</span>
+                                <span class="vDtList__badge">통증</span>
+                                <span class="vDtList__badge">모나리사</span>
+                                <span class="vDtList__badge">스마트에코</span>
+                                <span class="vDtList__badge">브루팬B</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $(".vDtList__profilePhoto").on("click", function(){
+                        $(".vDtList__profileModal").addClass("active");
+                        $("body, html").addClass("profileModalActive");
+                    });
+                    $(".profileModal__closeBtn").on("click", function(e){
+                        e.preventDefault();
+                        $(".vDtList__profileModal").removeClass("active");
+                        $("body, html").removeClass("profileModalActive");
+                    });
+                </script>
+                <!-- //220609 : 프로필 팝업 -->
+
+                <div class="vDtList__name">강서준 MR</div>
+                <div class="vDtList__from">화이자제약</div>
+                
+                <!-- S: 230220_vDt_v1.5 -->
+                <div class="vDtNew__matchingIco">
+                    <span class="live">LIVE</span>바로매칭
+                </div>
+                <!-- E: 230220_vDt_v1.5 -->
+            </div>
+
+            <!-- S: 디테일링 내용 -->
+            <div class="vDtDetail__desc">
+                <div class="vDtDetail__descTit">
+                    디테일링 내용
+                </div>
+                <div class="vDtDetail__descTxt">   
+                    <textarea class="dexcTxtCont" disabled>안녕하세요
+ab제약 김길동입니다.
+                        
+*코로나 백신 외에 담당 의약품과 관련하여 궁금하신 점 언제든지 물어봐 주세요!
+asdasd
+sadsad
+asdasdasdasd
+asd
+asd
+asd
+asd</textarea>
+                        <script>
+                            let textEle = $('textarea.dexcTxtCont');
+                            textEle[0].style.height = 'auto';
+                            var textEleHeight = textEle.prop('scrollHeight');
+                            textEle.css('height', textEleHeight);
+                        </script>
+                </div>
+            </div>
+            <!-- E: 디테일링 내용 -->
+
+            <!-- 220429 : 브랜드 정보 추가 -->
+            <div class="vDtDetail__toggleInfo">
+                <p class="vDtDetail__toggleInfoTit">브랜드 정보 보기</p>
+                <div class="vDtDetail__toggleInfoConts">
+                    브랜드 정보입니다. 브랜드 정보입니다. 브랜드 정보입니다.<br>
+                    브랜드 정보입니다.<br>
+                    브랜드 정보입니다. 브랜드 정보입니다.<br>
+                    브랜드 정보입니다. 브랜드 정보입니다.
+                </div>
+            </div>
+            <script>
+                $(".vDtDetail__toggleInfo .vDtDetail__toggleInfoTit").on("click", function(){
+                    $(this).stop().toggleClass("active")
+                    $(this).siblings(".vDtDetail__toggleInfoConts").stop().slideToggle()
+                })
+            </script>
+            <!-- //220429 : 브랜드 정보 추가 -->
+
+            <!-- S: 면담 안내 -->
+            <div class="vDtDetail__interview">                
+                <div class="vDtDetail__prfBox"><!-- 220429 : 디테일 기간 추가 -->
+                    <div class="vDtDetail__prfTit">
+                        디테일 기간
+                    </div>
+                    <div class="vDtDetail__prfDesc">
+                        2021.06.12 ~ 2021.08.22<!-- 종료되었을 경우 <span class="vDtDetail__prfDescBookEnd">예약 기간이 종료되었습니다.</span> -->
+                    </div>
+                </div>
+                <div class="vDtDetail__prfBox">
+                    <div class="vDtDetail__prfTit">
+                        면담 시간
+                    </div>
+                    <div class="vDtDetail__prfDesc">
+                        기본 4분
+                    </div>
+                </div>
+                <div class="vDtDetail__prfBox">
+                    <div class="vDtDetail__prfTit">
+                        면담 방법
+                    </div>
+                    <div class="vDtDetail__prfDesc">
+                        인터엠디 화상채팅 사용 <br /> <!-- 0630 : 텍스트변경 -->
+                        (예약한 시간에 화상채팅으로 면담 참여)
+                    </div>
+                </div>
+            </div>
+            <!-- E: 면담 안내 -->
+
+            <!-- S: 이용안내 -->
+            <div class="vDtDetail__info">
+                <div class="vDtDetail__infoTit">
+                    이용안내
+                </div>
+                <ul class="vDtDetail__infoDesc">
+                    <li>
+                        예약시간을 꼭 지켜주세요!<br>
+                        면담은 실시간채팅으로 진행됩니다.
+                    </li>
+                    <li>
+                        면담시간 5분전 모바일 푸시 및 문자메시지로<br>
+                        알림이 전송됩니다. 
+                    </li>
+                    <li>
+                        인터엠디(PC 또는 모바일앱)에 접속해 주세요.
+                    </li>
+                </ul>
+            </div>
+            <!-- E: 이용안내 -->
+
+            <!-- S: 230227_이용후기 -->
+            <div class="vDtDetail__review">
+                <div class="vDtDetail__reviewInr">
+                    <div class="vDtDetail__reviewTit">
+                        <div class="tit">OOO 담당자와 면담하신 선생님들은 아래와 같이 후기 남겨 주셨습니다.</div>
+                        <span class="desc">일부 내용만 발췌하여 노출</span>
+                    </div>
+                    <div class="vDtDetail__reviewList">
+                        <ul>
+                            <li>
+                                <span class="desc">정형외과 전문의 10년차</span>
+                                <div class="cont">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                                </div>
+                            </li>
+                            <li>
+                                <span class="desc">정형외과 전문의 10년차</span>
+                                <div class="cont">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- E: 230227_이용후기 -->
+
+            <!-- S: 다른 디테일링보기 -->
+            <div class="vDtDetail__other">
+
+                <!-- 왼쪽 -->
+                <div class="vDtDetail__othLt">
+                    <div class="vDtDetail__othTit">
+                        강서준 MR의<br>
+                        다른 디테일링이<br>
+                        궁금하시다면?
+                    </div>
+                    <a href="#" class="vDtDetail__othBtn">
+                        <span>전체보기</span>
+                        <i class="vDtDetail__othBtnIcon"></i>
+                    </a>
+                </div>
+
+                <!-- 오른쪽 -->
+                <div class="vDtDetail__othRt">
+                    <div class="vDtDetail__otherSwiper swiper-container">
+                        <div class="swiper-wrapper">
+                            <div onclick="location.href='#'" class="vDtList__item swiper-slide">
+                                <div class="vDtList__time">4min</div>
+                                <div class="vDtList__img" style="background-image: url(http://placehold.it/330x186.png/);"></div>
+                                <div class="vDtList__detail">
+                                    <div class="vDtList__pplCnt"><b>38명</b> 참여!</div>
+                                    <div class="vDtList__title">
+                                        <span class="vDtList__titleTxt">
+                                            신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다. 신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다.
+                                        </span>
+                                    </div>
+                                    <div class="vDtList__badgeSwiper overflow">
+                                        <div class="badgeSwiper-wrapper"> 
+                                            <span class="vDtList__badge">아스트라제네카</span>
+                                            <span class="vDtList__badge">코로나백신</span>
+                                            <span class="vDtList__badge">astrazeneca gmb</span>
+                                            <span class="vDtList__badge">타이레놀</span>
+                                            <span class="vDtList__badge">통증</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div onclick="location.href='#'" class="vDtList__item swiper-slide">
+                                <div class="vDtList__time">4min</div>
+                                <div class="vDtList__img" style="background-image: url(http://placehold.it/330x186.png/);"></div>
+                                <div class="vDtList__detail">
+                                    <div class="vDtList__pplCnt"><b>38명</b> 참여!</div>
+                                    <div class="vDtList__title">
+                                        <span class="vDtList__titleTxt">
+                                            신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다. 신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다.
+                                        </span>
+                                    </div>
+                                    <div class="vDtList__badgeSwiper overflow">
+                                        <div class="badgeSwiper-wrapper"> 
+                                            <span class="vDtList__badge">아스트라제네카</span>
+                                            <span class="vDtList__badge">코로나백신</span>
+                                            <span class="vDtList__badge">astrazeneca gmb</span>
+                                            <span class="vDtList__badge">타이레놀</span>
+                                            <span class="vDtList__badge">통증</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div onclick="location.href='#'" class="vDtDetail__otherView swiper-slide">
+                                <div class="vDtDetail__otherViewTxt">
+                                    다른 디테일링<br>
+                                    더보기
+                                </div>
+                                <button class="vDtDetil__othViewBtn">
+                                    <i class="vDtDetil__othViewIcon"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <script>
+                            var otherSwiper;
+                            $(function(){
+                                otherSwiper= new Swiper('.vDtDetail__otherSwiper', {
+                                    slidesPerView: 'auto',
+                                    spaceBetween: 12,
+                                    preventClicks: true,
+                                    preventClicksPropagation: false,
+                                    observer: true,
+                                    observeParents: true,
+                                    loop: false,
+                                    freeMode: true,
+                                });
+                            })
+                        </script>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- E: 다른 디테일링보기 -->
+
+
+
+
+        </div>
+
+        <!-- S: 230220_vDt_v1.5 -->
+        <div class="vDtNewDetail__bottomBtn">
+            <button class="vDtNewDetail__bookBtn on">예약하기</button>
+            <button class="vDtNewDetail__matchingBtn on">
+                <span class="matchingState">즉시 상담 가능</span>
+                <span class="live">LIVE</span><strong>바로매칭</strong>시작하기
+            </button>
+        </div>
+        <!-- E: 230220_vDt_v1.5 -->
+
+    </div>
+    <!-- E: vDetailng 디테일 -->
+    
+</div>
+
+
+
+
+</div>
+</body>
+</html>

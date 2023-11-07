@@ -1,0 +1,582 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> Inter MD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+<script src="../../js/plugins/swiper_3.3.1.js"></script>
+<script src="../../js/ui_script_m.js"></script>
+<body>
+<div class="pageWrap" data-role="page">
+
+
+    <!-- S: header -->
+    <div class="detail__topline"> 
+        <a href="#" class="detail__btnback"><i class="xi-angle-left"></i></a>
+        <h2>v-Detailing</h2>
+        <!-- 0630 : v-Detailing 이란? 버튼추가, 하단 연관되는 레이어 추가 -->
+        <button class="vDtHdrBtn" onclick="$('.vDtLayer').addClass('on').show();return false;"><span class="blind">v-Detailing 이란?</span></button>
+    </div>
+    <!-- E: header -->
+
+<div class="contentBody">
+
+    <!-- S: vDetailng 리스트 -->
+    <div class="vDt__list">
+
+
+        <!-- 상단 비디오 영역 -->
+        <div class="vDtList__topVideo">
+            <div class="vDtList__video">
+                <video id="video" style="position:absolute;top:0;left:0;width:100%;height:100%;" autoplay >
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+                </video>
+            </div>
+
+            <!-- 소리 제어 버튼 -->
+            <button class="vDtVideo__soundBtn mute"
+                onclick="$('.vDtVideo__soundBtn.mute').hide();$('.vDtVideo__soundBtn.speak').show();">
+                <i class="vDtVideo__muteIcon"></i>
+            </button>
+
+            <button class="vDtVideo__soundBtn speak" style="display: none;"
+                onclick="$('.vDtVideo__soundBtn.speak').hide();$('.vDtVideo__soundBtn.mute').show();">
+                <i class="vDtVideo__speakIcon"></i>
+            </button>
+            <!-- // 소리 제어 버튼 -->
+
+            <div class="vDtVideo__wrapper">
+                <div class="vDtVideo__desc">
+                    <div class="vDtVideo__tit">
+                        <b class="vDtVideo__name">이지안MR</b>
+                        <div class="vDtVideo__from">인터엠디 케토톱 동전파스 뭐가더 효과 좋은가 아스트라제네카 화이자</div>
+                    </div>
+                    <a href="#" class="vDtVideo__nextBtn">
+                        <i class="vDtVideo__nextIcon"></i>
+                    </a>
+                </div>
+
+                <div class="swiper-container vDtVideo__mrSwiper">
+                    <div class="swiper-wrapper"> 
+                        <button href="#" class="swiper-slide on">
+                           <div class="vDtVideo__mrPhoto" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg')"></div> 
+                           <div class="vDtVideo__mrName">이지안MR</div>
+                        </button>
+                        <button href="#" class="swiper-slide">
+                            <div class="vDtVideo__mrPhoto" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg')"></div> 
+                            <div class="vDtVideo__mrName">이지안MR</div>
+                        </button>
+                        <button href="#" class="swiper-slide">
+                            <div class="vDtVideo__mrPhoto" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg')"></div> 
+                            <div class="vDtVideo__mrName">이지안MR</div>
+                        </button>
+                        <button href="#" class="swiper-slide">
+                             <div class="vDtVideo__mrPhoto" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg')"></div> 
+                             <div class="vDtVideo__mrName">이지안MR</div>
+                        </button>
+                        <button href="#" class="swiper-slide">
+                            <div class="vDtVideo__mrPhoto" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg')"></div> 
+                            <div class="vDtVideo__mrName">이지안MR</div>
+                        </button>
+                        <button href="#" class="swiper-slide">
+                             <div class="vDtVideo__mrPhoto" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg')"></div> 
+                             <div class="vDtVideo__mrName">이지안MR</div>
+                        </button>
+                    </div>
+                    <script>
+                        var mrSwiper
+                        $(function(){
+                            mrSwiper = new Swiper('.vDtVideo__mrSwiper', {
+                                slidesPerView: 'auto',
+                                spaceBetween: 10,
+                                preventClicks: true,
+                                preventClicksPropagation: false,
+                                observer: true,
+                                observeParents: true,
+                                loop: false,
+                                freeMode: true,
+
+                                onTap: function(swiper, event){
+                                    var clickidx = mrSwiper.clickedIndex;
+                                    if(clickidx != undefined) {
+                                        mrSwiper.slides.removeClass('on').eq(clickidx).addClass('on');
+                                        mrSwiper.slideTo(clickidx -2, 300);
+                                    }
+                                }
+                            });
+                        })
+                    </script>
+                </div>
+
+
+            </div>
+
+        </div>
+        <!-- 상단 비디오 영역 -->
+
+
+
+
+        <!-- 0630 : 검색하기 버튼형식 변경 -->
+        <div class="vDtList__search">
+            <button class="vDtSearch__btn">
+                <span class="vDtSearch__btnTxt">의약품, 제약회사, MR을 검색해보세요.</span>
+                <i class="vDtSearch__btnIcon"></i>
+            </button>
+        </div>
+
+        <div class="vDtList__lists">
+            <div class="vDtConts__title">
+                <div class="vDtConts__titleTxt"><span>참여가능한 v-Detailing</span></div>
+            </div>
+
+            <!-- 0630 : <div class="vDtList__card__wrapper"></div> 2개씩 묶었던것 통합 (유지보수 편의위해 통합했는데 기존처럼 나눠도 이슈는 없습니다) -->
+            <!-- S: Detailing  카드 wrapper -->
+            <div class="vDtList__card__wrapper">
+                <!-- S: Detailing  카드 -->
+                <div class="vDtList__card">
+                    <div class="vDtList__profile">
+                        <div class="vDtList__profilePhoto" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg')"></div>
+                        <div class="vDtList__profileDetail">
+                            <div class="vDtList__profileName">강서준 MR</div>
+                            <div class="vDtList__profileFrom">화이자제약 화이자제약 화이자제약 화이자제약 화이자제약 화이자제약 화이자제약</div>
+                        </div>
+                    </div>
+                    <div onclick="location.href='#'" class="vDtList__item">
+                        <div class="vDtList__time">4min</div>
+                        <div class="vDtList__img" style="background-image: url(http://placehold.it/330x186.png/);"></div>
+                        <div class="vDtList__detail">
+                            <div class="vDtList__pplCnt"><b>38명</b> 참여!</div>
+                            <div class="vDtList__title">
+                                <span class="vDtList__titleTxt">
+                                    신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다. 신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다.
+                                </span>
+                            </div>
+                            <div id="vDtList__badgeSwiper" class="swiper-container vDtList__badgeSwiper">
+                                <div class="swiper-wrapper"> 
+                                    <a href="#" class="swiper-slide vDtList__badge">아스트라제네카</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">코로나백신</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">astrazeneca gmb</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">타이레놀</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">통증</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- E: Detailing 카드 -->
+                <div class="vDtList__card">
+                    <div class="vDtList__profile">
+                        <div class="vDtList__profilePhoto" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg')"></div>
+                        <div class="vDtList__profileDetail">
+                            <div class="vDtList__profileName">강서준 MR</div>
+                            <div class="vDtList__profileFrom">화이자제약 화이자제약 화이자제약 화이자제약 화이자제약 화이자제약 화이자제약</div>
+                        </div>
+                    </div>
+                    <div onclick="location.href='#'" class="vDtList__item">
+                        <div class="vDtList__time">4min</div>
+                        <div class="vDtList__img" style="background-image: url(http://placehold.it/330x186.png/);"></div>
+                        <div class="vDtList__detail">
+                            <div class="vDtList__pplCnt"><b>38명</b> 참여!</div>
+                            <div class="vDtList__title">
+                                <span class="vDtList__titleTxt">
+                                    신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다. 신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다.
+                                </span>
+                            </div>
+                            <div id="vDtList__badgeSwiper" class="swiper-container vDtList__badgeSwiper">
+                                <div class="swiper-wrapper"> 
+                                    <a href="#" class="swiper-slide vDtList__badge">아스트라제네카</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">코로나백신</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">astrazeneca gmb</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">타이레놀</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">통증</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vDtList__card">
+                    <div class="vDtList__profile">
+                        <div class="vDtList__profilePhoto" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg')"></div>
+                        <div class="vDtList__profileDetail">
+                            <div class="vDtList__profileName">강서준 MR</div>
+                            <div class="vDtList__profileFrom">화이자제약 화이자제약 화이자제약 화이자제약 화이자제약 화이자제약 화이자제약</div>
+                        </div>
+                    </div>
+                    <div onclick="location.href='#'" class="vDtList__item">
+                        <div class="vDtList__time">4min</div>
+                        <div class="vDtList__img" style="background-image: url(http://placehold.it/330x186.png/);"></div>
+                        <div class="vDtList__detail">
+                            <div class="vDtList__pplCnt"><b>38명</b> 참여!</div>
+                            <div class="vDtList__title">
+                                <span class="vDtList__titleTxt">
+                                    신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다. 신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다.
+                                </span>
+                            </div>
+                            <div id="vDtList__badgeSwiper" class="swiper-container vDtList__badgeSwiper">
+                                <div class="swiper-wrapper"> 
+                                    <a href="#" class="swiper-slide vDtList__badge">아스트라제네카</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">코로나백신</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">astrazeneca gmb</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">타이레놀</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">통증</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vDtList__card">
+                    <div class="vDtList__profile">
+                        <div class="vDtList__profilePhoto" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg')"></div>
+                        <div class="vDtList__profileDetail">
+                            <div class="vDtList__profileName">강서준 MR</div>
+                            <div class="vDtList__profileFrom">화이자제약 화이자제약 화이자제약 화이자제약 화이자제약 화이자제약 화이자제약</div>
+                        </div>
+                    </div>
+                    <div onclick="location.href='#'" class="vDtList__item">
+                        <div class="vDtList__time">4min</div>
+                        <div class="vDtList__img" style="background-image: url(http://placehold.it/330x186.png/);"></div>
+                        <div class="vDtList__detail">
+                            <div class="vDtList__pplCnt"><b>38명</b> 참여!</div>
+                            <div class="vDtList__title">
+                                <span class="vDtList__titleTxt">
+                                    신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다. 신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다.
+                                </span>
+                            </div>
+                            <div id="vDtList__badgeSwiper" class="swiper-container vDtList__badgeSwiper">
+                                <div class="swiper-wrapper"> 
+                                    <a href="#" class="swiper-slide vDtList__badge">아스트라제네카</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">코로나백신</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">astrazeneca gmb</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">타이레놀</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">통증</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- E: Detailing 카드 wrapper -->
+
+
+            <!-- 0630 :  텍스트 변경, MR관리 바로가기 버튼 -->
+            <!-- S: My 카드 -->
+            <div class="vDtList__myCard">
+                <div class="vDtList__profile">
+                    <div class="vDtList__profilePhoto" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg')"></div>
+                    <div class="vDtList__profileDetail">
+                        <div class="vDtList__profileName">강서준 MR</div>
+                        <div class="vDtList__profileFrom">화이자제약 화이자제약 화이자제약 화이자제약 화이자제약 화이자제약 화이자제약</div>
+                    </div>
+                    <a href="#" class="vDtList__myBtn">MY</a>
+                </div>
+                <div class="vDtList__mcDetail">
+                    <div class="vDtList__mcBox">
+                        <div class="vDtList__mcTitle">
+                            다음 예정된<br>
+                            v-Detailing
+                        </div>
+                        <div class="vDtList__mcDesc">
+                            <div class="vDtList__mcDate">03.12(화) 18:00</div>
+                            <div class="vDtList__mcTime">
+                                4min
+                            </div>
+                            <div class="vDtList__mcTxt">
+                                신장애 간장애 환자에게 처방 가능한 혈압약 설명
+                            </div>
+                            <!-- 0630 : 예정된 디테일링 없는경우 -->
+                            <!-- <div class="vDtList__mcTxt">예정된 v-Detailing이 없습니다.</div> -->
+                            <a href="#" class="vDtList__mcBookBtn">
+                                나의 예약바로가기
+                                <i class="vDtList__mcBookIcon"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="vDtList__mcBox">
+                        <div class="vDtList__mcTitle">
+                            MR
+                        </div>
+                        <div class="vDtList__mcDesc">
+                            <p>함께한 MR이 <b>16</b>명 있습니다!</p>
+                             <!-- 0630 : 바로가기 버튼 -->
+                            <a href="#" class="vDtList__mcBookBtn">
+                                MR 관리 바로가기
+                                <i class="vDtList__mcBookIcon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- E: My 카드 -->
+            
+            <!--  0630 : 배너 추가 -->
+            <!-- S: banner -->
+            <div class="vDtList__bannerImg">
+                <img src="http://placehold.it/375x380.png" alt="">
+            </div>
+            <!-- E: banner -->
+
+            <div class="vDtList__card__wrapper">
+                <!-- S: Detailing  카드 -->
+                <div class="vDtList__card">
+                    <div class="vDtList__profile">
+                        <div class="vDtList__profilePhoto" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg')"></div>
+                        <div class="vDtList__profileDetail">
+                            <div class="vDtList__profileName">강서준 MR</div>
+                            <div class="vDtList__profileFrom">화이자제약 화이자제약 화이자제약 화이자제약 화이자제약 화이자제약 화이자제약</div>
+                        </div>
+                    </div>
+                    <div onclick="location.href='#'" class="vDtList__item">
+                        <div class="vDtList__time">4min</div>
+                        <div class="vDtList__img" style="background-image: url(http://placehold.it/330x186.png/);"></div>
+                        <div class="vDtList__detail">
+                            <div class="vDtList__pplCnt"><b>38명</b> 참여!</div>
+                            <div class="vDtList__title">
+                                <span class="vDtList__titleTxt">
+                                    신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다. 신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다.
+                                </span>
+                            </div>
+                            <div id="vDtList__badgeSwiper" class="swiper-container vDtList__badgeSwiper">
+                                <div class="swiper-wrapper"> 
+                                    <a href="#" class="swiper-slide vDtList__badge">아스트라제네카</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">코로나백신</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">astrazeneca gmb</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">타이레놀</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">통증</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- E: Detailing 카드 -->
+                <div class="vDtList__card">
+                    <div class="vDtList__profile">
+                        <div class="vDtList__profilePhoto" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg')"></div>
+                        <div class="vDtList__profileDetail">
+                            <div class="vDtList__profileName">강서준 MR</div>
+                            <div class="vDtList__profileFrom">화이자제약 화이자제약 화이자제약 화이자제약 화이자제약 화이자제약 화이자제약</div>
+                        </div>
+                    </div>
+                    <div onclick="location.href='#'" class="vDtList__item">
+                        <div class="vDtList__time">4min</div>
+                        <div class="vDtList__img" style="background-image: url(http://placehold.it/330x186.png/);"></div>
+                        <div class="vDtList__detail">
+                            <div class="vDtList__pplCnt"><b>38명</b> 참여!</div>
+                            <div class="vDtList__title">
+                                <span class="vDtList__titleTxt">
+                                    신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다. 신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다.
+                                </span>
+                            </div>
+                            <div id="vDtList__badgeSwiper" class="swiper-container vDtList__badgeSwiper">
+                                <div class="swiper-wrapper"> 
+                                    <a href="#" class="swiper-slide vDtList__badge">아스트라제네카</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">코로나백신</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">astrazeneca gmb</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">타이레놀</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">통증</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vDtList__card">
+                    <div class="vDtList__profile">
+                        <div class="vDtList__profilePhoto" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg')"></div>
+                        <div class="vDtList__profileDetail">
+                            <div class="vDtList__profileName">강서준 MR</div>
+                            <div class="vDtList__profileFrom">화이자제약 화이자제약 화이자제약 화이자제약 화이자제약 화이자제약 화이자제약</div>
+                        </div>
+                    </div>
+                    <div onclick="location.href='#'" class="vDtList__item">
+                        <div class="vDtList__time">4min</div>
+                        <div class="vDtList__img" style="background-image: url(http://placehold.it/330x186.png/);"></div>
+                        <div class="vDtList__detail">
+                            <div class="vDtList__pplCnt"><b>38명</b> 참여!</div>
+                            <div class="vDtList__title">
+                                <span class="vDtList__titleTxt">
+                                    신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다. 신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다.
+                                </span>
+                            </div>
+                            <div id="vDtList__badgeSwiper" class="swiper-container vDtList__badgeSwiper">
+                                <div class="swiper-wrapper"> 
+                                    <a href="#" class="swiper-slide vDtList__badge">아스트라제네카</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">코로나백신</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">astrazeneca gmb</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">타이레놀</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">통증</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vDtList__card">
+                    <div class="vDtList__profile">
+                        <div class="vDtList__profilePhoto" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg')"></div>
+                        <div class="vDtList__profileDetail">
+                            <div class="vDtList__profileName">강서준 MR</div>
+                            <div class="vDtList__profileFrom">화이자제약 화이자제약 화이자제약 화이자제약 화이자제약 화이자제약 화이자제약</div>
+                        </div>
+                    </div>
+                    <div onclick="location.href='#'" class="vDtList__item">
+                        <div class="vDtList__time">4min</div>
+                        <div class="vDtList__img" style="background-image: url(http://placehold.it/330x186.png/);"></div>
+                        <div class="vDtList__detail">
+                            <div class="vDtList__pplCnt"><b>38명</b> 참여!</div>
+                            <div class="vDtList__title">
+                                <span class="vDtList__titleTxt">
+                                    신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다. 신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다.
+                                </span>
+                            </div>
+                            <div id="vDtList__badgeSwiper" class="swiper-container vDtList__badgeSwiper">
+                                <div class="swiper-wrapper"> 
+                                    <a href="#" class="swiper-slide vDtList__badge">아스트라제네카</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">코로나백신</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">astrazeneca gmb</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">타이레놀</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">통증</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="vDtList__bannerImg">
+                <img src="http://placehold.it/375x80.png" alt="">
+            </div>
+
+
+            
+            <div class="vDtList__card__wrapper">
+
+
+
+                <!-- S: Detailing  카드 -->
+                <div class="vDtList__card">
+                    <div class="vDtList__profile">
+                        <div class="vDtList__profilePhoto" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg')"></div>
+                        <div class="vDtList__profileDetail">
+                            <div class="vDtList__profileName">강서준 MR</div>
+                            <div class="vDtList__profileFrom">화이자제약 화이자제약 화이자제약 화이자제약 화이자제약 화이자제약 화이자제약</div>
+                        </div>
+                    </div>
+                    <div onclick="location.href='#'" class="vDtList__item">
+                        <div class="vDtList__time">4min</div>
+                        <div class="vDtList__img" style="background-image: url(http://placehold.it/330x186.png/);"></div>
+                        <div class="vDtList__detail">
+                            <div class="vDtList__pplCnt"><b>38명</b> 참여!</div>
+                            <div class="vDtList__title">
+                                <span class="vDtList__titleTxt">
+                                    신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다. 신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다.
+                                </span>
+                            </div>
+                            <div id="vDtList__badgeSwiper" class="swiper-container vDtList__badgeSwiper">
+                                <div class="swiper-wrapper"> 
+                                    <a href="#" class="swiper-slide vDtList__badge">아스트라제네카</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">코로나백신</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">astrazeneca gmb</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">타이레놀</a>
+                                    <a href="#" class="swiper-slide vDtList__badge">통증</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- E: Detailing 카드 -->
+    
+    
+                <!-- S: Detailing  카드 -->
+                <div class="vDtList__card">
+                    <div class="vDtList__profile">
+                        <div class="vDtList__profilePhoto" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg')"></div>
+                        <div class="vDtList__profileDetail">
+                            <div class="vDtList__profileName">강서준 MR</div>
+                            <div class="vDtList__profileFrom">화이자제약</div>
+                        </div>
+                    </div>
+                    <div onclick="location.href='#'" class="vDtList__item">
+                        <div class="vDtList__time">4min</div>
+                        <div class="vDtList__img" style="background-image: url(http://placehold.it/330x186.png/);"></div>
+                        <div class="vDtList__detail">
+                            <div class="vDtList__title">
+                                <span class="vDtList__titleTxt">
+                                    신장애 간장애
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- E: Detailing 카드 -->
+
+
+            </div>
+
+
+        </div>
+    </div>
+    <!-- E: vDetailng 리스트 -->
+    
+</div>
+
+
+
+
+</div>
+<div class="vDtLayer fullLayer">
+    <div class="vDtLayer__inner">
+        <div class="detail__topline"> 
+            <h2>v-Detailing이란?</h2>
+            <button class="vDtLayer__btn" onclick="$('.vDtLayer').removeClass('on').delay(500).hide(0);return false;"><i class="xi-close"></i><span class="blind">닫기</span></button>
+        </div>
+        
+        <img src="https://tw20.intermd.co.kr/img/vdetailing/v-Detailing_guide.png" alt="" class="vDtLayer__img">
+
+    </div>
+    <div class="vDtLayer__dim" ontouchstart="$('.vDtLayer').removeClass('on').delay(500).hide(0);"></div>
+</div>
+
+<!-- 0630 :  Detailing 카드 내 badge slider script 하단 공통으로 취합 -->
+<script>
+    // 카드 내 약품명 badge slide 공통으로 사용
+    var badgeSwiper;
+    var spaceMargin = 6;
+    $(function(){
+        badgeSwiper = new Swiper('.vDtList__badgeSwiper', {
+            slidesPerView: 'auto',
+            spaceBetween: spaceMargin,
+            preventClicks: true,
+            preventClicksPropagation: false,
+            observer: true,
+            observeParents: true,
+            loop: false,
+            freeMode: true,
+        });
+    })
+    $(document).ready(function() {
+        var badge = [];
+        var badgeWidth = 0;
+        var marginRight = spaceMargin;
+        badge = $('.vDtList__badge');
+        var $wrapper = $('.swiper-wrapper');
+        for(var i=0; i<badge.length; i++){
+            badgeWidth += badge[i].offsetWidth;
+            badgeWidth += marginRight*badge.length
+        }
+        if(badgeWidth > $wrapper[0].offsetWidth){
+            $('.vDtList__badgeSwiper').addClass('overflow');
+        }
+    });
+</script>
+
+</body>
+</html>

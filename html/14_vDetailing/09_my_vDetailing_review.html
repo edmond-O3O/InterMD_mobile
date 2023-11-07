@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> Inter MD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+<script src="../../js/plugins/swiper_3.3.1.js"></script>
+<script src="../../js/ui_script_m.js"></script>
+<body>
+<div class="pageWrap" data-role="page">
+
+
+    <!-- S: header -->
+    <div class="detail__topline">
+        <h2>후기 작성</h2>
+        <a href="#" class="detail__rt"><i class="xi-close"></i><span class="blind">닫기</span></a>
+    </div>
+    <!-- E: header -->
+
+<div class="contentBody">
+
+    <!-- S: vDetailng 후기 -->
+    <div class="vDt__review">
+
+        <div class="vDtRvw__top">
+            <div class="vDtRvw__title">
+                v-Detailing,<br>
+                <b>얼마나 도움이 되셨나요?</b>
+            </div>
+            <div class="vDtRvw__img" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg');"></div>
+        </div>
+
+
+        <!-- S: 후기 작성 -->
+        <div class="vDtRvw__content">
+
+
+            <!-- 만족도 -->
+            <div class="vDtRvw__satft">
+
+                <div class="vDtRvw__satTit">
+                    Detailing의 <b class="vDtStar">만족도</b>
+                </div>
+
+                <!-- 별점 -->
+                <div class="vDtRvw__starBox">
+                    <div class="vDtRvw__star">
+                        <label class="vDtRvw__star__box">
+                            <input type="radio" name="star" id="">
+                            <span class="vDtRvw__star__img"><span class="blind">별 1개</span></span>
+                        </label>
+                        <label class="vDtRvw__star__box">
+                            <input type="radio" name="star" id="">
+                            <span class="vDtRvw__star__img"><span class="blind">별 2개</span></span>
+                        </label>
+                        <label class="vDtRvw__star__box">
+                            <input type="radio" name="star" id="">
+                            <span class="vDtRvw__star__img"><span class="blind">별 3개</span></span>
+                        </label>
+                        <label class="vDtRvw__star__box">
+                            <input type="radio" name="star" id="">
+                            <span class="vDtRvw__star__img"><span class="blind">별 4개</span></span>
+                        </label>
+                        <label class="vDtRvw__star__box">
+                            <input type="radio" name="star" id="">
+                            <span class="vDtRvw__star__img"><span class="blind">별 5개</span></span>
+                        </label>
+                    </div>
+                </div>
+                <!-- 별점 -->
+
+
+
+                <div class="vDtRvw__satTit">
+                    해당 브랜드의 <b class="vDtStar">처방의향</b>
+                </div>
+
+                <div class="vDtRvw__checkWrapper">
+                     <!-- 만족도 체크버튼 -->
+                    <label class="vDtRvw__checkBox">
+                        <input type="radio" name="satifaction" id="">
+                        <span class="vDtRvw__check">있어요</span>
+                    </label>
+                    <label class="vDtRvw__checkBox">
+                        <input type="radio" name="satifaction" id="">
+                        <span class="vDtRvw__check">없어요</span>
+                    </label>
+                    <label class="vDtRvw__checkBox">
+                        <input type="radio" name="satifaction" id="">
+                        <span class="vDtRvw__check">잘 모르겠어요</span>
+                    </label>
+                </div>
+
+
+            </div>
+
+
+            <!-- 요청사항 -->
+            <div class="vDtRvw__ask">
+
+                <div class="vDtRvw__satTit">
+                    요청사항이 있으신가요?
+                </div>
+
+                <div class="vDtRvw__checkWrapper">
+                    <!-- 요청사항 체크버튼 -->
+                    <label class="vDtRvw__checkBox">
+                        <input type="checkbox" name="" id="">
+                        <span class="vDtRvw__check">더 많은 자료가 필요해요</span>
+                    </label>
+                    <label class="vDtRvw__checkBox">
+                        <input type="checkbox" name="" id="">
+                        <span class="vDtRvw__check">샘플이 필요해요</span>
+                    </label>
+                    <label class="vDtRvw__checkBox">
+                        <input type="checkbox" name="" id="">
+                        <span class="vDtRvw__check">직접 방문해주세요</span>
+                    </label>
+                    <label class="vDtRvw__checkBox">
+                        <input type="checkbox" name="" id="">
+                        <span class="vDtRvw__check">발주할게요</span>
+                    </label>
+                    <label class="vDtRvw__checkBox">
+                        <input type="checkbox" name="" id="" onchange="showTxtArea(this)">
+                        <span class="vDtRvw__check">직접입력</span>
+                    </label>
+                    <div class="vDtRvw__ask__txtWrap"> <!-- 20210707 : 위치변경 -->
+                        <textarea name="" id="" placeholder="요청사항을 작성해주세요."></textarea>                            </textarea>
+                    </div>
+                    <script>
+                        function showTxtArea(elm){
+                            if($(elm).is(":checked")){
+                                $('.vDtRvw__ask__txtWrap').addClass('on')
+                                $('.vDtRvw__ask__txtWrap textarea').focus()
+                            }else{
+                                $('.vDtRvw__ask__txtWrap').removeClass('on')
+                            }
+                        }
+                    </script>
+                </div>
+
+            </div>
+
+            <!-- S: 221104_서비스 이용 후기 -->
+            <div class="vDtRvw__ask">
+
+                <div class="vDtRvw__satTit">
+                    서비스 이용 후기 및 필요한 의약품 및 의료기기를 작성해주세요.
+                    <span class="desc">서비스 개선 및 새로운 디테일링 일정 반영을 위해 노력하겠습니다.</span>
+                </div>
+
+                <div class="vDtRvw__checkWrapper">
+                    <div class="vDtRvw__ask__txtWrap on" style="visibility: visible !important; height: auto !important;">
+                        <textarea name="" id="" placeholder="이용 관련 불편 및 필요 사항을 자유롭게 작성해 주세요."></textarea>                            </textarea>
+                    </div>
+                </div>
+
+
+                <div class="vDtBottom__btnBox">
+                    <button class="vDt__btn on">작성 완료</button>
+                </div>
+
+            </div>
+            <!-- E: 221104_서비스 이용 후기 -->
+
+        </div>
+        <!-- E: 후기 작성 -->
+
+    </div>
+    <!-- E: vDetailng 후기 -->
+    
+</div>
+
+
+
+
+</div>
+</body>
+</html>

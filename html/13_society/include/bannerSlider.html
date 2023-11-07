@@ -1,0 +1,39 @@
+<!-- banner slider -->
+    <h3 class="bnSlider__title">추천 바로가기</h3>
+	<div class="bnSlider swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+                <a href="#"><img src="http://placehold.it/343x99" alt=""></a>
+                <a href="#"><img src="http://placehold.it/343x99" alt=""></a>
+                <a href="#"><img src="http://placehold.it/343x99" alt=""></a>
+            </div>
+			<div class="swiper-slide">
+                <a href="#"><img src="http://placehold.it/343x99" alt=""></a>
+                <a href="#"><img src="http://placehold.it/343x99" alt=""></a>
+                <a href="#"><img src="http://placehold.it/343x99" alt=""></a>
+            </div>
+			<div class="swiper-slide">
+                <a href="#"><img src="http://placehold.it/343x99" alt=""></a>
+                <a href="#"><img src="http://placehold.it/343x99" alt=""></a>
+                <a href="#"><img src="http://placehold.it/343x99" alt=""></a>
+            </div>
+		</div>
+		<div class="bnSlider__pagination"></div>
+	</div>
+	<script>
+		$(function(){
+			var swiperRank = new Swiper('.bnSlider', {
+				slidesPerView: 'auto',
+				preventClicks: true,
+				preventClicksPropagation: false,
+				observer: true,
+				observeParents: true,
+				loop: true,
+				pagination: '.bnSlider__pagination',
+				paginationClickable: true,
+				autoplay: 3000,
+                spaceBetween:16
+			});
+		})
+	</script>
+<!-- // banner slider -->

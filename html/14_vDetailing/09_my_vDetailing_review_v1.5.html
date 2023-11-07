@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> Inter MD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+<script src="../../js/plugins/swiper_3.3.1.js"></script>
+<script src="../../js/ui_script_m.js"></script>
+<body>
+<div class="pageWrap" data-role="page">
+
+
+    <!-- S: header -->
+    <div class="detail__topline">
+        <h2>후기 작성</h2>
+        <a href="#" class="detail__rt"><i class="xi-close"></i><span class="blind">닫기</span></a>
+    </div>
+    <!-- E: header -->
+
+<div class="contentBody">
+
+    <!-- S: 230227_vDetailng 후기 -->
+    <div class="vDt__review vDt__review2">
+
+        <div class="vDtRvw__top">
+            <div class="vDtRvw__title">
+                화이자제약 추신수 담당자님<br>
+                <strong>면담 이용후기를 작성해 주세요.</strong>
+            </div>
+            <div class="vDtRvw__img" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg');"></div>
+        </div>
+
+
+        <!-- S: 후기 작성 -->
+        <div class="vDtRvw__content">
+
+
+            <!-- 만족도 -->
+            <div class="vDtRvw__satft">
+
+                <div class="vDtRvw__satTit">
+                    v-Detailing 면담은 만족하셨나요?
+                </div>
+
+                <!-- 별점 -->
+                <div class="vDtRvw__starBox">
+                    <div class="vDtRvw__star showStar">
+                        <label class="vDtRvw__star__box">
+                            <input type="radio" name="star" id="">
+                            <span class="vDtRvw__star__img"><span class="blind">별 1개</span></span>
+                        </label>
+                        <label class="vDtRvw__star__box">
+                            <input type="radio" name="star" id="">
+                            <span class="vDtRvw__star__img"><span class="blind">별 2개</span></span>
+                        </label>
+                        <label class="vDtRvw__star__box">
+                            <input type="radio" name="star" id="">
+                            <span class="vDtRvw__star__img"><span class="blind">별 3개</span></span>
+                        </label>
+                        <label class="vDtRvw__star__box">
+                            <input type="radio" name="star" id="">
+                            <span class="vDtRvw__star__img"><span class="blind">별 4개</span></span>
+                        </label>
+                        <label class="vDtRvw__star__box">
+                            <input type="radio" name="star" id="">
+                            <span class="vDtRvw__star__img"><span class="blind">별 5개</span></span>
+                        </label>
+                    </div>
+                    <div class="vDtRvw__starDesc"></div>
+                    <script>
+                        const starIpt = document.querySelectorAll('.vDtRvw__star.showStar input')
+                        const starTxt = document.querySelector('.vDtRvw__starBox .vDtRvw__starDesc')
+
+                        starIpt.forEach(function (input) {
+                            input.addEventListener('click', function () {
+                                const idx = Array.from(this.closest('.vDtRvw__star.showStar').querySelectorAll('input')).indexOf(this)
+                                const showNum = idx + 1
+
+                                const textMap = {
+                                    0: `${showNum}점 (아쉽네요)`,
+                                    1: `${showNum}점 (부족해요)`,
+                                    2: `${showNum}점 (괜찮아요)`,
+                                    3: `${showNum}점 (만족해요)`,
+                                    4: `${showNum}점 (최고예요)`
+                                }
+                                starTxt.textContent = textMap[idx]
+                            })
+                        })
+                    </script>
+                </div>
+                <!-- 별점 -->
+
+            </div>
+
+
+            <!-- 요청사항 -->
+            <div class="vDtRvw__ask">
+
+                <div class="vDtRvw__satTit">
+                    담당자에게 요청할 사항이나 서비스 면담 후기를 남겨주세요.
+                </div>
+
+                <div class="vDtRvw__checkWrapper">
+                    <!-- 요청사항 체크버튼 -->
+                    <label class="vDtRvw__checkBox">
+                        <input type="checkbox" name="" id="">
+                        <span class="vDtRvw__check">더 많은 자료가 필요해요</span>
+                    </label>
+                    <label class="vDtRvw__checkBox">
+                        <input type="checkbox" name="" id="">
+                        <span class="vDtRvw__check">샘플이 필요해요</span>
+                    </label>
+                    <label class="vDtRvw__checkBox">
+                        <input type="checkbox" name="" id="">
+                        <span class="vDtRvw__check">직접 방문해주세요</span>
+                    </label>
+                    <label class="vDtRvw__checkBox">
+                        <input type="checkbox" name="" id="">
+                        <span class="vDtRvw__check">발주할게요</span>
+                    </label>
+                    <div class="vDtRvw__ask__txtWrap on"> <!-- 20210707 : 위치변경 -->
+                        <textarea name="" id="" placeholder="요청사항을 작성해주세요."></textarea>                            </textarea>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="vDtBottom__btnBox vDtBottom__btnBox2">
+                <button class="vDt__btn vDt__skipBtn">다음에 작성</button>
+                <button class="vDt__btn on">후기 등록</button>
+            </div>
+
+        </div>
+        <!-- E: 후기 작성 -->
+
+    </div>
+    <!-- E: 230227_vDetailng 후기 -->
+    
+</div>
+
+
+
+
+</div>
+</body>
+</html>

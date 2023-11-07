@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> Inter MD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+<script src="../../js/plugins/swiper_3.3.1.js"></script>
+<script src="../../js/ui_script_m.js"></script>
+
+<body>
+<div class="pageWrap" data-role="page">
+
+
+    <!-- S: header -->
+    <div class="detail__topline"> 
+        <h2>상세검색</h2>
+        <a href="#" class="detail__rt"><i class="xi-close"></i><span class="blind">닫기</span></a>
+    </div>
+    <!-- E: header -->
+
+    <!-- S: 221108_vDt_v1.5 -->
+    <div class="vDtDetailSearch__con">
+        <div class="tit">지역 선택 <span class="count">1</span></div>
+        <div class="locationFilter">
+            <ul>
+                <li>전체</li>
+                <li>전체</li>
+                <li>전체</li>
+                <li>전체</li>
+                <li class="disabled">전체</li>
+                <li class="disabled">전체</li>
+                <li class="selected">전체</li>
+                <li>전체</li>
+                <li>전체</li>
+                <li>전체</li>
+                <li class="disabled">전체</li>
+                <li>전체</li>
+                <li>전체</li>
+                <li>전체</li>
+                <li>전체</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="vDtDetailSearch__con">
+        <div class="tit">기업/브랜드 선택</div>
+        <div class="brandFilter">
+            <div class="brandFilter__companyList">
+                <ul>
+                    <li class="active">기업이름1</li>
+                    <li>기업이름2</li>
+                    <li class="disabled">기업이름3</li>
+                    <li>기업이름4</li>
+                    <li>기업이름5</li>
+                    <li>기업이름6</li>
+                    <li>기업이름7</li>
+                </ul>
+            </div>
+            <div class="brandFilter__brandList">
+                <ul class="active">
+                    <li>브랜드이름1</li>
+                    <li class="selected">브랜드이름1</li>
+                    <li>브랜드이름1</li>
+                    <li>브랜드이름1</li>
+                    <li>브랜드이름1</li>
+                    <li>브랜드이름1</li>
+                    <li>브랜드이름1</li>
+                </ul>
+                <ul>
+                    <li>브랜드이름2</li>
+                    <li>브랜드이름2</li>
+                    <li>브랜드이름2</li>
+                    <li>브랜드이름2</li>
+                </ul>
+                <ul>
+                    <li>브랜드이름3</li>
+                    <li>브랜드이름3</li>
+                    <li>브랜드이름3</li>
+                    <li>브랜드이름3</li>
+                    <li>브랜드이름3</li>
+                </ul>
+                <ul>
+                    <li>브랜드이름4</li>
+                    <li>브랜드이름4</li>
+                    <li>브랜드이름4</li>
+                </ul>
+                <ul>
+                    <li>브랜드이름5</li>
+                </ul>
+                <ul>
+                    <li>브랜드이름6</li>
+                    <li>브랜드이름6</li>
+                    <li>브랜드이름6</li>
+                    <li>브랜드이름6</li>
+                    <li>브랜드이름6</li>
+                    <li>브랜드이름6</li>
+                    <li>브랜드이름6</li>
+                </ul>
+                <ul>
+                    <li>브랜드이름7</li>
+                    <li>브랜드이름7</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $(".locationFilter li").click(function(){
+                if(!$(this).hasClass("disabled")){
+                    $(this).stop().toggleClass("selected");
+                }
+            });
+            $(".brandFilter__brandList li").click(function(){
+                if(!$(this).hasClass("disabled")){
+                    $(this).stop().toggleClass("selected");
+                }
+            });
+            $(".brandFilter__companyList li").click(function(){
+                var companyIndex = $(this).index();
+                if(!$(this).hasClass("disabled")){
+                    $(".brandFilter__companyList li, .brandFilter__brandList ul").removeClass("active");
+                    $(this).addClass("active");
+                    $(".brandFilter__brandList ul").eq(companyIndex).addClass("active");
+                }
+            });
+            $(".brandFilter__brandList ul").each(function(){
+                if($(this).find("li").length < 5){
+                    $(this).find("li").last().addClass("bottomLine");
+                }
+            });
+        });
+    </script>
+    <!-- E: 221108_vDt_v1.5 -->
+
+</div>
+<!-- S: 221108_vDt_v1.5 -->
+<div class="vDtBottomFilter">
+    <button class="vDtBottomFilter__resetBtn">
+        <i class="xi-refresh"></i>
+        <span class="txt">조건 초기화</span>
+    </button>
+    <button class="vDtBottomFilter__searchBtn">조건 선택하기</button>
+</div>
+<!-- E: 221108_vDt_v1.5 -->
+
+</body>
+</html>

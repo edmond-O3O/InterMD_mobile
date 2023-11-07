@@ -1,0 +1,420 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title> Inter MD</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+	<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+
+	<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/style.css?v=202001210">
+	<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/framework.css?v=20200121">
+
+	<!-- Link Swiper's CSS -->
+	<link rel="stylesheet" href="https://www.intermd.co.kr/mobile/styles/swiper.min.css">
+	<!--font-->
+	<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/xeicon/xeicon.min.css">
+	<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--custom-->
+	<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/partner.css?v=20200121">
+	<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/base.css?v=20200121">
+	<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/custom.css?v=20200121">  
+	<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/sub.css?v=20200121">  
+	<!-- <link rel="stylesheet" type="text/css" href="../../css/sub.css?v=20200121">   -->
+	<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/styles/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" type="text/css" href="../../styles/style_mobile.css">
+	<!-- <link rel="stylesheet" type="text/css" media="all" href="https://www.intermd.co.kr/mobile/css/common.css?v=20200121"> -->
+	<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+	<script src="../../js/plugins/jquery-3.2.1.js"></script>
+	<script src="../../js/plugins/swiper_3.3.1.js"></script>
+	<script src="../../js/ui_script_m.js"></script>
+</head>
+<body class="my_page profile profile_edit">
+
+<div id="page-wrap" class="bg_fff">
+
+	<div id="page-content" class="page-content bg_fff" style="min-height: 667px;">
+		<div id="page-content-scroll">
+			<!--Enables this element to be scrolled -->
+			<div class="jobs-top50"> 
+				<a href="javascript:gfn_mobileTopBackButton('');" class="back-button-"><i class="xi-angle-left"></i></a>
+				<h2>내 정보 수정</h2> 
+			</div>
+			<div class="l_r_padding marginTop10">
+			
+				<form name="regform" id="regform" method="post">
+					
+					<input type="hidden" name="memberAreaCd" id="memberAreaCd" value="14"> <!-- 근무지 선택 코드 -->
+					
+					<div class="profileWrap-edit profileInfo">
+						<div class="profileImg01 c_img" style="background-image:url(/image/profile_no.jpg)"> 
+								
+						</div>
+						<div class="set">
+							<div class="fileBox">
+								<!-- <label for="mp_fileUpload" class="btn_file">편집</label>		2018.11.14 - 프로필 이미지 수정방식 변경 -->
+							</div>
+						</div>
+						<div class="name">
+							<p class="font-15 bold">고수현</p>
+							<span>안과</span><span id="specialDisp">전문의 11년차</span>
+						</div>
+					</div>
+					
+					<div class="login_form" style="z-index: 11;">
+						<div class="input-simple-1 has-icon input-green">
+							<input type="text" placeholder="kokoko" class="full-input" disabled="">
+						</div>
+						<div class="input-simple-1 has-icon input-green">
+							<input type="tel" name="memberPhone" placeholder="010000" value="010000" readonly="readonly">
+							<div class="change_btn"><a href="javascript:mobilePhoneMod();">변경</a></div>
+						</div>
+						<div class="input-simple-1 has-icon input-green" style="height:83px;">
+							<input type="email" name="memberEmail" placeholder="abc" value="abc" onkeyup="fn_CheckMail_mobile('edit');">
+							<span id="emailCheck">인증 및 각종 소식 안내에 사용되므로, 실제 사용중인 이메일을 입력하여 주시기 바랍니다.</span>
+						</div>
+					</div>
+					<div class="list_type marginBottom20">
+						<div class="">
+							<p>비밀번호 변경</p>
+						</div>
+						
+						<div class="input-simple-1 has-icon input-green">
+							<input type="password" name="memberPw" placeholder="새 비밀번호" maxlength="16" onkeyup="fn_CheckPassword_mobile('editPw', 'edit');">
+						</div>
+						
+						<div class="input-simple-1 has-icon input-green">
+							<input type="password" name="memberPw_confirm" placeholder="새 비밀번호 확인" maxlength="16" onkeyup="fn_ConfirmPass_mobile('editPw', 'edit');">
+							<span id="editPw">영문, 숫자, 특수문자를 2가지 이상 포함한 6자 이상 16자 이내</span>
+						</div>
+					</div>
+				
+					<div class="list_type marginBottom20">
+						<!--					<div class="marginTop20 border-bottom"><p>세부 정보 관리</p></div>-->
+						<div>
+							<label for="num" class="bold font-15">의사 면허 번호</label>
+						</div>
+						<div class="input-simple-1 has-icon input-green">
+							<input type="text" placeholder="2313" id="num" disabled="">
+						</div>
+					</div>
+					<div class="join02_form">
+						<div class="radio-half">
+							<p class="small-title"><span class="important-title font-15 bold">근무유형</span></p>
+								<div class="fac fac-radio fac-default inline_style_box"><span></span>
+									<input id="box1-fac-radio" type="radio" name="memberPaydoctor" value="1" checked="checked">
+									<label for="box1-fac-radio">개원의</label>
+								</div>
+								<div class="fac fac-radio fac-default inline_style_box"><span></span>
+									<input id="box2-fac-radio" type="radio" name="memberPaydoctor" value="2">
+									<label for="box2-fac-radio">봉직의</label>
+								</div>
+
+								<div class="fac fac-radio fac-default inline_style_box"><span></span>
+									<input id="box2-fac-radio" type="radio" disabled>
+									<label for="box2-fac-radio">봉직의</label>
+								</div>
+
+								<div class="fac fac-radio fac-default inline_style_box"><span></span>
+									<input id="box2-fac-radio" type="radio" disabled checked>
+									<label for="box2-fac-radio">봉직의</label>
+								</div>
+								<style>
+									.fac-radio input:disabled + label {color: #b3b3b3 !important;}
+									.fac-radio input:disabled + label::before {color: #d5d5d5 !important;}
+									.fac-radio input:disabled:checked + label {color: #b3b3b3 !important;}
+									.fac-radio input:disabled:checked + label::before {color: #d5d5d5 !important;}
+									.select-box:disabled {background-color: #f3f3f3 !important;}
+								</style>
+						</div> <span class="clear"></span> 
+					</div>
+					<div class="join02_form">
+						<div class="radio-half">
+							<p class="small-title"><span class="important-title font-15 bold">전문의 여부</span></p>
+							<div class="fac fac-radio fac-default inline_style_box"><span></span>
+								<input id="memberSpecialistY" type="radio" name="memberSpecialistYn" value="Y" checked="checked">
+								<label for="memberSpecialistY">전문의</label>
+							</div>
+							<div class="fac fac-radio fac-default inline_style_box"><span></span>
+								<input id="memberSpecialistN" type="radio" name="memberSpecialistYn" value="N">
+								<label for="memberSpecialistN">일반의</label>
+							</div>
+						</div> <span class="clear"></span> 
+					</div>
+					<div class="list_type pro-box input-simple-1 has-icon input-green marginBottom20">
+						<p class="small-title"><span class="important-title font-15 bold">취득년도</span></p>
+						<input type="text" name="memberSpecialistYear" placeholder="취득년도" maxlength="4" value="2010" onkeyup="fn_specialYear_mobile('edit');" onkeypress="return fn_pressNum(event);">
+						<span id="specialYearCheck"></span> 
+					</div>
+					
+					<div class="list_type marginBottom20" id="majorsDisp" style="">
+						<div class="small-title">
+							<p><span class="important-title font-15 bold" style="padding: 0;">전공과목</span></p>
+						</div>
+						<select disabled class="select-box full-bottom" id="sel_major" name="memberMajorsCd"><option value="0">--선택--</option><option value="268">내과</option><option value="269">신경과</option><option value="270">정신건강의학과</option><option value="271">외과</option><option value="272">정형외과</option><option value="273">신경외과</option><option value="274">흉부외과</option><option value="275">성형외과</option><option value="276">마취통증의학과</option><option value="277">산부인과</option><option value="278">소아청소년과</option><option value="279">안과</option><option value="280">이비인후과</option><option value="281">피부과</option><option value="282">비뇨의학과</option><option value="283">영상의학과</option><option value="284">방사선종양학과</option><option value="285">병리과</option><option value="286">진단검사의학과</option><option value="287">결핵과</option><option value="288">재활의학과</option><option value="289">예방의학과</option><option value="290">가정의학과</option><option value="291">응급의학과</option><option value="292">직업환경의학과</option><option value="293">핵의학과</option></select>
+						<span id="majorsCheck"></span> 
+					</div>
+
+
+					<div class="list_type page-login-field input-simple-1 has-icon input-green marginBottom20" id="minorsDisp" style="">
+						<p class="small-title"><span id="MinorsStrT" class="important-title font-15 bold">세부 분과</span></p>						
+					<!-- 20200305 추가 -->
+						<div class="member__detailmajors">
+							
+							<div class="fac fac-checkbox fac-default input-checkbox">
+								<input id="mjrdt-1" type="checkbox" name="" value="">
+								<label for="mjrdt-1" class="">감염</label>
+							</div>
+							<div class="fac fac-checkbox fac-default input-checkbox">
+								<input id="mjrdt-2" type="checkbox" name="" value="">
+								<label for="mjrdt-2" class="">내분비</label>
+							</div>
+							<div class="fac fac-checkbox fac-default input-checkbox">
+								<input id="mjrdt-3" type="checkbox" name="" value="">
+								<label for="mjrdt-3" class="">류마티스</label>
+							</div>
+							<div class="fac fac-checkbox fac-default input-checkbox">
+								<input id="mjrdt-4" type="checkbox" name="" value="">
+								<label for="mjrdt-4" class="">소화기</label>
+							</div>
+							<div class="fac fac-checkbox fac-default input-checkbox">
+								<input id="mjrdt-5" type="checkbox" name="" value="">
+								<label for="mjrdt-5" class="">순환기</label>
+							</div>
+							<div class="fac fac-checkbox fac-default input-checkbox">
+								<input id="mjrdt-6" type="checkbox" name="" value="">
+								<label for="mjrdt-6" class="">신장</label>
+							</div>
+							<div class="fac fac-checkbox fac-default input-checkbox">
+								<input id="mjrdt-7" type="checkbox" name="" value="">
+								<label for="mjrdt-7" class="">알레르기</label>
+							</div>
+							<div class="fac fac-checkbox fac-default input-checkbox">
+								<input id="mjrdt-8" type="checkbox" name="" value="">
+								<label for="mjrdt-8" class="">종양</label>
+							</div>
+							<div class="fac fac-checkbox fac-default input-checkbox">
+								<input id="mjrdt-9" type="checkbox" name="" value="">
+								<label for="mjrdt-9" class="">혈액</label>
+							</div>
+							<div class="fac fac-checkbox fac-default input-checkbox">
+								<input id="mjrdt-10" type="checkbox" name="" value="">
+								<label for="mjrdt-10" class="">호흡기</label>
+							</div>
+							<div class="fac fac-checkbox fac-default input-checkbox">
+								<input id="mjrdt-11" type="checkbox" name="" value="">
+								<label for="mjrdt-11" class="">일반내과</label>
+							</div>
+						</div>
+						<span class="">세부분과를 3개 이내로 선택해주세요.</span>
+						<span class="blue">선택완료</span>
+					<!--// 20200305 추가 -->
+					</div>
+
+
+					<div class="ph_chkWrap marginBottom20">
+						<div class="fac fac-checkbox fac-default inline_style_box harf_style"><span></span>
+						<input id="box4-fac-checkbox" type="checkbox" name="memberPhdYn" value="Y">
+							<label for="box4-fac-checkbox" class="font-15 bold right">Ph.D 취득 여부</label>
+							
+						</div>
+					</div>
+					<div class="list_type list_type02" style="">
+						<div class="list_form marginBottom10">
+							<p>근무지역</p>
+						</div>		
+						<select class="list_form01 select-box half-bottom" id="sel_city" onchange="fn_changeSido(this)"><option value="0">--선택--</option><option value="강원">강원</option><option value="경기">경기</option><option value="경남">경남</option><option value="경북">경북</option><option value="광주">광주</option><option value="대구">대구</option><option value="대전">대전</option><option value="부산">부산</option><option value="서울">서울</option><option value="세종">세종</option><option value="울산">울산</option><option value="인천">인천</option><option value="전남">전남</option><option value="전북">전북</option><option value="제주">제주</option><option value="충남">충남</option><option value="충북">충북</option><option value="해외">해외</option></select>
+						<label for="#" style="margin-right: 5px">시(도)</label>
+						<select class="list_form01 select-box  half-bottom" id="sel_gugun" onchange="fn_changeGugun(this)"><option value="0">--선택--</option><option value="1">강릉시</option><option value="2">고성군</option><option value="3">동해시</option><option value="4">삼척시</option><option value="5">속초시</option><option value="6">양구군</option><option value="7">양양군</option><option value="8">영월군</option><option value="9">원주시</option><option value="10">인제군</option><option value="11">정선군</option><option value="12">철원군</option><option value="13">춘천시</option><option value="14">태백시</option><option value="15">평창군</option><option value="16">홍천군</option><option value="17">화천군</option><option value="18">횡성군</option></select>
+						<label for="#" style="padding-left: 5px;">구</label>
+						<span id="areaCheck"></span> 
+					</div>
+					
+									<!-- 20200305 추가 -->
+									<div class="list_type list_type02" style="height: 90px;">
+										<div class="list_form marginBottom10">
+											<p><span id="" class="important-title font-15 bold">병원규모</span></p>
+										</div>		
+										
+										<div class="member__hospitalSize">
+											<div class="fac fac-radio fac-default input-radio"><span></span>
+												<input id="hospital-1" type="radio" name="" value="">
+												<label for="hospital-1">1차</label>
+											</div>
+											<div class="fac fac-radio fac-default input-radio"><span></span>
+												<input id="hospital-2" type="radio" name="" value="">
+												<label for="hospital-2">2차</label>
+											</div>
+											<div class="fac fac-radio fac-default input-radio"><span></span>
+												<input id="hospital-3" type="radio" name="" value="">
+												<label for="hospital-3">3차</label>
+											</div>
+											<div class="fac fac-radio fac-default input-radio"><span></span>
+												<input id="hospital-4" type="radio" name="" value="">
+												<label for="hospital-4">기타</label>
+											</div>
+											<div class="input-simple-1">
+												<input type="text" name="" placeholder="직접입력" value="">
+											</div>
+											<span id="" class="">병원규모를 선택해주세요</span>
+											<span id="" class="blue">선택완료</span>
+										</div>
+									</div>
+									<!--// 20200305 추가 -->
+
+					<div class="page-login-field input-simple-1 has-icon input-green marginBottom20">
+						<p class="small-title"><span class="font-15 bold">근무병원명</span></p>
+						<input type="text" name="memberMinorsCd" placeholder="근무병원명" value="">
+					</div>
+
+					
+									<!-- 20200313 추가 -->
+									<div class="list_type list_type02">
+										<div class="list_form marginBottom10">
+											<p>개인정보 유효 기간</p>
+										</div>		
+										
+										<div class="input_display">
+											<div class="memGuide__text">
+												개인정보 유효기간을 "평생회원, 5년, 3년" 중에서 선택 시 인터엠디 포인트몰에서 사용 가능한 포인트를 최대 <span class="memGuide__strong">10,000P</span> 까지 드립니다. <br>
+												개인정보 유효기간을 설정하면 마지막 로그인 시점부터 설정한 기간동안 휴면계정으로 전환되지 않습니다.
+											</div>
+											<div class="memGuide__btnbox">
+												<div class="fac fac-checkbox fac-default input-checkbox">
+													<input id="mgyr-1" type="checkbox" name="" value="">
+													<label for="mgyr-1" class="">평생회원 <span class="text-blue">(10,000P)</span></label>
+												</div>
+												<div class="fac fac-checkbox fac-default input-checkbox">
+													<input id="mgyr-2" type="checkbox" name="" value="">
+													<label for="mgyr-2" class="">5년 <span class="text-blue">(5,000P)</span></label>
+												</div>
+												<div class="fac fac-checkbox fac-default input-checkbox">
+													<input id="mgyr-3" type="checkbox" name="" value="">
+													<label for="mgyr-3" class="">3년 <span class="text-blue">(3,000P)</span></label>
+												</div>
+											</div>
+											<div class="memGuide__sidetext">개인정보 유효기간을 선택하지 않는 경우, 1년으로 자동 설정됩니다.</div>
+										</div>
+									</div>
+									<!--// 20200313 추가 -->
+
+				
+					<!-- 230906_이전 소스 주석 처리
+					<div class="ph_chkWrap marginBottom20" style="overflow: hidden; height: auto;">
+						<div class="fac fac-checkbox fac-default inline_style_box harf_style"><span></span>
+							<input id="box5-fac-checkbox" type="checkbox" name="memberMarketYn" value="Y">
+							<label for="box5-fac-checkbox" class="font-14">소식 이벤트 등 알림 수신 동의</label>
+						</div>
+					</div>
+
+
+					<div class="page-login-field input-simple-1 has-icon input-green marginBottom20">
+						<p class="small-title">
+							<span class="font-15 bold">마케팅 수신 동의</span>
+						</p>
+						<div class="fac fac-checkbox fac-default inline_style_box harf_style">
+							<span></span>
+							<input id="box5-fac-checkbox" type="checkbox" name="memberMarketYn" value="Y" ${member.memberMarketYn eq "Y" ? "checked='checked'" : "" } >
+							<label for="box5-fac-checkbox" class="font-14" style="white-space: unset;">맞춤 콘텐츠와 이벤트 혜택 등 정보 수신 동의</label>
+						</div>
+						<div class="fac fac-checkbox fac-default inline_style_box harf_style">
+							<span></span>
+							<input id="box5-fac-checkbox" type="checkbox" name="memberAdMarketYn" value="Y" ${member.memberAdMarketYn eq "Y" ? "checked='checked'" : "" } >
+							<label for="box5-fac-checkbox" class="font-14" style="white-space: unset;">기타 InterMD가 위탁받아 수행하는 광고/홍보 등 정보 수신 동의 </label>
+						</div>
+					</div>
+
+
+
+					<div class="list_form marginBottom10">
+						<p>마케팅 수신 동의</p>
+					</div>
+					<div class="ph_chkWrap marginBottom20" style="overflow: hidden; height: auto;">
+						<div class="fac fac-checkbox fac-default inline_style_box harf_style"><span></span>
+							<input id="box5-fac-checkbox" type="checkbox" name="memberMarketYn" value="Y" ${member.memberMarketYn eq "Y" ? "checked='checked'" : "" } >
+							<label for="box5-fac-checkbox" class="font-15 bold right">맞춤 콘텐츠와 이벤트 혜택 등 정보 수신 동의</label>
+						</div>
+					</div>
+					<div class="ph_chkWrap marginBottom20" style="overflow: hidden; height: auto;">
+						<div class="fac fac-checkbox fac-default inline_style_box harf_style"><span></span>
+							<input id="box5-fac-checkbox" type="checkbox" name="memberAdMarketYn" value="Y" ${member.memberAdMarketYn eq "Y" ? "checked='checked'" : "" } >
+							<label for="box5-fac-checkbox" class="font-15 bold right">기타 InterMD가 위탁받아 수행하는 <br>광고/홍보 등 정보 수신 동의 </label>
+						</div>
+					</div>
+					<div class="fixed_wrap">
+						<div class="double-type l_r_padding"> 
+							<a href="javascript:IFM_callDoHistoryBackReload();" class="button button-teal">취소</a> 
+							<a href="javascript:fn_edit();" class="button button-blue">변경완료</a> 
+						</div>
+					</div> 
+					-->
+
+					<!-- S: 230906_마케팅 수신 동의 수정 -->
+					<div class="page-login-field input-simple-1 has-icon input-green marginBottom20 memberMarketChkBox">
+						<p class="small-title">
+							<span class="font-15 bold">마케팅 수신 동의</span>
+						</p>
+						<div class="fac fac-checkbox fac-default inline_style_box harf_style">
+							<span></span>
+							<input id="memberMarketAllChk" type="checkbox" name="memberMarketYn" value="Y">
+							<label for="memberMarketAllChk" class="font-14" style="white-space: unset;">모두 동의합니다</label>
+						</div>
+						<div class="fac fac-checkbox fac-default inline_style_box harf_style">
+							<span></span>
+							<input id="box5-fac-checkbox" type="checkbox" name="memberMarketYn" checked value="Y">
+							<label for="box5-fac-checkbox" class="font-14" style="white-space: unset;">이용자 맞춤 콘텐츠. 새로운 서비스 및 이벤트 정보</label>
+						</div>
+						<div class="fac fac-checkbox fac-default inline_style_box harf_style">
+							<span></span>
+							<input id="box5-fac-ad-checkbox" type="checkbox" name="memberAdMarketYn" checked value="Y">
+							<label for="box5-fac-ad-checkbox" class="font-14" style="white-space: unset;">위탁 받아 수행하는 마케팅/홍보 정보</label>
+						</div>
+					</div>
+					<script>
+						$("#memberMarketAllChk").change(function(){
+							var chkAll = $(this).is(":checked");
+							if(chkAll){
+								$(".memberMarketChkBox").find("input").prop("checked", true)
+							}else {
+								$(".memberMarketChkBox").find("input").prop("checked", false)
+							}
+						});
+						$(".memberMarketChkBox").find("input").change(function(){
+							if(!$(this).is(":checked")) {
+								$("#memberMarketAllChk").prop("checked", false)
+							}
+							if(!$("#memberMarketAllChk").is(":checked") && $(".memberMarketChkBox input:checked").length == 2){
+								$("#memberMarketAllChk").prop("checked", true)
+							}
+						})
+						$(document).ready(function(){
+							$(".memberMarketChkBox").each(function(){
+								if(!$("#memberMarketAllChk").is(":checked") && $(".memberMarketChkBox input:checked").length == 2){
+									$("#memberMarketAllChk").prop("checked", true)
+								}
+							})
+						});
+					</script>
+					<!-- E: 230906_마케팅 수신 동의 수정 -->
+
+
+					<div class="fixed_wrap">
+						<div class="double-type l_r_padding"> 
+							<a href="javascript:fn_goBack();" class="button button-teal">취소</a> 
+							<a href="javascript:fn_edit();" class="button button-blue">변경 완료</a> 
+						</div>
+					</div>
+				</form>
+				<!-- <input type="file" name="mp_fileUpload" id="mp_fileUpload" class="uploadBtn" accept="*/*" style="display:none;"/> -->
+				
+			</div>
+			<!--E:page-content-scroll-->
+		</div>
+		<!--E:page-content-->
+	</div>
+</div>
+
+</body>
+</html>

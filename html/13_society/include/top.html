@@ -1,0 +1,22 @@
+<!-- 메인배너 -->
+<div class="societyMainBanner">
+    <img src="http://placehold.it/738x318" alt="">
+</div>
+<!-- // 메인배너 -->
+
+<!-- 메뉴 -->
+<script>
+    $(window).scroll(function () {
+        var scrollHeight = $(document).scrollTop();
+        var mainBannerHeight = $('.societyMainBanner').outerHeight();
+        scrollHeight > mainBannerHeight ? $('.societyMenu').addClass('fixed') : $('.societyMenu').removeClass('fixed')
+    });
+</script>
+<nav class="societyMenu">
+    <a href="#" class="societyMenu__item "><span>학회일정</span></a>
+    <a href="#" class="societyMenu__item "><span>사전등록</span></a>
+    <a href="#" class="societyMenu__item "><span>자료실</span></a>
+    <a href="#" class="societyMenu__item "><span>공지사항</span></a>
+    <a href="#" class="societyMenu__item "><span>파트너</span></a>
+</nav>
+<!-- //메뉴 -->

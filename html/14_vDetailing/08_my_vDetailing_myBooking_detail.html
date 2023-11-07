@@ -1,0 +1,328 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> Inter MD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+<script src="../../js/plugins/swiper_3.3.1.js"></script>
+<script src="../../js/ui_script_m.js"></script>
+<body>
+<div class="pageWrap" data-role="page">
+
+
+<!-- S: header -->
+<div class="detail__topline">
+    <h2>나의 예약 확인</h2>
+    <a href="#" class="detail__rt"><i class="xi-close"></i><span class="blind">닫기</span></a>
+</div>
+<!-- E: header -->
+
+<div class="contentBody">
+    <!-- S: 나의 예약 후기 -->
+    <!-- <div class="vDtMy -ongoing"> 진행중일경우 -ongoing : 하단에 케이스별 마크업 참고-->
+    <div class="vDtMy">
+        <div class="vDtMy__top">
+            <h3 class="vDtMy__topTitle"><span>MR의 요청에 의해 취소됨</span></h3>
+            <div class="vDtMy__topDesc">
+                <b class="redColor">취소사유 :</b>개인사정으로 취소합니다.
+            </div>
+        </div>
+
+        <div class="vDtDetail__conts ">
+            <!-- S: 221108_vDt_v1.5 -->
+            <div class="vDtNew__topIcoBox">
+                <div class="vDtNew__matchingIco">바로매칭</div>
+            </div>
+            <!-- E: 221108_vDt_v1.5 -->
+            <div class="vDtDetail__dateBox">
+                <span class="vDtDetail__dateBox--date">07.01 (목) 10:00</span>
+                <span class="vDtDetail__dateBox--min">2min</span>
+            </div>
+
+            <div class="vDtDetail__title">
+                신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다.
+            </div>
+
+            <div id="vDtList__badgeSwiper" class="swiper-container vDtList__badgeSwiper">
+                <div class="swiper-wrapper"> 
+                    <a href="#" class="swiper-slide vDtList__badge">아스트라제네카</a>
+                    <a href="#" class="swiper-slide vDtList__badge">코로나백신</a>
+                    <a href="#" class="swiper-slide vDtList__badge">astrazeneca gmb</a>
+                    <a href="#" class="swiper-slide vDtList__badge">타이레놀</a>
+                    <a href="#" class="swiper-slide vDtList__badge">통증</a>
+                </div>
+                <script>
+                    var badgeSwiper;
+                    var spaceMargin = 6;
+                    $(function(){
+                        badgeSwiper = new Swiper('#vDtList__badgeSwiper', {
+                            slidesPerView: 'auto',
+                            spaceBetween: spaceMargin,
+                            preventClicks: true,
+                            preventClicksPropagation: false,
+                            observer: true,
+                            observeParents: true,
+                            loop: false,
+                            freeMode: true,
+                        });
+                    })
+                    $(document).ready(function() {
+                        var badge = [];
+                        var badgeWidth = 0;
+                        var marginRight = spaceMargin;
+                        badge = $('#vDtList__badgeSwiper .vDtList__badge');
+                        var $wrapper = $('#vDtList__badgeSwiper .swiper-wrapper');
+                        for(var i=0; i<badge.length; i++){
+                            badgeWidth += badge[i].offsetWidth;
+                            badgeWidth += marginRight*badge.length
+                        }
+                        if(badgeWidth > $wrapper[0].offsetWidth){
+                            $('#vDtList__badgeSwiper').addClass('overflow');
+                        }
+                    });
+                </script>
+            </div>
+
+
+            <div class="vDtList__profile">
+                <div class="vDtList__profilePhoto" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg')"></div>
+                <div class="vDtList__name">강서준 MR</div>
+                <div class="vDtList__from">화이자제약</div>
+
+                <!-- 더보기 버튼 -->
+                <button class="vDtDetail__showMore" 
+                    onclick="$('.vDtDetail__morePrf').show();$('.vDtDetail__hideMore').show();$('.vDtDetail__showMore').hide()">
+                    <span>더보기</span>
+                    <i class="vDtDetail__moreIcon"></i>
+                </button>
+                <!-- // 더보기 버튼 -->
+
+                <!-- 숨기기 버튼 -->
+                <button class="vDtDetail__hideMore" style="display: none;" 
+                    onclick="$('.vDtDetail__morePrf').hide();$('.vDtDetail__hideMore').hide();$('.vDtDetail__showMore').show()">
+                    <span>더보기</span>
+                    <i class="vDtDetail__hideIcon"></i>
+                </button>
+                <!-- //숨기기 버튼 -->
+            </div>
+
+            <!-- S: MR 프로필 더보기 -->
+            <div class="vDtDetail__morePrf" style="display: none;">
+                <div class="vDtDetail__prfBox">
+                    <div class="vDtDetail__prfTit">
+                        수락률
+                    </div>
+                    <div class="vDtDetail__prfDesc">
+                        100%
+                    </div>
+                </div>
+                <div class="vDtDetail__prfBox">
+                    <div class="vDtDetail__prfTit">
+                        담당 의약품
+                    </div>
+                    <div class="vDtDetail__prfDesc badges">
+                        <span class="vDtList__badge">아스트라제네카</span>
+                        <span class="vDtList__badge">코로나백신</span>
+                        <span class="vDtList__badge">astrazeneca gmb</span>
+                        <span class="vDtList__badge">타이레놀</span>
+                        <span class="vDtList__badge">통증</span>
+                        <span class="vDtList__badge">모나리사</span>
+                        <span class="vDtList__badge">스마트에코</span>
+                        <span class="vDtList__badge">브루팬B</span>
+                    </div>
+                </div>
+            </div>
+            <!-- E: MR 프로필 더보기 -->
+
+            <!-- S: 디테일링 내용 -->
+            <div class="vDtDetail__desc">
+                <div class="vDtDetail__descTit">
+                    디테일링 내용
+                </div>
+                <div class="vDtDetail__descTxt">   
+                    안녕하세요<br>
+                    ab제약 김길동입니다.<br><br>
+
+                    *코로나 백신 외에 담당 의약품과 관련하여 궁금하신 점 언제든지 물어봐 주세요!
+                </div>
+            </div>
+            <!-- E: 디테일링 내용 -->
+            <!-- S: 내가 작성한 내용 class  -my 추가 -->
+            <div class="vDtDetail__desc -my">
+                <div class="vDtDetail__descTit">
+                    내가 작성한 내용
+                    <!-- S: 230516_사전요청사항 -->
+                    <div class="vDtDetail__request">
+                        <button class="vDtDetail__requestBtn">사전 요청사항</button>
+                        <div class="vDtDetail__requestBox">
+                            <div class="vDtDetail__requestBoxInr">
+                                <button class="vDtDetail__requestClose"><i class="xi-close-thin"></i></button>
+                                <div class="vDtDetail__requestCon">
+                                    1번. 노인환자를 대상으로 한 관절염 치료 전략<br>
+                                    2번. 당뇨병성 말초 신경병증성 통증(DPNP)<br>
+                                    3번. 신경병증성 요통(NLBP)<br>
+                                    4번. 2022 이상재질혈중 진료지침(5판)의 개정내용과 리피토 알아보기<br>
+                                    5번. 고중성지방혈증 환자에서 ASDVD 위험 감소를 위한 LDL-C 관리 전략<br>
+                                    6번. 스타틴 사용 시 고려해야 할 신장 안전성과 약물 상호작용<br>
+                                    7번. 노바스크 2.5mg 소개 및 소아적용증<br>
+                                    이런식으로 내용을 적을 수 있는데 아마 내용이 길어지면 노출되는 영역도 계속 길어지겠죠.
+                                </div>
+                            </div>
+                            <div class="vDtDetail__requestBoxBg"></div>
+                        </div>
+                    </div>
+                    <script>
+                        $(".vDtDetail__requestBtn").click(function(){
+                            $(".vDtDetail__requestBox").stop().toggleClass("active");
+                        });
+                        $(".vDtDetail__requestClose, .vDtDetail__requestBoxBg").click(function(){
+                            $(".vDtDetail__requestBox").removeClass("active");
+                        });
+                    </script>
+                    <!-- E: 230516_사전요청사항 -->
+                </div>
+                <div class="vDtDetail__descTxt">   
+                    보령제약 관련 통증계 의약품에 대해 알고싶습니다.<br />저는 보령제약의 의약품에 대해 잘 몰라 세심하게 알려주셨으면 좋겠습니다.
+                </div>
+            </div>
+            <!-- E: 내가 작성한 내용 -->
+
+            <!-- S: 면담 안내 -->
+            <div class="vDtDetail__interview">
+                <div class="vDtDetail__prfBox">
+                    <div class="vDtDetail__prfTit">
+                        면담 시간
+                    </div>
+                    <div class="vDtDetail__prfDesc">
+                        기본 4분
+                    </div>
+                </div>
+                <div class="vDtDetail__prfBox">
+                    <div class="vDtDetail__prfTit">
+                        면담 방법
+                    </div>
+                    <div class="vDtDetail__prfDesc">
+                        인터엠디 화상채팅 사용<br>
+                        (시간 예약 후 화상면담)
+                    </div>
+                </div>
+            </div>
+            <!-- E: 면담 안내 -->
+
+            <!-- S: 이용안내 -->
+            <div class="vDtDetail__info">
+                <div class="vDtDetail__infoTit">
+                    이용안내
+                </div>
+                <ul class="vDtDetail__infoDesc">
+                    <li>
+                        예약시간을 꼭 지켜주세요!<br>
+                        면담은 실시간채팅으로 진행됩니다.
+                    </li>
+                    <li>
+                        면담시간 5분전 모바일 푸시 및 문자메시지로<br>
+                        알림이 전송됩니다. 
+                    </li>
+                    <li>
+                        인터엠디(PC 또는 모바일앱)에 접속해 주세요.
+                    </li>
+                </ul>
+            </div>
+            <!-- E: 이용안내 -->
+
+            <!-- S : 230614_스탑노쇼배너 -->
+            <div class="vDtNewList__banner vDtNewList__bannerNoShow">
+                <a href="">
+                    <img src="../../img/banner/vDt_stop_noshow_banner.png" alt="">
+                </a>
+            </div>
+            <!-- E : 230614_스탑노쇼배너 -->
+
+            <!-- 취소 요청하기 -->
+            <div class="vDtDetail__cancel">
+                <label class="vDtBookPrv__checkBox">
+                    <input type="checkbox">
+                    <span class="vDtBookPrv__check">취소 요청하기</span>
+                </label>
+                <div class="vDtDetail__cancelForm">
+                    <select name="" id="" class="inputbox__select">
+                        <option value="">취소 사유 선택</option>
+                        <option value="">개인사유</option>
+                        <option value="">스케줄 변경</option>
+                    </select>
+                    <button class="vDtDetail__cancelBtn blue">취소요청</button>
+                </div>
+            </div>
+
+            <!-- 디테일링 상세링크 -->
+            <div class="vDtMy__btm">
+                <a href="#" class="vDtMy__link">이 v-Detailing을 다시 예약하고 싶다면?</a>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!-- E: 나의 예약 후기 -->
+</div>
+
+
+
+<div class="vDtMy -ongoing"> <!-- 진행중, 진행예정일경우 -ongoing -->
+    <div class="vDtMy__top">
+        <h3 class="vDtMy__topTitle"><span>진행중</span></h3>
+        <a href="#" class="vDtMy__link">이 v-Detailing 입장하기</a>
+        <!-- 
+            <h3 class="vDtMy__topTitle"><span>진행예정</span></h3>
+            <h3 class="vDtMy__topTitle">면담 종료</h3>
+            <h3 class="vDtMy__topTitle">MR의 요청에 의해 취소됨</h3>
+            <h3 class="vDtMy__topTitle">나의 요청에 의해 취소됨</h3>
+            <h3 class="vDtMy__topTitle">미접속으로 인해 취소됨</h3>
+            <div class="vDtMy__topDesc">
+                <b>실제 면담 시간 :</b>0701(목) 10:04 ~ 10:21
+                <b class="redColor">취소사유 :</b>개인사정으로 취소합니다.
+            </div>
+        -->
+    </div>
+    <div class="vDtDetail__conts "><div class="vDtDetail__dateBox"><span class="vDtDetail__dateBox--date">07.01 (목) 10:00</span><span class="vDtDetail__dateBox--min">2min</span></div><div class="vDtDetail__title">신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다.</div></div>
+</div>
+<div class="vDtMy -ongoing"> <!-- 진행중, 진행예정일경우 -ongoing -->
+    <div class="vDtMy__top">
+        <h3 class="vDtMy__topTitle"><span>진행예정</span></h3>
+        <a href="#" class="vDtMy__link">이 v-Detailing 입장하기</a>
+    </div>
+</div>
+<div class="vDtMy">
+    <div class="vDtMy__top">
+        <h3 class="vDtMy__topTitle">면담 종료</h3>
+        <div class="vDtMy__topDesc">
+            <b>실제 면담 시간 :</b>0701(목) 10:04 ~ 10:21
+        </div>
+    </div>
+</div>
+<div class="vDtMy">
+    <div class="vDtMy__top">
+        <h3 class="vDtMy__topTitle">MR의 요청에 의해 취소됨</h3>
+        <div class="vDtMy__topDesc">
+            <b class="redColor">취소사유 :</b>개인사정으로 취소합니다.
+        </div>
+    </div>
+</div>
+<div class="vDtMy">
+    <div class="vDtMy__top">
+        <h3 class="vDtMy__topTitle">미접속으로 인해 취소됨</h3>
+        <div class="vDtMy__topDesc">
+            <b class="redColor">취소사유 :</b>예약시간에 참여자가 접속하지 않아 면담이 자동 취소되었습니다.
+        </div>
+    </div>
+</div>
+
+</div>
+</body>
+</html>

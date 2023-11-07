@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> Inter MD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+<script src="../../js/plugins/swiper_3.3.1.js"></script>
+<script src="../../js/ui_script_m.js"></script>
+<body>
+<div class="pageWrap" data-role="page">
+
+
+    <!-- S: header -->
+    <div class="detail__topline line">
+        <a href="#" class="detail__btnback"><i class="xi-angle-left"></i></a>
+        <h2>나의 예약</h2>
+        <!-- S: 담당자 관리 버튼 추가 -->
+        <a href="#" class="detail__rt ManagerBtn">담당자 관리</a>
+        <!-- E: 담당자 관리 버튼 추가 -->
+    </div>
+    <!-- E: header -->
+
+<div class="contentBody">
+
+    <!-- S: v-Detailing 나의 예약 -->
+    <div class="vDt__myBooking">
+
+
+        <div class="vDtMb__tabBox">
+            <div class="vDtMb__tab on" 
+                onclick="$('.vDtMb__tab').removeClass('on');$(this).addClass('on');$('.vDtMb__ready').show(); $('.vDtMb__close').hide();"
+            >예정</div>
+            <div class="vDtMb__tab" 
+                onclick="$('.vDtMb__tab').removeClass('on');$(this).addClass('on');$('.vDtMb__ready').hide(); $('.vDtMb__close').show();"
+            >종료</div>
+        </div>
+
+
+
+        <!-- S: 나의 예약 예정 -->
+        <div class="vDtMb__ready">
+
+            <div class="vDtMb__filter">
+                <label class="vDtMb__fltCheckBox">
+                    <input type="radio" name="filter" checked>
+                    <span class="vDtMb__fltCheck">전체</span>
+                </label>
+                <label class="vDtMb__fltCheckBox">
+                    <input type="radio" name="filter">
+                    <span class="vDtMb__fltCheck">v-Detailing</span>
+                </label>
+                <label class="vDtMb__fltCheckBox">
+                    <input type="radio" name="filter">
+                    <span class="vDtMb__fltCheck">엠디상담</span>
+                </label>
+            </div>
+
+            <!-- S: 예정 리스트 -->
+            <div class="vDtMb__list">
+
+                <div class="vDtMbList__item">
+                    <div class="vDtMbList__top">
+                        <div class="vDtMbList__day">
+                            03.12(화) 18:00
+                        </div>
+                        <div class="vDtMbList__time">
+                            4min
+                        </div>
+                        <button class="vDtMbList__entryBtn">입장하기</button>
+                    </div>
+                    <div class="vDtMbList__conts">
+                        <div class="vDtMbList__desc">
+                            신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다.
+                        </div>
+                        <div class="vDtMbList__badge">v-Detailing</div>
+                    </div>
+                    <div class="vDtList__profile">
+                        <div class="vDtList__profilePhoto" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg')"></div>
+                        <div class="vDtList__name">강서준 MR</div>
+                        <div class="vDtList__from">화이자제약</div>
+                        <!-- S: 230227_바로 예약하기 버튼 -->
+                        <a href="" class="vDtList__reserveBtn">바로 예약하기<i class="xi-angle-right"></i></a>
+                        <!-- E: 230227_바로 예약하기 버튼 -->
+                    </div>
+                </div>
+
+                <div class="vDtMbList__item">
+                    <div class="vDtMbList__top">
+                        <div class="vDtMbList__day">
+                            03.12(화) 18:00
+                        </div>
+                        <div class="vDtMbList__time">
+                            4min
+                        </div>
+                        <button class="vDtMbList__entryBtn">입장하기</button>
+                    </div>
+                    <div class="vDtMbList__conts">
+                        <div class="vDtMbList__desc">
+                            신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다.
+                        </div>
+                        <div class="vDtMbList__badge">v-Detailing</div>
+                    </div>
+                    <div class="vDtList__profile">
+                        <div class="vDtList__profilePhoto" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg')"></div>
+                        <div class="vDtList__name">강서준 MR</div>
+                        <div class="vDtList__from">화이자제약</div>
+                    </div>
+                </div>
+
+                <div class="vDtMbList__item">
+                    <div class="vDtMbList__top">
+                        <div class="vDtMbList__day">
+                            03.12(화) 18:00
+                        </div>
+                        <div class="vDtMbList__time">
+                            4min
+                        </div>
+                        <button class="vDtMbList__entryBtn">입장하기</button>
+                    </div>
+                    <div class="vDtMbList__conts">
+                        <div class="vDtMbList__desc">
+                            신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다.
+                        </div>
+                        <div class="vDtMbList__badge">v-Detailing</div>
+                    </div>
+                    <div class="vDtList__profile">
+                        <div class="vDtList__profilePhoto" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg')"></div>
+                        <div class="vDtList__name">강서준 MR</div>
+                        <div class="vDtList__from">화이자제약</div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- E: 예정 리스트 -->
+
+        </div>
+        <!-- S: 나의 예약 예정 -->
+
+
+
+
+
+        <!-- S: 나의 예약 종료 -->
+        <div class="vDtMb__close">
+
+
+            <!-- S: 종료 리스트 -->
+            <div class="vDtMb__list">
+
+                <div class="vDtMbList__item">
+                    <!-- S: 221108_vDt_v1.5 -->
+                    <div class="vDtNew__topIcoBox">
+                        <div class="vDtNew__matchingIco">바로매칭</div>
+                    </div>
+                    <!-- E: 221108_vDt_v1.5 -->
+                    <div class="vDtMbList__top">
+                        <div class="vDtMbList__day">
+                            03.12(화) 18:00
+                        </div>
+                        <div class="vDtMbList__time">
+                            4min
+                        </div>
+                        <button class="vDtMbList__reviewBtn">
+                            후기 작성하기
+                            <i class="vDtMbList__reviewIcon"></i>
+                        </button>
+                    </div>
+                    <div class="vDtMbList__conts">
+                        <div class="vDtMbList__desc">
+                            신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다.
+                        </div>
+                        <div class="vDtMbList__badge">v-Detailing</div>
+                    </div>
+                    <div class="vDtList__profile">
+                        <div class="vDtList__profilePhoto" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg')"></div>
+                        <div class="vDtList__name">강서준 MR</div>
+                        <div class="vDtList__from">화이자제약</div>
+                        <!-- S: 230227_바로 예약하기 버튼 -->
+                        <a href="" class="vDtList__reserveBtn">바로 예약하기<i class="xi-angle-right"></i></a>
+                        <!-- E: 230227_바로 예약하기 버튼 -->
+                    </div>
+                </div>
+
+                <div class="vDtMbList__item">
+                    <div class="vDtMbList__top">
+                        <div class="vDtMbList__day">
+                            03.12(화) 18:00
+                        </div>
+                        <div class="vDtMbList__time">
+                            4min
+                        </div>                        
+                        <button class="vDtMbList__completeBtn">
+                            <i class="vDtMbList__completeIcon"></i>
+                            후기 완료
+                        </button>
+                    </div>
+                    <div class="vDtMbList__conts">
+                        <div class="vDtMbList__desc">
+                            신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다.
+                        </div>
+                        <div class="vDtMbList__badge">v-Detailing</div>
+                    </div>
+                    <div class="vDtList__profile">
+                        <div class="vDtList__profilePhoto" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg')"></div>
+                        <div class="vDtList__name">강서준 MR</div>
+                        <div class="vDtList__from">화이자제약</div>
+                    </div>
+                </div>
+
+                <div class="vDtMbList__item">
+                    <div class="vDtMbList__top">
+                        <div class="vDtMbList__day">
+                            03.12(화) 18:00
+                        </div>
+                        <div class="vDtMbList__time">
+                            4min
+                        </div>
+                    </div>
+                    <div class="vDtMbList__conts">
+                        <div class="vDtMbList__desc">
+                            신장애 간장애 환자에게 처방 가능한 혈압약 설명을 요청합니다.
+                        </div>
+                        <div class="vDtMbList__badge">v-Detailing</div>
+                    </div>
+                    <div class="vDtList__profile">
+                        <div class="vDtList__profilePhoto" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg')"></div>
+                        <div class="vDtList__name">강서준 MR</div>
+                        <div class="vDtList__from">화이자제약</div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- E: 종료 리스트 -->
+
+
+        </div>
+        <!-- E: 나의 예약 종료 -->
+
+
+
+        <!-- 0630 : S: 작성완료 레이어 -->
+        <div class="vDt__modal">
+            <div class="vDtModal__inner">
+                
+                <button class="vDtModal__closeBtn" onclick="$('.vDt__modal').hide()">
+                    <i class="xi-close"></i><span class="blind">닫기</span>
+                </button>
+
+                <div class="vDtModal__checkIcon--svg">
+                    <svg width="48" height="48" viewBox="0 0 48 48">
+                        <rect width="48" height="48" fill="#3F92F0" rx="24"/>
+                        <polyline points="13 25 21 32 36 17"></polyline>
+                    </svg>
+                </div>
+                <div class="vDtModal__txt1">
+                    작성 완료되었습니다.
+                </div>
+                <div class="vDtModal__txt2">
+                    후기를 작성해주셔서 감사합니다.
+                    <div class="vDtModal__textSmall c_blue">(후기 감사 포인트 100p 지급되었습니다.)</div>
+                </div>
+
+                <!-- 이벤트 있을경우 -->
+                <aside class="vDtModal__bottom">
+                    <h1 class="vDtModal__txtTitleRed"><span class="redmark">“v-Detailing 오픈 기념 이벤트”<br/>참여하고 선물 받으세요!</span></h1>
+                    <a href="#" class="vDtMadal__redBtn">이벤트 참여</a>
+                    <br />
+                    <button class="vDtMadal__btmbtn">다시보지 않기</button>
+                </aside>
+
+            </div>
+        </div>
+        <!-- E: 작성완료 레이어 -->
+
+    </div>
+    <!-- E: v-Detailing 나의 예약 -->
+    
+</div>
+
+
+
+
+</div>
+</body>
+</html>

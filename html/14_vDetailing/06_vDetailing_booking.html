@@ -1,0 +1,353 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> Inter MD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+<script src="../../js/plugins/swiper_3.3.1.js"></script>
+<script src="../../js/ui_script_m.js"></script>
+<body>
+<div class="pageWrap" data-role="page">
+
+
+    <!-- S: header -->
+    <div class="detail__topline">
+        <h2>v-Detailing 예약</h2>
+        <a href="#" class="detail__rt"><i class="xi-close"></i><span class="blind">닫기</span></a>
+    </div>
+    <!-- E: header -->
+
+<div class="contentBody">
+
+    <!-- S: v-Detailing 예약하기 -->
+    <div class="vDt__booking">
+
+        <div class="vDtBook__tit">
+            <div class="vDtStar">예약날짜</div>
+            <div class="vDtBook__deadline">
+                (마감되었습니다.)
+            </div>
+        </div>
+
+        <!-- S: 날짜 선택 영역 -->
+        <div class="vDtBook__day">
+
+            <div class="vDtBookDay__tit">04.26 (월)</div>
+
+            <div class="vDtBookDay__select swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="vDtBookDay__no">21</div>
+                        <div class="vDtBookDay__day">수</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="vDtBookDay__no">22</div>
+                        <div class="vDtBookDay__day">목</div>
+                    </div>
+                    <!-- 선택할 수 없는 날짜 -->
+                    <div class="swiper-slide disable">
+                        <div class="vDtBookDay__no">23</div>
+                        <div class="vDtBookDay__day">금</div>
+                    </div>
+                    <!-- // 선택할 수 없는 날짜 -->
+                    <div class="swiper-slide">
+                        <div class="vDtBookDay__no">24</div>
+                        <div class="vDtBookDay__day">토</div>
+                    </div>
+                    <!-- 선택된 날짜 -->
+                    <div class="swiper-slide on">
+                        <div class="vDtBookDay__no">25</div>
+                        <div class="vDtBookDay__day">일</div>
+                    </div>
+                    <!-- // 선택된 날짜 -->
+                    <div class="swiper-slide">
+                        <div class="vDtBookDay__no">26</div>
+                        <div class="vDtBookDay__day">월</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="vDtBookDay__no">27</div>
+                        <div class="vDtBookDay__day">화</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="vDtBookDay__no">28</div>
+                        <div class="vDtBookDay__day">수</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="vDtBookDay__no">29</div>
+                        <div class="vDtBookDay__day">목</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="vDtBookDay__no">30</div>
+                        <div class="vDtBookDay__day">금</div>
+                    </div>
+                </div>
+    
+                <script>
+                    $(function(){
+                        var vDtBookDay = new Swiper('.vDtBookDay__select', {
+                            slidesPerView: 'auto',
+                            preventClicks: true,
+                            preventClicksPropagation: false,
+                            observer: true,
+                            observeParents: true,
+                            loop: false,
+                            
+                            onTap: function(vDtBookDay, event){
+                                var clickidx = vDtBookDay.clickedIndex;
+                                var slidesCnt = vDtBookDay.slides.length;
+                                if(clickidx != undefined) {
+                                    vDtBookDay.slides.removeClass('on').eq(clickidx).addClass('on');
+                                    vDtBookDay.slideTo(clickidx -3, 300);
+                                }
+                                if(clickidx > slidesCnt -5){
+                                    $('.vDtBookDay__select').addClass('no-white-dim')
+                                }else{
+                                    $('.vDtBookDay__select').removeClass('no-white-dim')
+                                }
+                            }
+                        });
+                    })
+                </script>
+            </div>
+        </div>
+        <!-- E: 날짜 선택 영역 -->
+
+        <div class="vDtBook__tit">
+            <div class="vDtStar">예약 시간</div>
+            <div class="vDtBook__timeDesc">
+                (07:00 ~ 21:30 까지 예약 가능)
+            </div>
+        </div>
+
+
+        <!-- S: 시간 선택 영역 -->
+        <div class="vDtBook__time">
+            <div class="vDtBookTime__selct">
+                <!-- 선택할 수 없는 시간 -->
+                <label class="vDtRvw__checkBox disable">
+                    <input type="radio" name="satifaction" id="">
+                    <span class="vDtRvw__check">07:00</span>
+                </label>
+                <!-- // 선택할 수 없는 시간 -->
+                <!-- 선택된 시간 -->
+                <label class="vDtRvw__checkBox">
+                    <input type="radio" name="satifaction" id="" checked>
+                    <span class="vDtRvw__check">07:30</span>
+                </label>
+                <!-- // 선택된 시간 --> 
+                <label class="vDtRvw__checkBox disable">
+                    <input type="radio" name="satifaction" id="">
+                    <span class="vDtRvw__check">08:00</span>
+                </label>
+                <label class="vDtRvw__checkBox disable">
+                    <input type="radio" name="satifaction" id="">
+                    <span class="vDtRvw__check">08:30</span>
+                </label>
+                <label class="vDtRvw__checkBox disable">
+                    <input type="radio" name="satifaction" id="">
+                    <span class="vDtRvw__check">09:00</span>
+                </label>
+                <label class="vDtRvw__checkBox">
+                    <input type="radio" name="satifaction" id="">
+                    <span class="vDtRvw__check">09:30</span>
+                </label>
+                <label class="vDtRvw__checkBox">
+                    <input type="radio" name="satifaction" id="">
+                    <span class="vDtRvw__check">10:00</span>
+                </label>
+                <label class="vDtRvw__checkBox disable">
+                    <input type="radio" name="satifaction" id="">
+                    <span class="vDtRvw__check">10:30</span>
+                </label>
+                <label class="vDtRvw__checkBox">
+                    <input type="radio" name="satifaction" id="">
+                    <span class="vDtRvw__check">11:00</span>
+                </label>
+                <label class="vDtRvw__checkBox">
+                    <input type="radio" name="satifaction" id="">
+                    <span class="vDtRvw__check">11:30</span>
+                </label>
+                <label class="vDtRvw__checkBox">
+                    <input type="radio" name="satifaction" id="">
+                    <span class="vDtRvw__check">12:00</span>
+                </label>
+                <label class="vDtRvw__checkBox">
+                    <input type="radio" name="satifaction" id="">
+                    <span class="vDtRvw__check">12:30</span>
+                </label>
+                <label class="vDtRvw__checkBox">
+                    <input type="radio" name="satifaction" id="">
+                    <span class="vDtRvw__check">13:00</span>
+                </label>
+                <label class="vDtRvw__checkBox">
+                    <input type="radio" name="satifaction" id="">
+                    <span class="vDtRvw__check">13:30</span>
+                </label>
+            </div>
+            <script>
+                var timeCnt = $('.vDtBookTime__selct .vDtRvw__checkBox').length
+                $( document ).ready(function() {
+                    timeCnt > 12 ? $('.vDtBook__time').addClass('bottom-dim') : true
+                });
+                $('.vDtBookTime__selct').scroll(function(){
+                    var scrollHeight = $('.vDtBookTime__selct').prop('scrollHeight')
+                    var height = $('.vDtBookTime__selct').height()
+                    var scrollTop = $('.vDtBookTime__selct').scrollTop()
+                    if( timeCnt > 12 && scrollTop > (scrollHeight - height - 5)){
+                        $('.vDtBook__time').removeClass('bottom-dim')
+                    }else{
+                        $('.vDtBook__time').addClass('bottom-dim')
+                    }
+                });
+            </script>
+        </div>
+        <!-- E: 시간 선택 영역 -->
+
+
+        <!-- S: 230516_사전요청사항 -->
+        <div class="vDtBook__tit">
+            <div class="vDtStar">사전 요청사항</div>
+        </div>
+
+        <div class="vDtBook__befConts">
+            <div class="vDtBook__toggleTxtBox close">
+                <p class="vDtBook__toggleTxt">지방의회의 조직 권한 의원선거와 지방자치단체의 장의 선임방법 기타 지방자치단체의 조직과 운영에 관한 사항은 법률로 정한다. 국회의원의 선거구와 비례대표제 기타 선거에 관한 사항은 법률로 정한다. 재산권의 행사는 공공복리에 적합하도록 하여야 한다. 국가는 전통문화의 계승 발전과 민족문화의 창달에 노력하여야 한다. 대통령의 국법상 행위는 문서로써 하며, 이문서에는 국무총리와 관계 국무위원이 부서한다. 군사에 관한 것도 또한 같다. 국무회의는 대통령 국무총리와 15인 이상 30인 이하의 국무위원으로 구성한다. 법률은 특별한 규정이 없다.</p>
+                <button class="vDtBook__toggleTxtBtn"></button>
+            </div>
+            <div class="vDtBook__txtArea" style="display: none;">
+                <textarea placeholder="작성하신 답변을 토대로 담당자가 면담을 준비합니다."></textarea>
+            </div>
+        </div>
+        <script>
+            $(".vDtBook__toggleTxtBtn").click(function(){
+                $(".vDtBook__toggleTxtBox").stop().toggleClass("close");
+            });
+            $(".vDtBookTime__selct input").one("change", function(){
+                if($(this).is(":checked") && $(".vDtBook__toggleTxtBox").hasClass("close")){
+                    $(".vDtBook__toggleTxtBox").removeClass("close");
+                }
+                $(".vDtBook__toggleTxtBox + .vDtBook__txtArea").css("display","block");
+            });
+        </script>
+        <!-- E: 230516_사전요청사항 -->
+
+        <!-- 220427 : 근무병원명 입력 추가 -->
+        <div class="vDtBook__tit">
+            <div class="vDtStar">근무병원명</div>
+        </div>
+        <div class="vDtBook__txtConts">
+            <div class="vDtBook__txt">
+                <input type="text" placeholder="근무병원명을 입력해주세요. Ex) ㅇㅇ병원">
+                <span class="vDtBook__txtDesc">입력된 근무병원명으로 내 프로필이 업데이트됩니다.</span>
+            </div>
+        </div>
+        <!-- //220427 : 근무병원명 입력 추가 -->
+
+
+        <div class="vDtBook__tit">
+            <div class="vDtStar">개인정보 제 3자 제공 동의</div>
+        </div>
+
+
+        <!-- S: 개인정보 -->
+        <div class="vDtBook__private">
+            <div class="vDtBookPrv__desc">
+                (주)인터엠디컴퍼니는 아래의 목적으로 개인정보를 수집 및 이용하며, 회원의 개인정보를 안전하게 취급하는데 최선을 다합니다.<br><br>
+
+                1. 개인정보 수집 및 이용의 목적<br>
+                최초 입력 시로부터 1년간 인터엠디 플랫폼 내에서 진행되는한국애브비의 웹세미나 이용자 본인 확인, 식별 등 웹세미나 운영·관리·정산 관련 업무<br><br>
+
+                2. 수집하는 개인정보의 항목<br><br>
+            </div>
+            <label class="vDtBookPrv__checkBox">
+                <input type="checkbox">
+                <span class="vDtBookPrv__check">동의합니다.</span>
+            </label>
+        </div>
+        <!-- E: 개인정보 -->
+
+
+
+        <!-- S: 예약하기 버튼 -->
+        <div class="vDtBottom__btnBox">
+            <!-- 230516_사전요청사항 버튼 한 개일 경우 class에 col-1 추가  -->
+            <button class="vDt__btn col-1 on">예약하기</button>
+        </div>
+        <!-- E: 예약하기 버튼 -->
+
+
+    </div>
+    <!-- E: v-Detailing 예약하기 -->
+
+
+
+
+    <!-- S: 예약완료 레이어 -->
+    <div class="vDt__modal vDt__modalNoshow"><!-- 230614 : class에 vDt__modalNoshow 추가 -->
+        <div class="vDtModal__inner">
+            
+            <!-- <button class="vDtModal__closeBtn" onclick="$('.vDt__modal').hide()">
+                <i class="xi-close"></i><span class="blind">닫기</span>
+            </button> -->
+
+            <div class="vDtModal__checkIcon--svg">
+                <svg width="48" height="48" viewBox="0 0 48 48">
+                    <rect width="48" height="48" fill="#3F92F0" rx="24"/>
+                    <polyline points="13 25 21 32 36 17"></polyline>
+                </svg>
+            </div>
+            <div class="vDtModal__txt1">
+                예약 완료되었습니다.
+            </div>
+            <div class="vDtModal__txt2">
+                <b>면담시간 5분 전</b>에 푸시 및<br>
+                문자메시지로 알려드리겠습니다.
+            </div>
+
+            <div class="vDtList__profile">
+                <div class="vDtList__profilePhoto" style="background-image: url('https://tw20.intermd.co.kr/image/profile_no.jpg')"></div>
+                <div class="vDtList__name">강서준 MR</div>
+                <div class="vDtList__from">화이자제약</div>
+            </div>
+
+            <div class="vDtModal__date">
+                <div class="vDtModal__dateTit">
+                    예약 날짜
+                </div>
+                <div class="vDtModal__dateTxt">
+                    04.14 (월) 10:00
+                </div>
+            </div>
+
+            <!-- S : 230614_스탑노쇼배너_확인버튼추가 -->
+            <div class="vDtNewList__banner vDtNewList__bannerNoShow">
+                <a href="">
+                    <img src="../../img/banner/vDt_stop_noshow_banner.png" alt="">
+                </a>
+            </div>
+        
+            <div class="vDt__modalBottom">
+                <button onclick="$('.vDt__modal').hide()">네, 확인했습니다.</button>
+            </div>
+            <!-- E : 230614_스탑노쇼배너_확인버튼추가 -->
+        </div>
+    </div>
+    <!-- E: 예약완료 레이어 -->
+
+
+
+    
+</div>
+
+
+
+
+</div>
+</body>
+</html>
