@@ -1,0 +1,851 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> Inter MD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+<script src="../../js/plugins/swiper_3.3.1.js"></script>
+<script src="../../js/ui_script_m.js"></script>    
+<body>  
+
+<!-- S: header -->
+<div class="detail__topline">
+    <a href="#" class="detail__btnback"><i class="xi-angle-left"></i></a>
+    <h2>InterMD 스케줄</h2>
+</div>
+<!-- E: header -->
+
+
+
+
+
+<div class="mdSch__container">
+    <div class="mdSch__topBox">
+        
+        <div class="mdSch__topTitle">
+            <button class="mdSchTt__prevBtn"><i class="arrow-left"></i></button>
+            <div class="mdSchTt__yearMonth"><b><span class="mdSchCalTop__year">2020</span>.<span class="mdSchCalTop__month">12</span></b></div>
+            <button class="mdSchTt__nextBtn"><i class="arrow-right"></i></button>
+        </div>
+        <div class="mdSch__topSetting">
+            <button class="mdSchTs__todayBtn"><span>오늘</span></button>
+            <button onclick="$('.mdSch__settingLayer').show(0).addClass('on');" class="mdSchTs__settingBtn"><span>보기설정</span></button>
+        </div>
+
+        
+        <!-- calendar -->
+        <div class="mdSchCal">
+            <table class="mdSchCal__table">
+                <thead>
+                    <tr>
+                        <th>일</th>
+                        <th>월</th>
+                        <th>화</th>
+                        <th>수</th>
+                        <th>목</th>
+                        <th>금</th>
+                        <th>토</th>
+                    </tr>
+                </thead>
+                <tbody class="mdSchCal__tableBody">
+                    <tr>
+                        <td class="mdSchCalDay blur">
+                            <button class="mdSchCalDayNo" id="d20201129" onclick="$('.mdSchTt__prevBtn').trigger('click')"><span>29</span></button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay blur">
+                            <button class="mdSchCalDayNo" id="d20201130" onclick="$('.mdSchTt__prevBtn').trigger('click')"><span>30</span></button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay today">
+                            <button class="mdSchCalDayNo" id="d20201201"><span>1</span></button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201202"><span>2</span></button>
+                            <div class="mdSchCal__detail">
+                                <!-- contents -->
+                                    <span class="mdSchCal__dots">
+                                        <!-- S:채널개편 : 211206 : 삭제 -->
+                                        <!-- <i class="dot__society"></i> --> <!-- 온라인학회 -->
+                                        <!-- E:채널개편 : 211206 : 삭제 -->
+                                        <i class="dot__seminar"></i> <!-- 웹세미나 -->
+                                        <i class="dot__quiz"></i> <!-- 오늘의퀴즈 -->
+                                        <i class="dot__lecture"></i> <!-- 교육강좌 -->
+                                    </span>
+
+                                    <!-- 221018 / 추가 / 교육강좌 -->
+                                    <div class="mdSchCt__list__wrapper">
+                                        <a href="#" class="mdSchCt__list mdSch__lecture">
+                                            <div class="mdSchCt__type"><b>내가 등록한 강좌</b></div>
+                                            <div class="mdSchCt__name">
+                                                <div class="mdSchCt__nameDt">미란성 위식도 역류질환의 내시경 진단</div>
+                                            </div>
+                                            <div class="mdSchCt__time">9월21일 08:00 ~ 9월22일 07:59</div>
+                                        </a>
+                                    </div>
+                                    <!-- //221018 / 추가 / 교육강좌 -->
+
+                                    <div class="mdSchCt__list__wrapper">
+                                        <a href="#" class="mdSchCt__list mdSch__seminar">
+                                            <div class="mdSchCt__type"><b>웹 세미나</b></div>
+                                            <div class="mdSchCt__name">
+                                                <div class="mdSchCt__nameTit">MAVIRET</div>
+                                                <div class="mdSchCt__nameDt">내분비내과에서 바라보는 감염환경에서 만성질환 관리의 중요성</div>
+                                            </div>
+                                            <div class="mdSchCt__time">13:00~14:00</div>
+                                        </a>
+                                    </div>
+
+                                    <!-- 210818 / 추가 / 오늘의퀴즈 -->
+                                    <div class="mdSchCt__list__wrapper">
+                                        <a href="#" class="mdSchCt__list mdSch__quiz">
+                                            <div class="mdSchCt__type"><b>오늘의 퀴즈</b></div>
+                                            <div class="mdSchCt__name">
+                                                <div class="mdSchCt__nameDt">근육이 이완되게 하는 근이완제의 종류는?</div>
+                                            </div>
+                                            <div class="mdSchCt__time">9월21일 08:00 ~ 9월22일 07:59</div>
+                                        </a>
+                                    </div>
+                                    <!-- //210818 / 추가 / 오늘의퀴즈 -->
+
+                                    <!-- S:채널개편 : 211206 : 삭제 -->
+                                    <!-- <div class="mdSchCt__list__wrapper">
+                                        <a href="#"  class="mdSchCt__list mdSch__society registing">
+                                            <div class="mdSchCt__type"><b>온라인 학술대회</b></div>
+                                            <div class="mdSchCt__name">
+                                                <div class="mdSchCt__nameTit">대한이비인후과학회 부산울산경남지부회</div> 
+                                                <div class="mdSchCt__nameDt">대한이비인후과학회 부산울산경남지부회 2020년 10월 학술대회</div>
+                                            </div>
+                                            <div class="mdSchCt__date">
+                                                <span class="mdSch__dateStart active">9월4일</span> //오늘이 시작일과 같을경우 active추가
+                                                <span class="mdSch__dateCurve">~</span>
+                                                <span class="mdSch__dateEnd">9월16일</span>
+                                                <span class="mdSchCt__regist">사전등록기간</span>
+                                            </div>
+                                        </a>
+                                    </div> -->
+                                    <!-- E:채널개편 : 211206 : 삭제 -->
+                                    
+                                <!-- // contents -->
+                            </div>
+                        </td>
+                        <td class="mdSchCalDay red">
+                            <button class="mdSchCalDayNo" id="d20201203"><span>3</span></button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201204"><span>4</span></button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo red" id="d20201205"><span>5</span></button> <!-- 공휴일일 경우 red -->
+                            <div class="mdSchCal__detail">
+                                <!-- contents -->
+                                    <span class="mdSchCal__dots">
+                                        <!-- S:채널개편 : 211206 : 삭제 -->
+                                        <!-- <i class="dot__society"></i> --> <!-- 온라인학회 -->
+                                        <!-- E:채널개편 : 211206 : 삭제 -->
+                                        <i class="dot__event"></i>
+                                        <i class="dot__eDetailing"></i> 
+                                        <i class="dot__seminar"></i> <!-- 웹세미나 -->
+                                    </span>
+                                    <div class="mdSchCt__list__wrapper">
+                                        <a href="#" class="mdSchCt__list mdSch__seminar">
+                                            <div class="mdSchCt__type"><b>웹 세미나</b></div>
+                                            <div class="mdSchCt__name">
+                                                <div class="mdSchCt__nameTit">MAVIRET</div>
+                                                <div class="mdSchCt__nameDt">내분비내과에서 바라보는 감염환경에서 만성질환 관리의 중요성</div>
+                                            </div>
+                                            <div class="mdSchCt__time">13:00~14:00</div>
+                                        </a>
+                                    </div>
+
+                                    <!-- S:채널개편 : 211206 : 삭제 -->
+                                    <!-- <div class="mdSchCt__list__wrapper">
+                                        <a href="#"  class="mdSchCt__list mdSch__society">
+                                            <div class="mdSchCt__type"><b>온라인 학술대회</b></div>
+                                            <div class="mdSchCt__name">
+                                                <div class="mdSchCt__nameTit">Celebrex&Lipitor</div>
+                                                <div class="mdSchCt__nameDt">Topic2.Optimal Timing of High Intensity statin in Patients with Acute Coronary Syndrome High Intensity statin in Patients with Acute Coronary SyndromeHigh Intensity statin in Patients with Acute Coronary Syndrome</div>
+                                            </div>
+                                            <div class="mdSchCt__time">10:00&nbsp;~&nbsp;18:00</div>
+                                        </a>
+                                    </div> -->
+                                    <!-- <div class="mdSchCt__list__wrapper">
+                                        <a href="#"  class="mdSchCt__list mdSch__society registing">
+                                            <div class="mdSchCt__type"><b>온라인 학술대회</b></div>
+                                            <div class="mdSchCt__name">
+                                                <div class="mdSchCt__nameTit">대한이비인후과학회 부산울산경남지부회</div> 
+                                                <div class="mdSchCt__nameDt">대한이비인후과학회 부산울산경남지부회 2020년 10월 학술대회</div>
+                                            </div>
+                                            <div class="mdSchCt__date">
+                                                <span class="mdSch__dateStart active">9월4일</span> //오늘이 시작일과 같을경우 active추가
+                                                <span class="mdSch__dateCurve">~</span>
+                                                <span class="mdSch__dateEnd">9월16일</span>
+                                                <span class="mdSchCt__regist">사전등록기간</span>
+                                            </div>
+                                        </a>
+                                    </div> -->
+                                    <!-- E:채널개편 : 211206 : 삭제 -->
+
+                                    <div class="mdSchCt__list__wrapper">
+                                        <a href="#"  class="mdSchCt__list mdSch__eDetailing">
+                                            <div class="mdSchCt__type"><b>e-Detailing</b></div>
+                                            <div class="mdSchCt__name">
+                                                <div class="mdSchCt__nameTit">Akarb</div> 
+                                                <div class="mdSchCt__nameDt">유익한 정보 확인하시고 포인트받아가세요!</div>
+                                            </div>
+                                            <div class="mdSchCt__date">
+                                                <span class="mdSch__dateStart">9월4일</span>
+                                                <span class="mdSch__dateCurve">~</span>
+                                                <span class="mdSch__dateEnd active">9월16일</span> <!-- 오늘이 마지막일과 같을경우 active추가 -->
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="mdSchCt__list__wrapper">
+                                        <a href="#"  class="mdSchCt__list mdSch__event">
+                                            <div class="mdSchCt__type"><b>이벤트</b></div>
+                                            <div class="mdSchCt__name">
+                                                <div class="mdSchCt__nameDt">나만 알기 아까운 웹 세미나 이용꿀팁!</div>
+                                            </div>
+                                            <div class="mdSchCt__date">
+                                                <span class="mdSch__dateStart active">9월4일</span>
+                                                <span class="mdSch__dateCurve">~</span>
+                                                <span class="mdSch__dateEnd">9월16일</span>
+                                            </div>
+                                        </a>
+                                    </div> 
+                                <!-- // contents -->
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201206"><span>6</span></button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201207">
+                                <span>7</span>
+                            </button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201208">
+                                <span>8</span>
+                            </button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201209">
+                                <span>9</span>
+                            </button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201210">
+                                <span>10</span>
+                            </button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201211">
+                                <span>11</span>
+                            </button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201212">
+                                <span>12</span>
+                            </button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201213">
+                                <span>13</span>
+                            </button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201214">
+                                <span>14</span>
+                            </button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201215">
+                                <span>15</span>
+                            </button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201216">
+                                <span>16</span>
+                            </button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201217">
+                                <span>17</span>
+                            </button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201218">
+                                <span>18</span>
+                            </button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201219">
+                                <span>19</span>
+                            </button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201220">
+                                <span>20</span>
+                            </button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201221">
+                                <span>21</span>
+                            </button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201222">
+                                <span>22</span>
+                            </button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201223">
+                                <span>23</span>
+                            </button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201224">
+                                <span>24</span>
+                            </button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201225">
+                                <span>25</span>
+                            </button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201226">
+                                <span>26</span>
+                            </button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201227">
+                                <span>27</span>
+                            </button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201228">
+                                <span>28</span>
+                            </button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201229">
+                                <span>29</span>
+                            </button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201230">
+                                <span>30</span>
+                            </button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay">
+                            <button class="mdSchCalDayNo" id="d20201231">
+                                <span>31</span>
+                            </button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay blur">
+                            <button class="mdSchCalDayNo" id="d20210101" onclick="$('.mdSchTt__nextBtn').trigger('click')">
+                                <span>1</span>
+                            </button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                        <td class="mdSchCalDay blur">
+                            <button class="mdSchCalDayNo" id="d20210102" onclick="$('.mdSchTt__nextBtn').trigger('click')">
+                                <span>2</span>
+                            </button>
+                            <div class="mdSchCal__detail"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- // calendar -->
+        <!-- 보기 설정 레이어 -->
+        <div class="mdSch__settingLayer">
+            <div class="mdSchSt__wrapper">
+                <div class="mdSchSt__top">
+                    <div class="mdSchSt__title">설정</div>
+                    <button onclick="$('.mdSch__settingLayer').removeClass('on').delay(500).hide(0);return false;" class="mdSchSt__closeBtn"><i class="close"></i></button>
+                </div>
+                <div class="mdSchSt__contents">
+                    <div class="mdSchSt__labelWrapper">
+                        <label class="mdSchSt__label mdSch__seminar">
+                            <input type='checkbox' value='' />
+                            <span>웹 세미나</span>
+                        </label>
+                    </div>
+
+                    <!-- 221018 / 추가 / 교육강좌 -->
+                    <div class="mdSchSt__labelWrapper">
+                        <label class="mdSchSt__label mdSch__lecture">
+                            <input type='checkbox' value='' />
+                            <span>내가 등록한 강좌</span>
+                        </label>
+                    </div>
+                    <!-- //221018 / 추가 / 교육강좌 -->
+                    
+                    <!-- <div class="mdSchSt__labelWrapper">
+                        <label class="mdSchSt__label mdSch__society">
+                            <input type='checkbox' value='' />
+                            <span>온라인학술대회</span>
+                        </label>
+                    </div> -->
+                    <div class="mdSchSt__labelWrapper">
+                        <label class="mdSchSt__label mdSch__eDetailing">
+                            <input type='checkbox' value='' />
+                            <span>e-Detailing</span>
+                        </label>
+                    </div>
+                    <div class="mdSchSt__labelWrapper">
+                        <label class="mdSchSt__label mdSch__event">
+                            <input type='checkbox' value='' />
+                            <span>이벤트</span>
+                        </label>
+                    </div>
+                    <!-- 210818 / 추가 / 오늘의퀴즈 -->
+                    <div class="mdSchSt__labelWrapper">
+                        <label class="mdSchSt__label mdSch__quiz">
+                            <input type='checkbox' value='' />
+                            <span>오늘의 퀴즈</span>
+                        </label>
+                    </div>
+                    <!-- //210818 / 추가 / 오늘의퀴즈 -->
+
+                    <button onclick="$('.mdSch__settingLayer').hide();" class="mdSchSt__complete"><i class="check"></i>선택 완료</button>
+                </div>
+            </div>
+            <div class="mdSch__settingLayerDim" ontouchstart="$('.mdSch__settingLayer').removeClass('on').delay(500).hide(0);return false;"><span class="blind">보기설정 닫기</span></div>
+        </div>
+        <!-- // 보기 설정 레이어 -->
+
+    </div>
+</div>
+
+
+
+
+
+<!-- S: MD 스케쥴 레이어 -->
+<div class="mdSch__layer">
+<!-- <div class="mdSch__layer no-data"> -->
+    <div class="mdSchLyr__top">
+        <button ontouchend="openLayer();" class="mdSchTop__openBtn"><i class="open"></i></button>
+        <button ontouchend="closeLayer();" class="mdSchTop__closeBtn"><i class="close"></i></button>
+        <div class="mdSchTop__center">
+            <div class="mdSchTop__titleDate"><b><span class="mdSch__lyrMM">12</span>.<span class="mdSch__layerDD">01</span> (<span class="mdSch__layerWeek">화</span>)</b></div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            var outerHeight = 0;
+            outerHeight = $(window).innerHeight() - ($('.detail__topline').outerHeight() + $('.mdSch__container').outerHeight());
+            $('.mdSch__layer').height(outerHeight);
+        });
+
+        function openLayer(){
+            $('.mdSch__layer').addClass('opened');
+            outerHeight = $(window).innerHeight() - ($('.detail__topline').outerHeight());
+            $('.mdSch__layer').height(outerHeight);
+            setTimeout(function(){ $('.mdSchLyr__contents').scrollTop(0); },500)
+        }
+        
+        function closeLayer(){
+            $('.mdSch__layer').removeClass('opened');
+            outerHeight = $(window).innerHeight() - ($('.detail__topline').outerHeight() + $('.mdSch__container').outerHeight());
+            $('.mdSch__layer').height(outerHeight);
+            setTimeout(function(){ $('.mdSchLyr__contents').scrollTop(0); },500)
+        }
+    </script>
+
+    <div class="mdSchLyr__contents">
+        <!-- contents -->
+            <span class="mdSchCal__dots">
+                <!-- S:채널개편 : 211206 : 삭제 -->
+                <!-- <i class="dot__society"></i> --> <!-- 온라인학회 -->
+                <!-- E:채널개편 : 211206 : 삭제 -->
+                <i class="dot__event"></i>
+                <i class="dot__eDetailing"></i> 
+                <i class="dot__seminar"></i> <!-- 웹세미나 -->
+                <i class="dot__quiz"></i> <!-- 오늘의퀴즈 -->
+                <i class="dot__lecture"></i> <!-- 교육강좌 -->
+            </span>
+
+            <!-- 221018 / 추가 / 교육강좌 -->
+            <div class="mdSchCt__list__wrapper">
+                <a href="#" class="mdSchCt__list mdSch__lecture">
+                    <div class="mdSchCt__type"><b>내가 등록한 강좌</b></div>
+                    <div class="mdSchCt__name">
+                        <div class="mdSchCt__nameDt">미란성 위식도 역류질환의 내시경 진단</div>
+                    </div>
+                    <div class="mdSchCt__time">9월21일 08:00 ~ 9월22일 07:59</div>
+                </a>
+            </div>
+            <!-- //221018 / 추가 / 교육강좌 -->
+
+            <!-- 210818 / 추가 / 오늘의퀴즈 -->
+            <div class="mdSchCt__list__wrapper">
+                <a href="#" class="mdSchCt__list mdSch__quiz">
+                    <div class="mdSchCt__type"><b>오늘의 퀴즈</b></div>
+                    <div class="mdSchCt__name">
+                        <div class="mdSchCt__nameDt">근육이 이완되게 하는 근이완제의 종류는?</div>
+                    </div>
+                    <div class="mdSchCt__time">9월21일 08:00 ~ 9월22일 07:59</div>
+                </a>
+            </div>
+            <!-- //210818 / 추가 / 오늘의퀴즈 -->
+
+            <div class="mdSchCt__list__wrapper">
+                <a href="#" class="mdSchCt__list mdSch__seminar">
+                    <div class="mdSchCt__type"><b>웹 세미나</b></div>
+                    <div class="mdSchCt__name">
+                        <div class="mdSchCt__nameTit">MAVIRET</div>
+                        <div class="mdSchCt__nameDt">내분비내과에서 바라보는 감염환경에서 만성질환 관리의 중요성</div>
+                    </div>
+                    <div class="mdSchCt__time">13:00~14:00</div>
+                </a>
+            </div>
+
+            <!-- S:채널개편 : 211206 : 삭제 -->
+            <!-- <div class="mdSchCt__list__wrapper">
+                <a href="#"  class="mdSchCt__list mdSch__society">
+                    <div class="mdSchCt__type"><b>온라인 학술대회</b></div>
+                    <div class="mdSchCt__name">
+                        <div class="mdSchCt__nameTit">Celebrex&Lipitor</div>
+                        <div class="mdSchCt__nameDt">Topic2.Optimal Timing of High Intensity statin in Patients with Acute Coronary Syndrome High Intensity statin in Patients with Acute Coronary SyndromeHigh Intensity statin in Patients with Acute Coronary Syndrome</div>
+                    </div>
+                    <div class="mdSchCt__time">10:00&nbsp;~&nbsp;18:00</div>
+                </a>
+            </div> -->
+            <!-- <div class="mdSchCt__list__wrapper">
+                <a href="#"  class="mdSchCt__list mdSch__society registing">
+                    <div class="mdSchCt__type"><b>온라인 학술대회</b></div>
+                    <div class="mdSchCt__name">
+                        <div class="mdSchCt__nameTit">대한이비인후과학회 부산울산경남지부회</div> 
+                        <div class="mdSchCt__nameDt">대한이비인후과학회 부산울산경남지부회 2020년 10월 학술대회</div>
+                    </div>
+                    <div class="mdSchCt__date">
+                        <span class="mdSch__dateStart active">9월4일</span> //오늘이 시작일과 같을경우 active추가
+                        <span class="mdSch__dateCurve">~</span>
+                        <span class="mdSch__dateEnd">9월16일</span>
+                        <span class="mdSchCt__regist">사전등록기간</span>
+                    </div>
+                </a>
+            </div> -->
+            <!-- E:채널개편 : 211206 : 삭제 -->
+
+            <div class="mdSchCt__list__wrapper">
+                <a href="#"  class="mdSchCt__list mdSch__eDetailing">
+                    <div class="mdSchCt__type"><b>e-Detailing</b></div>
+                    <div class="mdSchCt__name">
+                        <div class="mdSchCt__nameTit">Akarb</div> 
+                        <div class="mdSchCt__nameDt">유익한 정보 확인하시고 포인트받아가세요!</div>
+                    </div>
+                    <div class="mdSchCt__date">
+                        <span class="mdSch__dateStart">9월4일</span>
+                        <span class="mdSch__dateCurve">~</span>
+                        <span class="mdSch__dateEnd active">9월16일</span> <!-- 오늘이 마지막일과 같을경우 active추가 -->
+                    </div>
+                </a>
+            </div>
+            <div class="mdSchCt__list__wrapper">
+                <a href="#"  class="mdSchCt__list mdSch__event">
+                    <div class="mdSchCt__type"><b>이벤트</b></div>
+                    <div class="mdSchCt__name">
+                        <div class="mdSchCt__nameDt">나만 알기 아까운 웹 세미나 이용꿀팁!</div>
+                    </div>
+                    <div class="mdSchCt__date">
+                        <span class="mdSch__dateStart active">9월4일</span>
+                        <span class="mdSch__dateCurve">~</span>
+                        <span class="mdSch__dateEnd">9월16일</span>
+                    </div>
+                </a>
+            </div> 
+
+            
+            <div class="mdSchCt__list__wrapper">
+                <a href="#" class="mdSchCt__list mdSch__seminar">
+                    <div class="mdSchCt__type"><b>웹 세미나</b></div>
+                    <div class="mdSchCt__name">
+                        <div class="mdSchCt__nameTit">MAVIRET</div>
+                        <div class="mdSchCt__nameDt">내분비내과에서 바라보는 감염환경에서 만성질환 관리의 중요성</div>
+                    </div>
+                    <div class="mdSchCt__time">13:00~14:00</div>
+                </a>
+            </div>
+
+            <!-- S:채널개편 : 211206 : 삭제 -->
+            <!-- <div class="mdSchCt__list__wrapper">
+                <a href="#"  class="mdSchCt__list mdSch__society">
+                    <div class="mdSchCt__type"><b>온라인 학술대회</b></div>
+                    <div class="mdSchCt__name">
+                        <div class="mdSchCt__nameTit">Celebrex&Lipitor</div>
+                        <div class="mdSchCt__nameDt">Topic2.Optimal Timing of High Intensity statin in Patients with Acute Coronary Syndrome High Intensity statin in Patients with Acute Coronary SyndromeHigh Intensity statin in Patients with Acute Coronary Syndrome</div>
+                    </div>
+                    <div class="mdSchCt__time">10:00&nbsp;~&nbsp;18:00</div>
+                </a>
+            </div> -->
+            <!-- <div class="mdSchCt__list__wrapper">
+                <a href="#"  class="mdSchCt__list mdSch__society registing">
+                    <div class="mdSchCt__type"><b>온라인 학술대회</b></div>
+                    <div class="mdSchCt__name">
+                        <div class="mdSchCt__nameTit">대한이비인후과학회 부산울산경남지부회</div> 
+                        <div class="mdSchCt__nameDt">대한이비인후과학회 부산울산경남지부회 2020년 10월 학술대회</div>
+                    </div>
+                    <div class="mdSchCt__date">
+                        <span class="mdSch__dateStart active">9월4일</span> //오늘이 시작일과 같을경우 active추가
+                        <span class="mdSch__dateCurve">~</span>
+                        <span class="mdSch__dateEnd">9월16일</span>
+                        <span class="mdSchCt__regist">사전등록기간</span>
+                    </div>
+                </a>
+            </div> -->
+            <!-- E:채널개편 : 211206 : 삭제 -->
+
+            <div class="mdSchCt__list__wrapper">
+                <a href="#"  class="mdSchCt__list mdSch__eDetailing">
+                    <div class="mdSchCt__type"><b>e-Detailing</b></div>
+                    <div class="mdSchCt__name">
+                        <div class="mdSchCt__nameTit">Akarb</div> 
+                        <div class="mdSchCt__nameDt">유익한 정보 확인하시고 포인트받아가세요!</div>
+                    </div>
+                    <div class="mdSchCt__date">
+                        <span class="mdSch__dateStart">9월4일</span>
+                        <span class="mdSch__dateCurve">~</span>
+                        <span class="mdSch__dateEnd active">9월16일</span> <!-- 오늘이 마지막일과 같을경우 active추가 -->
+                    </div>
+                </a>
+            </div>
+            <div class="mdSchCt__list__wrapper">
+                <a href="#"  class="mdSchCt__list mdSch__event">
+                    <div class="mdSchCt__type"><b>이벤트</b></div>
+                    <div class="mdSchCt__name">
+                        <div class="mdSchCt__nameDt">나만 알기 아까운 웹 세미나 이용꿀팁!</div>
+                    </div>
+                    <div class="mdSchCt__date">
+                        <span class="mdSch__dateStart active">9월4일</span>
+                        <span class="mdSch__dateCurve">~</span>
+                        <span class="mdSch__dateEnd">9월16일</span>
+                    </div>
+                </a>
+            </div> 
+        <!-- // contents -->  
+    </div>
+</div>
+<!-- E: MD 스케쥴 레이어 -->
+
+
+
+<script>
+    var init = {
+        today: new Date(), // 오늘날짜 설정
+        activeDate: new Date(), // 상세보기에서 활성화 된 날짜
+        targetDateID: null, // 상세보기에서 보여질 선택된 날짜 ID : dyyyymmdd
+        getFirstDay: function(yy, mm){ return new Date(yy, mm, 1) },
+        getLastDay: function(yy, mm) { return new Date(yy, mm + 1, 0) },
+        nextMonth: function () {
+            var d = new Date();
+            d = new Date(this.today.getFullYear(), this.today.getMonth() + 1, 1);
+            this.today = d;            
+            return d;
+        },
+        prevMonth: function () {
+            var d = new Date();
+            d = new Date(this.today.getFullYear(), this.today.getMonth() - 1, 1);
+            this.today = d;
+            return d;
+        },
+        addZero: function(num) {
+            return (num < 10) ? '0' + num : num
+        }
+    };
+
+    var $calBody = document.querySelector('.mdSchCal__tableBody');
+    var $btnNextMonth = document.querySelector('.mdSchTt__nextBtn'); // 달력 다음달
+    var $btnPrevMonth = document.querySelector('.mdSchTt__prevBtn'); // 달력 이전달
+    var $btnToday = document.querySelector('.mdSchTs__todayBtn'); // 달력 오늘버튼
+
+
+    /**
+    * @param {date} fullDate
+    * @param printLayer : callLayer 호출 여부. 달력내 이전/다음달 날짜 클릭할경우 클릭한 날짜의 스케줄 callLayer
+    */
+    function loadYYMM (fullDate, printLayer) {
+        var yy = fullDate.getFullYear();
+        var mm = fullDate.getMonth();
+        var firstDay = init.getFirstDay(yy, mm);
+        var lastDay = init.getLastDay(yy, mm);
+        var markToday;  // for marking today date
+        
+        if (mm === new Date().getMonth() && yy === new Date().getFullYear()) {
+            markToday = new Date().getDate();
+        }
+
+        document.querySelector('.mdSchCalTop__month').textContent = init.addZero(mm+1);
+        document.querySelector('.mdSchCalTop__year').textContent = yy;
+
+        var aftFirstDate = init.getLastDay(yy, fullDate.getMonth()-1 ).getDate() - firstDay.getDay()+1 ; // 이전달 마지막날 - 이번달 시작요일
+        var befLastDay = 1; // 다음달
+        var prevMM = new Date(fullDate.getFullYear(), fullDate.getMonth() - 1, 1);
+        var nextMM = new Date(fullDate.getFullYear(), fullDate.getMonth() + 1, 1);
+
+        var trtd = '';
+        var startCount = 0;
+        var countDay = 0;
+        for (var i = 0; i < 6; i++) {
+            trtd += '<tr>';
+            for (var j = 0; j < 7; j++) {
+                if (i === 0 && !startCount && j === firstDay.getDay()) { 
+                    startCount = 1;
+                }
+                if (!startCount) {
+                    if(i==0) { // 이전달 날짜                        
+                        var fullDateID = prevMM.getFullYear() +''+ init.addZero( (prevMM.getMonth()+1) ) +''+ aftFirstDate;
+                        trtd += '<td class="mdSchCalDay blur">';
+                        trtd += '<button class="mdSchCalDayNo" id="d'+ fullDateID +'" onclick="loadYYMM(init.prevMonth(),false)"><span>'+ aftFirstDate +'</span></button>'; // 날짜
+                        trtd += '<div class="mdSchCal__detail"></div>';
+                        trtd += '</td>';
+                        aftFirstDate++;
+                            
+                    }else { // 다음달 날짜
+                        var fullDateID = nextMM.getFullYear() +''+ init.addZero( (nextMM.getMonth()+1) ) +''+ init.addZero(befLastDay);
+                        trtd += '<td class="mdSchCalDay blur">';
+                        trtd += '<button class="mdSchCalDayNo" id="d'+ fullDateID +'" onclick="loadYYMM(init.nextMonth(),false)"><span>'+ befLastDay +'</span></button>'; // 날짜
+                        trtd += '<div class="mdSchCal__detail"></div>';
+                        trtd += '</td>';
+                        befLastDay++;
+                    }
+                } else {
+                    var fullDateID = yy +''+ init.addZero(mm + 1) +''+ init.addZero(countDay + 1);
+                    trtd += '<td class="mdSchCalDay';
+                    trtd += (markToday && markToday === countDay + 1) ? ' today" ' : '"'
+                    trtd += '>';
+                    trtd += (startCount) ? '<button class="mdSchCalDayNo" id="d'+ fullDateID +'"><span>'+ (++countDay) +'</span></button>' : ''; // 날짜
+                    trtd += '<div class="mdSchCal__detail"></div>';
+                    trtd += '</td>';
+                }
+                if (countDay === lastDay.getDate()) { 
+                    startCount = 0; 
+                }
+            }
+            trtd += '</tr>';
+            if(startCount == 0) { break }
+        }
+        $calBody.innerHTML = trtd;
+
+        if (printLayer == false) {
+            return
+        }else {
+            if (mm === new Date().getMonth() && yy === new Date().getFullYear()) {
+                callLayer('d'+yy +''+ init.addZero(mm + 1) +''+ init.addZero(new Date().getDate()));
+            }else {
+                callLayer('d'+yy +''+ init.addZero(mm + 1) +'01');
+            }
+        }
+    }
+    // loadYYMM(init.today,true);
+
+    
+    /** 상세 레이어
+    */
+    function loadDate () {
+        var yy = init.activeDate.getFullYear();
+        var mm =init.addZero(init.activeDate.getMonth() +1);
+        var dd =init.addZero(init.activeDate.getDate());
+        // 레이어의 선택된 날짜로 id 부여 id="MDbody-yyyymmdd"
+        document.querySelector('.mdSchLyr__contents').setAttribute('id','MDbody-'+yy+mm+dd)
+
+        // 캘린더에 해당날짜 회색배경처리
+        $('.mdSchCalDayNo.active').removeClass('active');
+        $('.mdSchCalDayNo#d'+yy+mm+dd).addClass('active');
+
+        // 선택된 날짜의 스케줄을 레이어에 띄움
+        var $ID = $('#d'+yy+mm+dd);
+        var scdCont = $ID.next('.mdSchCal__detail').clone();
+        $('.mdSchLyr__contents').html(scdCont).scrollTop(0);
+
+        var week = ['일', '월', '화', '수', '목', '금', '토'];
+        var dayOfWeek = week[init.activeDate.getDay()];
+        
+        // 레이어 날짜 출력
+        document.querySelector('.mdSch__lyrMM').textContent = init.addZero(init.activeDate.getMonth() +1);
+        document.querySelector('.mdSch__layerDD').textContent = init.addZero(init.activeDate.getDate());
+        document.querySelector('.mdSch__layerWeek').textContent = dayOfWeek;
+        $('.mdSch__layer').show();
+    }
+    
+
+    $btnNextMonth.addEventListener('click', function() { loadYYMM(init.nextMonth()) }) ;
+    $btnPrevMonth.addEventListener('click', function() { loadYYMM(init.prevMonth()) } );
+
+    $btnToday.addEventListener('click', function() { 
+        var newDt = new Date();
+        newDt = new Date(newDt.getFullYear(), newDt.getMonth(), newDt.getDate());
+        init.today = newDt;
+        loadYYMM(newDt,true);
+    })
+
+    // 날짜 클릭시 레이어 호출
+    $(document).on('click','.mdSchCalDayNo', function(e){
+    	init.targetDateID = $(this).attr('id'); // id="d20200101"
+    	callLayer(init.targetDateID);
+    })
+	
+    function callLayer(targetDateID){
+    	var yy = Number( targetDateID.substring(1,5) );
+        var mm = Number( targetDateID.substring(5,7) );
+        var dd = Number( targetDateID.substring(7,9) );
+        init.activeDate = new Date(mm+'/'+dd+'/'+yy);
+        loadDate();
+    }
+
+</script>
+
+
+
+</body>
+</html>
