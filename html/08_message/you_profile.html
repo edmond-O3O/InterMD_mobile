@@ -1,0 +1,321 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes, viewport-fit=cover" />
+<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">
+<title>IterMD</title>
+<meta property="fb:app_id" content="339657186446847" />
+<meta property="og:url"           content="http://www.intermd.co.kr" />
+<meta property="og:type"          content="website" />
+<meta property="og:title"         content="" id="meta_title" />
+<meta property="og:description"   content="의사만을 위한 Professional Knowledge Place" />
+<meta property="og:image"         content="https://was.intermd.co.kr/images/app_icon_512.png" />
+<meta property="og:ttl"           content=10 />
+
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/style.css">
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/framework.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://www.intermd.co.kr/mobile/styles/swiper.min.css">
+<!--font-->
+<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/font/noto_v3.css">
+<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/xeicon/xeicon.min.css">
+<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--custom-->
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/base.css">  
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/custom.css">  
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/sub.css">  
+<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/styles/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/sub.css">
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/xpull.css">
+<link rel="stylesheet" type="text/css" href="../../css/style_mobile.css">
+
+<!-- 개발 -->
+<link href="https://www.intermd.co.kr/mobile/styles/dev/customTextarea.css" rel="stylesheet" type="text/css" media="all" />
+
+<script type="text/javascript" src="https://www.intermd.co.kr/mobile/scripts/jquery.js"></script>
+<script type="text/javascript" src="https://www.intermd.co.kr/mobile/scripts/custom.js"></script>
+<script type="text/javascript" src="https://www.intermd.co.kr/mobile/scripts/plugins.js"></script>
+<script type="text/javascript" src="https://www.intermd.co.kr/mobile/scripts/intermd.js"></script>
+<script type="text/javascript" src="https://www.intermd.co.kr/mobile/scripts/scripts.js"></script>
+<script type="text/javascript" src="https://www.intermd.co.kr/mobile/scripts/xpull.js"></script>
+
+<!-- 회원가입 스템 -->
+<script type="text/javascript" src="https://www.intermd.co.kr/mobile/scripts/jquery.steps.js"></script>
+
+<!-- Swiper JS -->
+<script src="https://www.intermd.co.kr/mobile/scripts/swiper.min.js"></script>
+<!-- mCustomScrollbar JS -->
+<!-- 회원가입 화면에서는 사용하지 않음 -->
+<!-- <script src="https://www.intermd.co.kr/mobile/scripts/jquery.mCustomScrollbar.concat.min.js"></script> -->
+
+<script src="https://www.intermd.co.kr/js/jquery/jquery.form.js"></script>
+<script src="https://www.intermd.co.kr/js/jquery/jquery.MultiFile.js"></script>
+
+<!-- 본체 및 본체 공통 스크립트 -->
+<script src="https://www.intermd.co.kr/js/dev/transactionMgt.js"></script>
+<script src="https://www.intermd.co.kr/js/dev/modalMgt.js"></script>
+<script src="https://www.intermd.co.kr/js/dev/common_ui.js"></script>
+<script src="https://www.intermd.co.kr/js/dev/pagerMgt.js"></script>
+<script src="https://www.intermd.co.kr/js/dev/customTextarea.js"></script>
+<script src="https://www.intermd.co.kr/js/dev/sessionMgt.js"></script>
+<script src="https://www.intermd.co.kr/mobile/scripts/dev/fileMgt.js"></script>
+<script src="https://www.intermd.co.kr/mobile/scripts/dev/replyMgt.js"></script>
+
+
+</head>
+
+
+
+
+
+<body class="my_page">
+	<div id="page-wrap">
+	
+		<!--S:header-->
+		<div class="jobs-top50"> 
+			<a href="javascript:;" class="back-button-" id="back-button"><i class="xi-angle-left"></i></a>
+			<h2>타인의 프로필</h2>
+		</div>
+		<!--E:header-->
+		
+		<div id="page-content" class="page-content">				
+			<div id="page-content-scroll">
+					
+				<!--Enables this element to be scrolled -->
+			    <!-- 마이 프로파일 -->
+				<form id="frmMyProfile" method="post">
+					<input type="hidden" name="regMemberPseq" value="">
+					<input type="hidden" id="myPseq" name="myPseq" value="" />	<!-- 타인의 시퀀스 -->
+					<input type="hidden" id="otherPseq" name="otherPseq" value="12" />	<!-- 나의 시퀀스 -->
+				</form>
+				<!--Enables this element to be scrolled -->
+
+				<!--s:pick_list_box-->
+				<div id="my_profile_info_layer" class="topBox l_r_padding">
+					<div class="rt">						
+						<a href="javascript:gfn_callSubmit('/my/profile/memberEdit.do', $('#frmMyProfile'));">내 정보 수정</a>
+						<a href="javascript:fn_messageList();">메시지함</a>						
+					</div>
+					<div class="my_title">
+						<p class="bold">인터엠디</p>
+						<p class="font-12 gray">운영자</p>
+					</div>
+					<div class="profile_wrap camera" id="mobile_profile_wrap">
+						
+						<form name="mobileProfileImageform" id="mobileProfileImageform" class="profile_ipt" method="post">
+						<input type="file" name="mp_mobileProfileUpload" id="mp_mobileProfileUpload" class="profile_ipt" accept="image/*" onchange="my_profileChange()">
+						</form>
+						
+						<!-- <div id="imgBox" class="my-imgBox c_img" style="background-image:url(/image/profile_no.jpg)"> 
+							<img src="/image/profile_no.jpg" />
+						</div> -->
+					<div id="imgBox" class="my-imgBox c_img" style="background-image:url('https://tf20.intermd.co.kr/Thumb_upload/201901/31/FFD500B5-73E6-46B1-AD33-6EE5EE9F6C4F_201901311809421.jpeg')"></div></div>
+					
+				</div>
+				<!--E:pick_list_box-->
+		            
+				<!--S:my_gnb_wrap-->
+				<div class="my_gnb_wrap">
+				<!--E:my_gnb_wrap-->
+		
+				<!-- 마이페이지 공통 네비게이션 -->
+				<form id="frmNavMy" method="post">
+					<input type="hidden" value="" name="regMemberPseq" />
+				</form>
+
+				<!--S:my_gnb-->
+				<div class="swiper-container my_gnb swiper-container-horizontal" id="my_gnb">
+					<div class="list_slider_wrap  swiper-wrapper list_slide_content ">
+						<div class="swiper-slide swiper-slide-active">
+							<a href="javascript:gfn_callSubmit('/mobile/my/qna/question.do', $('#frmNavMy'));">Q&amp;A</a>
+						</div>
+						<div class="swiper-slide swiper-slide-next">
+							<a href="javascript:gfn_callSubmit('/mobile/my/posting/list.do', $('#frmNavMy'));">Posting</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="javascript:gfn_callSubmit('/mobile/my/qna/temp.do', $('#frmNavMy'));">Draft</a>
+						</div>
+						<div class="swiper-slide on">
+							<a href="javascript:gfn_callSubmit('/mobile/my/activity/you_follower.do', $('#frmNavMy'));">Activity</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="javascript:gfn_callSubmit('/mobile/my/resume/profile.do', $('#frmNavMy'));">Profile</a>
+						</div>
+					</div>
+				</div>
+				<!--E:my_gnb-->
+				<!--S:my_sub_gnb-->
+				<div id="my_sub_nv" class="my_sub_nv">
+					<ul id="filter_bt_box_ul_0" class="cf filter_ul "> <!-- S: 180611 : class 'your-wrap' 삭제 -->
+					
+					<!-- 타인의 my QnA, Activity -->
+			<!-- 	        	<a href="javascript:gfn_callSubmit('/my/posting/mobile/list.do', $('#frmNavMy'));" class="button button-blue">활동 내역</a> -->
+			<!-- 	        </li> -->
+						<li>
+							<a href="javascript:gfn_callSubmit('/mobile/my/activity/follower.do', $('#frmNavMy'));" class="button button-blue">팔로워</a>
+						</li>
+						<li class="">
+							<a href="javascript:gfn_callSubmit('/mobile/my/activity/following.do', $('#frmNavMy'));" class="button button-blue">팔로잉</a>
+						</li>
+						
+						<li class="active"> <a href="#" class="button">메시지 보내기</a> </li> <!-- S: 180611 : 메세지 li 추가-->
+					</ul>
+				</div>
+				<div class="content_container bg_fff">
+
+
+
+
+
+
+
+
+				</div>
+				<!--E:messages_list_container-->
+			</div>
+			<!--E:page-content-scroll-->
+		</div>
+		<!--E:page-content-->						
+				
+		<!-- top Menu -->		
+
+		<!-- top Menu -->
+        <div id="menu-1" data-menu-size="185" class="menu-wrapper menu-light menu-top">
+            <div class="top_modal_content_wrap no-top">
+                <div class="customerCenter">
+                    <div class="top_modal_container content margin-0">
+                        <div class="top_fixed_wrap">
+                             <h2>고객센터<a href="#" class="right close-menu"><i class="xi-close"></i></a></h2> 
+                         </div>
+                        <div class="accordion accordion-style-1 menu-notification">
+                            <ul class="top_menu_list_harf">
+                            	<li> <a href="javascript:gfn_goMyPageLink();" class="font-14 line01">
+                            		<span class="left"><i class="xi-user left"></i></span>마이페이지</a> </li>
+                                <li> <a href="javascript:gfn_callSubmit('/mobile/notice/list.do', $('#frmTopNav'));" class="font-14 line01">
+                                	<span class="left"><i class="xi-documents-o left"></i></span>공지사항</a> </li>
+                                <li> <a href="javascript:gfn_callSubmit('/mobile/event/list.do', $('#frmTopNav'));" class="font-14 line01">
+                                	<span class="left"><i class="xi-gift-o left"></i></span>이벤트</a> </li>
+                                <li> <a href="javascript:gfn_callSubmit('/mobile/faq/list.do', $('#frmTopNav'));" class="font-14 line01">
+                                	<span class="left"><i class="xi-forum-o left"></i></span>FAQ</a> </li>
+                                <!-- <li> <a href="javascript:alert('작업중');" class="font-14 line01">
+                                	<span class="left"><i class="xi-tags left"></i></span>서비스이용팁</a> </li> -->
+                                <li> <a href="javascript:gfn_callSubmit('/mobile/inquiry/list.do#qna', $('#frmTopNav'));" class="font-14 line01">
+                                	<span class="left"><i class="xi-speech-o left"></i></span>1:1문의</a> </li>
+                                <li> <a href="javascript:gfn_callSubmit('/common/goPage.do', $('#frmTopNav'));" class="font-14 line01">
+                                	<span class="left"><i class="xi-cog left"></i></span>설정</a> </li>
+                                <!-- <li> <a href="javascript:gfn_callSubmit('/mobile/jobs/list.do', $('#frmTopNav'));" class="font-14 line01">
+                                	<span class="left"><i class="xi-briefcase left"></i></span>Jobs (오픈시 삭제)</a> </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- top Menu -->
+        <!-- top Menu -->
+        <div id="menu-2" data-menu-size="400" class="menu-wrapper menu-light menu-top">
+             <div class="top_fixed_wrap">
+                 <h2>알림<a href="#" class="right close-menu"><i class="xi-close"></i></a></h2> 
+             </div>
+            <div class="menu-scroll">
+                <div class="top_modal_content_wrap mCustomScrollbar no-top menu-notification">
+                    <div class="scroll">
+                        <div class="top_modal_container" id="notification_info_layer">
+                            <div class="border-bottom modal-top-text l_r_padding">
+                            	<a href="#" class="a-gray">
+                            		읽지않음 <span class="num"></span>
+                            	</a>
+                            	<a href="javascript:fn_topUpdateNotificationAll();" class="right ">모두 읽음으로표시</a>
+                            </div>
+                            <ul class="l_r_padding"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- top Menu -->
+
+		<!-- top Menu -->
+		
+	</div>
+
+<form id="frmSearch" name="frmSearch" method="post">
+	<!-- 페이징 처리시 필수 항목 : 존재하지 않을경우 script 에러발생 : id값 지정되어있어서 건들면 안됨. S -->
+	<input type="hidden" id="startIndex" name="startIndex" value="0" />
+	<input type="hidden" id="rowNum" name="rowNum" value="5" />
+	<input type="hidden" id="pageNo" name="pageNo" value="1" />
+	<input type="hidden" id="myPseq" name="myPseq" value="12" />
+	<input type="hidden" id="otherPseq" name="otherPseq" value="" />
+	<input type="hidden" id="contactType" name="contactType" value="" />
+	<input type="hidden" id="regMemberPseq" name="regMemberPseq" value="" />
+	<!-- 페이징 처리시 필수 항목 E -->
+</form>
+
+
+
+<div class="footer_box">
+	<form name="frmBottom" id="frmBottom" method="post">
+	</form>
+	<ul class="clear" id="gnb_bottom_layer">
+		<!-- <li class="new_page"> -->
+		<li class="">
+			<a href="javascript:fn_goPageBottom('/mobile/main.do');">
+				<img src="https://www.intermd.co.kr/mobile/img/main/f_i_0.svg">
+				<p>Home</p>
+			</a>
+		</li>
+		<li class="">
+			<a href="javascript:fn_goPageBottom('/mobile/qna/list.do');">
+				<img src="https://www.intermd.co.kr/mobile/img/main/f_i_1.svg">
+				<p>Q&amp;A</p>
+			</a>
+		</li>
+		<li class="">
+			<a href="javascript:fn_goPageBottom('/mobile/posting/list.do');">
+				<img src="https://www.intermd.co.kr/mobile/img/main/f_i_2.svg">
+				<p>Posting</p>
+			</a>
+		</li>
+		<li class="">
+			<a href="javascript:fn_goPageBottom('/mobile/poll/list.do');">
+				<img src="https://www.intermd.co.kr/mobile/img/main/f_i_3.svg">
+				<p>Poll</p>
+			</a>
+		</li>
+		<li class="">
+			<a href="javascript:fn_goPageBottom('/mobile/connect.do');">
+				<img src="https://www.intermd.co.kr/mobile/img/main/f_i_4.svg">
+				<p>Connect</p>
+			</a>
+		</li>
+		<div class="clear"></div>
+	</ul>
+	
+	<div class="clear"></div>
+
+</div>
+
+
+<script type="text/javascript" src="../../js/ui_script_m.js"></script>
+</body>
+
+</html>
