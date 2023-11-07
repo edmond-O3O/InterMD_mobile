@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Inter MD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+    <meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+    <link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="../../js/plugins/jquery-3.2.1.js"></script>
+    <script src="../../js/plugins/swiper_3.3.1.js"></script>
+    <script src="../../js/ui_script_m.js"></script>   
+</head>
+<body>
+<div id="ptrMain">
+
+
+
+
+    <div class="page_poll contentBody">
+
+        
+		<!-- S: 필터 -->
+		<div class="filterBar">
+			<div class="filterBar__lt">
+				<div class="filterBtnBox"> <!-- 20210622 수정 -->
+                    <button class="filterBtn " onclick="filterBtnOnOff($(this))">전체</button>
+                    <button class="filterBtn on" onclick="filterBtnOnOff($(this))">진행중</button>
+                    <button class="filterBtn" onclick="filterBtnOnOff($(this))">종료</button>
+					<span class="filterBtn--bg"></span> <!-- 20210622 수정 -->
+				</div>
+                <style>
+                    .filterBtn--bg.noAni{
+                        transition: none;
+                    }
+                </style>
+                <script>
+                    // bg출력을 위해 첫번째 요소 초기 활성화
+                    // 화면 로드시 class 추가, 트리거 동작, class 삭제
+                    $('.filterBtn--bg').addClass('noAni');
+                    $('.filterBtn.on').trigger('click');
+                    setTimeout(function(){
+                        $('.filterBtn--bg').removeClass('noAni');
+                    },100);
+                </script>
+			</div>
+			<div class="filterBar__rt">
+                <button class="filterBtnChbox" type="button" onclick="$(this).toggleClass('on')">참여완료</button>
+			</div>
+		</div>
+		<!-- E: 필터 -->
+
+
+        <section class="pollList">
+            <!-- poll card 진행중 -->
+            <div class="pollCard">
+                <a href="#">
+                    <div class="pollCard__textbox">
+                        <span class="pollCard__img" style="background-image:url(https://file.intermd.co.kr/Thumb_upload/201902/28/손목시계형심전도_201902281024101.png)"></span>
+                        <span class="pollCard__headline">제약사 선호도와 디지털 마케팅</span>
+                        <span class="pollCard__point">1,000ⓟ 리워드</span>
+                        <span class="pollCard__badge--complete">참여완료</span>
+                        <h1 class="pollCard__subject">[선착순 100명] 새로운 항응고제 NOAC, 선생님께서는 어떻게 생각하시나요? 어떻게 생각하시나요?</h1>
+                        <div class="pollCard__sideInfo">
+                            <span class="pollCard__participant">참여수 : <b>330명</b></span>
+                            <span class="pollCard__date">~2020.04.30</span>
+                        </div>
+                    </div>
+                    <span class="pollCard__target"><b>설문대상</b> : 경기도, 31세~40세 경기도, 31세~40세, 남자, 전문의(내과), 선착순 300명</span>
+                </a>
+            </div>
+            <!-- // poll card 진행중 -->
+
+            <div class="pollCard">
+                <div class="pollCard__textbox">
+                    <span class="pollCard__img" style=""></span> <!-- 이미지 없는경우 style 속성 삭제 (background-image:url()) -->
+                    <span class="pollCard__headline">의사 의향 조사</span>
+                    <h1 class="pollCard__subject">코로나19 종식 이후 가장 하고 싶은 활동은 무엇인가요? </h1>
+                    <div class="pollCard__sideInfo">
+                        <span class="pollCard__participant">참여수 : <b>330명</b></span>
+                        <span class="pollCard__date">~2020.04.30</span>
+                    </div>
+                </div>
+                <span class="pollCard__target"><b>설문대상</b> : 전체</span>
+            </div>
+
+            <!-- poll card 종료 -->
+            <div class="pollCard close">
+                <div class="pollCard__textbox">
+                    <span class="pollCard__img" style="background-image:url(https://file.intermd.co.kr/Thumb_upload/201902/28/손목시계형심전도_201902281024101.png)"></span>
+                    <span class="pollCard__headline">정책 관련 조사</span>
+                    <span class="pollCard__point">500</span>
+                    <h1 class="pollCard__subject">전문의약품 광고 규제, 어떻게 생각하십니까?</h1>
+                    <div class="pollCard__sideInfo">
+                        <span class="pollCard__participant">참여수 : <b>330명</b></span>
+                        <span class="pollCard__date">~2020.04.30</span>
+                    </div>
+                </div>
+                <span class="pollCard__target"><b>설문대상</b> : 31세~40세, 전문의(내과)</span>
+            </div>
+            <!-- // poll card 종료 -->
+
+            <!-- S: poll 제안 배너 -->
+            <div class="banner">
+                <a href="#">
+                    <div class="poll_banner"> 
+                        <img src="http://www.intermd.co.kr/mobile/img/sub/poll_banner.png">
+                        <div class="poll_benner-text">
+                            <p>다른 의사 선생님들의 의견을 듣고 싶으세요?</p>
+                            <p>Poll을 제안해 보세요.</p>
+                            <h3>POLL 제안하기 &gt;</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- E: poll 제안 배너 -->
+            
+            <!-- 참여한 poll 없을경우 -->
+            <div class="nodata">
+                참여한 Poll이 없습니다.<br>
+                진행중인 Poll에서 참여하실 수 있습니다.
+            </div>
+            <!-- //참여한 poll 없을경우 -->
+
+
+        </section>
+    </div>
+
+    <!-- bottom fix -->
+    <div class="fixBtm">
+        <a href="#top" class="goToTop hide" onclick="$('html').stop().animate({ scrollTop:0 }, 800 );return false;"><span class="blind">맨 위로 이동</span></a>
+    </div>
+    <!-- // bottom fix -->
+
+
+
+
+</div>
+<!-- S: 당겨서 새로고침 <div id="ptrMain"> .. </div> 영역에서 작동합니다. -->
+<script src="../../js/plugins/pullToRefresh.js"></script>
+<script>
+    PullToRefresh.init({
+        mainElement: '#ptrMain',
+        onRefresh: function() { 
+            alert('refresh') 
+        }
+    });
+</script>
+<!-- E: 당겨서 새로고침 -->   
+</body>
+</html>

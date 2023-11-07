@@ -1,0 +1,425 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes, viewport-fit=cover" />
+<link rel="shortcut icon" href="https://file.intermd.co.kr/interMD-Favicon32.ico">
+<title>InterMD</title>
+<meta property="fb:app_id" content="339657186446847" />
+<meta property="og:url"           content="https://www.intermd.co.kr" />
+<meta property="og:title"         content="의사만을 위한 Professional Knowledge Place" id="metaTitle" />
+<meta property="og:description"   content="의사만을 위한 Professional Knowledge Place" />
+<meta property="og:image"         content="https://file.intermd.co.kr/InterMD_logo_v2.png" />
+
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/style.css?v=201902150">
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/framework.css?v=20190215">
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://www.intermd.co.kr/mobile/styles/swiper.min.css">
+<!--font-->
+<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/font/noto_v3.css">
+<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/xeicon/xeicon.min.css">
+<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--custom-->
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/base.css?v=20190215">  
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/custom.css?v=20190215">  
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/sub.css?v=20190215">  
+<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/styles/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/xpull.css">
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/style_mobile.css?v=20190215">
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+
+</head>
+
+
+
+
+
+<body class="modal write_modal_wrap posting-qna deepPoster__write">
+    <div id="page-wrap">
+        <div id="page-content" class="page-content bg_fff">
+            <div id="page-content-scroll">
+                <div class="top_fixed_wrap marginBottom20">
+                    <h2>Deep Posting<a href="javascript:void(0);" class="right" onclick="javascript:fn_goExit();"><i class="xi-close"></i></a></h2> 
+                </div>
+                
+                
+                <div class="write_modal_container write_modal_container02 surveyInputWrap">
+                    
+                    <div class="modal_qna">
+                        <div class="modal_text_block marginBottom20">
+                            <div class="surveyWriteRow__tit">제목</div>
+                            <span class="surveyWriteRow__desc">100자 이내로 입력해 주세요. (0자)</span>
+                            <div class="surveyWriteRowIpt">
+                                <input type="text" placeholder="제목을 입력해 주세요.">
+                            </div>
+                        </div>
+                        <div class="modal_text_block marginBottom20">
+                            <div class="surveyWriteRow__tit">작성자 프로필</div>
+                            <div class="deepPoster__writeProfile">
+                                <div class="writeProfile__cont">
+                                    <label>
+                                        <input type="radio" checked name="writeProfile">
+                                        <span class="text">닉네임</span>
+                                        <div class="writeProfile__infoNone">
+                                            <span class="desc">아직 설정된 닉네임이 없습니다.</span>
+                                            <a href="">닉네임 설정하기</a>
+                                        </div>
+                                    </label>
+                                </div>    
+                                <div class="writeProfile__cont">
+                                    <label>
+                                        <input type="radio" name="writeProfile">
+                                        <span class="text">실명</span>
+                                        <div class="writeProfile__infoBox">
+                                            <div class="writeProfile__img">
+                                                <img src="../../img/sample/deep_poster_sample_profile6.png" alt="">
+                                            </div>
+                                            <div class="writeProfile__text">
+                                                <div class="name">김호영</div>
+                                                <span class="desc">안과 전문의 12년차</span>
+                                            </div>
+                                            <a href="">프로필 편집</a>
+                                        </div>
+                                    </label>
+                                </div>   
+                            </div>
+                        </div>
+                        <div class="modal_text_block">
+                            <div class="surveyWriteRow__tit">상세내용</div>
+                            <span class="surveyWriteRow__desc">300자 이내로 입력해 주세요. (0자)</span>
+                            <div class="text_write_area">
+                                <textarea id="postingContent" name="postingContent" placeholder="상세내용을 입력해 주세요." class="validate-required text auto_area" rows="12"></textarea>
+                            </div>                            
+                            <div class="modal_attach_comment" id="posting_file_layer">
+                                <div id="div_attachedposting_file_layer">
+                                    <div id="div_uiposting_file_layer">
+                                        <ul id="ul_media_posting_file_layer"></ul>
+                                    </div> 
+                                    <div id="div_posting_file_layer"></div>
+                                </div>
+                                <div class="modal_attach_comment">
+                                    <span class="file_wrap file"><button type="button"></button></span>
+                                    <span class="file_txt">사진/영상/파일 최대 10개 가능</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixed_wrap">
+                    <!-- 새 작성 or 임시저장 글 작성 -->
+                    <div class="double-type">
+                        <a href="javascript:void(0);" class="button button-teal" id="writeDraft">임시저장</a>
+                        <a href="javascript:void(0);" class="button button-blue">등록</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- S: 닉네임 설정 팝업 -->     
+    <div class="deepPoster__nickPopup active">
+        <div class="top_fixed_wrap marginBottom20">
+            <h2>닉네임 설정하기<a href="" class="right"><i class="xi-close nickPopupClose"></i></a></h2> 
+        </div>
+        <div class="deepPoster__nickPopupCon">
+            <div class="write_modal_container write_modal_container02 surveyInputWrap">
+                <form action="">                       
+                    <div class="modal_qna">
+                        <div class="modal_text_block marginBottom20">
+                            <div class="surveyWriteRow__tit">닉네임 <span class="star">*</span></div>
+                            <div class="surveyWriteRowIpt postingNickNameIpt available"><!-- 사용 가능 시 available 추가 -->
+                                <input type="text" placeholder="닉네임을 입력해 주세요.">
+                                <div class="postingNickName__desc">
+                                    <span>한글 1~10자, 영문 2~20자 이내</span>
+                                </div>
+                                <!-- 닉네임 설정 메시지(사용가능) -->
+                                <div class="postingNickName__desc">
+                                    <span class="available">사용 가능한 닉네임 입니다.</span>
+                                </div>
+                                <!-- 닉네임 설정 메시지(사용불가) -->
+                                <div class="postingNickName__desc">
+                                    <span class="unavailable">사용할 수 없는 닉네임 입니다. (한글 1~10자, 영문 2~20자 이내)</span>
+                                </div>
+                                <!-- 닉네임 설정 메시지(중복) -->
+                                <div class="postingNickName__desc">
+                                    <span class="unavailable">사용할 수 없는 닉네임 입니다. (중복된 닉네임)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal_text_block marginBottom20">
+                            <div class="surveyWriteRow__tit">닉네임 하단글 <span class="sub">(선택사항)</span></div>
+                            <span class="surveyWriteRow__desc">입력하지 않으면 표시되지 않습니다.</span>
+                            <div class="surveyWriteRowIpt postingNickNameIpt">
+                                <input type="text" placeholder="닉네임 하단글을 입력해 주세요.">
+                                <div class="postingNickName__desc">
+                                    <span>한글 1~10자, 영문 2~20자 이내</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="modal_text_block marginBottom20">
+                            <div class="surveyWriteRow__tit">닉네임 아이콘 <span class="star">*</span></div>              
+                            <!-- S: 230728_닉네임아이콘설정수정 -->
+                            <div class="nickIconSetting">
+                                <div class="nickIcon__profile">
+                                    <img src="../../img/sample/deep_poster_sample_profile.png" alt="">
+                                </div>
+                                <div class="nickIcon__colorIpt">
+                                    <input type="text" value="#ff9c8b" id="icoBgPicker">
+                                    <div class="txt">배경색 수정하기</div>
+                                </div>
+                            </div>
+                            <div class="nickIcon__listBox">
+                                <ul>
+                                    <li>
+                                        <label>
+                                            <input type="radio" name="nickNameIcon">
+                                            <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile.png" alt=""></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="radio"  name="nickNameIcon">
+                                            <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile2.png" alt=""></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="radio" name="nickNameIcon">
+                                            <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile3.png" alt=""></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="radio" name="nickNameIcon">
+                                            <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile4.png" alt=""></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="radio" name="nickNameIcon">
+                                            <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile5.png" alt=""></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="radio" name="nickNameIcon">
+                                            <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile.png" alt=""></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="radio" name="nickNameIcon">
+                                            <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile2.png" alt=""></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="radio" name="nickNameIcon">
+                                            <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile3.png" alt=""></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="radio" name="nickNameIcon">
+                                            <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile4.png" alt=""></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="radio" name="nickNameIcon">
+                                            <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile5.png" alt=""></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="radio" name="nickNameIcon">
+                                            <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile.png" alt=""></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="radio" name="nickNameIcon">
+                                            <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile2.png" alt=""></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="radio" name="nickNameIcon">
+                                            <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile3.png" alt=""></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="radio" name="nickNameIcon">
+                                            <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile4.png" alt=""></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="radio" name="nickNameIcon">
+                                            <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile4.png" alt=""></span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- E: 230728_닉네임아이콘설정수정 -->
+                        </div>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.css">
+                        <script src="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.js"></script>
+                        <script>   
+                            /* 230811_제거  
+                            $(document).ready(function(){
+                                var defaultColor = $("#icoBgPicker").val()
+                                $(".nickIcon__profile, .nickIcon__img img").css("background", defaultColor);
+                            });  
+                            */                 
+                            // 230728_옵션수정
+                            $('#icoBgPicker').spectrum({
+                                type: "color",
+                                showPalette: true,
+                                palette: [
+                                    ['#ff9c8b', '#a5b6ff', '#f1fa8a'],
+                                    ['#ffafb2', '#90e596', '#5590ff'],
+                                    ['#6a5656', '#29698b', '#9fc5e8'],
+                                    ['#93c47d', '#b4a7d6', '#bcbcbc'],
+                                    ['#bf9000', '#990000', '#274e13'],
+                                    ['#a64d79', '#ffd966', '#744700'],
+                                ],
+                                showInput: true,
+                                allowEmpty: false,
+                                change: color => {
+                                    // value 값 변경시 선택리스트 배경 및 결과 배경 변경
+                                    const selectedColor = 'rgba('+ color._r +', '+ color._g +', '+ color._b +', '+ color._a +')'
+                                    const resultIcoBg = document.querySelector('.nickIcon__profile')
+                                    const selectIcoBg = document.querySelectorAll('.nickIcon__img img')
+
+                                    resultIcoBg.style.backgroundColor = selectedColor
+                                    selectIcoBg.forEach(selectIcoBg => selectIcoBg.style.backgroundColor = selectedColor)
+                                },
+                            });
+
+                            /* S: 230811_랜덤변경스크립트 */
+                            const icoBgPicker = document.querySelector("#icoBgPicker")
+                            const resultIcoBg = document.querySelector('.nickIcon__profile')
+                            const selectIcoBgList = document.querySelectorAll('.nickIcon__img img')
+                            const resultImg = document.querySelector('.nickIcon__profile img')
+                            const rowNickIcoSelect = document.querySelector('.nickIcon__listBox ul')
+                            const selectNickIco = document.querySelectorAll('.nickIcon__listBox ul')
+
+                            // 배경색 변경 함수
+                            const changeBgColor = (event) => {
+                                const changeValue = event.target.value
+                                resultIcoBg.style.backgroundColor = changeValue
+                                selectIcoBgList.forEach((selectIcoBg) => (selectIcoBg.style.backgroundColor = changeValue))
+                            }
+
+                            // 선택된 이미지 표시 함수
+                            const displaySelectedImg = (event) => {
+                                const li = event.target.closest('li')
+                                const radioBox = li.querySelector('input')
+                                if (!radioBox.checked) {
+                                    const selectedImgSrc = li.querySelector('img').src
+                                    resultImg.src = selectedImgSrc
+                                }
+                            }
+
+                            // 배경컬러 랜덤 HEX코드
+                            function getRandomHexColor() {
+                                let color = '#'
+                                for (let i = 0; i < 6; i++) {
+                                    const randomDigit = Math.floor(Math.random() * 16)
+                                    color += randomDigit.toString(16)
+                                }
+                                return color
+                            }
+
+                            // rowNickIco__select li 랜덤 선택
+                            function selectRandomLi(liElements) {
+                                const randomIndex = Math.floor(Math.random() * liElements.length)
+                                const selectedLi = liElements[randomIndex]
+                                selectedLi.querySelector('input').checked = true
+                                return selectedLi
+                            }
+
+                            // 선택된 li내 이미지 처리 함수
+                            function setRandomSelectedImage() {
+                                selectNickIco.forEach(ulElement => {
+                                    const liElements = ulElement.querySelectorAll('li')
+                                    const selectedInput = ulElement.querySelector('input:checked')    
+                                    if (selectedInput) {
+                                        const selectedLi = selectedInput.parentNode
+                                        resultImg.src = selectedLi.querySelector('img').src
+                                    } else {
+                                        const selectedLi = selectRandomLi(liElements)
+                                        resultImg.src = selectedLi.querySelector('img').src
+                                    }
+                                })
+                            }
+
+                            // 초기화면 설정 함수
+                            const setInitialView = () => {
+                                setRandomSelectedImage()
+                                
+                                const initialBgColor = getRandomHexColor()
+                                resultIcoBg.style.backgroundColor = icoBgPicker.value = initialBgColor
+                                selectIcoBgList.forEach((selectIcoBg) => (selectIcoBg.style.backgroundColor = initialBgColor))
+                                $("#icoBgPicker").spectrum("set", initialBgColor)
+                            }
+                            
+                            // 이벤트 핸들러 등록
+                            icoBgPicker.addEventListener('input', changeBgColor)
+                            rowNickIcoSelect.addEventListener('click', displaySelectedImg)
+
+                            // 초기화면 설정
+                            setInitialView()
+
+                            /* E: 230811_랜덤변경스크립트 */
+                            
+                            /* 230811_제거  
+                            $(".nickIcon__listBox li").each(function(){
+                                $(this).find("input").change(function(){
+                                    if($(this).is(":checked")){
+                                        var imgSrc = $(this).parent().find("img").attr("src");
+                                        $(".nickIcon__profile img").attr("src",imgSrc);
+                                    }
+                                });
+                            })
+                            */
+                           
+                            // 팝업 활성 시 스크롤 방지
+                            if($(".deepPoster__nickPopup").hasClass("active")) {
+                                $("html, body").css("overflow-y","hidden");
+                            } else {
+                                $("html, body").css("overflow-y","");
+                            }
+
+                            $(".nickPopupClose").click(function(e){
+                                e.preventDefault();
+                                $(".deepPoster__nickPopup").removeClass("active");
+                            });
+                        </script>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="fixed_wrap">
+            <!-- 저장하기 -->
+            <div class="fullBtn">
+                <a href="javascript:void(0);" class="button button-blue">저장하기</a>
+            </div>
+        </div>
+
+    </div>
+    <!-- E: 닉네임 설정 팝업 -->  
+    
+</body>
+
+</html>

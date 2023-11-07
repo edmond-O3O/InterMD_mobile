@@ -1,0 +1,471 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes, viewport-fit=cover" />
+    <link rel="shortcut icon" href="https://file.intermd.co.kr/interMD-Favicon32.ico">
+    <title>InterMD</title>
+    <meta property="fb:app_id" content="339657186446847" />
+    <meta property="og:url"           content="https://www.intermd.co.kr" />
+    <meta property="og:title"         content="의사만을 위한 Professional Knowledge Place" id="metaTitle" />
+    <meta property="og:description"   content="의사만을 위한 Professional Knowledge Place" />
+    <meta property="og:image"         content="https://file.intermd.co.kr/InterMD_logo_v2.png" />
+
+    <link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+
+    <link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/style.css?v=202001210">
+    <link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/framework.css?v=20200121">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://www.intermd.co.kr/mobile/styles/swiper.min.css">
+    <!--font-->
+    <link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/font/noto_v3.css">
+    <link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/xeicon/xeicon.min.css">
+    <link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--custom-->
+    <link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/base.css?v=20190215">  
+    <link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/custom.css?v=20190215">  
+    <link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/sub.css?v=20190215">  
+    <link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/styles/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/xpull.css">
+    <link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/style_mobile.css?v=20190215">
+
+    <script type="text/javascript" src="https://www.intermd.co.kr/mobile/scripts/jquery.js"></script>
+    <script type="text/javascript" src="https://www.intermd.co.kr/mobile/scripts/custom.js"></script>
+</head>
+
+
+
+
+
+<body class="modal write_modal_wrap posting-qna">
+    <div id="page-wrap">
+        <div id="page-content" class="page-content bg_fff">
+            <div id="page-content-scroll">
+                <div class="top_fixed_wrap marginBottom20">
+                    <h2>Q&A 작성하기<a href="javascript:void(0);" class="right" onclick="javascript:fn_goExit();"><i class="xi-close"></i></a></h2> 
+                </div>
+                
+                
+                <div class="write_modal_container">
+                    <!-- QnA설문형 : 추가 -->
+                    <ul class="surveyTab">
+                        <li>
+                            <button>일반형 Q&A</button>
+                        </li>
+                        <li class="active">
+                            <button>설문형 Q&A</button>
+                        </li>
+                    </ul>
+                    <!-- //QnA설문형 : 추가 -->
+
+                    <div class="modal_qna">
+                        <div class="marginBottom20">
+                            <div class="select_sec">
+                                <div class="topic_sec">
+                                    <div class="input-simple-1 has-icon input-green   topic-popup">
+                                        <input type="text" id="topicInput" placeholder="토픽을 선택하세요" readonly="" onfocus="this.blur();">
+                                        <i class="xi-plus-circle-o topic_icon" onclick="javascript:fn_openTopic();"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div style="margin-top: 10px; line-height: 150%; font-size: 90%; color: #666666;">* 진로/경력개발, 개원/경영 상담은 [ 홈 > Career > 진로 상담 ]을 이용해 주세요.</div> -->
+                        </div>
+                        <div class="option_chk marginBottom20">
+                            <div class="fac fac-checkbox fac-default inline_style_box harf_style">
+                                <span></span>
+                                <input id="checkboxQuestionAnonymousYn" type="checkbox">
+                                <label for="checkboxQuestionAnonymousYn">익명으로 질문하기</label>
+                            </div>
+                            <div class="fac fac-checkbox fac-default inline_style_box harf_style">
+                                <span></span>
+                                <input id="checkboxQuestionUrgentYn" type="checkbox">
+                                <label for="checkboxQuestionUrgentYn">Urgent</label>
+                            </div>
+                        </div>
+                        <div class="modal_text_block">
+                            <div class="questionBox marginBottom10">
+                                <textarea id="questionTitle" name="questionTitle" placeholder="질문을 입력하세요. (궁금한 점을 바로 알 수 있도록 질문을 요약해 주세요.)" rows="5"></textarea>
+                            </div>
+                            <div class="text_write_area">
+                                <div class="people_sec paddingBottom10" id="patientBox">
+                                    <div class="fac fac-checkbox fac-default inline_style_box harf_style">
+                                        <span></span>
+                                        <input id="checkboxPatientInfo" type="checkbox">
+                                        <label for="checkboxPatientInfo">환자정보</label>
+                                    </div>
+                                    <div id="patientInfoBox" style="">
+                                        <div class="people_info clear hidden">
+                                            <div class="fac fac-radio fac-default inline_style_box">
+                                                <span></span>
+                                                <input name="questionPatientSex" id="questionPatientSexMan1" value="M" type="radio">
+                                                <label for="questionPatientSexMan1">남성</label>
+                                            </div>
+                                            <div class="fac fac-radio fac-default inline_style_box">
+                                                <span></span>
+                                                <input name="questionPatientSex" id="questionPatientSexMan2" value="F" type="radio">
+                                                <label for="questionPatientSexMan2">여성</label>
+                                            </div>
+                                            <div class="input-simple-1 has-icon input-green  inline_style_box">
+                                                <input name="questionPatientAge" id="questionPatientAge" type="number" placeholder="나이" style="width: 70px;" min="0" max="200" maxlength="3" onkeypress="fn_pressNum(event);" oninput="fn_maxLengthCheck(this);">
+                                                <span class="left">세</span>
+                                            </div>
+                                        </div>
+                                        <div class="page-login-field clear">
+                                            <div class="coupon select-box select-box-2 half-bottom position">
+                                                <select id="writeSelectSido"><option value=""></option><option value="강원">강원</option><option value="경기">경기</option><option value="경남">경남</option><option value="경북">경북</option><option value="광주">광주</option><option value="대구">대구</option><option value="대전">대전</option><option value="부산">부산</option><option value="서울">서울</option><option value="세종">세종</option><option value="울산">울산</option><option value="인천">인천</option><option value="전남">전남</option><option value="전북">전북</option><option value="제주">제주</option><option value="충남">충남</option><option value="충북">충북</option><option value="해외">해외</option></select>
+                                            </div>
+                                            <label style="margin-right: 3%;">시(도)</label>
+                                            <div class="coupon select-box select-box-2 half-bottom position gugun_select" style="display: none;">
+                                                <select id="questionPatientArea" name="questionPatientArea"><option value=""></option></select>
+                                            </div>
+                                            <label class="gugun_select" style="padding-left: 10px; display: none;">구</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <textarea id="questionContent" name="questionContent" placeholder="상세내용을 입력하세요. (질문에서 환자 개인을 특정할 수 있는 정보 노출 시 의료법 위반의 소지가 있으므로 유의해주시기 바랍니다.)" class="validate-required text auto_area" rows="7"></textarea>
+                                </div>
+                                <div id="qnaFile"><div id="div_attachedqnaFile"><div id="div_uiqnaFile"><ul id="ul_media_qnaFile"></ul></div> <div id="div_qnaFile"></div></div><div class="modal_attach_comment"><span class="file_wrap file"><button type="button"></button></span> <span class="file_txt">사진/영상/파일 최대 10개 가능</span></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- QnA설문형 : 추가 -->
+                    <div class="surveyWrite">
+                        <div class="surveyWriteRow">
+                            <div class="surveyWrite__tit">
+                                <textarea placeholder="설문 제목을 입력하세요."></textarea>
+                            </div>
+                            <div class="surveyWrite__wrap">
+                                <ul class="surveyWrite__list">
+                                    <li class="surveyWrite__listRow">
+                                        <div class="surveyWrite__listRadio"></div>
+                                        <div class="surveyWrite__listInput">
+                                            <input type="text" placeholder="항목을 입력하세요.">
+                                        </div>
+                                        <div class="surveyWrite__listInputImg">
+                                            <button>
+                                                <span class="blind">이미지첨부</span>
+                                            </button>
+                                        </div>
+                                        <div class="surveyWrite__listClose">
+                                            <button>
+                                                <i class="xi-close"></i>
+                                            </button>
+                                        </div>
+                                        <div class="surveyWrite__listInputImgResult hideBlock"></div>
+                                    </li>
+                                    <li class="surveyWrite__listRow">
+                                        <div class="surveyWrite__listRadio"></div>
+                                        <div class="surveyWrite__listInput">
+                                            <input type="text" placeholder="항목을 입력하세요.">
+                                        </div>
+                                        <div class="surveyWrite__listInputImg">
+                                            <!-- <label>
+                                                <input type="file" class="imgAdd">
+                                            </label> -->
+                                            <button>
+                                                <span class="blind">이미지첨부</span>
+                                            </button>
+                                        </div>
+                                        <div class="surveyWrite__listClose">
+                                            <button>
+                                                <i class="xi-close"></i>
+                                            </button>
+                                        </div>
+                                        <div class="surveyWrite__listInputImgResult hideBlock"></div>
+                                    </li>
+                                </ul>
+                                <div class="surveyWrite__listAdd">
+                                    <button>항목 추가</button>
+                                </div>
+                            </div>
+                            <div class="surveyWrite__notice">
+                                <p>※ 항목은 최대 10개까지 구성할 수 있습니다.</p>
+                            </div>
+
+                            <!-- 순서바꾸기 -->
+                            <!--
+                                <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+                                <script src="http://lukasoppermann.github.io/html5sortable/html5sortable.js"></script>
+                            -->
+                            
+                            <script>
+                                // 순서바꾸기
+                                // sortable('.surveyWrite__list', {
+                                //     placeholderClass: 'my-placeholder fade'
+                                // });
+
+                                $('.imgAdd').on('change', function() {
+                                    file = $(this).prop("files")[0];
+                                    blobURL = window.URL.createObjectURL(file);
+
+                                    let imgAdd = "<img alt='사진영역1' src=" + blobURL +" class='fileImg'><div class='delImg'></div>";
+                                    let addTarget = $(this).closest('.surveyWrite__listRow').find('.surveyWrite__listInputImgResult');
+
+                                    addTarget.removeClass('hideBlock');
+                                    addTarget.html(imgAdd);
+                                });
+
+                                $(document).on('click', '.delImg', function(){
+                                    let imgTarget = $(this).closest('.surveyWrite__listInputImgResult');
+                                    imgTarget.siblings('.surveyWrite__listInputImg').find('input[type=file]').val('');
+                                    imgTarget.addClass('hideBlock');
+                                    imgTarget.html('');
+                                });
+
+                                $(document).on('click', '.surveyWrite__listClose button', function(){
+                                    let removeLength = $('.surveyWrite__list li').length
+
+                                    if(removeLength <= 2) {
+                                        alert('항목은 2개 이상으로만 구성할 수 있습니다.');
+                                    } else {
+                                        $(this).closest('.surveyWrite__listRow').remove();
+                                    }
+                                });
+
+                                $(document).on('click', '.surveyWrite__listAdd button', function(){
+                                    const surveyList = `
+                                        <li class="surveyWrite__listRow">
+                                            <div class="surveyWrite__listRadio"></div>
+                                            <div class="surveyWrite__listInput">
+                                                <input type="text" placeholder="항목을 입력하세요.">
+                                            </div>
+                                            <div class="surveyWrite__listInputImg">
+                                                <button>
+                                                    <span class="blind">이미지첨부</span>
+                                                </button>
+                                            </div>
+                                            <div class="surveyWrite__listClose">
+                                                <button>
+                                                    <i class="xi-close"></i>
+                                                </button>
+                                            </div>
+                                            <div class="surveyWrite__listInputImgResult hideBlock"></div>
+                                        </li>
+                                    `
+                                    
+                                    let length = $('.surveyWrite__list li').length
+
+                                    if(length <= 9) {
+                                        $('.surveyWrite__list').append(surveyList);
+                                    } else {
+                                        alert('항목은 최대 10개까지 구성할 수 있습니다.');
+                                    }
+
+                                    $('.imgAdd').on('change', function() {
+                                        file = $(this).prop("files")[0];
+                                        blobURL = window.URL.createObjectURL(file);
+
+                                        let imgAdd = "<img alt='사진영역1' src=" + blobURL +" class='fileImg'><div class='delImg'></div>";
+                                        let addTarget = $(this).closest('.surveyWrite__listRow').find('.surveyWrite__listInputImgResult');
+
+                                        addTarget.removeClass('hideBlock');
+                                        addTarget.html(imgAdd);
+                                    });
+
+                                    // 순서바꾸기
+                                    // sortable('.surveyWrite__list', {
+                                    //     placeholderClass: 'my-placeholder fade'
+                                    // });
+                                });
+                            </script>
+                        </div>
+
+                        <div class="surveyWriteRow">
+                            <p class="surveyWriteRow__tit">설문기간</p>
+                            
+                            <div class="surveyPeriod">
+                                <div class="surveyPeriod__ipt">
+                                    <div class="surveyWriteRowIpt">
+                                        <input type="text" id="datepicker_start" placeholder="시작일">
+                                    </div>
+                                </div>
+                                <div class="surveyPeriod__txt">~</div>
+                                <div class="surveyPeriod__ipt">
+                                    <div class="surveyWriteRowIpt">
+                                        <input type="text" id="datepicker_end" placeholder="종료일(선택사항)">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- S: 달력 plugin -->
+                            <script src="../../js/jquery-ui/jquery-ui.js"></script>
+                            <link rel="stylesheet" href="../../js/jquery-ui/jquery-ui.css">
+                            <style>
+                                #ui-datepicker-div { z-index: 9000 !important; }
+                            </style>
+                            <script>
+                                $.datepicker.setDefaults({
+                                    dateFormat: 'yymmdd',
+                                    prevText: '이전 달',
+                                    nextText: '다음 달',
+                                    monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                                    monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                                    dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+                                    dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+                                    dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+                                    showMonthAfterYear: true,
+                                    yearSuffix: '년'
+                                });
+
+                                $( function() {                                                    
+                                    $( "#datepicker_start" ).datepicker({
+                                        dateFormat: 'yy-mm-dd',
+                                        minDate: 0
+                                    }).datepicker("setDate", "0");
+                                    $( "#datepicker_end" ).datepicker({ dateFormat: 'yy-mm-dd' });
+                                } );
+                            </script>
+                            <!-- E: 달력 plugin -->
+                        </div>
+                        
+                        <div class="surveyWriteRow">
+                            <p class="surveyWriteRow__tit">선착순 참여수</p>
+                            <div class="surveyParticipation">
+                                <div class="surveyWriteRowIpt unit">
+                                    <input type="number" placeholder="300이하 숫자(선택사항)" class="write__ipt">
+                                    <span>명</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="surveyWriteRow">
+                            <p class="surveyWriteRow__tit">설문 답변</p>
+                            <div class="surveyAnswer">
+                                <ul class="surveyAnswerRadio">
+                                    <li>
+                                        <div class="fac fac-radio fac-default">
+                                            <span></span>
+                                            <input name="surveyAnswer" id="surveyAnswerSingular" type="radio" onchange="setDisplay()">
+                                            <label for="surveyAnswerSingular">단수 선택</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="fac fac-radio fac-default">
+                                            <span></span>
+                                            <input name="surveyAnswer" id="surveyAnswerPlural" type="radio" onchange="setDisplay()">
+                                            <label for="surveyAnswerPlural">복수 선택</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="surveyAnswerQty">
+                                    <div class="surveyAnswerQty__ipt">
+                                        <div class="surveyWriteRowIpt unit">
+                                            <input type="number" placeholder="최소" class="write__ipt">
+                                            <span>개</span>
+                                        </div>
+                                    </div>
+                                    <div class="surveyAnswerQty__txt">~</div>
+                                    <div class="surveyAnswerQty__ipt">
+                                        <div class="surveyWriteRowIpt unit">
+                                            <input type="number" placeholder="최대" class="write__ipt">
+                                            <span>개</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="surveyAnswerNotice">
+                                    <p>※ 복수 선택에서 지정한 범위만큼 답변자가 항목을 선택할 수 있습니다.</p>
+                                </div>
+                            </div>
+                            <script>
+                                function setDisplay(){
+                                    if($('input:radio[id=surveyAnswerPlural]').is(':checked')){
+                                        $('.surveyAnswerQty').addClass('active');
+                                    }else{
+                                        $('.surveyAnswerQty').removeClass('active');
+                                    }
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    <!-- //QnA설문형 : 추가 -->
+
+                    <div class="modal_qna_02">
+                        <div class="content_container">
+                            <div class="select_sec select_sec01 marginBottom20">
+                                <div class="fac fac-checkbox fac-default inline_style_box harf_style topic_sec font-15">
+                                    <span></span>
+                                    <input id="checkRequest" type="checkbox">
+                                    <label for="checkRequest">답변요청하기(선택사항)</label>
+                                </div>
+                            </div>
+                            <div id="detailQuestionRequest" style="display: none;">
+                                <div class="select_sec">
+                                    <h3 class="font-15">선택 답변인</h3>
+                                    <div class="answerWrap" id="writeQuestionRequestSelectedMember"></div>
+                                </div>
+                                <div class="select_sec02">
+                                    <h3 class="font-15">추천 답변인</h3>
+                                    <div id="writeQuestionRecommendedMemberList"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fixed_wrap">
+             		
+                    	
+                    		<!-- 새 작성 or 임시저장 글 작성 -->
+                    		<div class="double-type">
+                    			<!-- <a href="#" class="button button-teal">임시저장</a> -->
+                    			<a href="#" class="button button-teal line2" id="writeDraft">임시저장<span class="s_text">(저장위치 : 마이페이지 &gt; Draft)</span></a>
+                    			<a href="#" class="button button-blue">등록</a>
+                    		</div>
+                    	
+                    	
+                    
+                </div>
+                
+                <div class="textlayer_ty2 save">
+					<div class="text">
+						임시저장 되었습니다.
+					</div>
+				</div>
+				<div class="textlayer_ty2 autoSave">
+					<div class="text">
+						자동 임시저장 되었습니다.
+					</div>
+				</div>
+
+                <!-- S:파일첨부팝업 -->
+                <div class="surveyModalFile">
+                    <div class="surveyModalFileInr">
+                        <ul class="surveyModalFileInr__btn">
+                            <li>
+                                <label>
+                                    <input type="file" accept="image/*">
+                                    <p class="txt">사진 첨부</p>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="file" accept="image/*" capture="camera">
+                                    <p class="txt">카메라</p>
+                                </label>
+                            </li>
+                        </ul>
+                        <div class="surveyModalFileInr__close">
+                            <button>취소</button>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $(".surveyModalFileInr__close").on("click", function(){
+                        $(this).closest(".surveyModalFile").removeClass("active")
+                    })
+                    $(".surveyWrite__listInputImg button").on("click", function(){
+                        $(".surveyModalFile").addClass("active")
+                    })
+                </script>
+                <!-- E:파일첨부팝업 -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

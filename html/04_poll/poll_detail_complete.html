@@ -1,0 +1,1116 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> Inter MD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+<script src="../../js/plugins/swiper_3.3.1.js"></script>
+<script src="../../js/ui_script_m.js"></script>    
+<body>
+
+<div class="pageWrapDetail" data-role="page">
+    
+    <!-- S: header -->
+    <div class="detail__topline">
+        <a href="#" class="detail__btnback"><i class="xi-angle-left"></i></a>
+        <h2>Poll</h2>
+    </div>
+    <!-- E: header -->
+    <div class="page_detail contentBody">
+        
+        <!-- poll detail content -->
+        <section class="pollDetail">
+
+            <style>
+                .pollDetail__descTop {background:#eff5fb} /* [template] 상단 설명 배경색상 */
+                .pollDetail__descBottom {background:#e3e3e3 } /* [template] 하단 설명 배경색상 */
+                .pollDetail__btnbox .buttonPrimary {background:#1565c0 ;} /* [template] '설문제출, 다음' 버튼 배경색상 */
+            </style>
+            <!-- poll 상단정보 -->
+            <div class="pollHead">
+                <div class="pollHead__textbox">
+                    <span class="pollHead__headline">제약회사 온라인 서비스 조사</span>
+                    <span class="pollHead__point">500</span>
+                    <h1 class="pollHead__subject">제약회사의 온라인 서비스 경험해보셨나요?</h1>
+                    <div class="pollHead__sideInfo">
+                        <span class="pollHead__participant">참여수:<b>330명</b></span>
+                        <span class="pollHead__date">~2020.04.30</span>
+                    </div>
+                </div>
+                <!-- <span class="pollHead__target"><b class="pollHead__targetTitle">설문대상</b><span class="pollHead__targetDesc">경기도, 전문의(내과)</span></span> -->
+            </div>
+            <!-- // poll 상단정보 -->
+            
+            <!-- 상단 설명 -->
+            <div class="pollDetail__descTop">
+                <p>
+                    국내에서는 최근 전문의약품의 약국 광고·표시 제한 완화가 논의 중인데요. 선생님께서는 전문의약품 광고 규제, 어떻게 생각하십니까?
+                </p>
+                <b>* 전문의약품 광고 규제에 대한 선생님의 의견을 나눠주시면, 1,000ⓟ를 드립니다! (선착순 120명)</b>
+            </div>
+            <!-- // 상단 설명 -->
+
+            <h2 class="pollDetail__h2">설문 참여자 현황</h2>
+            <!-- 참여자 현황 그래프 -->
+            <article class="donutChart">
+                <div class="donutChart__box donutChart__box1">
+                    <div id="donutChart__box1" class="donutChart__svg"><h1 class="donutChart__title"></h1></div>
+                    <ul class="donutChart__desc"></ul>
+                </div>
+                <div class="donutChart__box donutChart__box2">
+                    <div id="donutChart__box2" class="donutChart__svg"><h1 class="donutChart__title"></h1></div>
+                    <ul class="donutChart__desc"></ul>
+                </div>
+                <div class="donutChart__box donutChart__box3">
+                    <div id="donutChart__box3" class="donutChart__svg"><h1 class="donutChart__title"></h1></div>
+                    <ul class="donutChart__desc"></ul>
+                </div>
+                <div class="donutChart__box donutChart__box4">
+                    <div id="donutChart__box4" class="donutChart__svg"><h1 class="donutChart__title"></h1></div>
+                    <ul class="donutChart__desc"></ul>
+                </div>
+            </article>
+            <script>
+                $(function(){
+                    chartDraw({
+                        chartBox : 'donutChart__box1',
+                        subject : '<em>의사</em>구분',
+                        item: [
+                            {
+                                title : '전문의',
+                                value : 1330 // 각 항목의 참여자 수
+                            },
+                            {
+                                title : '일반의',
+                                value : 1148
+                            }
+                        ]
+                    });
+                    chartDraw({
+                        chartBox : 'donutChart__box2',
+                        subject : '<em>근무</em>유형',
+                        item: [
+                            {
+                                title : '개원의',
+                                value : 1350
+                            },
+                            {
+                                title : '봉직의',
+                                value : 915
+                            },
+                            {
+                                title : '미기재',
+                                value : 783
+                            }
+                        ]
+                    });
+                    chartDraw({
+                        chartBox : 'donutChart__box3',
+                        subject : '성별',
+                        item: [
+                            {
+                                title : '남자',
+                                value : 550
+                            },
+                            {
+                                title : '여자',
+                                value : 415
+                            }
+                        ]
+                    });
+                    chartDraw({
+                        chartBox : 'donutChart__box4',
+                        subject : '연령',
+                        item: [
+                            {
+                                title : '20대',
+                                value : 25
+                            },
+                            {
+                                title : '30대',
+                                value : 25
+                            },
+                            {
+                                title : '40대',
+                                value : 25
+                            },
+                            {
+                                title : '50대 이상',
+                                value : 25
+                            }
+                        ]
+                    });
+                });
+
+
+            </script>
+            <!-- // 참여자 현황 그래프 -->
+
+
+            <h2 class="pollDetail__h2">설문 문항</h2>
+
+            <!-- 결과화면 -->
+            <div class="pollResult">
+                <h2 class="pollSurvey__title marking-o"><span class="pollSurvey__num">1</span>단일 선택형(텍스트)</h2>
+                <div class="pollSurvey__body">
+                    <span class="inputbox__radio"> <label><input type="radio" name="" value=""><span class="text">네</span></label> </span>
+                    <div class="pollResultGraph"><span class="pollResultGraph__stick" style="width:0%;"></span><span class="pollResultGraph__num">0명 (0%)</span></div>
+
+                    <!-- 본인이 선택한 질문인 경우 input에 checked,  그래프에 class selected -->
+                    <span class="inputbox__radio"> <label><input type="radio" name="" value="" checked><span class="text">네</span></label> </span>
+                    <div class="pollResultGraph selected"><span class="pollResultGraph__stick" style="width: 30%;"></span><span class="pollResultGraph__num">10510명 (30%)</span></div>
+
+                    <span class="inputbox__radio"> <label><input type="radio" name="" value=""><span class="text">네</span></label> </span>
+                    <div class="pollResultGraph"><span class="pollResultGraph__stick" style="width:20%;"></span><span class="pollResultGraph__num">930명 (20%)</span></div>
+
+                    <span class="inputbox__radio"> <label><input type="radio" name="" value=""><span class="text">네</span></label> </span>
+                    <div class="pollResultGraph"><span class="pollResultGraph__stick" style="width:25%;"></span><span class="pollResultGraph__num">1582명 (25%)</span></div>
+
+                    <span class="inputbox__complex">
+                        <span class="inputbox__radio"> <label><input type="radio" name="" value=""><span class="text">기타</span></label> </span>
+                        <span class="inputbox__text"><input type="text" class="inputbox__short"  name="" value="" placeholder="기타사항을 작성해 주세요."></span>
+                    </span>
+                    <div class="pollResultGraph"><span class="pollResultGraph__stick" style="width:3%;"></span><span class="pollResultGraph__num">82명 (15%)</span></div>
+                </div>
+
+                <h2 class="pollSurvey__title"><span class="pollSurvey__num">2</span>checkbox 다중선택</h2>
+                <div class="pollSurvey__body">
+                    <span class="inputbox__checkbox"> <label><input type="checkbox" name="" value=""><span class="text">네</span></label> </span>
+                    <div class="pollResultGraph"><span class="pollResultGraph__stick" style="width: 30%;"></span><span class="pollResultGraph__num">10510명 (30%)</span></div>
+
+                    <span class="inputbox__checkbox"> <label><input type="checkbox" name="" value=""><span class="text">네</span></label> </span>
+                    <div class="pollResultGraph"><span class="pollResultGraph__stick" style="width:19%;"></span><span class="pollResultGraph__num">82명 (19%)</span></div>
+
+                    <span class="inputbox__checkbox"> <label><input type="checkbox" name="" value=""><span class="text">네</span></label> </span>
+                    <div class="pollResultGraph"><span class="pollResultGraph__stick" style="width:14%;"></span><span class="pollResultGraph__num">102명 (14%)</span></div>
+
+                    <span class="inputbox__checkbox"> <label><input type="checkbox" name="" value=""><span class="text">네</span></label> </span>
+                    <div class="pollResultGraph"><span class="pollResultGraph__stick" style="width:3%;"></span><span class="pollResultGraph__num">82명 (15%)</span></div>
+
+                    <span class="inputbox__complex">
+                        <span class="inputbox__checkbox"> <label><input type="checkbox" name="" value="" checked><span class="text">기타</span></label> </span>
+                        <span class="inputbox__text"><input type="text" class="inputbox__short"  name="" value="하나의 질환에 대해 연속적인 정보를 얻을 수 있어서" placeholder="기타사항을 작성해 주세요."></span>
+                    </span>
+                    <div class="pollResultGraph selected"><span class="pollResultGraph__stick" style="width:3%;"></span><span class="pollResultGraph__num">82명 (15%)</span></div>
+                </div>
+                
+                <h2 class="pollSurvey__title"><span class="pollSurvey__num">3</span>단일 선택형 (이미지 기본)</h2>
+                <div class="pollSurvey__body">
+                    <div class="pollTyImage">
+                        <span class="inputbox__radio"> 
+                            <label><img src="http://placehold.it/310x262" alt="" class="ipt__img"><input type="radio" name="" value="" class=""><span class="text">checkbox</span></label> 
+                            <div class="pollResultGraph selected"><span class="pollResultGraph__stick" style="width: 47%;"></span><span class="pollResultGraph__num">8010명 (47%)</span></div>
+                        </span>
+                        <span class="inputbox__radio">
+                            <label><img src="http://placehold.it/310x262" alt="" class="ipt__img"><input type="radio" name="" value="" class=""><span class="text"> 시간약속 잡기가 힘들다.</span></label> 
+                            <div class="pollResultGraph"><span class="pollResultGraph__stick" style="width: 13%;"></span><span class="pollResultGraph__num">1001명 (13%)</span></div>
+                        </span>
+                        <span class="inputbox__radio">
+                            <label><img src="http://placehold.it/310x262" alt="" class="ipt__img"><input type="radio" name="" value="" class=""><span class="text"> checkbox</span></label> 
+                            <div class="pollResultGraph"><span class="pollResultGraph__stick" style="width: 32%;"></span><span class="pollResultGraph__num">94명 (32%)</span></div>
+                        </span>
+                        <span class="inputbox__radio"> 
+                            <label><img src="http://placehold.it/310x262" alt="" class="ipt__img"><input type="radio" name="" value="" class=""><span class="text"> checkbox</span></label> 
+                            <div class="pollResultGraph"><span class="pollResultGraph__stick" style="width: 8%;"></span><span class="pollResultGraph__num">9명 (8%)</span></div>
+                        </span>
+                    </div>
+                </div>
+                
+                <h2 class="pollSurvey__title"><span class="pollSurvey__num">4</span>다중 선택형 (이미지 기본)</h2>
+                <div class="pollSurvey__body">
+                    <div class="pollTyImage">
+                        <span class="inputbox__checkbox"> 
+                            <label><img src="http://placehold.it/310x262" alt="" class="ipt__img"><input type="checkbox" name="" value=""><span class="text">checkbox</span></label> 
+                            <div class="pollResultGraph"><span class="pollResultGraph__stick" style="width: 32%;"></span><span class="pollResultGraph__num">94명 (32%)</span></div>
+                        </span>
+                        <span class="inputbox__checkbox"> 
+                            <label><img src="http://placehold.it/310x262" alt="" class="ipt__img"><input type="checkbox" name="" value="" checked><span class="text">checkbox</span></label> 
+                            <div class="pollResultGraph selected"><span class="pollResultGraph__stick" style="width: 32%;"></span><span class="pollResultGraph__num">94명 (32%)</span></div>
+                        </span>
+                        <span class="inputbox__checkbox"> 
+                            <label><img src="http://placehold.it/310x262" alt="" class="ipt__img"><input type="checkbox" name="" value=""><span class="text">checkbox</span></label> 
+                            <div class="pollResultGraph"><span class="pollResultGraph__stick" style="width: 32%;"></span><span class="pollResultGraph__num">94명 (32%)</span></div>
+                        </span>
+                        <span class="inputbox__checkbox"> 
+                            <label><img src="http://placehold.it/310x262" alt="" class="ipt__img"><input type="checkbox" name="" value=""><span class="text">checkbox</span></label> 
+                            <div class="pollResultGraph"><span class="pollResultGraph__stick" style="width: 32%;"></span><span class="pollResultGraph__num">94명 (32%)</span></div>
+                        </span>
+                    </div>
+                </div>
+                
+                <h2 class="pollSurvey__title"><span class="pollSurvey__num">7</span>목록 선택형</h2>
+                <div class="pollSurvey__body">
+                    
+                    <span class="inputbox__radio"> <label><input type="radio" name="" value="" checked><span class="text">전면 취소해야 한다.</span></label> </span>
+                    <div class="pollResultGraph selected"><span class="pollResultGraph__stick" style="width: 30%;"></span><span class="pollResultGraph__num">10510명 (30%)</span></div>
+
+                    <span class="inputbox__radio"> <label><input type="radio" name="" value=""><span class="text">코로나19의 추이를 보고 축소하여 진행해야 한다.</span></label> </span>
+                    <div class="pollResultGraph"><span class="pollResultGraph__stick" style="width:20%;"></span><span class="pollResultGraph__num">930명 (20%)</span></div>
+
+                    <span class="inputbox__radio"> <label><input type="radio" name="" value=""><span class="text">개인 위생(마스크, 소독제)에 신경 쓴다면 진행해도 무방하다.</span></label> </span>
+                    <div class="pollResultGraph"><span class="pollResultGraph__stick" style="width:25%;"></span><span class="pollResultGraph__num">1582명 (25%)</span></div>
+
+                </div>
+                
+                <h2 class="pollSurvey__title"><span class="pollSurvey__num">8</span>단답형</h2>
+                <div class="pollSurvey__body">
+                    <span class="inputbox__textbox"><input type="text" name="" value="필요한 정보만 전달받을 수 있다." placeholder="직접 입력해 주세요."></span>
+                    <div class="pollResult__text">※ 이 문항은 전체 참여자의 설문 결과를 제공하지 않습니다.</div>
+                </div>
+                
+                <h2 class="pollSurvey__title"><span class="pollSurvey__num">9</span>서술형</h2>
+                <div class="pollSurvey__body">
+                    <!-- 서술형 -->
+                    <textarea name="" id="" maxlength="200" class="inputbox__textarea" readonly placeholder="기타 의견을 기술해주세요.">서울 마포구에서 이벤트 업체를 운영하는 엄모(54)씨는 최저임금 인상 소식을 듣고 한숨을 내쉬었다. 코로나 바이러스 감염증(코로나19) 사태로 일감이 줄었는데 인건비마저 올랐기 때문이다. 그는 "3개월을 버틸지, 6개월을 버틸지 모르겠다. 우리는 시한부 인생"이라고 했다.서울 마포구에서 이벤트 업체를 운영하는 엄모(54)씨는 최저임금 인상 소식을 듣고 한숨을 내쉬었다. 코로나 바이러스 감염증(코로나19) 사태로 일감이 줄었는데 인건비마저 올랐기 때문이다. 그는 "3개월을 버틸지, 6개월을 버틸지 모르겠다. 우리는 시한부 인생"이라고 했다.</textarea>
+                    <div class="inputbox__textareaCounter">
+                        <b class="inputbox__textareaCounter--current">0</b> / 200
+                        <script>
+                            $('.inputbox__textarea').keyup(function(){
+                                var thisLen = $(this).val().length;
+                                if(thisLen <= 200) { // 200자 이하일경우
+                                    $('.inputbox__textareaCounter--current').text(thisLen);
+                                }else {
+                                    return false;
+                                }                                                    
+                            })
+                        </script>
+                    </div>
+                    <div class="pollResult__text">※ 이 문항은 전체 참여자의 설문 결과를 제공하지 않습니다.</div>
+                    <!-- // 서술형 -->
+                </div>
+
+                <h2 class="pollSurvey__title"><span class="pollSurvey__num">10</span>찬반형</h2>
+                <div class="pollSurvey__body">
+
+                    <!-- 찬반형 결과 마크업 다름 -->
+                    <span class="inputbox__radio"> <label><input type="radio" name="" value="" checked><span class="text">마스크를 매일 바꿔서 새것으로 써야한다.</span></label> </span>
+                    <div class="pollResultGraph selected"><span class="pollResultGraph__stick" style="width: 30%;"></span><span class="pollResultGraph__num">10510명 (30%)</span></div>
+
+                    <span class="inputbox__radio"> <label><input type="radio" name="" value=""><span class="text">주에 하나씩 써도된다.</span></label> </span>
+                    <div class="pollResultGraph"><span class="pollResultGraph__stick" style="width:70%;"></span><span class="pollResultGraph__num">39300명 (70%)</span></div>
+
+                </div>
+
+                
+                <h2 class="pollSurvey__title"><span class="pollSurvey__num">11</span>척도형</h2>
+                <div class="pollSurvey__body">
+                    <div class="pollSurvey__media">
+                        <img src="http://placehold.it/552x270" alt="" class="pollSurvey__img">
+                        <video controls="" playsinline="" poster="https://file.intermd.co.kr/upload/202004/23/다시보기_202004231212401.png" class="pollSurvey__video">
+                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                            <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+                        </video>
+                    </div>
+                    <!-- 척도형 -->
+                        <div class="pollTyScale">
+                            <span class="pollTyScale__title--lt">수준 불만족</span>
+                            <span class="pollTyScale__title--rt">수준 만족</span>
+                            <div class="pollTyScale__body">
+                                <span class="inputbox__radio"> <label><input type="radio" name=""><span class="text">1</span></label> </span>
+                                <span class="inputbox__radio"> <label><input type="radio" name="" checked><span class="text">2</span></label> </span>
+                                <span class="inputbox__radio"> <label><input type="radio" name=""><span class="text">3</span></label> </span>
+                            </div>
+                        </div>
+                        <div class="pollTyScale">
+                            <span class="pollTyScale__title--lt">내용 불만족</span>
+                            <span class="pollTyScale__title--rt">내용 만족</span>
+                            <div class="pollTyScale__body">
+                                <span class="inputbox__radio"> <label><input type="radio" name=""><span class="text">1</span></label> </span>
+                                <span class="inputbox__radio"> <label><input type="radio" name=""><span class="text">2</span></label> </span>
+                                <span class="inputbox__radio"> <label><input type="radio" name=""><span class="text">3</span></label> </span>
+                                <span class="inputbox__radio"> <label><input type="radio" name=""><span class="text">4</span></label> </span>
+                                <span class="inputbox__radio"> <label><input type="radio" name=""><span class="text">5</span></label> </span>
+                                <span class="inputbox__radio"> <label><input type="radio" name="" checked><span class="text">6</span></label> </span>
+                                <span class="inputbox__radio"> <label><input type="radio" name=""><span class="text">7</span></label> </span>
+                            </div>
+                        </div>
+                    <!-- // 척도형 -->
+                    <div class="pollResult__text">※ 이 문항은 전체 참여자의 설문 결과를 제공하지 않습니다.</div>
+                </div>
+                
+                <h2 class="pollSurvey__title"><span class="pollSurvey__num">12</span>매트릭스형(단일 선택)</h2>
+                <div class="pollSurvey__body">
+                    <!-- 매트릭스형 -->
+                        <div class="pollTyMatrix">
+                            <div class="pollTyMatrix__thead">
+                                <span class="pollTyMatrix__th pollTyMatrix__title">만족도</span>
+                                <span class="pollTyMatrix__th">매우 불만족</span>
+                                <span class="pollTyMatrix__th">불만족</span>
+                                <span class="pollTyMatrix__th">보통</span>
+                                <span class="pollTyMatrix__th">만족</span>
+                                <span class="pollTyMatrix__th">매우 만족</span>
+                            </div>
+                            <div class="pollTyMatrix__tbody">
+                                <h2 class="pollTyMatrix__title">참가비</h2>
+                                <span class="inputbox__radio"> <label><input type="radio" name=""><span class="text">매우 불만족</span></label> </span>
+                                <span class="inputbox__radio"> <label><input type="radio" name=""><span class="text">불만족</span></label> </span>
+                                <span class="inputbox__radio"> <label><input type="radio" name="" checked><span class="text">보통</span></label> </span>
+                                <span class="inputbox__radio"> <label><input type="radio" name=""><span class="text">만족</span></label> </span>
+                                <span class="inputbox__radio"> <label><input type="radio" name=""><span class="text">매우 만족</span></label> </span>
+                            </div>
+                            <div class="pollTyMatrix__tbody">
+                                <h2 class="pollTyMatrix__title">세미나 시간과 주차 및 교통 </h2>
+                                <span class="inputbox__radio"> <label><input type="radio" name=""><span class="text">매우 불만족</span></label> </span>
+                                <span class="inputbox__radio"> <label><input type="radio" name=""><span class="text">불만족</span></label> </span>
+                                <span class="inputbox__radio"> <label><input type="radio" name="" checked><span class="text">보통</span></label> </span>
+                                <span class="inputbox__radio"> <label><input type="radio" name=""><span class="text">만족</span></label> </span>
+                                <span class="inputbox__radio"> <label><input type="radio" name=""><span class="text">매우 만족</span></label> </span>
+                            </div>
+                            <div class="pollTyMatrix__tbody">
+                                <h2 class="pollTyMatrix__title">안내자료</h2>
+                                <span class="inputbox__radio"> <label><input type="radio" name=""><span class="text">매우 불만족</span></label> </span>
+                                <span class="inputbox__radio"> <label><input type="radio" name="" checked><span class="text">불만족</span></label> </span>
+                                <span class="inputbox__radio"> <label><input type="radio" name=""><span class="text">보통</span></label> </span>
+                                <span class="inputbox__radio"> <label><input type="radio" name=""><span class="text">만족</span></label> </span>
+                                <span class="inputbox__radio"> <label><input type="radio" name=""><span class="text">매우 만족</span></label> </span>
+                            </div>
+                            <div class="pollTyMatrix__tbody">
+                                <h2 class="pollTyMatrix__title">강사의 수준</h2>
+                                <span class="inputbox__radio"> <label><input type="radio" name="" checked><span class="text">매우 불만족</span></label> </span>
+                                <span class="inputbox__radio"> <label><input type="radio" name=""><span class="text">불만족</span></label> </span>
+                                <span class="inputbox__radio"> <label><input type="radio" name=""><span class="text">보통</span></label> </span>
+                                <span class="inputbox__radio"> <label><input type="radio" name=""><span class="text">만족</span></label> </span>
+                                <span class="inputbox__radio"> <label><input type="radio" name=""><span class="text">매우 만족</span></label> </span>
+                            </div>
+                        </div>
+                    <!-- // 매트릭스형 -->
+                    <div class="pollResult__text">※ 이 문항은 전체 참여자의 설문 결과를 제공하지 않습니다.</div>
+                </div>
+                
+                <h2 class="pollSurvey__title"><span class="pollSurvey__num">13</span>매트릭스형 (다중 선택)</h2>
+                <div class="pollSurvey__body">
+                    <!-- 매트릭스형 -->
+                    <div class="pollTyMatrix">
+                        <div class="pollTyMatrix__thead">
+                            <span class="pollTyMatrix__th pollTyMatrix__title">만족도</span>
+                            <span class="pollTyMatrix__th">매우 불만족</span>
+                            <span class="pollTyMatrix__th">불만족</span>
+                            <span class="pollTyMatrix__th">보통</span>
+                            <span class="pollTyMatrix__th">만족</span>
+                            <span class="pollTyMatrix__th">매우 만족</span>
+                        </div>
+                        <div class="pollTyMatrix__tbody">
+                            <h2 class="pollTyMatrix__title">참가비</h2>
+                            <span class="inputbox__checkbox"> <label><input type="checkbox" name="" checked><span class="text">매우 불만족</span></label> </span>
+                            <span class="inputbox__checkbox"> <label><input type="checkbox" name="" checked><span class="text">불만족</span></label> </span>
+                            <span class="inputbox__checkbox"> <label><input type="checkbox" name=""><span class="text">보통</span></label> </span>
+                            <span class="inputbox__checkbox"> <label><input type="checkbox" name=""><span class="text">만족</span></label> </span>
+                            <span class="inputbox__checkbox"> <label><input type="checkbox" name=""><span class="text">매우 만족</span></label> </span>
+                        </div>
+                        <div class="pollTyMatrix__tbody">
+                            <h2 class="pollTyMatrix__title">세미나 시간과 주차 및 교통 </h2>
+                            <span class="inputbox__checkbox"> <label><input type="checkbox" name=""><span class="text">매우 불만족</span></label> </span>
+                            <span class="inputbox__checkbox"> <label><input type="checkbox" name=""><span class="text">불만족</span></label> </span>
+                            <span class="inputbox__checkbox"> <label><input type="checkbox" name="" checked><span class="text">보통</span></label> </span>
+                            <span class="inputbox__checkbox"> <label><input type="checkbox" name="" checked><span class="text">만족</span></label> </span>
+                            <span class="inputbox__checkbox"> <label><input type="checkbox" name=""><span class="text">매우 만족</span></label> </span>
+                        </div>
+                        <div class="pollTyMatrix__tbody">
+                            <h2 class="pollTyMatrix__title">안내자료</h2>
+                            <span class="inputbox__checkbox"> <label><input type="checkbox" name=""><span class="text">매우 불만족</span></label> </span>
+                            <span class="inputbox__checkbox"> <label><input type="checkbox" name=""><span class="text">불만족</span></label> </span>
+                            <span class="inputbox__checkbox"> <label><input type="checkbox" name=""><span class="text">보통</span></label> </span>
+                            <span class="inputbox__checkbox"> <label><input type="checkbox" name=""><span class="text">만족</span></label> </span>
+                            <span class="inputbox__checkbox"> <label><input type="checkbox" name="" checked><span class="text">매우 만족</span></label> </span>
+                        </div>
+                        <div class="pollTyMatrix__tbody">
+                            <h2 class="pollTyMatrix__title">강사의 수준</h2>
+                            <span class="inputbox__checkbox"> <label><input type="checkbox" name=""><span class="text">매우 불만족</span></label> </span>
+                            <span class="inputbox__checkbox"> <label><input type="checkbox" name=""><span class="text">불만족</span></label> </span>
+                            <span class="inputbox__checkbox"> <label><input type="checkbox" name=""><span class="text">보통</span></label> </span>
+                            <span class="inputbox__checkbox"> <label><input type="checkbox" name="" checked><span class="text">만족</span></label> </span>
+                            <span class="inputbox__checkbox"> <label><input type="checkbox" name=""><span class="text">매우 만족</span></label> </span>
+                        </div>
+                    </div>
+                    <!-- // 매트릭스형 -->
+                    <div class="pollResult__text">※ 이 문항은 전체 참여자의 설문 결과를 제공하지 않습니다.</div>
+                </div>
+                
+                <h2 class="pollSurvey__title"><span class="pollSurvey__num">14</span>순위형</h2>
+                <div class="pollSurvey__body">
+                    <!-- 순위형 -->
+                    <div class="pollTyOrder" id="select1">
+                        <div class="pollTyOrder__item">
+                            <label class="pollTyOrder__label">
+                                <input type="text" name="" id="" value="3" readonly class="pollTyOrder__input">
+                                <span class="pollTyOrder__text">온라인 커뮤니티 (인터엠디 등), 메디컬 매거진 또는 칼럼 웹 심포지엄, 학회 홈페이지, 논문 </span>
+                            </label>
+                        </div>
+                        <div class="pollTyOrder__item">
+                            <label class="pollTyOrder__label">
+                                <input type="text" name="" id="" readonly class="pollTyOrder__input">
+                                <span class="pollTyOrder__text">웹 심포지엄</span>
+                            </label>
+                        </div>
+                        <div class="pollTyOrder__item">
+                            <label class="pollTyOrder__label">
+                                <input type="text" name="" id="" value="1" readonly class="pollTyOrder__input">
+                                <span class="pollTyOrder__text">메디컬 매거진 또는 칼럼</span>
+                            </label>
+                        </div>
+                        <div class="pollTyOrder__item">
+                            <label class="pollTyOrder__label">
+                                <input type="text" name="" id="" value="2" readonly class="pollTyOrder__input">
+                                <span class="pollTyOrder__text">학회 홈페이지</span>
+                            </label>
+                        </div>
+                        <div class="pollTyOrder__item">
+                            <label class="pollTyOrder__label">
+                                <input type="text" readonly name="" id="" readonly class="pollTyOrder__input">
+                                <span class="pollTyOrder__text">논문</span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- // 순위형 -->
+                    <div class="pollResult__text">※ 이 문항은 전체 참여자의 설문 결과를 제공하지 않습니다.</div>
+
+                </div>
+                
+                <h2 class="pollSurvey__title"><span class="pollSurvey__num">15</span>별점형 (단일척도)</h2>
+                <div class="pollSurvey__body">
+                    <!-- 별점형 -->
+                    <ul class="pollTyStarResult"> <!-- 별점형 결과 마크업 다름 -->
+                        <li>
+                            <div class="pollTyStarResult__box star1"><span class="blind">별 1개</span></div>
+                            <div class="pollResultGraph"><span class="pollResultGraph__stick" style="width: 28%;"></span><span class="pollResultGraph__num">119명 (28%)</span></div>
+                        </li>
+                        <li>
+                            <div class="pollTyStarResult__box star2"><span class="blind">별 2개</span></div>
+                            <div class="pollResultGraph"><span class="pollResultGraph__stick" style="width: 30%;"></span><span class="pollResultGraph__num">215명 (30%)</span></div>
+                        </li>
+                        <li>
+                            <div class="pollTyStarResult__box star3 selected"><span class="blind">별 3개</span></div>
+                            <div class="pollResultGraph selected"><span class="pollResultGraph__stick" style="width: 13%;"></span><span class="pollResultGraph__num">111명 (13%)</span></div>
+                        </li>
+                        <li>
+                            <div class="pollTyStarResult__box star4"><span class="blind">별 4개</span></div>
+                            <div class="pollResultGraph"><span class="pollResultGraph__stick" style="width: 48%;"></span><span class="pollResultGraph__num">439명 (48%)</span></div>
+                        </li>
+                        <li>
+                            <div class="pollTyStarResult__box star5"><span class="blind">별 5개</span></div>
+                            <div class="pollResultGraph"><span class="pollResultGraph__stick" style="width: 18%;"></span><span class="pollResultGraph__num">19명 (18%)</span></div>
+                        </li>
+                    </ul>
+                    <!-- // 별점형 -->
+                </div>
+                
+                <h2 class="pollSurvey__title"><span class="pollSurvey__num">16</span>별점형(다중 척도)</h2>
+                <div class="pollSurvey__body">
+                    <!-- 별점형(다중 척도) -->
+                    <div class="pollTyStarTable">
+                        <div class="pollTyStarTable__tbody">
+                            <h2 class="pollTyStarTable__title">참가비</h2>
+                            <div class="pollTyStarTable__cont">
+                                <div class="pollTyStarTable__star">
+                                    <!-- 별점형 -->
+                                        <div class="pollTyStar">
+                                            <h3 class="blind">참가비</h3>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 1개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star" id="" checked>
+                                                <span class="pollTyStar__img"><span class="blind">별 2개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 3개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 4개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 5개</span></span>
+                                            </label>
+                                        </div>
+                                    <!-- // 별점형 -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pollTyStarTable__tbody">
+                            <h2 class="pollTyStarTable__title">세미나 시간과 주차 및 교통 </h2>
+                            <div class="pollTyStarTable__cont">
+                                <div class="pollTyStarTable__star">
+                                    <!-- 별점형 -->
+                                        <div class="pollTyStar sizeSmall">
+                                            <h3 class="blind">세미나 시간과 주차 및 교통</h3>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star3" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 1개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star3" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 2개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star3" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 3개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star3" id="" checked>
+                                                <span class="pollTyStar__img"><span class="blind">별 4개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star3" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 5개</span></span>
+                                            </label>
+                                        </div>
+                                    <!-- // 별점형 -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pollTyStarTable__tbody">
+                            <h2 class="pollTyStarTable__title">안내자료</h2>
+                            <div class="pollTyStarTable__cont">
+                                <div class="pollTyStarTable__star">
+                                    <!-- 별점형 -->
+                                        <div class="pollTyStar">
+                                            <h3 class="blind">안내자료</h3>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star5" id="" checked>
+                                                <span class="pollTyStar__img"><span class="blind">별 1개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star5" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 2개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star5" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 3개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star5" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 4개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star5" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 5개</span></span>
+                                            </label>
+                                        </div>
+                                    <!-- // 별점형 -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pollTyStarTable__tbody">
+                            <h2 class="pollTyStarTable__title">강사의 수준</h2>
+                            <div class="pollTyStarTable__cont">
+                                <div class="pollTyStarTable__star">
+                                    <!-- 별점형 -->
+                                        <div class="pollTyStar">
+                                            <h3 class="blind">강사의 수준</h3>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star7" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 1개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star7" id="" checked>
+                                                <span class="pollTyStar__img"><span class="blind">별 2개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star7" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 3개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star7" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 4개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star7" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 5개</span></span>
+                                            </label>
+                                        </div>
+                                    <!-- // 별점형 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 별점형(다중 척도) -->
+                    <div class="pollResult__text">※ 이 문항은 전체 참여자의 설문 결과를 제공하지 않습니다.</div>
+                </div>
+                
+                <h2 class="pollSurvey__title"><span class="pollSurvey__num">16</span>별점형(다중 비교)</h2>
+                <div class="pollSurvey__body">
+                    <!-- 별점형(다중 비교) -->
+                    <div class="pollTyStarTable">
+                        <div class="pollTyStarTable__tbody">
+                            <h1 class="pollTyStarTable__subject">참가비</h1>
+                            <h2 class="pollTyStarTable__title">세미나A</h2>
+                            <div class="pollTyStarTable__cont">
+                                <div class="pollTyStarTable__star">
+                                    <!-- 별점형 -->
+                                        <div class="pollTyStar">
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star" id="" checked>
+                                                <span class="pollTyStar__img"><span class="blind">별 1개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 2개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 3개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 4개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 5개</span></span>
+                                            </label>
+                                        </div>
+                                    <!-- // 별점형 -->
+                                </div>
+                            </div>
+                            <h2 class="pollTyStarTable__title">2020 MOVE Web Symposium</h2>
+                            <div class="pollTyStarTable__cont">
+                                <div class="pollTyStarTable__star">
+                                    <!-- 별점형 -->
+                                        <div class="pollTyStar">
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star5" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 1개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star5" id="" checked>
+                                                <span class="pollTyStar__img"><span class="blind">별 2개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 3개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 4개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 5개</span></span>
+                                            </label>
+                                        </div>
+                                    <!-- // 별점형 -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pollTyStarTable__tbody">
+                            <h1 class="pollTyStarTable__subject">시간과 주차 및 교통</h1>
+                            <h2 class="pollTyStarTable__title">세미나A</h2>
+                            <div class="pollTyStarTable__cont">
+                                <div class="pollTyStarTable__star">
+                                    <!-- 별점형 -->
+                                        <div class="pollTyStar sizeSmall">
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star2" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 1개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star2" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 2개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star2" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 3개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star2" id="" checked>
+                                                <span class="pollTyStar__img"><span class="blind">별 4개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star2" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 5개</span></span>
+                                            </label>
+                                        </div>
+                                    <!-- // 별점형 -->
+                                </div>
+                            </div>
+                            <h2 class="pollTyStarTable__title">2020 MOVE Web Symposium</h2>
+                            <div class="pollTyStarTable__cont">
+                                <div class="pollTyStarTable__star">
+                                    <!-- 별점형 -->
+                                        <div class="pollTyStar">
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star6" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 1개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star6" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 2개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star6" id="" checked>
+                                                <span class="pollTyStar__img"><span class="blind">별 3개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star6" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 4개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star6" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 5개</span></span>
+                                            </label>
+                                        </div>
+                                    <!-- // 별점형 -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pollTyStarTable__tbody">
+                            <h1 class="pollTyStarTable__subject">안내자료</h1>
+                            <h2 class="pollTyStarTable__title">세미나A</h2>
+                            <div class="pollTyStarTable__cont">
+                                <div class="pollTyStarTable__star">
+                                    <!-- 별점형 -->
+                                        <div class="pollTyStar sizeSmall">
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star3" id="" checked>
+                                                <span class="pollTyStar__img"><span class="blind">별 1개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star3" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 2개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star3" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 3개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star3" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 4개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star3" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 5개</span></span>
+                                            </label>
+                                        </div>
+                                    <!-- // 별점형 -->
+                                </div>
+                            </div>
+                            <h2 class="pollTyStarTable__title">2020 MOVE Web Symposium</h2>
+                            <div class="pollTyStarTable__cont">
+                                <div class="pollTyStarTable__star">
+                                    <!-- 별점형 -->
+                                        <div class="pollTyStar">
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 1개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 2개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 3개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star" id="">
+                                                <span class="pollTyStar__img"><span class="blind">별 4개</span></span>
+                                            </label>
+                                            <label class="pollTyStar__box">
+                                                <input type="radio" name="star" id="" checked>
+                                                <span class="pollTyStar__img"><span class="blind">별 5개</span></span>
+                                            </label>
+                                        </div>
+                                    <!-- // 별점형 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 별점형(다중 비교) -->
+                    <div class="pollResult__text">※ 이 문항은 전체 참여자의 설문 결과를 제공하지 않습니다.</div>
+                </div>
+
+
+                <h2 class="pollSurvey__title"><span class="pollSurvey__num">17</span>퀴즈형 다음은 노이로민에 대한 내용입니다. <br>7초 후, 해당 내용에 대한 문항이 공개됩니다.</h2>
+                <div class="pollSurvey__body">
+                    <!-- 퀴즈형 -->
+                    <div class="pollTyQuiz">
+                        <div class="pollTyQuiz__top">
+                            <!-- 문항내용 -->
+                            <div class="pollTyQuiz__question">
+                                1. Paroxetine과 동등한 효과<br>
+                                2. Sertraline과 동등한 효과<br>
+                                3. 신체화 장애 개선 효과
+                            </div>
+                            <!-- //문항내용 -->
+                        </div>
+                        <!-- 퀴즈 -->
+                        <div class="pollTyQuiz__body" style="">
+                            <div class="pollTyQuiz__title">다음 중 노이로민의 효과가 아닌 것은 무엇입니까?</div>
+                            <div class="pollTyQuiz__form">
+                                <span class="inputbox__radio"> <label><input type="radio" name="" value=""><span class="text">Paroxetine과 동등한 효과</span></label> </span>
+                                <span class="inputbox__radio"> <label><input type="radio" name="" value=""><span class="text">Sertraline과 동등한 효과</span></label> </span>
+                                <span class="inputbox__radio"> <label><input type="radio" name="" value=""><span class="text">신체화 장애 개선 효과</span></label> </span>
+                                <span class="inputbox__radio"> <label><input type="radio" name="" value="" checked ><span class="text">면역력 강화</span></label> </span>
+                            </div>
+                        </div>
+                        <!-- // 퀴즈 -->
+                    </div>
+                    <!-- // 퀴즈형 -->
+                    <div class="pollResult__text">※ 이 문항은 전체 참여자의 설문 결과를 제공하지 않습니다.</div>
+                </div>
+
+
+
+
+
+
+            </div>
+            <!-- // 결과화면 -->
+            
+        </section>
+        <!-- // poll detail content -->
+    </div>
+    
+
+    <!-- S: 답글 -->
+    <div class="message__typeReply">
+        <div class="message__item">
+            <!-- S: 프로필 정보 -->
+            <div class="profilefield type_small">
+                <a href="#">
+                    <span class="profilefield__img" style="background-image:url('https://tf20.intermd.co.kr/Thumb_upload/201805/04/201805041149051.jpg')"></span>
+                    <span class="profilefield__text">
+                        <span class="profilefield__name">홍길동</span>
+                        <span class="profilefield__desc">호흡기내과ㆍ레지던트 7년차</span>
+                    </span>
+                </a>
+            </div>
+            <div class="message__btns">
+                <!-- <button class="btnIcon"><i class="icon__flag"></i><span class="blind">신고하기</span></button> -->
+                <button class="btnIcon"><i class="xi-border-color"></i><span class="blind">수정하기</span></button>
+                <button class="btnIcon"><i class="xi-trash-o"></i><span class="blind">삭제</span></button>
+            </div>
+            <!-- E: 프로필 정보 -->
+            <div class="message__cont">
+                <!-- S: 내용 -->
+                <div class="message__body">
+                    선생님 감사합니다.
+                </div>
+                <!-- E: 내용 -->
+                <!-- S: 좋아요, 답글달기, 보낸시간, 좋아요 수 -->
+                <div class="message__repbtn">
+                    <div class="btn_like on"><a href="#"><span>좋아요</span></a></div>
+                    <div class="btn_reply"><a href="#"><span>답글달기</span></a></div>
+                    <div class="date"><a href="#"><span>18.11.11</span></a></div>
+                    <div class="likedata on">
+                        <i class="fa fa-thumbs-up"></i>
+                        <span class="no">0</span>
+                    </div>
+                </div>
+                <!-- E: 좋아요, 답글달기, 보낸시간, 좋아요 수 -->
+            </div>
+        </div>
+        <div class="message__item depth2">                
+            <!-- S: 프로필 정보 -->
+            <div class="profilefield type_small">
+                <a href="#">
+                    <span class="profilefield__img" style="background-image:url('https://tf20.intermd.co.kr/Thumb_upload/201806/12/201806121557491.jpg')"></span>
+                    <span class="profilefield__text">
+                        <span class="profilefield__name">김철수</span>
+                        <span class="profilefield__desc">정신건강의학과 전문의 22년차</span>
+                    </span>
+                </a>
+            </div>
+            <div class="message__btns">
+                <button class="point__btn">
+                    <i class="point__icon"></i>
+                    <span class="blind">포인트</span>
+                    <span class="point__txt">선물<i class="point__txtBlind">하기</i></span>
+                </button>
+                <button class="btnIcon"><i class="icon__flag"></i><span class="blind">신고하기</span></button>
+                <!-- <button class="btnIcon"><i class="xi-border-color"></i><span class="blind">수정하기</span></button>
+                <button class="btnIcon"><i class="xi-trash-o"></i><span class="blind">삭제</span></button> -->
+            </div>
+            <!-- E: 프로필 정보 -->
+            <div class="message__cont">
+                <!-- S: 내용 -->
+                <div class="message__body">
+                    <span class="tag">@홍길동</span> 지원자 입장에서는 회사가 얼마를 주는지도 모른 채 시간과 비용을 투자해 면접까지 보러가는 상황이다.
+                </div>
+                <!-- E: 내용 -->
+
+                <!-- S: 첨부 영역 -->
+                <div class="message__atchboxList">
+                    <!-- S: 이미지 첨부 -->
+                    <a href="#" class="image" style="background-image:url('https://file.intermd.co.kr/upload/201905/24/20190524_131651_201905241318511.jpg')"></a>
+                    <!-- S: 영상 첨부 -->
+                    <a href="#" class="image" style="background-image:url('https://file.intermd.co.kr/upload/201905/24/20190524_131651_201905241318511.jpg')"><i class="xi-play-circle-o"></i></a>
+                    <!-- S: 파일 첨부 -->
+                    <a href="#" class="file">
+                        <span class="filewrap">
+                            <span class="file_name"><i class="xi-attachment"></i>KakaoTalk_Video_20180604_1452_40_160.mp4</span><span class="file_size">397.9KB</span>
+                        </span>
+                    </a>
+                    <a href="#" class="file">
+                        <span class="filewrap">
+                            <span class="file_name"><i class="xi-attachment"></i>KakaoTalk_Video_20180604_1452_40_160.mp4</span><span class="file_size">397.9KB</span>
+                        </span>
+                    </a>
+                </div>
+                <!-- E: 첨부 영역 -->
+
+                <!-- S: 좋아요, 답글달기, 보낸시간, 좋아요 수 -->
+                <div class="message__repbtn">
+                    <div class="btn_like on"><a href="#"><span>좋아요</span></a></div>
+                    <div class="btn_reply"><a href="#"><span>답글달기</span></a></div>
+                    <div class="date"><a href="#"><span>18.11.11</span></a></div>
+                    <div class="likedata on">
+                        <i class="fa fa-thumbs-up"></i>
+                        <span class="no">0</span>
+                    </div>
+                </div>
+                <!-- E: 좋아요, 답글달기, 보낸시간, 좋아요 수 -->
+            </div>
+        </div>
+        <div class="message__item depth2">
+            <!-- S: 프로필 정보 -->
+            <div class="profilefield type_small">
+                <a href="#">
+                    <span class="profilefield__img" style="background-image:url('https://tf20.intermd.co.kr/Thumb_upload/201806/12/201806121557491.jpg')"></span>
+                    <span class="profilefield__text">
+                        <span class="profilefield__name">김철수</span>
+                        <span class="profilefield__desc">치과ㆍ전문의 7년차</span>
+                    </span>
+                </a>
+            </div>
+            <div class="message__btns">
+                <button class="point__btn">
+                    <i class="point__icon"></i>
+                    <span class="blind">포인트</span>
+                    <span class="point__txt">선물<i class="point__txtBlind">하기</i></span>
+                </button>
+                <button class="btnIcon"><i class="icon__flag"></i><span class="blind">신고하기</span></button>
+                <!-- <button class="btnIcon"><i class="xi-border-color"></i><span class="blind">수정하기</span></button>
+                <button class="btnIcon"><i class="xi-trash-o"></i><span class="blind">삭제</span></button> -->
+            </div>
+            <!-- E: 프로필 정보 -->
+            <div class="message__cont">
+                <!-- S: 내용 -->
+                <div class="message__body">
+                    <span class="tag">@홍길동</span>시간과 비용.
+                </div>
+                <!-- E: 내용 -->
+
+                <!-- S: 첨부 영역 -->
+                <div class="message__atchboxList">
+                    <!-- S: 이미지 첨부 -->
+                    <a href="#" class="image" style="background-image:url('https://file.intermd.co.kr/upload/201905/24/20190524_131651_201905241318511.jpg')"></a>
+                    <!-- S: 영상 첨부 -->
+                    <a href="#" class="image" style="background-image:url('https://file.intermd.co.kr/upload/201905/24/20190524_131651_201905241318511.jpg')"><i class="xi-play-circle-o"></i></a>
+                    <!-- S: 파일 첨부 -->
+                    <a href="#" class="file">
+                        <span class="filewrap">
+                            <span class="file_name"><i class="xi-attachment"></i>KakaoTalk.mp4</span><span class="file_size">397.9KB</span>
+                        </span>
+                    </a>
+                </div>
+                <!-- E: 첨부 영역 -->
+
+                <!-- S: 좋아요, 답글달기, 보낸시간, 좋아요 수 -->
+                <div class="message__repbtn">
+                    <div class="btn_like on"><a href="#"><span>좋아요</span></a></div>
+                    <div class="btn_reply"><a href="#"><span>답글달기</span></a></div>
+                    <div class="date"><a href="#"><span>18.11.11</span></a></div>
+                    <div class="likedata on">
+                        <i class="fa fa-thumbs-up"></i>
+                        <span class="no">0</span>
+                    </div>
+                </div>
+                <!-- E: 좋아요, 답글달기, 보낸시간, 좋아요 수 -->
+            </div>
+        </div>
+        <div class="message__item">
+            <!-- S: 프로필 정보 -->
+            <div class="profilefield type_small">
+                <a href="#">
+                    <span class="profilefield__img" style="background-image:url('https://www.intermd.co.kr/image/profile_no.jpg')"></span>
+                    <span class="profilefield__text">
+                        <span class="profilefield__name">홍길동</span>
+                        <span class="profilefield__desc">호흡기내과ㆍ레지던트 7년차</span>
+                    </span>
+                </a>
+            </div>
+            <div class="message__btns">
+                <button class="point__btn">
+                    <i class="point__icon"></i>
+                    <span class="blind">포인트</span>
+                    <span class="point__txt">선물<i class="point__txtBlind">하기</i></span>
+                </button>
+                <button class="btnIcon"><i class="icon__flag"></i><span class="blind">신고하기</span></button>
+                <!-- <button class="btnIcon"><i class="xi-border-color"></i><span class="blind">수정하기</span></button>
+                <button class="btnIcon"><i class="xi-trash-o"></i><span class="blind">삭제</span></button> -->
+            </div>
+            <!-- E: 프로필 정보 -->
+            <div class="message__cont">
+                <!-- S: 내용 -->
+                <div class="message__body">
+                    선생님 감사합니다.
+                </div>
+                <!-- E: 내용 -->
+                <!-- S: 좋아요, 답글달기, 보낸시간, 좋아요 수 -->
+                <div class="message__repbtn">
+                    <div class="btn_like on"><a href="#"><span>좋아요</span></a></div>
+                    <div class="btn_reply"><a href="#"><span>답글달기</span></a></div>
+                    <div class="date"><a href="#"><span>18.11.11</span></a></div>
+                    <div class="likedata on">
+                        <i class="fa fa-thumbs-up"></i>
+                        <span class="no">0</span>
+                    </div>
+                </div>
+                <!-- E: 좋아요, 답글달기, 보낸시간, 좋아요 수 -->
+            </div>
+        </div>
+    </div>
+    <!-- E: 답글 -->
+
+    <!--S:fixed commentWrite 댓글, 메시지 공용 -->
+    <div class="commentWrite fix_footer">
+        <div class="commentWrite__content">
+            <!-- S: 첨부파일 리스트 -->
+            <div class="commentWrite__atchbox" style="display:none">
+                <button class="image" style="background-image:url('https://source.unsplash.com/random/40x40')"><i class="delete xi-close"></i></button>
+                <button class="image" style="background-image:url('https://source.unsplash.com/random/40x40')"><i class="xi-play-circle-o"></i><i class="delete xi-close"></i></button>
+            </div>
+            <div class="commentWrite__atchbox" style="display:none">
+                <button class="file">
+                    <span class="filewrap">
+                        <span class="file_name"><i class="xi-attachment"></i>Kakao.mp4</span>
+                        <i class="delete xi-close"></i>
+                    </span>
+                </button>
+                <button class="file">
+                    <span class="filewrap">
+                        <span class="file_name"><i class="xi-attachment"></i>KakaoTalk_Video_20180604_1452_40_160.mp4</span>
+                        <i class="delete xi-close"></i>
+                    </span>
+                </button>
+            </div>
+            <!-- S: 텍스트 입력 영역 -->
+            <div class="commentWrite__input">
+                <textarea name="text" class="commentWrite__textarea auto_area" onkeyup="textareaSize(this)" placeholder="메시지를 입력하세요."></textarea>
+            </div>
+            <!-- S: 첨부하기 버튼 -->
+            <span class="commentWrite__atchBtn">
+                <button><i class="xi-paperclip"></i></button>
+            </span>
+        </div>
+        <div class="commentWrite__btn">
+            <!-- <button type="submit" class="btn_msg"><span class="blind">전송</span></button> -->
+            <button type="submit" class="btn_msg on"><span class="blind">전송</span></button>
+        </div>
+    </div>
+    <!--E:fixed commentWrite-->
+</div>
+
+</body>
+</html>

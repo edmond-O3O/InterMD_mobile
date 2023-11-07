@@ -1,0 +1,427 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Inter MD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+    <meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+    <link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="../../js/plugins/jquery-3.2.1.js"></script>
+    <script src="../../js/plugins/swiper_3.3.1.js"></script>
+    <script src="../../js/ui_script_m.js"></script>    
+<body>
+
+<div class="pageWrapDetail contentBody" data-role="page">    
+    <!-- S: header -->
+    <div class="detail__topline">
+        <a href="#" class="detail__btnback"><i class="xi-angle-left"></i></a>
+        <h2>Deep Posting</h2>
+    </div>
+    <!-- E: header -->
+
+
+    <!-- S: content -->
+    <div class="page_detail">
+        
+        <div class="deepPoster__profileBox" style="background: #ce877b;"><!-- 프로필 설정 시 선택한 컬러 값 -->
+            <div class="profileEdit">
+                <a href="" class="profileEdit__btn"><i class="ico icoEdit"></i></a>
+                <ul>
+                    <li><a href="">닉네임 설정</a></li>
+                    <li><a href="">배경 이미지 설정</a></li>
+                </ul>
+            </div>
+            <div class="deepPoster__profile">
+                <div class="profileInfo">
+                    <div class="profileInfo__img deepPoster">
+                        <a href="" style="background: #ce877b;"><!-- 프로필 설정 시 선택한 컬러 값 -->
+                            <img src="../../img/sample/deep_poster_sample_profile.png" alt="">
+                        </a>
+                    </div>
+                    <div class="profileInfo__text">
+                        <p class="name">인터엠디생명이</p>
+                        <span class="desc">생명을 지키자</span>
+                    </div>
+                    <div class="profileInfo__bottom">
+                        <ul>
+                            <li><i class="ico icoPosting"></i>50</li>
+                            <li><i class="ico icoStar"></i>7</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="profileAside">
+                    <div class="profileAside__changeBtn">
+                        <a href="">
+                            <img src="../../img/sample/deep_poster_sample_profile6.png" alt="">
+                            <i class="ico icoChange"></i>
+                        </a>
+                    </div>
+                    <a href="" class="profileAside__bookMarkBtn on">즐겨찾기</a>
+                </div>
+            </div>
+            <script>
+                $(".profileAside__bookMarkBtn").click(function(e){
+                    e.preventDefault();
+                    $(this).stop().toggleClass("on");
+                });
+                $(".profileEdit__btn").click(function(e){
+                    e.preventDefault();
+                    $(this).parent().stop().toggleClass("on");
+                });
+                $(document).ready(function(){
+                    var profileTop = $(".deepPoster__profile").offset().top;
+                    var windowTop = $(window).scrollTop();
+                    if(windowTop >= profileTop) {
+                        $(".deepPoster__profileBox").addClass("fixed");
+                    }else {
+                        $(".deepPoster__profileBox").removeClass("fixed");
+                    }
+                    $(window).scroll(function(){
+                        if($(this).scrollTop() >= profileTop) {
+                            $(".deepPoster__profileBox").addClass("fixed");
+                        }else {
+                            $(".deepPoster__profileBox").removeClass("fixed");
+                        }
+                    });
+                });
+            </script>
+        </div>
+
+        <div class="posting__list">
+            
+            <!-- S: card -->
+			<div class="card">
+				<div class="card__header">
+					<div class="card__posterInfo">
+                        김의사 재활의학과 전문의 7년차
+                    </div>
+				</div>
+				<div class="card__content">
+					<!-- S: 본문 -->
+					<a href="#">
+                        <div class="card__text">
+                            <!-- 딥 포스팅일 경우 deepPosting 추가 -->
+                            <span class="card__subject deepPosting"><span class="text">GA4 MVP로 시작하기</span></span>
+                            <span class="card__desc">
+                                <span class="text">
+                                    구글 애널리틱스 4로 이전하기 지난 글에서는 GA4로 이전 계획을 어떻게 세울 것인지 이야기를 나누었습니다. 네트워크 오퍼링
+                                </span>	
+                            </span>
+                        </div>                
+					</a>
+					<!-- E: 본문 -->
+				</div>
+				<!-- S: 공감해요, 답글달기, 공유하기 수 -->
+                <div class="card__aside">
+                    <div class="lt">
+                        <span class="el like">
+                            <i class="xi-check-circle"><span class="blind">공감해요수</span></i>
+                            <span class="no">3명</span>
+                        </span>
+                    </div>
+                    <div class="rt">
+                        <span class="el reply">
+                            <i class="xi-comment"><span class="blind">답글수</span></i>
+                            <span class="no">4</span>
+                        </span>
+                        <span class="el view">
+                            <i class="xi-eye"><span class="blind">조회수</span></i>
+                            <span class="no">10</span>
+                        </span>
+                        <span class="el date"><span class="no">23.03.06</span></span>
+                    </div>
+                </div>
+			</div>
+			<!-- E: card -->	
+
+            <!-- S: card -->
+			<div class="card">
+				<div class="card__header">
+					<div class="card__posterInfo">
+                        김의사 재활의학과 전문의 7년차
+                    </div>
+				</div>
+				<div class="card__content">
+					<!-- S: 본문 -->
+					<a href="#">
+                        <!-- 이미지 img, 동영상 movie, 2개이상일때 more 추가 -->
+                        <span class="img" style="background-image:url('https://file.intermd.co.kr/Thumb_upload/201810/23/43BBCF8A-8A6A-42F5-9F8F-76E5E53609C3_201810231626291.jpeg')"></span>
+                        <!-- 
+                        <span class="img more" style="background-image:url('https://file.intermd.co.kr/Thumb_upload/201810/23/43BBCF8A-8A6A-42F5-9F8F-76E5E53609C3_201810231626291.jpeg')"></span>
+                        <span class="movie" style="background-image:url('https://file.intermd.co.kr/Thumb_upload/201810/23/43BBCF8A-8A6A-42F5-9F8F-76E5E53609C3_201810231626291.jpeg')"></span>
+                        <span class="movie more" style="background-image:url('https://file.intermd.co.kr/Thumb_upload/201810/23/43BBCF8A-8A6A-42F5-9F8F-76E5E53609C3_201810231626291.jpeg')"></span> 
+                        -->	
+                        <div class="card__text">
+                            <span class="card__subject deepPosting"><span class="text">2025년, 60%의 클라우드 오퍼링에 탑재된 보안 데이터</span></span>
+                            <span class="card__desc">
+                                <span class="text">
+                                    구글 애널리틱스 4로 이전하기 지난 글에서는 GA4로 이전 계획을 어떻게 세울 것인지 이야기를 나누었습니다. 네트워
+                                </span>	
+                            </span>
+                        </div>                
+					</a>
+					<!-- E: 본문 -->
+				</div>
+				<!-- S: 공감해요, 답글달기, 공유하기 수 -->
+                <div class="card__aside">
+                    <div class="lt">
+                        <span class="el like">
+                            <i class="xi-check-circle"><span class="blind">공감해요수</span></i>
+                            <span class="no">3명</span>
+                        </span>
+                    </div>
+                    <div class="rt">
+                        <span class="el reply">
+                            <i class="xi-comment"><span class="blind">답글수</span></i>
+                            <span class="no">4</span>
+                        </span>
+                        <span class="el view">
+                            <i class="xi-eye"><span class="blind">조회수</span></i>
+                            <span class="no">10</span>
+                        </span>
+                        <span class="el date"><span class="no">23.03.06</span></span>
+                    </div>
+                </div>
+			</div>
+			<!-- E: card -->	
+
+            <!-- S: card -->
+			<div class="card">
+				<div class="card__header">
+					<div class="card__posterInfo">
+                        김의사 재활의학과 전문의 7년차
+                    </div>
+				</div>
+				<div class="card__content">
+					<!-- S: 본문 -->
+					<a href="#">
+                        <div class="card__text">
+                            <span class="card__subject deepPosting"><span class="text">GA4 MVP로 시작하기</span></span>
+                            <span class="card__desc">
+                                <span class="text">
+                                    구글 애널리틱스 4로 이전하기 지난 글에서는 GA4로 이전 계획을 어떻게 세울 것인지 이야기를 나누었습니다. 네트워크 오퍼링
+                                </span>	
+                            </span>
+                        </div>                
+					</a>
+					<!-- E: 본문 -->
+                    <!-- S: link -->
+                    <div class="linkBox">
+                        <a href="#">
+                            <span class="link__url">http://m.monews.co.kr/news/articleView.html?idxno=118085</span>
+                            <i class="xi-external-link"></i>
+                        </a>
+                    </div>
+                    <!-- E: link -->
+				</div>
+				<!-- S: 공감해요, 답글달기, 공유하기 수 -->
+                <div class="card__aside">
+                    <div class="lt">
+                        <span class="el like">
+                            <i class="xi-check-circle"><span class="blind">공감해요수</span></i>
+                            <span class="no">3명</span>
+                        </span>
+                    </div>
+                    <div class="rt">
+                        <span class="el reply">
+                            <i class="xi-comment"><span class="blind">답글수</span></i>
+                            <span class="no">4</span>
+                        </span>
+                        <span class="el view">
+                            <i class="xi-eye"><span class="blind">조회수</span></i>
+                            <span class="no">10</span>
+                        </span>
+                        <span class="el date"><span class="no">23.03.06</span></span>
+                    </div>
+                </div>
+			</div>
+			<!-- E: card -->	
+
+            <!-- S: card -->
+			<div class="card">
+				<div class="card__header">
+					<div class="card__posterInfo">
+                        김의사 재활의학과 전문의 7년차
+                    </div>
+				</div>
+				<div class="card__content">
+					<!-- S: 본문 -->
+					<a href="#">
+                        <div class="card__text">
+                            <span class="card__subject deepPosting"><span class="text">GA4 MVP로 시작하기</span></span>
+                            <span class="card__desc">
+                                <span class="text">
+                                    구글 애널리틱스 4로 이전하기 지난 글에서는 GA4로 이전 계획을 어떻게 세울 것인지 이야기를 나누었습니다. 네트워크 오퍼링
+                                </span>	
+                            </span>
+                        </div>                
+					</a>
+					<!-- E: 본문 -->
+				</div>
+				<!-- S: 공감해요, 답글달기, 공유하기 수 -->
+                <div class="card__aside">
+                    <div class="lt">
+                        <span class="el like">
+                            <i class="xi-check-circle"><span class="blind">공감해요수</span></i>
+                            <span class="no">3명</span>
+                        </span>
+                    </div>
+                    <div class="rt">
+                        <span class="el reply">
+                            <i class="xi-comment"><span class="blind">답글수</span></i>
+                            <span class="no">4</span>
+                        </span>
+                        <span class="el view">
+                            <i class="xi-eye"><span class="blind">조회수</span></i>
+                            <span class="no">10</span>
+                        </span>
+                        <span class="el date"><span class="no">23.03.06</span></span>
+                    </div>
+                </div>
+			</div>
+			<!-- E: card -->	
+            <!-- S: card -->
+			<div class="card">
+				<div class="card__header">
+					<div class="card__posterInfo">
+                        김의사 재활의학과 전문의 7년차
+                    </div>
+				</div>
+				<div class="card__content">
+					<!-- S: 본문 -->
+					<a href="#">
+                        <div class="card__text">
+                            <span class="card__subject deepPosting"><span class="text">GA4 MVP로 시작하기</span></span>
+                            <span class="card__desc">
+                                <span class="text">
+                                    구글 애널리틱스 4로 이전하기 지난 글에서는 GA4로 이전 계획을 어떻게 세울 것인지 이야기를 나누었습니다. 네트워크 오퍼링
+                                </span>	
+                            </span>
+                        </div>                
+					</a>
+					<!-- E: 본문 -->
+				</div>
+				<!-- S: 공감해요, 답글달기, 공유하기 수 -->
+                <div class="card__aside">
+                    <div class="lt">
+                        <span class="el like">
+                            <i class="xi-check-circle"><span class="blind">공감해요수</span></i>
+                            <span class="no">3명</span>
+                        </span>
+                    </div>
+                    <div class="rt">
+                        <span class="el reply">
+                            <i class="xi-comment"><span class="blind">답글수</span></i>
+                            <span class="no">4</span>
+                        </span>
+                        <span class="el view">
+                            <i class="xi-eye"><span class="blind">조회수</span></i>
+                            <span class="no">10</span>
+                        </span>
+                        <span class="el date"><span class="no">23.03.06</span></span>
+                    </div>
+                </div>
+			</div>
+			<!-- E: card -->	
+            <!-- S: card -->
+			<div class="card">
+				<div class="card__header">
+					<div class="card__posterInfo">
+                        김의사 재활의학과 전문의 7년차
+                    </div>
+				</div>
+				<div class="card__content">
+					<!-- S: 본문 -->
+					<a href="#">
+                        <div class="card__text">
+                            <span class="card__subject deepPosting"><span class="text">GA4 MVP로 시작하기</span></span>
+                            <span class="card__desc">
+                                <span class="text">
+                                    구글 애널리틱스 4로 이전하기 지난 글에서는 GA4로 이전 계획을 어떻게 세울 것인지 이야기를 나누었습니다. 네트워크 오퍼링
+                                </span>	
+                            </span>
+                        </div>                
+					</a>
+					<!-- E: 본문 -->
+				</div>
+				<!-- S: 공감해요, 답글달기, 공유하기 수 -->
+                <div class="card__aside">
+                    <div class="lt">
+                        <span class="el like">
+                            <i class="xi-check-circle"><span class="blind">공감해요수</span></i>
+                            <span class="no">3명</span>
+                        </span>
+                    </div>
+                    <div class="rt">
+                        <span class="el reply">
+                            <i class="xi-comment"><span class="blind">답글수</span></i>
+                            <span class="no">4</span>
+                        </span>
+                        <span class="el view">
+                            <i class="xi-eye"><span class="blind">조회수</span></i>
+                            <span class="no">10</span>
+                        </span>
+                        <span class="el date"><span class="no">23.03.06</span></span>
+                    </div>
+                </div>
+			</div>
+			<!-- E: card -->	
+
+        </div>
+        
+    </div>
+    <!-- E: content -->
+
+    <!-- S: 포스팅 프로필 팝업 -->
+    <div class="deepPoster__profilePopup">
+        <div class="profilePopup__cont">
+            <a href="" class="profilePopup__close"><i class="xi-close"></i></a>
+            <div class="profileInfo">
+                <div class="profileInfo__img" style="background: #ce877b;"><!-- 프로필 설정 시 선택한 컬러 값 -->
+                    <img src="../../img/sample/deep_poster_sample_profile.png" alt="">
+                </div>
+                <div class="profileInfo__text">
+                    <p class="name">생명이</p>
+                    <span class="desc">생명을 지키자</span>
+                </div>
+            </div>
+            <div class="profilePopup__btnBox">
+                <a href="" class="profilePopup__btn">
+                    <i class="ico icoDeep"></i>
+                    <span class="text">딥 포스팅 보기</span>
+                </a>
+                <a href="" class="profilePopup__btn">
+                    <i class="ico icoProfile"></i>
+                    <span class="text">프로필 보기</span>
+                </a>
+            </div>
+        </div>
+        <div class="profilePopup__bg"></div>
+    </div>
+    <script>
+        $(".deepPoster__profile .profileInfo__img a").click(function(e){
+            e.preventDefault();
+            $(".deepPoster__profilePopup").addClass("active");
+        });
+        $(".profilePopup__close, .profilePopup__bg").click(function(e){
+            e.preventDefault();
+            $(".deepPoster__profilePopup").removeClass("active");
+        });
+    </script>
+    <!-- E: 포스팅 프로필 팝업 -->
+
+    <!-- bottom fix -->
+	<div class="fixBtm">
+        <a href="#top" class="goToTop hide" onclick="$('html').stop().animate({ scrollTop:0 }, 800 );return false;"><span class="blind">맨 위로 이동</span></a>
+	</div>
+	<!-- // bottom fix -->
+
+</div>
+
+
+</body>
+</html>

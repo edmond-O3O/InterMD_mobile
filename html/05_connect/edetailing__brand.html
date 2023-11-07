@@ -1,0 +1,793 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/style.css?v=20181226">
+    <!--custom-->
+    <link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/base.css">
+    <link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/custom.css">
+    <link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/sub.css">
+    
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>InterMD</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+	<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+	<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+
+	<script src="../../js/plugins/jquery-3.2.1.js"></script>
+    <script src="../../js/plugins/swiper_3.3.1.js"></script>
+	<script src="../../js/ui_script_m.js"></script>
+</head>
+<html>
+<body>
+
+<div id="contentPage" class="pageWrapDetail contentBody" data-role="page" style="padding-bottom: 0;">
+
+	<!-- S: header -->
+    <div class="detail__topline">
+		<a href="#" class="detail__lt"><i class="xi-angle-left"></i></a>
+		<h2>edBrand</h2>    
+		<a href="#" class="detail__rt"><i class="icon_share"></i></a>
+	</div>
+    <!-- E: header -->
+
+	<!-- S: 230227_v-Detailing 예약 바로가기 추가 -->
+	<div class="webinarDet__vDtBtn webinarDet__vDtBtnEdtTop">
+		<a href="">
+			<div class="tit">v-Detailing 예약 바로가기<i class="xi-angle-right"></i></div>
+			<span class="desc">원하는 시간에 1:1 화상면담에 참여하세요!</span>
+		</a>
+	</div>
+	<!-- E: 230227_v-Detailing 예약 바로가기 추가 -->
+
+	<!--여기서부터 사용하세요.-->
+	<!-- S: eDetailing 브랜드관 -->
+		<style>
+			/* 브랜드컬러 사용시 주석을 푸세요 */
+			/* 버튼 및 메뉴 브랜드컬러 */
+			/* .edBrand .brandColor{ background:#ee005b !important; }  */
+			/* 폰트 브랜드컬러 */
+			/* .edBrand .brandFontColor, .edBrand .brandFontColor > *{ color:#ee005b !important; } */
+			/* 탭 메뉴 브랜드컬러 */
+			/* .edBrand .edBrandTab__item.on .edBrandTab__text{ background:#ee005b !important; } */
+			/* 배경 브랜드컬러 */
+			/* .edBrand .brandBgColor{ background: #ecd3dd !important; } */
+		</style>
+		<script>
+			// S: swiper script 보다 반드시 먼저 실행되어야하는 함수입니다	
+			$(document).ready(function() {
+				var tabItem = new Array();
+				var tabItemWidth = 0;
+				var padding = 0;
+				tabItem = $('#edBrand__snbSwiper .edBrandTab__item');
+				padding = $('#edBrand__snbSwiper').outerWidth(false) - $('#edBrand__snbSwiper').width();
+				for(var i=0; i<tabItem.length; i++){
+					tabItemWidth += tabItem[i].offsetWidth;
+				}
+				if((tabItemWidth + padding) < document.body.clientWidth){
+					$('.edBrand__snb').addClass('noMoreBtn');
+				}
+			});
+			// E: swiper script 보다 반드시 먼저 실행되어야하는 함수입니다	
+			function changeVideo(elm){
+				$(elm).parent().find('.edBrandVideo__slide.on').removeClass('on');
+				$(elm).addClass('on');
+			}
+		</script>
+		<section class="edBrand verticalMenu">   
+			<div class="edBrand__topBanner"><img src="http://placehold.it/750x324.png/bcd2ee/ffffff?text=TopBanner" alt=""></div>
+			<!-- S: 상단 슬라이드 메뉴 -->
+			<div class="edBrand__snb">
+				<!-- Swiper -->
+				<div id="edBrand__snbSwiper" class="swiper-container edBrand__snbSwiper">
+					<div class="swiper-wrapper">
+						<div onclick="changeTab(this);" class="swiper-slide edBrandTab__item on"><a href="javascript:void(0);"><span class="edBrandTab__text">Intro</span></a></div>
+						<div onclick="changeTab(this);" class="swiper-slide edBrandTab__item"><a href="javascript:void(0);"><span class="edBrandTab__text">Information</span></a></div>
+						<div onclick="changeTab(this);" class="swiper-slide edBrandTab__item"><a href="javascript:void(0);"><span class="edBrandTab__text">Seminar</span></a></div>
+						<div onclick="changeTab(this);" class="swiper-slide edBrandTab__item"><a href="javascript:void(0);"><span class="edBrandTab__text">Matarials</span></a></div>
+					</div>
+				</div>
+				<button class="edBrand__snb__moreBtn" onclick="$('.edBrand__menuAll').show();return false;"><i></i><span class="blind">카테고리 전체보기</span></button>    
+				<div class="edBrand__menuAll">
+					<div class="edBrand__menuAll__top">
+						<div class="edBrand__menuAll__title">카테고리 바로가기</div>
+						<button class="edBrand__menuAll__close" onclick="$('.edBrand__menuAll').hide();return false;"><i></i><span class="blind">close</span></button>
+					</div>
+					
+					<div class="edBrand__menuAll__boxmenu">
+						<div class="edBrand__boxMenu">
+							<a href="javascript:void(0);" onclick="changeTab(this);" class="edBrandTab__item on"><span>Intro</span></a>
+							<a href="javascript:void(0);" onclick="changeTab(this);" class="edBrandTab__item"><span>Information</span></a>
+							<a href="javascript:void(0);" onclick="changeTab(this);" class="edBrandTab__item"><span>Seminar</span></a>
+							<a href="javascript:void(0);" onclick="changeTab(this);" class="edBrandTab__item"><span>Matarials</span></a>
+						</div>
+					</div>
+					<div class="edBrand__menuAll__dim" ontouchstart="$('.edBrand__menuAll').hide();return false;"></div>
+				</div>
+	
+				<script>
+				var ebSnbSwiper;
+				$(function(){
+					ebSnbSwiper = new Swiper('#edBrand__snbSwiper', {
+						slidesPerView: 'auto',
+						initialSlide: 0,
+						preventClicks: true,
+						preventClicksPropagation: false,
+					});
+				})	
+							
+				function changeTab(elm){
+					var idx = $(elm).index();
+					$('.edBrandTab__content.on').removeClass('on');
+					$('.edBrandTab__item.on').removeClass('on');
+					$('.edBrandTab__content').eq(idx).addClass('on');
+					$('.swiper-wrapper .edBrandTab__item').eq(idx).addClass('on');
+					$('.edBrand__boxMenu .edBrandTab__item').eq(idx).addClass('on');
+					if(!$('#edBrand__snbSwiper').hasClass('noMoreBtn')){
+						ebSnbSwiper.slideTo(idx - 1);
+					}
+				}
+				</script>
+			</div>
+			<!-- E: 상단 슬라이드 메뉴 -->  
+			
+			<!-- S: Publishing Content -->
+			<div class="edBrandTab__content on">
+				<!-- S: 비디오 스와이퍼 -->
+				<div class="edBrandVideo__slider brandBgColor">
+					<div class="edBrandCurrent__wrapper">
+						<div class="edBrandCurrent__video ready">							     
+							<video id="video"style="width:100%;" controls playsinline>
+								<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+								<source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+							</video>
+							<button class="edBrandCurrent__vdBtn" onclick="$('.edBrandCurrent__video').removeClass('ready');$('.edBrandCurrent__video video').trigger('play');"></button>
+						</div>
+					</div>
+					<div class="edBrandVideo__title">카나브 패밀리 최초의 복합제- Atorvastatin 카나브 패밀리 최초의 복합제- AtorvastatinAtorvastatin</div>
+					<div id="edBrandVideo__container1" class="edBrandVideo__container swiper-container">
+						<div class="edBrandVideo__wrapper swiper-wrapper">
+							<div class="edBrandVideo__slide swiper-slide on" onclick="changeVideo(this);">
+								<div class="edBrandVideo__thumbnail" style="background-image: url(http://placehold.it/750x422.png/6269A8/ffffff?text=1);"></div>
+								<span class="edBrandVideo__text">카나브 패밀리 최초의 복합제- AtorvastatinAtorvastatin AtorvastatinAtorvastatin</span>
+							</div>
+							<div class="edBrandVideo__slide swiper-slide" onclick="changeVideo(this)">
+								<div class="edBrandVideo__thumbnail" style="background-image: url(http://placehold.it/750x422.png/E1C9FD/ffffff?text=2);"></div>
+								<span class="edBrandVideo__text">카나브 패밀리 최초</span>
+							</div>
+							<div class="edBrandVideo__slide swiper-slide" onclick="changeVideo(this)">
+								<div class="edBrandVideo__thumbnail" style="background-image: url(http://placehold.it/750x422.png/040441/ffffff?text=3);"></div>
+								<span class="edBrandVideo__text">카나브 패밀리 최초</span>
+							</div>
+							<div class="edBrandVideo__slide swiper-slide" onclick="changeVideo(this)">
+								<div class="edBrandVideo__thumbnail" style="background-image: url(http://placehold.it/750x422.png/4BD279/ffffff?text=4);"></div>
+								<span class="edBrandVideo__text">카나브 패밀리 최초의 복합제- AtorvastatinAtorvastatin AtorvastatinAtorvastatin</span>
+							</div>
+							<div class="edBrandVideo__slide swiper-slide" onclick="changeVideo(this)">
+								<div class="edBrandVideo__thumbnail" style="background-image: url(http://placehold.it/750x422.png/ff7f50/ffffff?text=5);"></div>
+								<span class="edBrandVideo__text">카나브 패밀리 최초의 복합제- AtorvastatinAtorvastatin AtorvastatinAtorvastatin</span>
+							</div>
+							<div class="edBrandVideo__slide swiper-slide" onclick="changeVideo(this)">
+								<div class="edBrandVideo__thumbnail" style="background-image: url(http://placehold.it/750x422.png/bf3eff/ffffff?text=6);"></div>
+								<span class="edBrandVideo__text">카나브 패밀리 최초의 복합제- AtorvastatinAtorvastatin AtorvastatinAtorvastatin</span>
+							</div>
+						</div>
+					</div>
+				</div>
+		
+				<script>
+					$(function(){
+						var swiperRank = new Swiper('#edBrandVideo__container1', {
+							slidesPerView: 2,
+							spaceBetween: 11,
+							preventClicks: true,
+							preventClicksPropagation: false,
+							observer: true,
+							observeParents: true,
+							loop: false,
+							freeMode: true,
+						});
+					})
+				</script> 
+				<!-- E: 비디오 스와이퍼 -->
+
+				<!-- S: 문의하기 영역 -->
+				<div class="edBrandAsk">
+					<div class="edBrandAsk__wrapper">
+						<div class="edBrandAsk__title"><b>카나브</b>에 대해서 무엇이든 물어보세요! 제품 담당자가 이메일로 답변드립니다.</div>
+						<div class="edBrandAsk__content">
+							<div class="edBrandAsk__textArea">
+								<textarea name="text" class="textarea" placeholder="문의사항을 작성해주시기 바랍니다."></textarea>
+							</div>
+						</div>
+						<button class="edBrandAsk__btn brandColor">
+							<span>문의하기</span>
+						</button>
+					</div>
+				</div>
+				<!-- E: 문의하기 영역 -->
+
+				<!-- S: 샘플 신청 영역 -->
+				<div class="edBrandSp brandBgColor">
+					<div class="edBrandSp__wrapper">
+						<div class="edBrandSp__title"><b>아카브 Sample</b>을 받아보세요!</div>
+						<div class="edBrandSp__date">
+							<span>신청기간</span>
+							<span>2020.09.15(화) ~ 10.08(목)</span>
+						</div>
+						<button onclick="$('#sampleLayer').show();" class="edBrandSp__btn brandColor">
+							<span>Sample 신청하기</span>
+						</button>
+					</div>
+				</div>
+				<!-- E: 샘플 신청 영역 -->
+
+				<!-- S: 세로이미지 스와이퍼 -->
+				<div class="edBrandImg__slider" ontouchend="showPageNum();">
+					<div class="edBrandImg__sliderWrapper">
+						<div class="edBrandImg__container swiper-container">
+							<div class="swiper-wrapper">
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379.png/ffffff/bf3eff?text=sample" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+							</div>
+						</div>
+						<div class="edBrandImg__page">
+							<span id="edBrandImg__pageNow" class="edBrandImg__pageNow">1</span>
+							<span id="edBrandImg__pageAll" class="edBrandImg__pageAll">15</span>
+						</div>
+					</div>
+				</div>
+
+				<script>
+					$(function(){
+						var swiper = new Swiper('.edBrandImg__container', {
+							slidesPerView: 1,
+							spaceBetween: 11,
+							preventClicks: true,
+							preventClicksPropagation: false,
+							observer: true,
+							observeParents: true,
+							loop: false,     
+						});
+					})
+					function showPageNum(){
+						var currentPage = $('.edBrandImg__slider .edBrandImg__slide.swiper-slide-active').index() + 1;
+						$('#edBrandImg__pageNow').text(currentPage);
+					};
+				</script>
+				<!-- E: 세로 이미지 스와이퍼 -->
+
+				<!-- S: 자료 다운로드 영역 -->
+				<div class="edBrandDl brandBgColor">
+					<div class="edBrandDl__banner"><img src="http://placehold.it/750x300.png/" alt=""></div>
+					<div class="edBrandDl__btnWrapper">
+						<a class="edBrandDl__btn">
+							<span class="edBrandDl__file">AWARD-1~10.pdf</span>
+							<span class="edBrandDl__down">다운로드</span>
+						</a>
+						<a class="edBrandDl__btn">
+							<span class="edBrandDl__file">AWARD-1~10AWARD-1~10AWARD-1~10AWARD-1~10AWARD-1~10.pdf</span>
+							<span class="edBrandDl__down">다운로드</span>
+						</a>
+					</div>
+				</div>
+				<!-- E: 자료 다운로드 영역 -->
+
+			</div>
+			<!-- E: Publishing Content -->
+
+			<!-- S: Study Content -->
+			<div class="edBrandTab__content">
+
+				<!-- S: 텍스트 영역 -->
+				<p class="edBrandTxt">
+					카나브는 제2형 당뇨병을 동반한 고혈압환자에서 베
+					타세포의 인슐린 분비능 개선효과를 입증하였습니다.
+					Fimsartan은 Amlo dipine 대비 제 2형 당뇨병을 동반하고 고혈압 환자에서 베타세포의 인슐린분비
+					능 개선효과를 입증하였습니다. 타나민은 egb 761을
+					원료로 하는 세계 최초 은행엽엑스 의약품으로, 24% 
+					flavone glycosides, 6% terpene lactones로 표
+					준화되어 있습니다. 어불어 알러지 유발물질로 알려
+					진 ginkgolic acid는 5ppm미만으로 제한하였다.
+				</p>
+				<!-- E: 텍스트 영역 -->
+
+				<!-- S: 이미지 영역 -->
+				<div class="edBrandImg">
+					<img src="http://placehold.it/750x370.png" alt="">
+				</div>
+				<!-- E: 이미지 영역 -->
+
+				<div class="edBrand__blank" style="height: 15px;"></div>
+
+				<!-- S: 텍스트 이미지 콘텐츠 영역 -->
+				<div class="edBrandCt">
+					<div class="edBrandCt__wrapper">
+						<div class="edBrandCt__img">
+							<img src="http://placehold.it/682x400.png" alt="">
+						</div>
+						<p class="edBrandCt__txt">
+							타나민정은 치매환자의 인지기능과 신경정신증상, 
+							생활 기능을 개선시킵니다.
+							<br><br>
+							타나민정은 치매의 유형에 관계없이 placebo gro-
+							up 대비 SKT score와 NPI score를 개선시켜주며,
+							Meta-analysis를 통해 용량의존적으로 치료효과가 
+							높음을 입증하였습니다.
+						</p>
+					</div>
+				</div>
+				<!-- E: 텍스트 이미지 콘텐츠 영역 -->
+
+				<div class="edBrand__border"><div class="edBrand__borderBar"></div></div>
+
+				<!-- S: 웹 세미나 영역 -->
+				<div class="edBrandWs">
+					<div class="edBrandWs__wrapper">
+						<div class="edBrandWs__block">
+							<div class="edBrandWs__title">웹 세미나에 실시간으로 참여하시고 최신 정보를 빠르게 접해보세요!</div>
+							<div class="edBrandWs__detail">
+								<div class="edBrandWs__date">9월14일(월)</div>
+								<div class="edBrandWs__desc">
+									<div class="edBrandWs__name brandFontColor">
+										Facing the challenge of 
+										hypertenstionand dyslipidema
+										management<br>
+										: optimal choice is AKARB
+									</div>
+									<div class="edBrandWs__ppl">
+										<div>
+											<b>좌장</b>
+											광주 전남개원내과의사회 양승진 고문, 경기도 내과협회 위원회
+										</div>
+										<div>
+											<b>연자</b>
+											아주대학교 심장내과 홍영준 교수
+										</div>
+									</div>
+								</div>
+								<button class="edBrandWs__btn brandColor">
+									<span>바로가기</span>
+								</button>
+							</div>
+						</div>
+						<div class="edBrandWs__block">
+							<div class="edBrandWs__detail">
+								<div class="edBrandWs__date">9월14일(월)</div>
+								<div class="edBrandWs__desc">
+									<div class="edBrandWs__name brandFontColor">
+										고혈압 증례와 관리개선
+									</div>
+									<div class="edBrandWs__ppl">
+										<div>
+											<b>좌장</b>
+											광주 전남개원내과의사회 양승진 고문, 경기도 내과협회 위원회
+										</div>
+										<div>
+											<b>연자</b>
+											아주대학교 심장내과 홍영준 교수
+										</div>
+									</div>
+								</div>
+								<button class="edBrandWs__btn brandColor">
+									<span>바로가기</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- E: 웹 세미나 영역 -->
+
+				<div class="edBrand__blank" style="height: 10px;"></div>
+				<div class="edBrand__border"><div class="edBrand__borderBar"></div></div>
+
+				<!-- S: Poll 영역 -->
+				<div class="edBrandPl">
+					<div class="edBrandPl__wrapper">
+						<div class="edBrandPl__block">
+							<div class="edBrandPl__title">
+								Poll에 참여하고 다른 선생님들의 의견도 확인해보세요!
+							</div>
+							<a href="#" class="edBrandPl__link">
+								<div class="edBrandPl__name brandFontColor">
+									<span>Q&nbsp;</span>
+									<span>
+										고혈압과 이상지질혈증의 동반질환 관리에 관해 여쭙니다.
+									</span>   
+								</div>
+							</a>
+						</div>
+						<div class="edBrandPl__block">
+							<a href="#" class="edBrandPl__link">
+								<div class="edBrandPl__name brandFontColor">
+									<span>Q&nbsp;</span>
+									<span>
+										고혈압과 이상지질혈증의 동반질환 관리에 관해 여쭙니다.
+									</span>  
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- E: Poll 영역 -->
+
+				<div class="edBrand__blank" style="height: 15px;"></div>
+				<div class="edBrand__border"><div class="edBrand__borderBar"></div></div>
+
+				<!-- S: 샘플 신청 영역 -->
+				<div class="edBrandSp brandBgColor">
+					<div class="edBrandSp__wrapper">
+						<div class="edBrandSp__title"><b>아카브 Sample</b>을 받아보세요!</div>
+						<div class="edBrandSp__date">
+							<span>신청기간</span>
+							<span>2020.09.15(화) ~ 10.08(목)</span>
+						</div>
+						<button onclick="$('#sampleLayer').show();" class="edBrandSp__btn brandColor">
+							<span>Sample 신청하기</span>
+						</button>
+						<P class="edBrandSp__desc">
+							*샘플을 신청하신 선생님 500분께 인터엠디 포인트 
+							3,000p를 드립니다. <br>
+							*포인트 지급일 : 10월14일(수)
+						</P>
+					</div>
+				</div>
+				<!-- E: 샘플 신청 영역 -->
+
+				<!-- S: 텍스트 이미지 콘텐츠 영역(가로) -->
+				<div class="edBrandCt horizontal">
+					<div class="edBrandCt__wrapper">
+						<div class="edBrandCt__img">
+							<img src="http://placehold.it/682x400.png" alt="">
+						</div>
+						<p class="edBrandCt__txt">
+							타나민정은 치매환자의 인지기능과 신경정신증상, 
+							생활 기능을 개선시킵니다.
+							<br><br>
+							타나민정은 치매의 유형에 관계없이 placebo gro-
+							up 대비 SKT score와 NPI score를 개선시켜주며,
+							Meta-analysis를 통해 용량의존적으로 치료효과가 
+							높음을 입증하였습니다.
+						</p>
+					</div>
+				</div>
+				<!-- E: 텍스트 이미지 콘텐츠 영역(가로) -->
+
+				<!-- S: 텍스트 이미지 콘텐츠 영역(가로) -->
+				<div class="edBrandCt horizontal">
+					<div class="edBrandCt__wrapper">
+						<div class="edBrandCt__img">
+							<img src="http://placehold.it/682x400.png" alt="">
+						</div>
+						<p class="edBrandCt__txt">
+							타나민정은 치매환자의 인지기능과 신경정신증상, 
+							생활 기능을 개선시킵니다.
+							<br><br>
+							타나민정은 치매의 유형에 관계없이 placebo gro-
+							up 대비 SKT score와 NPI score를 개선시켜주며,
+							Meta-analysis를 통해 용량의존적으로 치료효과가 
+							높음을 입증하였습니다.
+						</p>
+					</div>
+				</div>
+				<!-- E: 텍스트 이미지 콘텐츠 영역(가로) -->
+
+				<!-- S: 텍스트 이미지 콘텐츠 영역(가로) -->
+				<div class="edBrandCt horizontal">
+					<div class="edBrandCt__wrapper">
+						<div class="edBrandCt__img">
+							<img src="http://placehold.it/682x400.png" alt="">
+						</div>
+						<div class="edBrandCt__img">
+							<img src="http://placehold.it/682x400.png" alt="">
+						</div>
+					</div>
+				</div>
+				<!-- E: 텍스트 이미지 콘텐츠 영역(가로) -->
+
+			</div>
+			<!-- E: Study Content -->
+
+			<!-- S: Seminar Content -->
+			<div class="edBrandTab__content"> 
+			</div>
+			<!-- E: Seminar Content -->
+
+			<!-- S: Materials Content -->
+			<div class="edBrandTab__content">	
+			</div>
+			<!-- E: Materials Content -->
+
+			<!-- 의학품 샘플 신청하기 -->
+			<div class="edBrandform__lry" id="sampleLayer" style="display:none;">
+				<div class="edBrandform__inrScroll">
+					<div class="edBrandform__dim"></div>
+					<div class="edBrandform__inr">
+						<div class="edBrandform__titleline">
+							<h2 class="edBrandform__title">트루리시티 의약품 Sample 신청</h2>
+							<button type="button" class="edBrandform__close" onclick="$('#sampleLayer').hide(); $('body').css({ overflowY : '' }); return false;"><i class="xi-close"></i><span class="blind">닫기</span></button>
+						</div>
+						<div class="edBrandiptBox">
+							<div class="edBrandiptBox__col2">
+								<label class="edBrandlabel">
+									<span class="edBrandiptTxt">이름<span class="edBrand__important">*</span></span>
+									<input type="text" class="edBrandipt" placeholder="이름을 입력해주세요">
+								</label>
+								<label class="edBrandlabel">
+									<span class="edBrandiptTxt">병원명<span class="edBrand__important">*</span></span>
+									<input type="text" class="edBrandipt" placeholder="병원명을 입력해주세요">
+								</label>
+							</div>
+							<label class="edBrandlabel">
+								<span class="edBrandiptTxt">주소 (동)<span class="edBrand__important">*</span></span>
+								<!-- 주소영역 -->
+								<div class="edBrandlabel__address">
+									<select name="" id="">
+										<option value="">시/도</option>
+									</select>
+									&nbsp;
+									<select name="" id="">
+										<option value="">시/군/구</option>
+									</select>
+									<input type="text" class="edBrandipt" placeholder="동을 입력해주세요">
+								</div>
+								<!-- // 주소영역 -->
+							</label>
+							<label class="edBrandlabel">
+								<span class="edBrandiptTxt">휴대폰 번호</span>
+								<input type="tel" class="edBrandipt" placeholder="‘-’를 제외한 숫자만 입력해주세요">
+							</label>
+							<label class="edBrandlabel">
+								<span class="edBrandiptTxt">요청사항</span>
+								<input type="text" class="edBrandipt" placeholder="예) 점심시간에 방문해 주세요">
+							</label>
+						</div>
+
+						<div class="edBrandagree">
+							<span class="inputbox__checkbox"> <label><input type="checkbox" name=""><span class="text">[필수]개인 정보 수집 및 이용에 대한 동의</span></label></span>
+							<div class="edBrandagreebox">
+								<div class="edBrandagreebox__inr">
+									1. 개인정보 수집 및 이용의 목적<br>
+									- 이용자 본인 확인, 이용자 식별 등 본 웹세미나 운영, 관리, 모니터링 및 알림, 서비스 개선<br>
+									<br>
+									2. 수집하는 개인정보의 항목<br>
+									- 이름, 주소(동), 병원명, 휴대전화 번호(선택)<br>
+									<br>
+									3. 개인정보의 보유ㆍ이용 기간<br>
+									최초 입력 시로부터 3개월간 (단, 관련 법령에 보관기간이 규정된 경우는 그에 따름)<br>
+								</div>
+							</div>
+							<div class="edBrand__asidetext">
+								개인정보 수집 및 이용에 대한 동의를 거부할 수 있으며, 동의한 이후에도 언제든지 이를 철회할 수있습니다. 다만, 개인정보의 수집 및 이용을 거부하는 경우 샘플 신청을 진행하실 수 없습니다.
+							</div>
+							<span class="inputbox__checkbox"><label><input type="checkbox" name=""><span class="text">[필수]개인정보 제3자 제공 동의</span></label></span>
+							<div class="edBrandagreebox">
+								<div class="edBrandagreebox__inr">
+									1. 개인정보를 제공받는 자<br>
+									인터엠디와 마케팅 위탁 계약을 체결한 기관 또는 업체(유유제약)<br>
+									<br>
+									2. 개인정보를 제공받는 자의 개인정보 이용 목적<br>
+									의약품 샘플 제공을 위한 정보 확인<br>
+									<br>
+									3. 제3자에게 제공되는 개인정보의 항목<br>
+									- 이름, 주소(동), 병원명, 휴대전화 번호(선택)<br>
+								</div>
+							</div>
+						</div>
+						<div class="edBrand__asidetext">
+							개인정보의 제 3자 제공에 대한 동의를 거부할 수 있으며, 동의한 이후에도 언제든지 이를 철회할 수있습니다. 다만, 개인정보의 제3자 제공을 거부하는 경우 샘플 신청을 진행하실 수 없습니다.
+						</div>
+
+						<div class="edBrand__submitbox">
+							<button class="edBrand__submit">신청완료</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- // 의학품 샘플 신청하기 -->
+
+		</section>
+	
+	<!-- E: eDetailing 브랜드관 -->
+	<!-- 여기서부터 사용하세요 -->
+
+	<!-- S: 230308_디테일카드팝업 -->
+	<div class="vDtCardPopup">
+		<div class="vDtCardPopup__cont">
+			<div class="vDtCardPopup__top">
+				<div class="tit">지금 바로 담당자를 만나보세요.</div>
+				<div class="desc">비대면 화상통화 상담이 가능합니다.</div>
+			</div>
+			<div class="vDtCardPopup__swiper swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide vDtCardPopup__card">
+						<a href="" class="card">
+							<div class="cardTop bg1">
+								<div class="opacity"></div>
+								<div class="logo">
+									<img src="https://via.placeholder.com/200x100">
+								</div>
+							</div>
+							<div class="cardBottom">
+								<div class="cardProfile">
+									<div class="cardPhoto">
+										<div class="cardPop">
+											<strong>38명</strong> 참여!
+										</div>
+										<img src="https://tw20.intermd.co.kr/image/profile_no.jpg" alt="">
+									</div>
+									<p class="cardName">이지안 MR</p>
+									<p class="cardAffiliation">보령제약</p>
+								</div>
+
+								<div class="cardDetail">
+									<p class="cardTxt">신장애</p>
+									<div class="cardTag">
+										<ul class="swiper-wrapper">
+											<li class="swiper-slide">타이레놀</li>
+											<li class="swiper-slide">타이레놀 A</li>
+											<li class="swiper-slide">아스트라 제네카</li>
+											<li class="swiper-slide">아목시실린</li>
+											<li class="swiper-slide">탁센</li>
+											<li class="swiper-slide">후시딘</li>
+											<li class="swiper-slide">이지엔</li>
+										</ul>
+									</div>
+									
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide vDtCardPopup__card">
+						<a href="" class="card">
+							<div class="cardTop bg2">
+								<div class="opacity"></div>
+								<div class="logo">
+									<img src="https://via.placeholder.com/200x100">
+								</div>
+							</div>
+							<div class="cardBottom">
+								<div class="cardProfile">
+									<div class="cardPhoto">
+										<div class="cardPop">
+											<strong>38명</strong> 참여!
+										</div>
+										<img src="https://tw20.intermd.co.kr/image/profile_no.jpg" alt="">
+									</div>
+									<p class="cardName">이지안 MR</p>
+									<p class="cardAffiliation">보령제약</p>
+								</div>
+
+								<div class="cardDetail">
+									<p class="cardTxt">신장애</p>
+									<div class="cardTag">
+										<ul class="swiper-wrapper">
+											<li class="swiper-slide">타이레놀</li>
+											<li class="swiper-slide">타이레놀 A</li>
+											<li class="swiper-slide">아스트라 제네카</li>
+											<li class="swiper-slide">아목시실린</li>
+											<li class="swiper-slide">탁센</li>
+											<li class="swiper-slide">후시딘</li>
+											<li class="swiper-slide">이지엔</li>
+										</ul>
+									</div>
+									
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide vDtCardPopup__card">
+						<a href="" class="card">
+							<div class="cardTop bg3">
+								<div class="opacity"></div>
+								<div class="logo">
+									<img src="https://via.placeholder.com/200x100">
+								</div>
+							</div>
+							<div class="cardBottom">
+								<div class="cardProfile">
+									<div class="cardPhoto">
+										<div class="cardPop">
+											<strong>38명</strong> 참여!
+										</div>
+										<img src="https://tw20.intermd.co.kr/image/profile_no.jpg" alt="">
+									</div>
+									<p class="cardName">이지안 MR</p>
+									<p class="cardAffiliation">보령제약</p>
+								</div>
+
+								<div class="cardDetail">
+									<p class="cardTxt">신장애</p>
+									<div class="cardTag">
+										<ul class="swiper-wrapper">
+											<li class="swiper-slide">타이레놀</li>
+											<li class="swiper-slide">타이레놀 A</li>
+											<li class="swiper-slide">아스트라 제네카</li>
+											<li class="swiper-slide">아목시실린</li>
+											<li class="swiper-slide">탁센</li>
+											<li class="swiper-slide">후시딘</li>
+											<li class="swiper-slide">이지엔</li>
+										</ul>
+									</div>
+									
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+		<div class="vDtCardPopup__bg"></div>
+	</div>
+	<script>
+		var badgeSwiper;
+		var spaceMargin = 6;
+		/* S: 230315_스크립트 수정 */
+		$(function(){
+			badgeSwiper = new Swiper('.cardTag', {
+				slidesPerView: 'auto',
+				spaceBetween: spaceMargin,
+				preventClicks: true,
+				preventClicksPropagation: false,
+				observer: true,
+				observeParents: true,
+				loop: false,
+				freeMode: true,
+			});
+		})
+		$(document).ready(function() {
+			var badge = [];
+			var badgeWidth = 0;
+			var marginRight = spaceMargin;
+			badge = $('.cardTag .swiper-slide');
+			var $wrapper = $('.cardTag .swiper-wrapper');
+			for(var i=0; i<badge.length; i++){
+				badgeWidth += badge[i].offsetWidth;
+				badgeWidth += marginRight*badge.length
+			}
+			if(badgeWidth > $wrapper[0].offsetWidth){
+				$('.cardTag').addClass('overflow');
+			}
+		});		
+		/* E: 230315_스크립트 수정 */
+		var vDtCardSwiper = new Swiper(".vDtCardPopup__swiper", {
+			slidesPerView: "1.6",
+			spaceBetween: 15,
+			centeredSlides: true,
+			pagination: ".swiper-pagination",
+		});
+
+		$(".webinarDet__vDtBtn").click(function(e){
+			e.preventDefault();
+			$(".vDtCardPopup").addClass("active");			
+			vDtCardSwiper.update();
+			vDtCardSwiper.slideTo(0,0,false);
+		});
+		$(".vDtCardPopup__bg").click(function(){
+			$(".vDtCardPopup").removeClass("active");
+		});
+	</script>
+	<!-- E: 230308_디테일카드팝업 -->
+
+
+</div>
+
+</body>
+</html>

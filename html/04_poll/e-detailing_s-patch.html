@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> Inter MD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+<script src="../../js/plugins/swiper_3.3.1.js"></script>
+<script src="../../js/ui_script_m.js"></script>    
+<body>
+
+<div class="pageWrapDetail" data-role="page">
+    
+    <!-- S: header -->
+    <div class="detail__topline">
+        <a href="#" class="detail__btnback"><i class="xi-angle-left"></i></a>
+        <h2>Poll</h2>
+    </div>
+    <!-- E: header -->
+    <div class="page_detail contentBody">
+        
+        <!-- poll detail content -->
+        <section class="pollDetail">
+
+            <style>
+                .pollDetail__descTop {background:#eff5fb} /* [template] 상단 설명 배경색상 */
+                .pollDetail__descBottom {background:#e3e3e3 } /* [template] 하단 설명 배경색상 */
+                .pollDetail__btnbox .buttonPrimary {background:#1565c0 ;} /* [template] '설문제출, 다음' 버튼 배경색상 */
+            </style>
+            <!-- poll 상단정보 -->
+            <div class="pollHead">
+                <div class="pollHead__textbox">
+                    <span class="pollHead__headline">퀴즈 이벤트</span>
+                    <span class="pollHead__point">1,000P</span>
+                    <h1 class="pollHead__subject">[선착순 100명] S-PATCH EX 3차 이벤트_test</h1>
+                    <div class="pollHead__sideInfo">
+                        <span class="pollHead__participant">참여수:<b>6명</b></span>
+                        <span class="pollHead__date">~2022년 06월 24일</span>
+                    </div>
+                </div>
+                <span class="pollHead__target"><b class="pollHead__targetTitle">대상</b><span class="pollHead__targetDesc">선착순 15명</span></span>
+            </div>
+            <!-- // poll 상단정보 -->
+
+            <!-- 결과화면 -->            
+            <!-- <div class="pollResult"> -->
+            <div class="pollSurvey">
+                <!-- 
+                    정답, 오답표시 문제에 추가
+                    pollMarking__o : 정답체크
+                    pollMarking__x : 오답체크
+                    
+                    정답표시 문항에 표시
+                    오답인 문제에만 문항 추가
+                    pollMarking__check : 정답표시 문항에 추가
+                 -->
+                <h2 class="pollSurvey__title pollMarking__x"><span class="pollSurvey__num">1</span>S-Patch EX를 통한 심전도 검사는 보험 급여가 가능하다.</h2>
+                <div class="pollSurvey__body">
+                    <span class="inputbox__radio"> <label><input type="radio" name="" value="" class="" checked><span class="text">O</span></label> </span>
+                    <span class="inputbox__radio"> <label><input type="radio" name="" value="" class=""><span class="text">X</span></label> </span>
+                    <div class="pollSurvey__explanation">
+                        <div class="explanation__tit">해설</div>
+                        <div class="explanation__desc">
+                            <p>S-Patch EX를 통한 심전도 검사는 보험 급여가 가능하며 보험 수가코드는 아래와 같습니다.</p>
+                        </div>
+                        <table class="explanation__table">
+                            <thead>
+                                <tr>
+                                    <th>수기 코드</th>
+                                    <th>한글명</th>
+                                    <th>가산수가 (병원종별 상이함)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>E6545</td>
+                                    <td>심전도 감시-홀터기록<br>48시간 이내</td>
+                                    <td>약 5만원</td>
+                                </tr>
+                                <tr>
+                                    <td>E6556</td>
+                                    <td>심전도 감시-홀터기록<br>48시간 초과 7일 이내</td>
+                                    <td>약 13~15만원</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <h2 class="pollSurvey__title pollMarking__x"><span class="pollSurvey__num">2</span>S-Patch EX는 한국, 유럽, 호주, 싱가포르 등에서 인증을 받은 의료진이 심전도 검사 시 사용하는 의료기기이다.</h2>
+                <div class="pollSurvey__body">
+                    <span class="inputbox__radio"> <label><input type="radio" name="" value="" class="" checked><span class="text">O</span></label> </span>
+                    <span class="inputbox__radio"> <label><input type="radio" name="" value="" class=""><span class="text">X</span></label> </span>
+                    <div class="pollSurvey__explanation">
+                        <div class="explanation__tit">해설</div>
+                        <div class="explanation__desc">
+                            <p>S-Patch EX는 국내 뿐만 아니라 해외에서도 인증을 받은 의료기기이며 해외 여러 나라에서도 사용하고 있는 의료기기로 애플 워치 등의 소비재와는 다릅니다.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2 class="pollSurvey__title pollMarking__x"><span class="pollSurvey__num">3</span>S-Patch EX의 무게는 9g, 두께는 6mm, 기기 색상은 흰색이다.</h2>
+                <div class="pollSurvey__body">
+                    <span class="inputbox__radio"> <label><input type="radio" name="" value="" class=""><span class="text">O</span></label> </span>
+                    <span class="inputbox__radio"> <label><input type="radio" name="" value="" class="" checked><span class="text">X</span></label> </span>
+                    <div class="pollSurvey__explanation">
+                        <div class="explanation__tit">해설</div>
+                        <div class="explanation__desc">
+                            <p>S-Patch EX는 가벼운 무게와 얇은 두께, 기기 색상은 흰색으로 환자의 심전도 검사 시, 환자의 일상생활의 불편함 및 프라이버시 문제를 줄일 수 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div> 
+            <!-- // 결과화면 -->
+            
+        </section>
+        <!-- // poll detail content -->
+    </div>
+    
+
+</div>
+
+</body>
+</html>

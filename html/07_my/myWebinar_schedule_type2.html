@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> Inter MD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+<script src="../../js/plugins/swiper_3.3.1.js"></script>
+<script src="../../js/ui_script_m.js"></script>
+<body>
+<div class="pageWrap" data-role="page">
+
+    <!-- S: header -->
+    <div class="detail__topline line">
+        <a href="#" class="detail__btnback"><i class="xi-angle-left"></i></a>
+        <h2>웹 세미나 일정</h2>
+    </div>
+    <!-- E: header -->
+
+    <div class="contentBody">
+        <!-- S: 웹 세미나 일정 -->
+        <div class="myWebinar__mySchedule">
+            <div class="myWebinar__myScheduleTop">
+                <div class="myWebinar__myScheduleDate">
+                    <div class="myWebinar__myScheduleDateBox">
+                        <input class="date" type="text" value="2023.06" readonly="readonly">
+                    </div>
+                    <button class="prevMonth"></button>
+                    <button class="nextMonth"></button>
+                    <div class="myWebinar__calendar">
+                        <div class="myWebinar__calendarBox">
+                            <div class="myWebinar__calendarTop">
+                                <input type="text" value="2023" readonly="readonly">
+                                <button class="prevYear"></button>
+                                <button class="nextYear"></button>
+                            </div>
+                            <div class="myWebinar__calendarCon">
+                                <span class="myWebinar__calendarMonth">1월</span>
+                                <span class="myWebinar__calendarMonth">2월</span>
+                                <span class="myWebinar__calendarMonth">3월</span>
+                                <span class="myWebinar__calendarMonth">4월</span>
+                                <span class="myWebinar__calendarMonth">5월</span>
+                                <span class="myWebinar__calendarMonth today selected">6월</span>
+                                <span class="myWebinar__calendarMonth disabled">7월</span>
+                                <span class="myWebinar__calendarMonth disabled">8월</span>
+                                <span class="myWebinar__calendarMonth disabled">9월</span>
+                                <span class="myWebinar__calendarMonth disabled">10월</span>
+                                <span class="myWebinar__calendarMonth disabled">11월</span>
+                                <span class="myWebinar__calendarMonth disabled">12월</span>
+                            </div>
+                        </div>
+                        <div class="myWebinar__calendarBg"></div>
+                    </div>
+                </div>
+                <div class="myWebinar__myScheduleTotal">
+                    <p class="tit">시청한 웹 세미나</p>
+                    <p class="total">00건</p>
+                </div>
+                <script>
+                    $(".myWebinar__myScheduleDateBox").click(function(){
+                        $(".myWebinar__calendar").addClass("active")
+                    })
+                    $(".myWebinar__calendarBg").click(function(){
+                        $(".myWebinar__calendar").removeClass("active")
+                    })
+                    $(".myWebinar__calendarMonth").each(function(){
+                        $(this).click(function(){
+                            if(!$(this).hasClass("disabled")) {
+                                $(this).parent().find(".myWebinar__calendarMonth").removeClass("selected")
+                                $(this).addClass("selected")
+                            }
+                        })
+                    })                   
+                </script>
+            </div>
+            
+            <div class="filterBar">
+                <div class="filterBar__lt">
+                    <div class="filterBtnBox">
+                        <button class="filterBtn " onclick="filterBtnOnOff($(this))">전체</button>
+                        <button class="filterBtn" onclick="filterBtnOnOff($(this))">사전등록</button>
+                        <button class="filterBtn on" onclick="filterBtnOnOff($(this))">시청완료</button>
+                        <span class="filterBtn--bg"></span>
+                    </div>
+                </div>
+                <div class="filterBar__rt">
+                    <div class="total">총 00건</div>
+                </div>
+            </div>
+            <!-- S: 웹 세미나 일정 리스트 -->
+            <div class="myWebinarList">
+                <!-- S: LIVE 시청 옵션 -->
+                <div class="myWebinarList__option">
+                    <label>
+                        <input type="checkbox" class="myWebinarList__optionChk" checked>
+                        <span class="txt">LIVE 시청만 보기</span>
+                    </label>
+                </div>
+                <!-- E: LIVE 시청 옵션 -->
+                <ul>
+                    <li class="myWebinarList__item end">
+                        <a href="">
+                            <div class="myWebinarList__itemTop">
+                                <div class="myWebinarList__itemTopLt">
+                                    <p class="date">02.24(금) 18:00</p>
+                                    <span class="type type04">종료</span>
+                                    <span class="enterTime">입장시간 17:58</span>
+                                </div>
+                            </div>
+                            <div class="myWebinarList__itemCon">
+                                <p class="tit">Topic. 10분 코성형 (탑스코) Non-Surgical Rhinoplasty by PCL(TAPS) Threads</p>
+                                <p class="name">김종서 원장</p>
+                                <div class="myWebinarList__itemConBottom">
+                                    <p class="brand" style="color:#71368e">탑스코</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="myWebinarList__item end">
+                        <a href="">
+                            <div class="myWebinarList__itemTop">
+                                <div class="myWebinarList__itemTopLt">
+                                    <p class="date">02.24(금) 18:00</p>
+                                    <span class="type type04">종료</span>
+                                    <span class="enterTime">입장시간 17:58</span>
+                                </div>
+                            </div>
+                            <div class="myWebinarList__itemCon">
+                                <p class="tit">Topic. 10분 코성형 (탑스코) Non-Surgical Rhinoplasty by PCL(TAPS) Threads</p>
+                                <p class="name">김종서 원장</p>
+                                <div class="myWebinarList__itemConBottom">
+                                    <p class="brand" style="color:#71368e">탑스코</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="myWebinarList__item end">
+                        <a href="">
+                            <div class="myWebinarList__itemTop">
+                                <div class="myWebinarList__itemTopLt">
+                                    <p class="date">02.24(금) 18:00</p>
+                                    <span class="type type04">종료</span>
+                                    <span class="enterTime">입장시간 17:58</span>
+                                </div>
+                            </div>
+                            <div class="myWebinarList__itemCon">
+                                <p class="tit">Topic. 10분 코성형 (탑스코) Non-Surgical Rhinoplasty by PCL(TAPS) Threads</p>
+                                <p class="name">김종서 원장</p>
+                                <div class="myWebinarList__itemConBottom">
+                                    <p class="brand" style="color:#71368e">탑스코</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="myWebinarList__item end">
+                        <a href="">
+                            <div class="myWebinarList__itemTop">
+                                <div class="myWebinarList__itemTopLt">
+                                    <p class="date">02.24(금) 18:00</p>
+                                    <span class="type type04">종료</span>
+                                    <span class="enterTime">입장시간 17:58</span>
+                                </div>
+                            </div>
+                            <div class="myWebinarList__itemCon">
+                                <p class="tit">Topic. 10분 코성형 (탑스코) Non-Surgical Rhinoplasty by PCL(TAPS) Threads</p>
+                                <p class="name">김종서 원장</p>
+                                <div class="myWebinarList__itemConBottom">
+                                    <p class="brand" style="color:#71368e">탑스코</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- E: 웹 세미나 일정 리스트 -->
+        </div>
+        <!-- E: 웹 세미나 일정 -->
+    </div>
+
+</div>
+</body>
+</html>

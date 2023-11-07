@@ -1,0 +1,422 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">    
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> Inter MD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+<script src="../../js/plugins/swiper_3.3.1.js"></script>
+<script src="../../js/ui_script_m.js"></script>    
+<body>
+
+<div class="pageWrap" data-role="page">
+
+    <!-- <div class="detail__topline">
+        <h2>Channel</h2>
+        <a href="#" class="detail__rt"><i class="xi-close"></i><span class="blind">닫기</span></a>
+    </div> -->
+
+    <!-- S:채널개편 : 211206 : 추가 -->
+    <div class="channelMainNew">
+            
+        <!-- S: 220907 e-detailing 개편 -->
+        <div class="channelMainNew__section eDt__section">
+            <div class="channelMainNew__tit">
+                <a href="">
+                    <div class="ico5"></div>
+                    <div class="tit">
+                        <p>e-Detailing</p>
+                        <span>의사에게 도움되는 최신 의약학/의료기기 정보</span>
+                    </div>
+                    <div class="more">
+                        <i class="xi-angle-right"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="eDt__cont">
+                <div class="eDt__swiper swiper-container">
+                    <div class="swiper-wrapper">
+                       
+                    </div>
+                    <div class="swiper-pagination eDt__swiperPagination"></div>
+                </div>
+                <script>
+                    $(document).ready(function(){
+                        var eDtSlideLength = $(".eDt__swiper .eDt__swiperSlide").length;
+                        
+                        if(eDtSlideLength == 2){
+                            $(".eDt__swiper").addClass("col-2");
+                        }else if(eDtSlideLength > 2){
+                            $(".eDt__swiper").addClass("col-2");
+                            var eDtSwiper = new Swiper('.eDt__swiper', {
+                                slidesPerView: '2',
+                                spaceBetween: 5,
+                                pagination: '.eDt__swiperPagination',
+								paginationClickable: true,
+                            });
+                        }else if(eDtSlideLength == 0) {
+                            $(".eDt__section").remove();
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+        <!-- E: 220907 e-detailing 개편 -->
+        
+
+        <div class="channelMainNew__section">
+            <!-- 220610 : 타이틀 수정 -->
+            <div class="channelMainNew__tit">
+                <a href="">
+                    <div class="ico6"></div>
+                    <div class="tit">
+                        <p>v-Detailing</p>
+                        <span>영업담당자와 진행하는 온라인 면담</span>
+                    </div>
+                    <div class="more">
+                        <i class="xi-angle-right"></i>
+                    </div>
+                </a>
+            </div>
+            <!-- //220610 : 타이틀 수정 -->
+            <div class="utility__list">
+                <!-- S: vdetailing 배너 -->
+                <a href="#" class="vDtBnr__main">
+                    <span class="vDtBnr__mainImg" style="background-image:url('https://placeimg.com/682/411/animals')"></span>
+                    <span class="vDtBnr__mainDesc">
+                        <h2 class="vDtBnr__mainTitle">제약사 매니저와 함께하는 <br />같지만 다른 면담, v-Detailing</h2>
+                        <span class="vDtBnr__mainBtm">입장하기</span>
+                    </span>
+                </a>
+                <!-- S: 롤링배너 -->
+                <div class="vDtBnr__slide vDtBnr__slideSwiper swiper-container -disabled"> <!-- -disabled :사용자 스와이프 방지 용도 불필요시 삭제 -->
+                    <div class="swiper-wrapper">
+                        <!-- S: item -->
+                        <span class="swiper-slide vDtBnr__slideItem">
+                            <!-- S: profile -->
+                            <div class="vDtList__profile">
+                                <div class="vDtList__profilePhoto" style="background-image: url('../../img/common/mr-profile.png')"></div>
+                                <div class="vDtList__profileDetail">
+                                    <div class="vDtList__profileName">강서준 MR</div>
+                                    <div class="vDtList__profileFrom">화이자제약 화이자제약 화이자제약 화이자제약 화이자제약 화이자제약 화이자제약</div>
+                                </div>
+                            </div>
+                            <!-- E: profile -->
+                            <span class="vDtBnr__slideDesc"><span class="vDtBnr__slideDescTxt">열감을 더한 케토톱 핫 출시</span></span>
+                        </span>
+                        <!-- E: item -->
+                        <span class="swiper-slide vDtBnr__slideItem">
+                            <div class="vDtList__profile">
+                                <div class="vDtList__profilePhoto" style="background-image: url('../../img/common/mr-profile.png')"></div>
+                                <div class="vDtList__profileDetail">
+                                    <div class="vDtList__profileName">강서준 MR</div>
+                                    <div class="vDtList__profileFrom">화이자제약 화이자제약 화이자제약 화이자제약 화이자제약 화이자제약 화이자제약</div>
+                                </div>
+                            </div>
+                            <span class="vDtBnr__slideDesc"><span class="vDtBnr__slideDescTxt">열감을 더한 케토톱 핫 출시염증·​통증을 완화하는 효과가 강합니다.</span></span>
+                        </span>
+                        <span class="swiper-slide vDtBnr__slideItem">
+                            <div class="vDtList__profile">
+                                <div class="vDtList__profilePhoto" style="background-image: url('../../img/common/mr-profile.png')"></div>
+                                <div class="vDtList__profileDetail">
+                                    <div class="vDtList__profileName">강서준 MR</div>
+                                    <div class="vDtList__profileFrom">화이자제약 화이자제약 화이자제약 화이자제약 화이자제약 화이자제약 화이자제약</div>
+                                </div>
+                            </div>
+                            <span class="vDtBnr__slideDesc"><span class="vDtBnr__slideDescTxt">열감을 더한 케토톱 핫 출시</span></span>
+                        </span>
+                    </div>
+                </div>
+                <script>
+                    $(function(){
+                        var vDtBnr__slideSwiper = new Swiper('.vDtBnr__slideSwiper', {
+                            slidesPerView: '2',
+                            spaceBetween: 12,
+                            preventClicks: true,
+                            preventClicksPropagation: true,
+                            loop: true,
+                            freeMode: true,
+                            autoplay : 2500
+                        });
+                    })
+                </script>
+                <!-- E: 롤링배너 -->
+                <!-- E: vdetailing 배너 -->
+            </div>
+        </div>
+
+        <!-- S:220905/굿리스너추가 -->
+        <div class="channelMainNew__section">
+            <div class="channelMainNew__tit">
+                <a href="">
+                    <div class="ico7"></div>
+                    <div class="tit">
+                        <p>굿 리스너</p>
+                        <span>의사를 위한 온라인 정신건강 상담 서비스</span>
+                    </div>
+                    <div class="more">
+                        <i class="xi-angle-right"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="utility__list">
+                <a href="#" class="vDtBnr__main">
+                    <span class="vDtBnr__mainImg" style="background-image:url('../../img/connect/banner_goodListener_mo.png')"></span>
+                    <span class="vDtBnr__mainDesc">
+                        <h2 class="vDtBnr__mainTitle">업계최초 의사선생님 전문 <br>정신건강 상담서비스</h2>
+                        <span class="vDtBnr__mainBtm">입장하기</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <!-- E:220905/굿리스너추가 -->
+
+        <div class="channelMainNew__section">
+            <div class="channelMainNew__tit">
+                <a href="">
+                    <div class="ico1"></div>
+                    <div class="tit">
+                        <p>InterMD v-Pick</p>
+                        <span>의사에게 도움되는 숏클립 영상 콘텐츠</span>
+                    </div>
+                    <div class="more">
+                        <i class="xi-angle-right"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="channelMainNew__cont">
+                <ul class="channelMainNew__list channelMainNew__list--movie">
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <img src="https://placeimg.com/400/400/animals" />
+                            </div>
+                            <div class="detail">
+                                <p class="tit">위식도암 내시경 관찰 포인트1</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <img src="https://placeimg.com/500/400/animals" />
+                            </div>
+                            <div class="detail">
+                                <p class="tit">위식도암 내시경 관찰 포인트1</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <img src="https://placeimg.com/400/200/animals" />
+                            </div>
+                            <div class="detail">
+                                <p class="tit">위식도암 내시경 관찰 포인트1위식도암 내시경 관찰 포인트1위식도암 내시경 관찰 포인트1위식도암 내시경 관찰 포인트1위식도암 내시경 관찰 포인트1위식도암 내시경 관찰 포인트1</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="channelMainNew__section">
+            <div class="channelMainNew__tit">
+                <a href="">
+                    <div class="ico2"></div>
+                    <div class="tit">
+                        <p>InterMD Pick</p>
+                        <span>의사에게 도움되는 법률·세무 지식 정보</span>
+                    </div>
+                    <div class="more">
+                        <i class="xi-angle-right"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="channelMainNew__cont">
+                <ul class="channelMainNew__list">
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <img src="https://placeimg.com/400/300/animals" />
+                            </div>
+                            <div class="detail">
+                                <p class="tit">위식도암 내시경 관찰 포인트1</p>
+                                <p class="date">2021.11.18</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <img src="https://placeimg.com/200/200/animals" />
+                            </div>
+                            <div class="detail">
+                                <p class="tit">골프엘보우(Golfer's elbow) A 골프엘보우(Golfer's elbow) A골프엘보우(Golfer's elbow) A 골프엘보우(Golfer's elbow) A</p>
+                                <p class="date">2021.11.18</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <img src="https://placeimg.com/300/200/animals" />
+                            </div>
+                            <div class="detail">
+                                <p class="tit">허혈성 뇌질환의 영상 진단</p>
+                                <p class="date">2021.11.18</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <img src="https://placeimg.com/500/300/animals" />
+                            </div>
+                            <div class="detail">
+                                <p class="tit">허혈성 뇌질환의 영상 진단</p>
+                                <p class="date">2021.11.18</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="channelMainNew__section">
+            <div class="channelMainNew__tit">
+                <a href="">
+                    <div class="ico3"></div>
+                    <div class="tit">
+                        <p>Drug & Posting</p>
+                        <span>의사로서 알아야 할 필수 약물 정보/가이드</span>
+                    </div>
+                    <div class="more">
+                        <i class="xi-angle-right"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="channelMainNew__cont">
+                <ul class="channelMainNew__list">
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <img src="https://placeimg.com/400/300/animals" />
+                            </div>
+                            <div class="detail">
+                                <p class="tit">위식도암 내시경 관찰 포인트1</p>
+                                <p class="date">2021.11.18</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <img src="https://placeimg.com/200/200/animals" />
+                            </div>
+                            <div class="detail">
+                                <p class="tit">골프엘보우(Golfer's elbow) A 골프엘보우(Golfer's elbow) A</p>
+                                <p class="date">2021.11.18</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <img src="https://placeimg.com/300/200/animals" />
+                            </div>
+                            <div class="detail">
+                                <p class="tit">허혈성 뇌질환의 영상 진단</p>
+                                <p class="date">2021.11.18</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <img src="https://placeimg.com/500/300/animals" />
+                            </div>
+                            <div class="detail">
+                                <p class="tit">허혈성 뇌질환의 영상 진단</p>
+                                <p class="date">2021.11.18</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="channelMainNew__section">
+            <div class="channelMainNew__tit">
+                <a href="">
+                    <div class="ico4"></div>
+                    <div class="tit">
+                        <p>InterMD discover</p>
+                        <span>의사들이 알아두면 좋은 최신 트렌드 정보</span>
+                    </div>
+                    <div class="more">
+                        <i class="xi-angle-right"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="channelMainNew__cont">
+                <ul class="channelMainNew__list">
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <img src="https://placeimg.com/400/300/animals" />
+                            </div>
+                            <div class="detail">
+                                <p class="tit">위식도암 내시경 관찰 포인트1</p>
+                                <p class="date">2021.11.18</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <img src="https://placeimg.com/200/200/animals" />
+                            </div>
+                            <div class="detail">
+                                <p class="tit">골프엘보우(Golfer's elbow) A 골프엘보우(Golfer's elbow) A</p>
+                                <p class="date">2021.11.18</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <img src="https://placeimg.com/300/200/animals" />
+                            </div>
+                            <div class="detail">
+                                <p class="tit">허혈성 뇌질환의 영상 진단</p>
+                                <p class="date">2021.11.18</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img">
+                                <img src="https://placeimg.com/500/300/animals" />
+                            </div>
+                            <div class="detail">
+                                <p class="tit">허혈성 뇌질환의 영상 진단</p>
+                                <p class="date">2021.11.18</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- E:채널개편 : 211206 : 추가 -->
+    
+</div>
+</body>
+</html>

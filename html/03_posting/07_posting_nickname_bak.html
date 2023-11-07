@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes, viewport-fit=cover" />
+<link rel="shortcut icon" href="https://file.intermd.co.kr/interMD-Favicon32.ico">
+<title>InterMD</title>
+<meta property="fb:app_id" content="339657186446847" />
+<meta property="og:url"           content="https://www.intermd.co.kr" />
+<meta property="og:title"         content="의사만을 위한 Professional Knowledge Place" id="metaTitle" />
+<meta property="og:description"   content="의사만을 위한 Professional Knowledge Place" />
+<meta property="og:image"         content="https://file.intermd.co.kr/InterMD_logo_v2.png" />
+
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/style.css?v=201902150">
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/framework.css?v=20190215">
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://www.intermd.co.kr/mobile/styles/swiper.min.css">
+<!--font-->
+<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/font/noto_v3.css">
+<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/xeicon/xeicon.min.css">
+<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--custom-->
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/base.css?v=20190215">  
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/custom.css?v=20190215">  
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/sub.css?v=20190215">  
+<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/styles/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/xpull.css">
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/style_mobile.css?v=20190215">
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+
+</head>
+
+
+
+
+
+<body class="modal write_modal_wrap posting-qna deepPoster__write">
+    <div id="page-wrap">
+        <div id="page-content" class="page-content bg_fff">
+            <div id="page-content-scroll">
+                <div class="top_fixed_wrap marginBottom20">
+                    <h2>닉네임 설정하기<a href="javascript:void(0);" class="right" onclick="javascript:fn_goExit();"><i class="xi-close"></i></a></h2> 
+                </div>
+                
+                
+                <div class="write_modal_container write_modal_container02 surveyInputWrap">
+                    
+                    <div class="modal_qna">
+                        <div class="modal_text_block marginBottom20">
+                            <div class="surveyWriteRow__tit">닉네임 <span class="star">*</span></div>
+                            <div class="surveyWriteRowIpt postingNickNameIpt available"><!-- 사용 가능 시 available 추가 -->
+                                <input type="text" placeholder="닉네임을 입력해 주세요.">
+                                <div class="postingNickName__desc">
+                                    <span>한글 1~10자, 영문 2~20자 이내</span>
+                                </div>
+                                <!-- 닉네임 설정 메시지(사용가능) -->
+                                <div class="postingNickName__desc">
+                                    <span class="available">사용 가능한 닉네임 입니다.</span>
+                                </div>
+                                <!-- 닉네임 설정 메시지(사용불가) -->
+                                <div class="postingNickName__desc">
+                                    <span class="unavailable">사용할 수 없는 닉네임 입니다. (한글 1~10자, 영문 2~20자 이내)</span>
+                                </div>
+                                <!-- 닉네임 설정 메시지(중복) -->
+                                <div class="postingNickName__desc">
+                                    <span class="unavailable">사용할 수 없는 닉네임 입니다. (중복된 닉네임)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal_text_block marginBottom20">
+                            <div class="surveyWriteRow__tit">닉네임 하단글 <span class="sub">(선택사항)</span></div>
+                            <span class="surveyWriteRow__desc">입력하지 않으면 표시되지 않습니다.</span>
+                            <div class="surveyWriteRowIpt postingNickNameIpt">
+                                <input type="text" placeholder="닉네임 하단글을 입력해 주세요.">
+                                <div class="postingNickName__desc">
+                                    <span>한글 1~10자, 영문 2~20자 이내</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal_text_block marginBottom20">
+                            <div class="surveyWriteRow__tit">닉네임 아이콘 <span class="star">*</span></div>
+                            <div class="nickIconSetting">
+                                <div class="nickIcon__profile">
+                                    <img src="../../img/sample/deep_poster_sample_profile.png" alt="">
+                                </div>
+                                <div class="nickIcon__listBox">
+                                    <ul>
+                                        <li>
+                                            <label>
+                                                <input type="radio" checked name="nickNameIcon">
+                                                <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile.png" alt=""></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="nickNameIcon">
+                                                <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile2.png" alt=""></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="nickNameIcon">
+                                                <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile3.png" alt=""></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="nickNameIcon">
+                                                <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile4.png" alt=""></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="nickNameIcon">
+                                                <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile5.png" alt=""></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="nickNameIcon">
+                                                <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile.png" alt=""></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="nickNameIcon">
+                                                <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile2.png" alt=""></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="nickNameIcon">
+                                                <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile3.png" alt=""></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="nickNameIcon">
+                                                <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile4.png" alt=""></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="nickNameIcon">
+                                                <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile5.png" alt=""></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="nickNameIcon">
+                                                <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile.png" alt=""></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="nickNameIcon">
+                                                <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile2.png" alt=""></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="nickNameIcon">
+                                                <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile3.png" alt=""></span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="nickNameIcon">
+                                                <span class="nickIcon__img"><img src="../../img/sample/deep_poster_sample_profile4.png" alt=""></span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal_text_block">
+                            <div class="surveyWriteRow__tit">아이콘 배경색</div>
+                            <div class="nickIcon__colorIpt">
+                                <input type="text" value="#276cb8" id="icoBgPicker">
+                            </div>
+                        </div>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.css">
+                        <script src="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.js"></script>
+                        <script>
+                            $(document).ready(function(){
+                                var defaultColor = $("#icoBgPicker").val()
+                                $(".nickIcon__profile, .nickIcon__img img").css("background", defaultColor);
+                            });
+                            $('#icoBgPicker').spectrum({
+                                type: "component",
+                                showPalette: false,
+                                showInput: true,
+                                allowEmpty: false,
+                                change: color => {
+                                    // value 값 변경시 선택리스트 배경 및 결과 배경 변경
+                                    const selectedColor = 'rgba('+ color._r +', '+ color._g +', '+ color._b +', '+ color._a +')'
+                                    const resultIcoBg = document.querySelector('.nickIcon__profile')
+                                    const selectIcoBg = document.querySelectorAll('.nickIcon__img img')
+
+                                    resultIcoBg.style.backgroundColor = selectedColor
+                                    selectIcoBg.forEach(selectIcoBg => selectIcoBg.style.backgroundColor = selectedColor)
+                                },
+                            });
+
+
+                            $(".nickIcon__listBox li").each(function(){
+                                $(this).find("input").change(function(){
+                                    if($(this).is(":checked")){
+                                        var imgSrc = $(this).parent().find("img").attr("src");
+                                        $(".nickIcon__profile img").attr("src",imgSrc);
+                                    }
+                                });
+                            })
+                        </script>
+                    </div>
+                </div>
+                <div class="fixed_wrap">
+                    <!-- 새 작성 or 임시저장 글 작성 -->
+                    <div class="fullBtn">
+                        <a href="javascript:void(0);" class="button button-blue">저장하기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> Inter MD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+<script src="../../js/plugins/swiper_3.3.1.js"></script>
+<script src="../../js/ui_script_m.js"></script>    
+<body>
+
+<div class="pageWrapDetail" data-role="page">
+    
+    <!-- S: header -->
+    <div class="detail__topline">
+        <a href="#" class="detail__btnback"><i class="xi-angle-left"></i></a>
+        <h2>Poll</h2>
+    </div>
+    <!-- E: header -->
+    <div class="page_detail contentBody">
+        
+        <!-- poll detail content -->
+        <section class="pollDetail">
+
+            <style>
+                .pollDetail__descTop {background:#eff5fb} /* [template] 상단 설명 배경색상 */
+                .pollDetail__descBottom {background:#e3e3e3 } /* [template] 하단 설명 배경색상 */
+                .pollDetail__btnbox .buttonPrimary {background:#1565c0 ;} /* [template] '설문제출, 다음' 버튼 배경색상 */
+            </style>
+            <!-- poll 상단정보 -->
+            <div class="pollHead">
+                <div class="pollHead__textbox">
+                    <span class="pollHead__headline">제약회사 온라인 서비스 조사</span>
+                    <span class="pollHead__point">500</span>
+                    <h1 class="pollHead__subject">제약회사의 온라인 서비스 경험해보셨나요?</h1>
+                    <div class="pollHead__sideInfo">
+                        <span class="pollHead__participant">참여수:<b>330명</b></span>
+                        <span class="pollHead__date">~2020.04.30</span>
+                    </div>
+                </div>
+                <span class="pollHead__target"><b class="pollHead__targetTitle">설문대상</b><span class="pollHead__targetDesc">경기도, 전문의(내과)</span></span>
+            </div>
+            <!-- // poll 상단정보 -->
+            
+            <!-- 상단 설명 -->
+            <div class="pollDetail__descTop">
+                <p>
+                    국내에서는 최근 전문의약품의 약국 광고·표시 제한 완화가 논의 중인데요. 선생님께서는 전문의약품 광고 규제, 어떻게 생각하십니까?
+                </p>
+                <b>* 전문의약품 광고 규제에 대한 선생님의 의견을 나눠주시면, 1,000ⓟ를 드립니다! (선착순 120명)</b>
+            </div>
+            <!-- // 상단 설명 -->
+
+
+            <h2 class="pollDetail__h2">설문 문항</h2>
+
+            <!-- 결과화면 -->            
+            <!-- <div class="pollResult"> -->
+            <div class="pollSurvey">
+                <!-- 
+                    정답, 오답표시 문제에 추가
+                    pollMarking__o : 정답체크
+                    pollMarking__x : 오답체크
+                    
+                    정답표시 문항에 표시
+                    오답인 문제에만 문항 추가
+                    pollMarking__check : 정답표시 문항에 추가
+                 -->
+                <h2 class="pollSurvey__title pollMarking__o"><span class="pollSurvey__num">1</span>단일 선택형(텍스트)</h2>
+                <div class="pollSurvey__body">
+                    <span class="inputbox__radio"> <label><input type="radio" name="" value="" class=""><span class="text">네</span></label> </span>
+                    <span class="inputbox__radio"> <label><input type="radio" name="" value="" class="" checked><span class="text">네</span></label> </span>
+                    <span class="inputbox__radio"> <label><input type="radio" name="" value="" class=""><span class="text">네</span></label> </span>
+                    <span class="inputbox__radio"> <label><input type="radio" name="" value="" class=""><span class="text">네</span></label> </span>
+                    <span class="inputbox__complex">
+                        <span class="inputbox__radio"> <label><input type="radio" name="" value=""><span class="text">기타</span></label> </span>
+                        <span class="inputbox__text"><input type="text" class="inputbox__short"  name="" value="" placeholder="기타사항을 작성해 주세요."></span>
+                    </span>
+                </div>
+
+                <h2 class="pollSurvey__title pollMarking__x"><span class="pollSurvey__num">2</span>checkbox 다중선택</h2>
+                <div class="pollSurvey__body">
+                    <span class="inputbox__checkbox"> <label><input type="checkbox" name="" value="" class=""><span class="text">네</span></label> </span>
+                    <span class="inputbox__checkbox"> <label><input type="checkbox" name="" value="" class=""><span class="text">네</span></label> </span>
+                    <span class="inputbox__checkbox pollMarking__check"> <label><input type="checkbox" name="" value="" class=""><span class="text">네</span></label> </span>
+                    <span class="inputbox__checkbox"> <label><input type="checkbox" name="" value="" class=""><span class="text">네</span></label> </span>
+                    <span class="inputbox__complex">
+                        <span class="inputbox__checkbox"> <label><input type="checkbox" name="" value=""><span class="text">기타</span></label> </span>
+                        <span class="inputbox__text"><input type="text" class="inputbox__short"  name="" value="" placeholder="기타사항을 작성해 주세요."></span>
+                    </span>
+                </div>
+                
+                <h2 class="pollSurvey__title pollMarking__x"><span class="pollSurvey__num">3</span>단일 선택형 (이미지 기본)</h2>
+                <div class="pollSurvey__body">
+                    <div class="pollTyImage">
+                        <span class="inputbox__radio"> <label><img src="http://placehold.it/310x262" alt="" class="ipt__img"><input type="radio" name="" value="" class=""><span class="text">checkbox</span></label> </span>
+                        <span class="inputbox__radio pollMarking__check"> <label><img src="http://placehold.it/310x262" alt="" class="ipt__img"><input type="radio" name="" value="" class=""><span class="text">하나의 질환에 대해 연속적인 정보를 얻을 수 있다.</span></label> </span>
+                        <span class="inputbox__radio"> <label><img src="http://placehold.it/310x262" alt="" class="ipt__img"><input type="radio" name="" value="" class=""><span class="text">checkbox</span></label> </span>
+                        <span class="inputbox__radio"> <label><img src="http://placehold.it/310x262" alt="" class="ipt__img"><input type="radio" name="" value="" class=""><span class="text">checkbox</span></label> </span>
+                    </div>
+                </div>
+                
+                <h2 class="pollSurvey__title pollMarking__x"><span class="pollSurvey__num">4</span>다중 선택형 (이미지 기본)</h2>
+                <div class="pollSurvey__body">
+                    <div class="pollTyImage">
+                        <span class="inputbox__checkbox"> <label><img src="http://placehold.it/310x262" alt="" class="ipt__img"><input type="checkbox" name="" value="" class=""><span class="text">checkbox</span></label> </span>
+                        <span class="inputbox__checkbox pollMarking__check"> <label><img src="http://placehold.it/310x262" alt="" class="ipt__img"><input type="checkbox" name="" value="" class=""><span class="text">checkbox</span></label> </span>
+                        <span class="inputbox__checkbox"> <label><img src="http://placehold.it/310x262" alt="" class="ipt__img"><input type="checkbox" name="" value="" class=""><span class="text">checkbox</span></label> </span>
+                        <span class="inputbox__checkbox"> <label><img src="http://placehold.it/310x262" alt="" class="ipt__img"><input type="checkbox" name="" value="" class=""><span class="text">checkbox</span></label> </span>
+                    </div>
+                </div>
+            </div> 
+            <!-- // 결과화면 -->
+            
+        </section>
+        <!-- // poll detail content -->
+    </div>
+    
+
+</div>
+
+</body>
+</html>

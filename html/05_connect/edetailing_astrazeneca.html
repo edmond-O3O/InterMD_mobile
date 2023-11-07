@@ -1,0 +1,716 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/style.css?v=20181226">
+    <!--custom-->
+    <link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/base.css">
+    <link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/custom.css">
+    <link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/sub.css">
+    
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>InterMD</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+	<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+	<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+
+	<script src="../../js/plugins/jquery-3.2.1.js"></script>
+    <script src="../../js/plugins/swiper_3.3.1.js"></script>
+	<script src="../../js/ui_script_m.js"></script>
+	<script src="../../js/plugins/slick.min.js"></script>
+	<link href="../../css/slick.css" rel="stylesheet">
+
+</head>
+<html>
+<body class="edBrand__AZ"><!-- 231010_아스트라제네카 브랜드관 페이지 edBrand__AZ class 추가 -->
+
+<div id="contentPage" class="pageWrapDetail contentBody" data-role="page" style="padding-bottom: 0;">
+
+	<!-- S: header -->
+    <div class="detail__topline">
+		<a href="#" class="detail__lt"><i class="xi-angle-left"></i></a>
+		<h2>edBrand</h2>    
+		<a href="#" class="detail__rt"><i class="icon_share"></i></a>
+	</div>
+    <!-- E: header -->
+
+	<!-- S: 230227_v-Detailing 예약 바로가기 추가 -->
+	<div class="webinarDet__vDtBtn webinarDet__vDtBtnEdtTop">
+		<a href="">
+			<div class="tit">v-Detailing 예약 바로가기<i class="xi-angle-right"></i></div>
+			<span class="desc">원하는 시간에 1:1 화상면담에 참여하세요!</span>
+		</a>
+	</div>
+	<!-- E: 230227_v-Detailing 예약 바로가기 추가 -->
+
+	<!--여기서부터 사용하세요.-->
+	<!-- S: eDetailing 브랜드관 -->
+		<style>
+			/* 브랜드컬러 사용시 주석을 푸세요 */
+			/* 버튼 및 메뉴 브랜드컬러 */
+			/* .edBrand .brandColor{ background:#ee005b !important; }  */
+			/* 폰트 브랜드컬러 */
+			/* .edBrand .brandFontColor, .edBrand .brandFontColor > *{ color:#ee005b !important; } */
+			/* 탭 메뉴 브랜드컬러 */
+			/* .edBrand .edBrandTab__item.on .edBrandTab__text{ background:#ee005b !important; } */
+			/* 배경 브랜드컬러 */
+			/* .edBrand .brandBgColor{ background: #ecd3dd !important; } */
+		</style>
+		<script>
+			// S: swiper script 보다 반드시 먼저 실행되어야하는 함수입니다	
+			$(document).ready(function() {
+				var tabItem = new Array();
+				var tabItemWidth = 0;
+				var padding = 0;
+				tabItem = $('#edBrand__snbSwiper .edBrandTab__item');
+				padding = $('#edBrand__snbSwiper').outerWidth(false) - $('#edBrand__snbSwiper').width();
+				for(var i=0; i<tabItem.length; i++){
+					tabItemWidth += tabItem[i].offsetWidth;
+				}
+				if((tabItemWidth + padding) < document.body.clientWidth){
+					$('.edBrand__snb').addClass('noMoreBtn');
+				}
+			});
+			// E: swiper script 보다 반드시 먼저 실행되어야하는 함수입니다	
+			function changeVideo(elm){
+				$(elm).parent().find('.edBrandVideo__slide.on').removeClass('on');
+				$(elm).addClass('on');
+			}
+		</script>
+		<section class="edBrand verticalMenu">   
+			<div class="edBrand__topBanner"><img src="http://placehold.it/750x324.png/bcd2ee/ffffff?text=TopBanner" alt=""></div>
+			<!-- S: 상단 슬라이드 메뉴 -->
+			<!-- 231010_아스트라제네카 브랜드관 -->
+			<div class="edBrand__snb noMoreBtn"><!-- noMoreBtn class 추가 -->
+				<!-- Swiper -->
+				<div id="edBrand__snbSwiper" class="swiper-container edBrand__snbSwiper noMoreBtn"><!-- noMoreBtn class 추가 -->
+					<div class="swiper-wrapper">
+						<div onclick="changeTab(this);" class="swiper-slide edBrandTab__item on"><a href="javascript:void(0);"><span class="edBrandTab__text">Home</span></a></div>
+						<div onclick="changeTab(this);" class="swiper-slide edBrandTab__item"><a href="javascript:void(0);"><span class="edBrandTab__text">Forxiga</span></a></div>
+						<div onclick="changeTab(this);" class="swiper-slide edBrandTab__item"><a href="javascript:void(0);"><span class="edBrandTab__text">Symbicort</span></a></div>
+						<div onclick="changeTab(this);" class="swiper-slide edBrandTab__item"><a href="javascript:void(0);"><span class="edBrandTab__text">Crestor</span></a></div>
+						<div onclick="changeTab(this);" class="swiper-slide edBrandTab__item"><a href="javascript:void(0);"><span class="edBrandTab__text">Nexium</span></a></div>
+					</div>
+				</div>
+				<button class="edBrand__snb__moreBtn" onclick="$('.edBrand__menuAll').show();return false;"><i></i><span class="blind">카테고리 전체보기</span></button>    
+				<div class="edBrand__menuAll">
+					<div class="edBrand__menuAll__top">
+						<div class="edBrand__menuAll__title">카테고리 바로가기</div>
+						<button class="edBrand__menuAll__close" onclick="$('.edBrand__menuAll').hide();return false;"><i></i><span class="blind">close</span></button>
+					</div>
+					
+					<div class="edBrand__menuAll__boxmenu">
+						<div class="edBrand__boxMenu">
+							<a href="javascript:void(0);" onclick="changeTab(this);" class="edBrandTab__item on"><span>Intro</span></a>
+							<a href="javascript:void(0);" onclick="changeTab(this);" class="edBrandTab__item"><span>Information</span></a>
+							<a href="javascript:void(0);" onclick="changeTab(this);" class="edBrandTab__item"><span>Seminar</span></a>
+							<a href="javascript:void(0);" onclick="changeTab(this);" class="edBrandTab__item"><span>Matarials</span></a>
+						</div>
+					</div>
+					<div class="edBrand__menuAll__dim" ontouchstart="$('.edBrand__menuAll').hide();return false;"></div>
+				</div>
+				<!-- <a href="javascript:void(0);"><img src="https://file.intermd.co.kr/ebrand/img_az_top_mobile.png" alt=""> -->
+				<script>
+				var ebSnbSwiper;
+				$(function(){
+					ebSnbSwiper = new Swiper('#edBrand__snbSwiper', {
+						slidesPerView: 'auto',
+						initialSlide: 0,
+						preventClicks: true,
+						preventClicksPropagation: false,
+					});
+					// 231010_아스트라제네카 브랜드관
+					if(edBrandBody.classList.contains("edBrand__AZ")){
+						ebSnbSwiper.destroy(true, true);
+					}
+				})	
+							
+				function changeTab(elm){
+					var idx = $(elm).index();
+					$('.edBrandTab__content.on').removeClass('on');
+					$('.edBrandTab__item.on').removeClass('on');
+					$('.edBrandTab__content').eq(idx).addClass('on');
+					$('.swiper-wrapper .edBrandTab__item').eq(idx).addClass('on');
+					$('.edBrand__boxMenu .edBrandTab__item').eq(idx).addClass('on');
+					if(!$('#edBrand__snbSwiper').hasClass('noMoreBtn')){
+						ebSnbSwiper.slideTo(idx - 1);
+					}
+				}
+				</script>
+			</div>
+			<!-- E: 상단 슬라이드 메뉴 -->  
+			
+			<!-- S: Publishing Content -->
+			<div class="edBrandTab__content on">
+				<!-- S: 231010_아스트라제네카 브랜드관 -->
+				<script>
+					var edBrandBody = document.querySelector('body');
+					var edBrandHome = $('#edBrand__snbSwiper').find('.edBrandTab__item').eq(0);
+					var edBrandHomeImg = '<a href="javascript:void(0);"><img src="../../img/connect/img_az_top_mobile.png" alt="">';
+	
+					if(edBrandBody.classList.contains("edBrand__AZ")){
+						edBrandHome.html(edBrandHomeImg);
+					}
+					function changeImgTab(elm){
+						var idx = $(elm).index();
+						$('.swiper-wrapper .edBrandTab__item').eq(idx).trigger("click");
+					}					
+				</script>
+				<div class='edBrandTxt'>
+					<div class='azMobile'>
+						<div class='edBrandImgTab'>
+							<a href='' class='edBrandImgTab__item on'></a>
+							<a href='javascript:void(0);' onclick='changeImgTab(this);' class='edBrandImgTab__item'>
+								<span class='edBrandImgTab__itemThumb'><img src='https://www.dummyimage.com/598x970/09f/fff.png&text=IMAGE+1' alt=''></span>
+							</a>
+							<a href='javascript:void(0);' onclick='changeImgTab(this);' class='edBrandImgTab__item'>
+								<span class='edBrandImgTab__itemThumb'><img src='https://www.dummyimage.com/598x970/09f/fff.png&text=IMAGE+2' alt=''></span>
+							</a>
+							<a href='javascript:void(0);' onclick='changeImgTab(this);' class='edBrandImgTab__item'>
+								<span class='edBrandImgTab__itemThumb'><img src='https://www.dummyimage.com/598x970/09f/fff.png&text=IMAGE+3' alt=''></span>
+							</a>
+							<a href='javascript:void(0);' onclick='changeImgTab(this);' class='edBrandImgTab__item'>
+								<span class='edBrandImgTab__itemThumb'><img src='https://www.dummyimage.com/598x970/09f/fff.png&text=IMAGE+4' alt=''></span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="edBrandTxt">
+					<div class="azSliderThesisMobile">
+						<div class="azSliderThesis">
+							<div class="azSliderThesisMobile__item">
+								<a href="">
+									<img src="https://www.dummyimage.com/240x340/09f/fff.png&text=IMAGE+1" />
+									<div class="txt">test message</div>
+								</a>
+							</div>
+							<div class="azSliderThesisMobile__item">
+								<a href="">
+									<img src="https://www.dummyimage.com/240x340/09f/fff.png&text=IMAGE+2" />
+									<div class="txt">test message</div>
+								</a>
+							</div>
+							<div class="azSliderThesisMobile__item">
+								<a href="">
+									<img src="https://www.dummyimage.com/240x340/09f/fff.png&text=IMAGE+3" />
+									<div class="txt">test message</div>
+								</a>
+							</div>
+							<div class="azSliderThesisMobile__item">
+								<a href="">
+									<img src="https://www.dummyimage.com/240x340/09f/fff.png&text=IMAGE+4" />
+									<div class="txt">test message</div>
+								</a>
+							</div>
+							<div class="azSliderThesisMobile__item">
+								<a href="">
+									<img src="https://www.dummyimage.com/240x340/09f/fff.png&text=IMAGE+5" />
+									<div class="txt">test message</div>
+								</a>
+							</div>
+							<div class="azSliderThesisMobile__item">
+								<a href="">
+									<img src="https://www.dummyimage.com/240x340/09f/fff.png&text=IMAGE+6" />
+									<div class="txt">test message</div>
+								</a>
+							</div>					
+						</div>
+					</div>
+				</div>
+
+					<script>
+						function sliderSetMobile(slickMobile){
+							slickMobile.slick({
+								centerMode: true,
+								centerPadding: '40px',
+								slidesToShow: 3,
+								draggable: true,
+								infinite: true,
+								pauseOnHover: true,
+								autoplay: false,
+								autoplaySpeed: 3000,
+								arrows: false,
+								responsive: [
+									{
+										breakpoint: 480,
+										settings: {
+											arrows: false,
+											centerMode: true,
+											centerPadding: '60px',
+											slidesToShow: 1,
+											draggable: true,
+										}
+									}
+								]
+							})
+						}
+					
+						$(".azSliderThesisMobile").each(function(i,el){
+							i+=1
+							var slickMobile = $(el).find(".azSliderThesis").addClass('for'+ i)
+							sliderSetMobile(slickMobile)
+						})					
+					</script>
+				</div>
+				<!-- E: 231010_아스트라제네카 브랜드관 -->
+				<!-- S: 비디오 스와이퍼 -->
+				<div class="edBrandVideo__slider brandBgColor">
+					<div class="edBrandCurrent__wrapper">
+						<div class="edBrandCurrent__video ready">							     
+							<video id="video"style="width:100%;" controls playsinline>
+								<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+								<source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+							</video>
+							<button class="edBrandCurrent__vdBtn" onclick="$('.edBrandCurrent__video').removeClass('ready');$('.edBrandCurrent__video video').trigger('play');"></button>
+						</div>
+					</div>
+					<div class="edBrandVideo__title">카나브 패밀리 최초의 복합제- Atorvastatin 카나브 패밀리 최초의 복합제- AtorvastatinAtorvastatin</div>
+					<div id="edBrandVideo__container1" class="edBrandVideo__container swiper-container">
+						<div class="edBrandVideo__wrapper swiper-wrapper">
+							<div class="edBrandVideo__slide swiper-slide on" onclick="changeVideo(this);">
+								<div class="edBrandVideo__thumbnail" style="background-image: url(http://placehold.it/750x422.png/6269A8/ffffff?text=1);"></div>
+								<span class="edBrandVideo__text">카나브 패밀리 최초의 복합제- AtorvastatinAtorvastatin AtorvastatinAtorvastatin</span>
+							</div>
+							<div class="edBrandVideo__slide swiper-slide" onclick="changeVideo(this)">
+								<div class="edBrandVideo__thumbnail" style="background-image: url(http://placehold.it/750x422.png/E1C9FD/ffffff?text=2);"></div>
+								<span class="edBrandVideo__text">카나브 패밀리 최초</span>
+							</div>
+							<div class="edBrandVideo__slide swiper-slide" onclick="changeVideo(this)">
+								<div class="edBrandVideo__thumbnail" style="background-image: url(http://placehold.it/750x422.png/040441/ffffff?text=3);"></div>
+								<span class="edBrandVideo__text">카나브 패밀리 최초</span>
+							</div>
+							<div class="edBrandVideo__slide swiper-slide" onclick="changeVideo(this)">
+								<div class="edBrandVideo__thumbnail" style="background-image: url(http://placehold.it/750x422.png/4BD279/ffffff?text=4);"></div>
+								<span class="edBrandVideo__text">카나브 패밀리 최초의 복합제- AtorvastatinAtorvastatin AtorvastatinAtorvastatin</span>
+							</div>
+							<div class="edBrandVideo__slide swiper-slide" onclick="changeVideo(this)">
+								<div class="edBrandVideo__thumbnail" style="background-image: url(http://placehold.it/750x422.png/ff7f50/ffffff?text=5);"></div>
+								<span class="edBrandVideo__text">카나브 패밀리 최초의 복합제- AtorvastatinAtorvastatin AtorvastatinAtorvastatin</span>
+							</div>
+							<div class="edBrandVideo__slide swiper-slide" onclick="changeVideo(this)">
+								<div class="edBrandVideo__thumbnail" style="background-image: url(http://placehold.it/750x422.png/bf3eff/ffffff?text=6);"></div>
+								<span class="edBrandVideo__text">카나브 패밀리 최초의 복합제- AtorvastatinAtorvastatin AtorvastatinAtorvastatin</span>
+							</div>
+						</div>
+					</div>
+				</div>
+		
+				<script>
+					$(function(){
+						var swiperRank = new Swiper('#edBrandVideo__container1', {
+							slidesPerView: 2,
+							spaceBetween: 11,
+							preventClicks: true,
+							preventClicksPropagation: false,
+							observer: true,
+							observeParents: true,
+							loop: false,
+							freeMode: true,
+						});
+					})
+				</script> 
+				<!-- E: 비디오 스와이퍼 -->
+
+				<!-- S: 문의하기 영역 -->
+				<div class="edBrandAsk">
+					<div class="edBrandAsk__wrapper">
+						<div class="edBrandAsk__title"><b>카나브</b>에 대해서 무엇이든 물어보세요! 제품 담당자가 이메일로 답변드립니다.</div>
+						<div class="edBrandAsk__content">
+							<div class="edBrandAsk__textArea">
+								<textarea name="text" class="textarea" placeholder="문의사항을 작성해주시기 바랍니다."></textarea>
+							</div>
+						</div>
+						<button class="edBrandAsk__btn brandColor">
+							<span>문의하기</span>
+						</button>
+					</div>
+				</div>
+				<!-- E: 문의하기 영역 -->
+
+				<!-- S: 샘플 신청 영역 -->
+				<div class="edBrandSp brandBgColor">
+					<div class="edBrandSp__wrapper">
+						<div class="edBrandSp__title"><b>아카브 Sample</b>을 받아보세요!</div>
+						<div class="edBrandSp__date">
+							<span>신청기간</span>
+							<span>2020.09.15(화) ~ 10.08(목)</span>
+						</div>
+						<button onclick="$('#sampleLayer').show();" class="edBrandSp__btn brandColor">
+							<span>Sample 신청하기</span>
+						</button>
+					</div>
+				</div>
+				<!-- E: 샘플 신청 영역 -->
+
+				<!-- S: 세로이미지 스와이퍼 -->
+				<div class="edBrandImg__slider" ontouchend="showPageNum();">
+					<div class="edBrandImg__sliderWrapper">
+						<div class="edBrandImg__container swiper-container">
+							<div class="swiper-wrapper">
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379.png/ffffff/bf3eff?text=sample" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+								<div class="edBrandImg__slide swiper-slide"><img src="http://placehold.it/598x379" alt=""></div>
+							</div>
+						</div>
+						<div class="edBrandImg__page">
+							<span id="edBrandImg__pageNow" class="edBrandImg__pageNow">1</span>
+							<span id="edBrandImg__pageAll" class="edBrandImg__pageAll">15</span>
+						</div>
+					</div>
+				</div>
+
+				<script>
+					$(function(){
+						var swiper = new Swiper('.edBrandImg__container', {
+							slidesPerView: 1,
+							spaceBetween: 11,
+							preventClicks: true,
+							preventClicksPropagation: false,
+							observer: true,
+							observeParents: true,
+							loop: false,     
+						});
+					})
+					function showPageNum(){
+						var currentPage = $('.edBrandImg__slider .edBrandImg__slide.swiper-slide-active').index() + 1;
+						$('#edBrandImg__pageNow').text(currentPage);
+					};
+				</script>
+				<!-- E: 세로 이미지 스와이퍼 -->
+
+				<!-- S: 자료 다운로드 영역 -->
+				<div class="edBrandDl brandBgColor">
+					<div class="edBrandDl__banner"><img src="http://placehold.it/750x300.png/" alt=""></div>
+					<div class="edBrandDl__btnWrapper">
+						<a class="edBrandDl__btn">
+							<span class="edBrandDl__file">AWARD-1~10.pdf</span>
+							<span class="edBrandDl__down">다운로드</span>
+						</a>
+						<a class="edBrandDl__btn">
+							<span class="edBrandDl__file">AWARD-1~10AWARD-1~10AWARD-1~10AWARD-1~10AWARD-1~10.pdf</span>
+							<span class="edBrandDl__down">다운로드</span>
+						</a>
+					</div>
+				</div>
+				<!-- E: 자료 다운로드 영역 -->
+
+			</div>
+			<!-- E: Publishing Content -->
+
+			<div class="edBrandTab__content"> 
+				<div class="edBrandTxt">
+					test2
+				</div>
+			</div>
+			
+			<div class="edBrandTab__content"> 
+				<div class="edBrandTxt">
+					test3
+				</div>
+			</div>
+			
+			<div class="edBrandTab__content">	
+				<div class="edBrandTxt">
+					test4
+				</div>
+			</div>
+
+			<div class="edBrandTab__content">	
+				<div class="edBrandTxt">
+					test5
+				</div>
+			</div>
+
+			<!-- 의학품 샘플 신청하기 -->
+			<div class="edBrandform__lry" id="sampleLayer" style="display:none;">
+				<div class="edBrandform__inrScroll">
+					<div class="edBrandform__dim"></div>
+					<div class="edBrandform__inr">
+						<div class="edBrandform__titleline">
+							<h2 class="edBrandform__title">트루리시티 의약품 Sample 신청</h2>
+							<button type="button" class="edBrandform__close" onclick="$('#sampleLayer').hide(); $('body').css({ overflowY : '' }); return false;"><i class="xi-close"></i><span class="blind">닫기</span></button>
+						</div>
+						<div class="edBrandiptBox">
+							<div class="edBrandiptBox__col2">
+								<label class="edBrandlabel">
+									<span class="edBrandiptTxt">이름<span class="edBrand__important">*</span></span>
+									<input type="text" class="edBrandipt" placeholder="이름을 입력해주세요">
+								</label>
+								<label class="edBrandlabel">
+									<span class="edBrandiptTxt">병원명<span class="edBrand__important">*</span></span>
+									<input type="text" class="edBrandipt" placeholder="병원명을 입력해주세요">
+								</label>
+							</div>
+							<label class="edBrandlabel">
+								<span class="edBrandiptTxt">주소 (동)<span class="edBrand__important">*</span></span>
+								<!-- 주소영역 -->
+								<div class="edBrandlabel__address">
+									<select name="" id="">
+										<option value="">시/도</option>
+									</select>
+									&nbsp;
+									<select name="" id="">
+										<option value="">시/군/구</option>
+									</select>
+									<input type="text" class="edBrandipt" placeholder="동을 입력해주세요">
+								</div>
+								<!-- // 주소영역 -->
+							</label>
+							<label class="edBrandlabel">
+								<span class="edBrandiptTxt">휴대폰 번호</span>
+								<input type="tel" class="edBrandipt" placeholder="‘-’를 제외한 숫자만 입력해주세요">
+							</label>
+							<label class="edBrandlabel">
+								<span class="edBrandiptTxt">요청사항</span>
+								<input type="text" class="edBrandipt" placeholder="예) 점심시간에 방문해 주세요">
+							</label>
+						</div>
+
+						<div class="edBrandagree">
+							<span class="inputbox__checkbox"> <label><input type="checkbox" name=""><span class="text">[필수]개인 정보 수집 및 이용에 대한 동의</span></label></span>
+							<div class="edBrandagreebox">
+								<div class="edBrandagreebox__inr">
+									1. 개인정보 수집 및 이용의 목적<br>
+									- 이용자 본인 확인, 이용자 식별 등 본 웹세미나 운영, 관리, 모니터링 및 알림, 서비스 개선<br>
+									<br>
+									2. 수집하는 개인정보의 항목<br>
+									- 이름, 주소(동), 병원명, 휴대전화 번호(선택)<br>
+									<br>
+									3. 개인정보의 보유ㆍ이용 기간<br>
+									최초 입력 시로부터 3개월간 (단, 관련 법령에 보관기간이 규정된 경우는 그에 따름)<br>
+								</div>
+							</div>
+							<div class="edBrand__asidetext">
+								개인정보 수집 및 이용에 대한 동의를 거부할 수 있으며, 동의한 이후에도 언제든지 이를 철회할 수있습니다. 다만, 개인정보의 수집 및 이용을 거부하는 경우 샘플 신청을 진행하실 수 없습니다.
+							</div>
+							<span class="inputbox__checkbox"><label><input type="checkbox" name=""><span class="text">[필수]개인정보 제3자 제공 동의</span></label></span>
+							<div class="edBrandagreebox">
+								<div class="edBrandagreebox__inr">
+									1. 개인정보를 제공받는 자<br>
+									인터엠디와 마케팅 위탁 계약을 체결한 기관 또는 업체(유유제약)<br>
+									<br>
+									2. 개인정보를 제공받는 자의 개인정보 이용 목적<br>
+									의약품 샘플 제공을 위한 정보 확인<br>
+									<br>
+									3. 제3자에게 제공되는 개인정보의 항목<br>
+									- 이름, 주소(동), 병원명, 휴대전화 번호(선택)<br>
+								</div>
+							</div>
+						</div>
+						<div class="edBrand__asidetext">
+							개인정보의 제 3자 제공에 대한 동의를 거부할 수 있으며, 동의한 이후에도 언제든지 이를 철회할 수있습니다. 다만, 개인정보의 제3자 제공을 거부하는 경우 샘플 신청을 진행하실 수 없습니다.
+						</div>
+
+						<div class="edBrand__submitbox">
+							<button class="edBrand__submit">신청완료</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- // 의학품 샘플 신청하기 -->
+
+		</section>
+	
+	<!-- E: eDetailing 브랜드관 -->
+	<!-- 여기서부터 사용하세요 -->
+
+	<!-- S: 230308_디테일카드팝업 -->
+	<div class="vDtCardPopup">
+		<div class="vDtCardPopup__cont">
+			<div class="vDtCardPopup__top">
+				<div class="tit">지금 바로 담당자를 만나보세요.</div>
+				<div class="desc">비대면 화상통화 상담이 가능합니다.</div>
+			</div>
+			<div class="vDtCardPopup__swiper swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide vDtCardPopup__card">
+						<a href="" class="card">
+							<div class="cardTop bg1">
+								<div class="opacity"></div>
+								<div class="logo">
+									<img src="https://via.placeholder.com/200x100">
+								</div>
+							</div>
+							<div class="cardBottom">
+								<div class="cardProfile">
+									<div class="cardPhoto">
+										<div class="cardPop">
+											<strong>38명</strong> 참여!
+										</div>
+										<img src="https://tw20.intermd.co.kr/image/profile_no.jpg" alt="">
+									</div>
+									<p class="cardName">이지안 MR</p>
+									<p class="cardAffiliation">보령제약</p>
+								</div>
+
+								<div class="cardDetail">
+									<p class="cardTxt">신장애</p>
+									<div class="cardTag">
+										<ul class="swiper-wrapper">
+											<li class="swiper-slide">타이레놀</li>
+											<li class="swiper-slide">타이레놀 A</li>
+											<li class="swiper-slide">아스트라 제네카</li>
+											<li class="swiper-slide">아목시실린</li>
+											<li class="swiper-slide">탁센</li>
+											<li class="swiper-slide">후시딘</li>
+											<li class="swiper-slide">이지엔</li>
+										</ul>
+									</div>
+									
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide vDtCardPopup__card">
+						<a href="" class="card">
+							<div class="cardTop bg2">
+								<div class="opacity"></div>
+								<div class="logo">
+									<img src="https://via.placeholder.com/200x100">
+								</div>
+							</div>
+							<div class="cardBottom">
+								<div class="cardProfile">
+									<div class="cardPhoto">
+										<div class="cardPop">
+											<strong>38명</strong> 참여!
+										</div>
+										<img src="https://tw20.intermd.co.kr/image/profile_no.jpg" alt="">
+									</div>
+									<p class="cardName">이지안 MR</p>
+									<p class="cardAffiliation">보령제약</p>
+								</div>
+
+								<div class="cardDetail">
+									<p class="cardTxt">신장애</p>
+									<div class="cardTag">
+										<ul class="swiper-wrapper">
+											<li class="swiper-slide">타이레놀</li>
+											<li class="swiper-slide">타이레놀 A</li>
+											<li class="swiper-slide">아스트라 제네카</li>
+											<li class="swiper-slide">아목시실린</li>
+											<li class="swiper-slide">탁센</li>
+											<li class="swiper-slide">후시딘</li>
+											<li class="swiper-slide">이지엔</li>
+										</ul>
+									</div>
+									
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide vDtCardPopup__card">
+						<a href="" class="card">
+							<div class="cardTop bg3">
+								<div class="opacity"></div>
+								<div class="logo">
+									<img src="https://via.placeholder.com/200x100">
+								</div>
+							</div>
+							<div class="cardBottom">
+								<div class="cardProfile">
+									<div class="cardPhoto">
+										<div class="cardPop">
+											<strong>38명</strong> 참여!
+										</div>
+										<img src="https://tw20.intermd.co.kr/image/profile_no.jpg" alt="">
+									</div>
+									<p class="cardName">이지안 MR</p>
+									<p class="cardAffiliation">보령제약</p>
+								</div>
+
+								<div class="cardDetail">
+									<p class="cardTxt">신장애</p>
+									<div class="cardTag">
+										<ul class="swiper-wrapper">
+											<li class="swiper-slide">타이레놀</li>
+											<li class="swiper-slide">타이레놀 A</li>
+											<li class="swiper-slide">아스트라 제네카</li>
+											<li class="swiper-slide">아목시실린</li>
+											<li class="swiper-slide">탁센</li>
+											<li class="swiper-slide">후시딘</li>
+											<li class="swiper-slide">이지엔</li>
+										</ul>
+									</div>
+									
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+		<div class="vDtCardPopup__bg"></div>
+	</div>
+	<script>
+		var badgeSwiper;
+		var spaceMargin = 6;
+		/* S: 230315_스크립트 수정 */
+		$(function(){
+			badgeSwiper = new Swiper('.cardTag', {
+				slidesPerView: 'auto',
+				spaceBetween: spaceMargin,
+				preventClicks: true,
+				preventClicksPropagation: false,
+				observer: true,
+				observeParents: true,
+				loop: false,
+				freeMode: true,
+			});
+		})
+		$(document).ready(function() {
+			var badge = [];
+			var badgeWidth = 0;
+			var marginRight = spaceMargin;
+			badge = $('.cardTag .swiper-slide');
+			var $wrapper = $('.cardTag .swiper-wrapper');
+			for(var i=0; i<badge.length; i++){
+				badgeWidth += badge[i].offsetWidth;
+				badgeWidth += marginRight*badge.length
+			}
+			if(badgeWidth > $wrapper[0].offsetWidth){
+				$('.cardTag').addClass('overflow');
+			}
+		});		
+		/* E: 230315_스크립트 수정 */
+		var vDtCardSwiper = new Swiper(".vDtCardPopup__swiper", {
+			slidesPerView: "1.6",
+			spaceBetween: 15,
+			centeredSlides: true,
+			pagination: ".swiper-pagination",
+		});
+
+		$(".webinarDet__vDtBtn").click(function(e){
+			e.preventDefault();
+			$(".vDtCardPopup").addClass("active");			
+			vDtCardSwiper.update();
+			vDtCardSwiper.slideTo(0,0,false);
+		});
+		$(".vDtCardPopup__bg").click(function(){
+			$(".vDtCardPopup").removeClass("active");
+		});
+	</script>
+	<!-- E: 230308_디테일카드팝업 -->
+
+
+</div>
+
+</body>
+</html>

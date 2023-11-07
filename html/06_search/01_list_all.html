@@ -1,0 +1,1014 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Inter MD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+    <meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+    <link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="../../js/plugins/jquery-3.2.1.js"></script>
+    <script src="../../js/plugins/swiper_3.3.1.js"></script>
+    <script src="../../js/ui_script_m.js"></script>    
+</head>
+<body>
+
+<div class="page_search" data-role="page">
+    <h1 class="blind">검색</h1>
+    <div class="search__header">
+        <div class="searchHeader__field">
+            <form action="#">
+                <input type="search" name="" id="" placeholder="검색어를 입력하세요" class="searchHeader__input" onfocus="">
+                <button class="searchHeader__btnClear"><i class="xi-close"></i><span class="blind">검색어 지우기</span></button>
+            </form>
+            <script>
+                $(function(){
+                    var $searchInput = $('.searchHeader__input');
+                    var $searchClearBtn = $('.searchHeader__btnClear');
+                    $searchInput.focus(function(){
+                        $('body').addClass('rank--active');
+                        $('html').not('.searchHeader__field').bind('touchstart',function(){
+                            $searchInput.blur();
+                        })
+                        /* 모바일검색 개선 */
+                        searchHistory();
+                        /* //모바일검색 개선 */
+                    })
+                    .focusout(function(){
+                        $searchInput.unbind('touchstart');
+                    })
+                    .keyup(function(){
+                        if ($(this).val().length > 0) {
+                            $searchClearBtn.addClass('on')
+                        }else if ($(this).val().length == 0){
+                            $searchClearBtn.removeClass('on')
+                        }
+                    })
+                    $('.searchHeader__btnClose').click(function(){
+                        $('body').removeClass('rank--active');
+                        return false;
+                    })
+                    $searchClearBtn.click(function(){
+                        $searchInput.val('').trigger('focus');
+                        $(this).removeClass('on');
+                        return false;
+                    });
+
+                    // 최근, 인기검색어 swiper
+                    var swiperRank = new Swiper('.rank__listBox', {
+                        slidesPerView: 'auto',
+                        preventClicks: true,
+                        preventClicksPropagation: false,
+                        observer: true,
+                        observeParents: true,
+                    });
+                    var $lankTitle = $('.rank__title');
+                    $lankTitle.click(function(){
+                        var targetIdx = $(this).index();
+                        $lankTitle.removeClass('on')
+                        $(this).addClass('on');
+                        swiperRank.slideTo(targetIdx);
+                    })
+                    swiperRank.on('onSlideChangeStart',function(){
+                        var index = swiperRank.activeIndex;
+                        $lankTitle.removeClass('on');
+                        $lankTitle.eq(index).addClass('on');
+                    })
+
+                    /* 모바일검색 개선 */
+                    searchHistory();
+
+                    function searchHistory(){
+                        let listLength = $('.swiper-wrapper').children().eq(0).children('.rank__item').length;
+                        if(listLength <= 0) {
+                            $('.rank__title').eq(1).trigger('click');
+                        }
+                    }
+                    /* //모바일검색 개선 */
+                })
+            </script>
+        </div>
+        <a href="#" class="searchHeader__btnBack">나가기</a>
+        <button class="searchHeader__btnClose">취소</button>
+    </div>
+    <!-- S: 검색 랭킹 -->
+    <div class="search__rank">
+        <div class="rank__titleBox">
+            <strong class="rank__title on">최근 검색어</strong>
+            <strong class="rank__title">인기 검색어</strong>
+        </div>
+        <!-- Swiper -->
+        <div class="swiper-container rank__listBox">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide rank__list"></div>
+                
+                <!-- <div class="swiper-slide rank__list">
+                    <div class="rank__item">
+                        <a href="#" class="rank__link">
+                            <span class="rank__text">의사</span>
+                            <span class="rank__date">3분전</span>
+                        </a>
+                        <button class="rank__del"><i class="xi-close"></i><span class="blind">검색어 삭제</span></button>
+                    </div>
+                    <div class="rank__item">
+                        <a href="#" class="rank__link">
+                            <span class="rank__text">인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디인터엠디 </span>
+                            <span class="rank__date">2019.05.14</span>
+                        </a>
+                        <button class="rank__del"><i class="xi-close"></i><span class="blind">검색어 삭제</span></button>
+                    </div>
+                    <div class="rank__item">
+                        <a href="#" class="rank__link">
+                            <span class="rank__text">인터엠디</span>
+                            <span class="rank__date">2019.05.14</span>
+                        </a>
+                        <button class="rank__del"><i class="xi-close"></i><span class="blind">검색어 삭제</span></button>
+                    </div>
+                    <div class="rank__item">
+                        <a href="#" class="rank__link">
+                            <span class="rank__text">친구초대</span>
+                            <span class="rank__date">2019.05.14</span>
+                        </a>
+                        <button class="rank__del"><i class="xi-close"></i><span class="blind">검색어 삭제</span></button>
+                    </div>
+                    <div class="rank__item">
+                        <a href="#" class="rank__link">
+                            <span class="rank__text">개원</span>
+                            <span class="rank__date">2019.05.14</span>
+                        </a>
+                        <button class="rank__del"><i class="xi-close"></i><span class="blind">검색어 삭제</span></button>
+                    </div>
+                    <div class="rank__item">
+                        <a href="#" class="rank__link">
+                            <span class="rank__text">개원</span>
+                            <span class="rank__date">2019.05.14</span>
+                        </a>
+                        <button class="rank__del"><i class="xi-close"></i><span class="blind">검색어 삭제</span></button>
+                    </div>
+                    <div class="rank__item">
+                        <a href="#" class="rank__link">
+                            <span class="rank__text">개원</span>
+                            <span class="rank__date">2019.05.14</span>
+                        </a>
+                        <button class="rank__del"><i class="xi-close"></i><span class="blind">검색어 삭제</span></button>
+                    </div>
+                    <button class="rank__allDel">모두삭제</button>
+                </div> -->
+                
+                <div class="swiper-slide rank__list -popular">
+                    <div class="rank__item">
+                        <a href="#" class="rank__link">
+                            <span class="rank__text">대상포진</span>
+                        </a>
+                    </div>
+                    <div class="rank__item">
+                        <a href="#" class="rank__link">
+                            <span class="rank__text">영상</span>
+                        </a>
+                    </div>
+                    <div class="rank__item">
+                        <a href="#" class="rank__link">
+                            <span class="rank__text">개원</span>
+                        </a>
+                    </div>
+                    <div class="rank__item">
+                        <a href="#" class="rank__link">
+                            <span class="rank__text">삭센다</span>
+                        </a>
+                    </div>
+                    <div class="rank__item">
+                        <a href="#" class="rank__link">
+                            <span class="rank__text">태반조기박리</span>
+                        </a>
+                    </div>
+                    <div class="rank__item">
+                        <a href="#" class="rank__link">
+                            <span class="rank__text">수족구</span>
+                        </a>
+                    </div>
+                    <div class="rank__item">
+                        <a href="#" class="rank__link">
+                            <span class="rank__text">벌</span>
+                        </a>
+                    </div>
+                    <div class="rank__item">
+                        <a href="#" class="rank__link">
+                            <span class="rank__text">공보의</span>
+                        </a>
+                    </div>
+                    <div class="rank__item">
+                        <a href="#" class="rank__link">
+                            <span class="rank__text">산부인과</span>
+                        </a>
+                    </div>
+                    <div class="rank__item">
+                        <a href="#" class="rank__link">
+                            <span class="rank__text">화상</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- S: category -->
+    <div id="my_sub_nv" class="searchNavi">
+        <div class="searchNavi__wrap">
+            <div class="searchNavi__item on">
+                <a href="javascript:fn_goSearchTop('mobile/search/total', '');">통합검색</a>
+            </div>
+            <div class="searchNavi__item ">
+                <a href="javascript:fn_goSearchTop('mobile/search/qna', 'Q');">Q&amp;A</a>
+            </div>
+            <div class="searchNavi__item ">
+                <a href="javascript:fn_goSearchTop('mobile/search/posting', 'P');">Posting</a>
+            </div>        
+            <div class="searchNavi__item ">
+                <a href="javascript:fn_goSearchTop('mobile/search/poll', 'L');">Poll</a>
+            </div>
+            <div class="searchNavi__item ">
+                <a href="javascript:fn_goSearchTop('mobile/search/connect', 'C');">Connect</a>
+            </div>
+            <div class="searchNavi__item ">
+                <a href="javascript:fn_goSearchTop('mobile/search/connect', 'C');">Media</a>
+            </div>
+            <div class="searchNavi__item ">
+                <a href="javascript:fn_goSearchTop('mobile/search/faq', 'F');">FAQ</a>
+            </div>
+            <div class="searchNavi__item ">
+                <a href="javascript:fn_goSearchTop('mobile/search/event', 'E');">이벤트</a>
+            </div>
+            <div class="searchNavi__item ">
+                <a href="javascript:fn_goSearchTop('mobile/search/noti', 'N');">공지사항</a>
+            </div>
+            <div class="searchNavi__item ">
+                <a href="#">채용공고</a>
+            </div>
+            <div class="searchNavi__item ">
+                <a href="#">진로상담</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 모바일검색 개선 -->
+    <!-- bottom fix -->
+    <div class="fixBtm">
+        <a href="#top" class="goToTop hide" onclick="$('html').stop().animate({ scrollTop:0 }, 800 );return false;"><span class="blind">맨 위로 이동</span></a>
+    </div>
+    <!-- // bottom fix -->
+    <!-- //모바일검색 개선 -->
+
+    <!-- S: 통합검색 -->
+    <div class="searchResult">
+        <div class="searchResult__summary">통합 검색 결과 <span class="no">1023</span> 건</div>
+
+        
+        
+        <div class="searchResult__title">
+            <h2>Media</h2>
+            <span class="searchResult__titleNo">(총 <span class="no">29</span>건)</span>
+            <a href="#" class="searchResult__more">더보기<i class="xi-angle-right-thin"></i></a>
+        </div>
+        <div class="searchResult__content">
+            <!-- item -->
+            <a href="#" class="mediaCard">
+                <span class="mediaCard__image" style="background-image: url(https://source.unsplash.com/random/100x200);"></span>
+                <div class="mediaCard__text">
+                    <h1 class="mediaCard__subject">신재생에너지 공급의무 RPS 제도 유연성 확대 … 다음달 1일 시행 신재생에너지 공급의무 RPS 제도 유연성 확대 … 다음달 1일 시행</h1>
+                    <div class="mediaCard__bottom">
+                        <span class="mediaCard__cp">이투데이</span>
+                        <span class="mediaCard__date latest">5분전</span> <!-- latest 59분 이내 -->
+                    </div>
+                </div>
+            </a>
+            <!-- // item -->
+            <a href="#" class="mediaCard">
+                <span class="mediaCard__image" style="background-image: url(https://source.unsplash.com/random/100x500);"></span>
+                <div class="mediaCard__text">
+                    <h1 class="mediaCard__subject">방역당국 “강제 조치 검토＂</h1>
+                    <div class="mediaCard__bottom">
+                        <span class="mediaCard__cp">이투데이</span>
+                        <span class="mediaCard__date">2020.06.30</span>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="mediaCard">
+                <div class="mediaCard__text">
+                    <h1 class="mediaCard__subject">방역당국 “종교시설 감염 이어질 시 엄청 쎈 강제 조치 검토＂</h1>
+                    <div class="mediaCard__bottom">
+                        <span class="mediaCard__cp">이투데이</span>
+                        <span class="mediaCard__date latest">5분전</span> <!-- latest 59분 이내 -->
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="searchResult__title">
+            <h2>Q&amp;A</h2>
+            <span class="searchResult__titleNo">(총 <span class="no">322</span>건)</span>
+            <a href="#" class="searchResult__more">더보기<i class="xi-angle-right-thin"></i></a>
+        </div>
+        <div class="searchResult__content">
+            <!-- S: card -->
+            <div class="card">
+                <div class="card__header">
+                    <!-- QnA설문형 : 구조변경 -->
+                    <div class="surveyWrap search">
+                        <!-- S: category badge -->
+                        <div class="surveyBadge">
+                            <div class="surveyBadgeInner">
+                                <div class="swiper-wrapper">
+                                    <span class="swiper-slide surveyBadge__item">정신건강의학과</span>
+                                    <span class="swiper-slide surveyBadge__item">방사선종야학과</span>
+                                    <span class="swiper-slide surveyBadge__item">정신건강의학과</span>
+                                    <span class="swiper-slide surveyBadge__item">정신건강의학과</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- E: category badge -->
+                        
+                        <!-- S: Question Type -->
+                        <div class="surveyLabel">
+                            <div class="surveyLabel__item">설문형</div>
+                            <div class="surveyLabel__item surveyLabel__item--ing">진행중</div>
+                        </div>
+                        <!-- E: Question Type -->
+                    </div>
+                    <!-- //QnA설문형 : 구조변경 -->
+                </div>
+                <div class="card__content">
+                    <!-- S: 본문 -->
+                    <a href="#">
+                        <span class="card__patient">환자정보 : 35세 남성 서초구</span>
+                        <span class="card__subject qnalist"><span class="text">응급실에서 결핵이 의심되는 환자</span></span>
+                        <span class="card__desc">
+                            <span class="text">
+                                지인분이 불면증을 호소합니다. 일단 수면위생이 좋지않아 환경개선부터 말씀을
+                            </span>
+                            <!-- <span class="img" style="background-image:url('https://file.intermd.co.kr/Thumb_upload/201810/23/43BBCF8A-8A6A-42F5-9F8F-76E5E53609C3_201810231626291.jpeg')"></span> -->
+                            <span class="img more" style="background-image:url('https://file.intermd.co.kr/Thumb_upload/201810/23/43BBCF8A-8A6A-42F5-9F8F-76E5E53609C3_201810231626291.jpeg')"></span>
+                            <!-- 
+                            <span class="movie" style="background-image:url('https://file.intermd.co.kr/Thumb_upload/201810/23/43BBCF8A-8A6A-42F5-9F8F-76E5E53609C3_201810231626291.jpeg')"></span>
+                            <span class="movie more" style="background-image:url('https://file.intermd.co.kr/Thumb_upload/201810/23/43BBCF8A-8A6A-42F5-9F8F-76E5E53609C3_201810231626291.jpeg')"></span> 
+                            -->
+                            <!-- 첨부파일 -->
+                            <div class="atchbox__file">
+                                <div class="filewrap">
+                                    <span class="file_name">KakaoTalk_Video_20180604_1452_40_160.mp4</span>
+                                    <span class="file_size">397.9KB</span>
+                                </div>
+                            </div>
+                        </span>
+                    </a>
+                    <!-- E: 본문 -->
+                </div>
+                <div class="card__aside">
+                    <div class="lt">
+                        <span class="el like">
+                            <i class="fa fa-thumbs-up"><span class="blind">좋아요수</span></i>
+                            <span class="no">3명</span>
+                        </span>
+                    </div>
+                    <div class="rt">
+                        <span class="el reply">
+                            <i class="xi-comment"><span class="blind">답글수</span></i>
+                            <span class="no">4</span>
+                        </span>
+                        <span class="el view">
+                            <i class="xi-eye"><span class="blind">조회수</span></i>
+                            <span class="no">10</span>
+                        </span>
+                        <span class="el date"><span class="no">5분전</span></span>
+                    </div>
+                </div>
+            </div>
+            <!-- E: card -->
+            <div class="card">
+                <div class="card__header">
+                    <!-- QnA설문형 : 구조변경 -->
+                    <div class="surveyWrap search">
+                        <!-- S: category badge -->
+                        <div class="surveyBadge">
+                            <div class="surveyBadgeInner">
+                                <div class="swiper-wrapper">
+                                    <span class="swiper-slide surveyBadge__item">정신건강의학과</span>
+                                    <span class="swiper-slide surveyBadge__item">방사선종야학과</span>
+                                    <span class="swiper-slide surveyBadge__item">정신건강의학과</span>
+                                    <span class="swiper-slide surveyBadge__item">정신건강의학과</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- E: category badge -->
+                        
+                        <!-- S: Question Type -->
+                        <div class="surveyLabel">
+                            <div class="surveyLabel__item">설문형</div>
+                            <div class="surveyLabel__item surveyLabel__item--end">종료</div>
+                        </div>
+                        <!-- E: Question Type -->
+                    </div>
+                    <!-- //QnA설문형 : 구조변경 -->
+                </div>
+                <div class="card__content">
+                    <!-- S: 본문 -->
+                    <a href="#">
+                        <span class="card__patient">환자정보 : 35세 남성 서초구</span>
+                        <span class="card__subject qnalist"><span class="text">응급실에서 결핵이 의심되는 환자</span></span>
+                        <span class="card__desc">
+                            <span class="text">
+                                지인분이 불면증을 호소합니다. 일단 수면위생이 좋지않아 환경개선부터 말씀을
+                            </span>
+                        </span>
+                    </a>
+                    <!-- E: 본문 -->
+                </div>
+                <div class="card__aside">
+                    <div class="lt">
+                        <span class="el like">
+                            <i class="fa fa-thumbs-up"><span class="blind">좋아요수</span></i>
+                            <span class="no">3명</span>
+                        </span>
+                    </div>
+                    <div class="rt">
+                        <span class="el reply">
+                            <i class="xi-comment"><span class="blind">답글수</span></i>
+                            <span class="no">4</span>
+                        </span>
+                        <span class="el view">
+                            <i class="xi-eye"><span class="blind">조회수</span></i>
+                            <span class="no">10</span>
+                        </span>
+                        <span class="el date"><span class="no">5분전</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- QnA설문형 : 추가 -->
+		<script>
+			var swiper = new Swiper(".surveyBadgeInner", {
+				slidesPerView: "auto",
+				freeMode: true,
+			});
+		</script>
+		<!-- //QnA설문형 : 추가 -->
+    
+        <div class="searchResult__title">
+            <h2>Posting</h2>
+            <span class="searchResult__titleNo">(총 <span class="no">12</span>건)</span>
+            <a href="#" class="searchResult__more">더보기<i class="xi-angle-right-thin"></i></a>
+        </div>
+        <div class="searchResult__content">
+            <!-- S: card -->
+            <div class="card">
+                <div class="card__header">
+                    <div class="lt">
+                        <!-- S: 프로필 정보 -->
+                        <div class="profilefield type_small">
+                            <a href="#">
+                                <span class="profilefield__img" style="background-image:url('https://tf20.intermd.co.kr/Thumb_upload/201805/04/201805041149051.jpg')"></span>
+                                <span class="profilefield__text">
+                                    <span class="profilefield__name">홍길동</span>
+                                    <span class="profilefield__desc">호흡기내과 전문의 7년차</span>
+                                </span>
+                            </a>
+                        </div>
+                        <!-- E: 프로필 정보 -->
+                    </div>
+                </div>
+                <div class="card__content">
+                    <!-- S: 본문 -->
+                    <a href="#">
+                        <span class="card__desc">
+                            <span class="text">
+                                ‘악성 신생물’ 여부를 놓고 병리과 전문의와 감정의사들이 다른 의견을 낼 정도로 논란이 있는 경우에는 작성자 불이 익의 원칙에 따라 ‘암’으로 봐야 한다는 점에도 무게를 실 었다.
+                            </span>
+                            <!-- S: 첨부파일 미디어 -->
+                            <div class="atchbox__gallery ty_2">
+                                <span class="item atchbox__movie" style="background-image:url('https://tf20.intermd.co.kr/upload/201810/24/01_201807021815361_201810241603431.png')"></span>
+                                <span class="item atchbox__img" style="background-image:url('https://tf20.intermd.co.kr/upload/201810/24/07_201807041633217_201810241603382.png')"></span>
+                            </div>
+                            <!-- E: 첨부파일 미디어 -->
+                        </span>
+                    </a>
+                    <!-- E: 본문 -->
+                </div>
+                <!-- S: 공감해요, 답글달기, 공유하기 수 -->
+                <div class="card__aside">
+                    <div class="lt">
+                        <span class="el like">
+                            <i class="xi-check-circle"><span class="blind">공감해요수</span></i>
+                            <span class="no">3명</span>
+                        </span>
+                    </div>
+                    <div class="rt">
+                        <span class="el reply">
+                            <i class="xi-comment"><span class="blind">답글수</span></i>
+                            <span class="no">4</span>
+                        </span>
+                        <span class="el view">
+                            <i class="xi-eye"><span class="blind">조회수</span></i>
+                            <span class="no">10</span>
+                        </span>
+                        <span class="el date"><span class="no">2019.12.02</span></span>
+                    </div>
+                </div>
+            </div>
+            <!-- E: card -->
+            <div class="card">
+                <div class="card__header">
+                    <div class="lt">
+                        <!-- S: 프로필 정보 -->
+                        <div class="profilefield type_small">
+                            <a href="#">
+                                <span class="profilefield__img" style="background-image:url('https://tf20.intermd.co.kr/Thumb_upload/201805/04/201805041149051.jpg')"></span>
+                                <span class="profilefield__text">
+                                    <span class="profilefield__name">홍길동</span>
+                                    <span class="profilefield__desc">호흡기내과 전문의 7년차</span>
+                                </span>
+                            </a>
+                        </div>
+                        <!-- E: 프로필 정보 -->
+                    </div>
+                </div>
+                <div class="card__content">
+                    <!-- S: 본문 -->
+                    <a href="#">
+                        <span class="card__desc">
+                            <span class="text">
+                                ‘악성 신생물’ 여부를 놓고 병리과 전문의와 감정의사들이 다른 의견을 낼 정도로 논란이 있는 경우에는 작성자 불이 익의 원칙에 따라 ‘암’으로 봐야 한다는 점에도 무게를 실 었다.
+                            </span>
+                            <!-- S: 첨부파일 -->
+                            <div class="atchbox__file">
+                                <span class="filewrap">
+                                    <span class="file_name">KakaoTalk_Video.mp4</span><span class="file_size">397.9KB</span>
+                                </span>
+                            </div>
+                            <!-- E: 첨부파일 -->
+                        </span>
+                    </a>
+                    <!-- E: 본문 -->
+                </div>
+                <!-- S: 공감해요, 답글달기, 공유하기 수 -->
+                <div class="card__aside">
+                    <div class="lt">
+                        <span class="el like">
+                            <i class="xi-check-circle"><span class="blind">공감해요수</span></i>
+                            <span class="no">3명</span>
+                        </span>
+                    </div>
+                    <div class="rt">
+                        <span class="el reply">
+                            <i class="xi-comment"><span class="blind">답글수</span></i>
+                            <span class="no">4</span>
+                        </span>
+                        <span class="el view">
+                            <i class="xi-eye"><span class="blind">조회수</span></i>
+                            <span class="no">10</span>
+                        </span>
+                        <span class="el date"><span class="no">2019.12.02</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card__header">
+                    <div class="lt">
+                        <!-- S: 프로필 정보 -->
+                        <div class="profilefield type_small">
+                            <a href="#">
+                                <span class="profilefield__img" style="background-image:url('https://tf20.intermd.co.kr/Thumb_upload/201805/04/201805041149051.jpg')"></span>
+                                <span class="profilefield__text">
+                                    <span class="profilefield__name">홍길동</span>
+                                    <span class="profilefield__desc">호흡기내과 전문의 7년차</span>
+                                </span>
+                            </a>
+                        </div>
+                        <!-- E: 프로필 정보 -->
+                    </div>
+                </div>
+                <div class="card__content">
+                    <!-- S: 본문 -->
+                    <a href="#">
+                        <span class="card__desc">
+                            <span class="text">
+                                ‘악성 신생물’ 여부를 놓고 병리과 전문의와 감정의사들이 다른 의견을 낼 정도로 논란이 있는 경우에는 작성자 불이 익의 원칙에 따라 ‘암’으로 봐야 한다는 점에도 무게를 실 었다.
+                            </span>
+                        </span>
+                    </a>
+                    <!-- E: 본문 -->
+                </div>
+                <!-- S: 공감해요, 답글달기, 공유하기 수 -->
+                <div class="card__aside">
+                    <div class="lt">
+                        <span class="el like">
+                            <i class="xi-check-circle"><span class="blind">공감해요수</span></i>
+                            <span class="no">3명</span>
+                        </span>
+                    </div>
+                    <div class="rt">
+                        <span class="el reply">
+                            <i class="xi-comment"><span class="blind">답글수</span></i>
+                            <span class="no">4</span>
+                        </span>
+                        <span class="el view">
+                            <i class="xi-eye"><span class="blind">조회수</span></i>
+                            <span class="no">10</span>
+                        </span>
+                        <span class="el date"><span class="no">2019.12.02</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="searchResult__title">
+            <h2>Poll</h2>
+            <span class="searchResult__titleNo">(총 <span class="no">52</span>건)</span>
+            <a href="#" class="searchResult__more">더보기<i class="xi-angle-right-thin"></i></a>
+        </div>
+        <div class="searchResult__content">
+            <div class="listSec">
+                
+			    <!-- poll list와 마크업 동일 -->
+                <!-- poll card 진행중 -->
+                <div class="pollCard">
+                    <a href="#">
+                        <div class="pollCard__textbox">
+                            <span class="pollCard__img" style="background-image:url(https://file.intermd.co.kr/Thumb_upload/201902/28/손목시계형심전도_201902281024101.png)"></span>
+                            <span class="pollCard__headline">제약사 선호도와 디지털 마케팅</span>
+                            <span class="pollCard__point">1,000ⓟ 리워드</span>
+                            <h1 class="pollCard__subject">[선착순 100명] 새로운 항응고제 NOAC, 선생님께서는 어떻게 생각하시나요? 어떻게 생각하시나요?</h1>
+                            <div class="pollCard__sideInfo">
+                                <span class="pollCard__participant">참여수 : <b>330명</b></span>
+                                <span class="pollCard__date">~2020.04.30</span>
+                            </div>
+                        </div>
+                        <span class="pollCard__target"><b>설문대상</b> : 경기도, 31세~40세 경기도, 31세~40세, 남자, 전문의(내과), 선착순 300명</span>
+                    </a>
+                </div>
+                <!-- // poll card 진행중 -->
+
+                <div class="pollCard">
+                    <div class="pollCard__textbox">
+                        <span class="pollCard__img" style=""></span> <!-- 이미지 없는경우 style 속성 삭제 (background-image:url()) -->
+                        <span class="pollCard__headline">의사 의향 조사</span>
+                        <h1 class="pollCard__subject">코로나19 종식 이후 가장 하고 싶은 활동은 무엇인가요? </h1>
+                        <div class="pollCard__sideInfo">
+                            <span class="pollCard__participant">참여수 : <b>330명</b></span>
+                            <span class="pollCard__date">~2020.04.30</span>
+                        </div>
+                    </div>
+                    <span class="pollCard__target"><b>설문대상</b> : 전체</span>
+                </div>
+
+                <!-- poll card 종료 -->
+                <div class="pollCard close">
+                    <div class="pollCard__textbox">
+                        <span class="pollCard__img" style="background-image:url(https://file.intermd.co.kr/Thumb_upload/201902/28/손목시계형심전도_201902281024101.png)"></span>
+                        <span class="pollCard__headline">정책 관련 조사</span>
+                        <span class="pollCard__point">500</span>
+                        <h1 class="pollCard__subject">전문의약품 광고 규제, 어떻게 생각하십니까?</h1>
+                        <div class="pollCard__sideInfo">
+                            <span class="pollCard__participant">참여수 : <b>330명</b></span>
+                            <span class="pollCard__date">~2020.04.30</span>
+                        </div>
+                    </div>
+                    <span class="pollCard__target"><b>설문대상</b> : 31세~40세, 전문의(내과)</span>
+                </div>
+                <!-- // poll card 종료 -->
+            </div>
+        </div>
+
+
+        <div class="searchResult__title">
+            <h2>초빙 공고</h2>
+            <span class="searchResult__titleNo">(총 <span class="no">52</span>건)</span>
+            <a href="#" class="searchResult__more">더보기<i class="xi-angle-right-thin"></i></a>
+        </div>
+        <div class="searchResult__content">
+            <div class="careerCard">
+                <a href="#" class="careerCardLink">
+                    <span class="careerCard__hospital">덕수요양병원</span>
+                    <span class="careerCard__subject">영등포 타임스퀘어 근처의 요양병원 평일 야간당직 선생님 모십니다.</span>
+                    <span class="careerCard__cate">
+                        <span class="careerCard__cateItem">전문의</span>
+                        <span class="careerCard__cateItem">내과 외 1</span>
+                        <span class="careerCard__cateItem">서울 영등포구</span>
+                        <span class="careerCard__cateItem">월-금</span>
+                    </span>
+                </a>
+                <!-- S: 공감해요, 답글달기, 공유하기 수 -->
+                <div class="card__aside">
+                    <div class="lt">
+                        <span class="el like">
+                            <i class="ico__recom"><span class="blind">추천수</span></i>
+                            <span class="no">3명</span>
+                        </span>
+                    </div>
+                    <div class="rt">
+                        <span class="el view">
+                            <i class="xi-eye"><span class="blind">조회수</span></i>
+                            <span class="no">10</span>
+                        </span>
+                        <span class="el date"><span class="no">2019.12.02</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="careerCard">
+                <a href="#" class="careerCardLink">
+                    <span class="careerCard__hospital">덕수요양병원</span>
+                    <span class="careerCard__subject">영등포 타임스퀘어 근처의 요양병원 평일 야간당직 선생님 모십니다.</span>
+                    <span class="careerCard__cate">
+                        <span class="careerCard__cateItem">전문의</span>
+                        <span class="careerCard__cateItem">내과 외 1</span>
+                        <span class="careerCard__cateItem">서울 영등포구</span>
+                        <span class="careerCard__cateItem">월-금</span>
+                    </span>
+                </a>
+                <!-- S: 공감해요, 답글달기, 공유하기 수 -->
+                <div class="card__aside">
+                    <div class="lt">
+                        <span class="el like">
+                            <i class="ico__recom"><span class="blind">추천수</span></i>
+                            <span class="no">3명</span>
+                        </span>
+                    </div>
+                    <div class="rt">
+                        <span class="el view">
+                            <i class="xi-eye"><span class="blind">조회수</span></i>
+                            <span class="no">10</span>
+                        </span>
+                        <span class="el date"><span class="no">2019.12.02</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="searchResult__title">
+            <h2>진로 상담</h2>
+            <span class="searchResult__titleNo">(총 <span class="no">52</span>건)</span>
+            <a href="#" class="searchResult__more">더보기<i class="xi-angle-right-thin"></i></a>
+        </div>
+        <div class="searchResult__content">
+            <!-- S: card -->
+            <div class="card">
+                <div class="card__header">
+                    <!-- S: category badge -->
+                    <div class="lt badgebox">
+                        <span class="badge_round">진로/경력개발</span>
+                    </div>
+                    <!-- E: badge -->
+                </div>
+                <div class="card__content">
+                    <!-- S: 본문 -->
+                    <a href="#">
+                        <span class="card__subject qnalist"><span class="text">응급실에서 결핵이 의심되는 환자인데 객담검사 등을 거부하고 귀가 원하는 경우 어떻게 처방</span></span>
+                        <span class="card__desc">
+                            <span class="text">
+                                응급실에 내원환자 중 보호자 없고 엑스레이 및 ct 촬영 후 결핵이 의심되어 입원해서 검사 더 해보자고 했는데 거부하고 귀가한다고 했을때 어떻게 처방시나요? 
+                            </span>
+                        </span>
+                    </a>
+                    <!-- E: 본문 -->
+                </div>
+                <!-- S: 좋아요, 답글달기, 공유하기 수 -->
+                <div class="card__aside">
+                    <div class="lt">
+                        <span class="el like">
+                            <i class="fa fa-thumbs-up"><span class="blind">좋아요수</span></i>
+                            <span class="no">3명</span>
+                        </span>
+                    </div>
+                    <div class="rt">
+                        <span class="el reply">
+                            <i class="xi-comment"><span class="blind">답글수</span></i>
+                            <span class="no">0</span>
+                        </span>
+                        <span class="el view">
+                            <i class="xi-eye"><span class="blind">조회수</span></i>
+                            <span class="no">10</span>
+                        </span>
+                        <span class="el date"><span class="no">5분전</span></span>
+                    </div>
+                </div>
+            </div>
+            <!-- E: card -->
+            <!-- S: card -->
+            <div class="card">
+                <div class="card__header">
+                    <!-- S: category badge -->
+                    <div class="lt badgebox">
+                        <span class="badge_round">진로/경력개발</span>
+                    </div>
+                    <!-- E: badge -->
+                </div>
+                <div class="card__content">
+                    <!-- S: 본문 -->
+                    <a href="#">
+                        <span class="card__subject qnalist"><span class="text">응급실에서 결핵이 의심되는 환자인데 객담검사 등을 거부하고 귀가 원하는 경우 어떻게 처방</span></span>
+                        <span class="card__desc">
+                            <span class="text">
+                                응급실에 내원환자 중 보호자 없고 엑스레이 및 ct 촬영 후 결핵이 의심되어 입원해서 검사 더 해보자고 했는데 거부하고 귀가한다고 했을때 어떻게 처방시나요? 
+                            </span>
+                        </span>
+                    </a>
+                    <!-- E: 본문 -->
+                </div>
+                <!-- S: 좋아요, 답글달기, 공유하기 수 -->
+                <div class="card__aside">
+                    <div class="lt">
+                        <span class="el like">
+                            <i class="fa fa-thumbs-up"><span class="blind">좋아요수</span></i>
+                            <span class="no">3명</span>
+                        </span>
+                    </div>
+                    <div class="rt">
+                        <span class="el reply">
+                            <i class="xi-comment"><span class="blind">답글수</span></i>
+                            <span class="no">0</span>
+                        </span>
+                        <span class="el view">
+                            <i class="xi-eye"><span class="blind">조회수</span></i>
+                            <span class="no">10</span>
+                        </span>
+                        <span class="el date"><span class="no">5분전</span></span>
+                    </div>
+                </div>
+            </div>
+            <!-- E: card -->
+        </div>
+
+
+        
+        <div class="searchResult__title">
+            <h2>Connect</h2>
+            <span class="searchResult__titleNo">(총 <span class="no">29</span>건)</span>
+            <a href="#" class="searchResult__more">더보기<i class="xi-angle-right-thin"></i></a>
+        </div>
+        <div class="searchResult__content">
+            <ul class="linelist">
+                <li>
+                    <a href="#">
+                        <span class="connectItem">
+                            <span class="connectItem__logo"><img src="https://file.intermd.co.kr/upload/201807/03/201807031426001.png" alt=""></span>
+                            <span class="connectItem__desc">
+                                <strong class="connectItem__title">헬스닷gsk</strong>
+                                <span class="connectItem__text">한국 GSK가 제공하는 보건 의료 전문가 전용 포털</span>
+                            </span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="connectItem">
+                            <span class="connectItem__logo"><img src="https://file.intermd.co.kr/upload/201807/03/201807031426001.png" alt=""></span>
+                            <span class="connectItem__desc">
+                                <strong class="connectItem__title">Bio International Convention</strong>
+                                <span class="connectItem__text">미국바이오산업협회 주최로 미국에서 매년 열리는  제약·바이오산업 분야 세계 최대 콘퍼런스·전시회</span>
+                            </span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="connectItem">
+                            <span class="connectItem__logo"><img src="https://file.intermd.co.kr/upload/201808/06/201808061857581.png" alt=""></span>
+                            <span class="connectItem__desc">
+                                <strong class="connectItem__title">JKMA(Journal of the Korean Medical Association)</strong>
+                                <span class="connectItem__text">대한의사협회 협회지</span>
+                            </span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="connectItem">
+                            <span class="connectItem__logo"><img src="https://file.intermd.co.kr/upload/201808/14/201808141842171.png" alt=""></span>
+                            <span class="connectItem__desc">
+                                <strong class="connectItem__title">내과 전공의를 위한 학습 플랫폼(CADE)</strong>
+                                <span class="connectItem__text">가톨릭의대 내과학교실에서 제공하는 내과 전공의 학습 플랫폼 입니다.</span>
+                            </span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="connectItem">
+                            <span class="connectItem__logo"><img src="https://file.intermd.co.kr/upload/201808/22/201808221507501.png" alt=""></span>
+                            <span class="connectItem__desc">
+                                <strong class="connectItem__title">올리브 유니온</strong>
+                                <span class="connectItem__text">스마트 보청기 개발 스타트업 입니다.</span>
+                            </span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="searchResult__title">
+            <h2>FAQ</h2>
+            <span class="searchResult__titleNo">(총 <span class="no">10</span>건)</span>
+            <a href="#" class="searchResult__more">더보기<i class="xi-angle-right-thin"></i></a>
+        </div>
+        <div class="searchResult__content">
+            <div class="faq">
+                <div class="faq__item">
+                    <button class="faq__subject">의사만 가입할 수 있나요?</button>
+                    <div class="faq__content">
+                        인터엠디는 오직 의사면허가 있으신 의사 선생님과 의대생만이 사용할 수 있습니다. 단, 의대생은 읽기 모드만 가능합니다. 회원이 되시기 위해서는 실명인증과 의사면허 인증 또는 학생증 인증을 거치셔야 합니다.
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__subject">익명 질문은 의사가 작성한 게 맞나요? 인터엠디나 외부업체에서 등록하는 거 아닌가요?</button>
+                    <div class="faq__content">
+                        인터엠디는 오직 의사면허가 있으신 의사 선생님과 의대생만이 사용할 수 있습니다. 단, 의대생은 읽기 모드만 가능합니다. 회원이 되시기 위해서는 실명인증과 의사면허 인증 또는 학생증 인증을 거치셔야 합니다.
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__subject">의사만 가입할 수 있나요?</button>
+                    <div class="faq__content">
+                        인터엠디는 오직 의사면허가 있으신 의사 선생님과 의대생만이 사용할 수 있습니다. 단, 의대생은 읽기 모드만 가능합니다. 회원이 되시기 위해서는 실명인증과 의사면허 인증 또는 학생증 인증을 거치셔야 합니다.
+                    </div>
+                </div>
+            </div>
+            <script>
+                $(function(){
+                    $('.faq__subject').click(function(){
+                        var accordion_cont = $(this).next('.faq__content');		
+                        if($(this).hasClass("active")){
+                            accordion_cont.slideUp(200); 
+                            $(this).removeClass('active');
+                        }else{
+                            $('.faq__content').slideUp(200);
+                            $('.faq__subject').removeClass('active');
+                            accordion_cont.slideDown(200); 
+                            $(this).addClass('active');
+                        }
+                    })
+                })
+            </script>
+        </div>
+
+        <div class="searchResult__title">
+            <h2>이벤트</h2>
+            <span class="searchResult__titleNo">(총 <span class="no">4</span>건)</span>
+            <a href="#" class="searchResult__more">더보기<i class="xi-angle-right-thin"></i></a>
+        </div>
+        <div class="searchResult__content">
+            <div class="eventList__item">
+                <a href="#">
+                    <span class="eventList__subject">3월 한정! 새내기 의사초대 특별 이벤트3월 한정! 새내기 의사초대 특별 이벤트</span>
+                    <span class="eventList__bottom">
+                        <span class="badge__big--close">마감</span>
+                        <!-- <span class="badge__big--going">진행중</span> -->
+                        <span class="eventList__date">2019-03-23 ~ 2019-03-31</span>
+                    </span>
+                </a>
+            </div>
+            <div class="eventList__item">
+                <a href="#">
+                    <span class="eventList__subject">Posting 공감 이벤트</span>
+                    <span class="eventList__bottom">
+                        <span class="badge__big--going">진행중</span>
+                        <span class="eventList__date">2019-03-23 ~ 2019-03-31</span>
+                    </span>
+                </a>
+            </div>
+            <div class="eventList__item">
+                <a href="#">
+                    <span class="eventList__subject">3월 한정! 새내기 의사초대 특별 이벤트</span>
+                    <span class="eventList__bottom">
+                        <span class="badge__big--close">마감</span>
+                        <span class="eventList__date">2019-03-23 ~ 2019-03-31</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="searchResult__title">
+            <h2>공지사항</h2>
+            <span class="searchResult__titleNo">(총 <span class="no">4</span>건)</span>
+            <a href="#" class="searchResult__more">더보기<i class="xi-angle-right-thin"></i></a>
+        </div>
+        <div class="searchResult__content">
+            <div class="noticeList__item">
+                <a href="#">
+                    <span class="noticeList__date">2019년 1월 23일</span>
+                    <span class="noticeList__subject">1월 공지사항</span>
+                </a>
+            </div>
+            <div class="noticeList__item">
+                <a href="#">
+                    <span class="noticeList__date">2019년 1월 23일</span>
+                    <span class="noticeList__subject">[공지] 신규회원혜택 상품발송 안내</span>
+                </a>
+            </div>
+        </div>
+        
+    </div>
+    <!-- E: 통합검색 -->
+</div>
+</body>
+</html>

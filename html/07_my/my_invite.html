@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> Inter MD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+<script src="../../js/plugins/swiper_3.3.1.js"></script>
+<script src="../../js/ui_script_m.js"></script>    
+<body>
+
+<!-- S: header -->
+<div class="detail__topline">
+    <a href="#" class="detail__lt"><i class="xi-angle-left"></i></a>
+    <h2>친구 초대</h2>
+</div>
+<!-- E: header -->
+
+<div class="myList">
+    <div class="invite">
+        <div class="invite__title">현재 가입한 친구 <b>4</b></div>
+        <div class="invite__list">
+            <!-- <div class="nodata">
+                초대한 친구가 없습니다.
+            </div> -->
+            <!-- S: 친구 리스트 -->
+            <div  class="invite__item">
+                <span class="invite__name">봉주노</span>
+                <span class="invite__state on">가입 완료</span>
+                <!-- <span class="invite__state">미가입</span> -->
+                <span class="invite__date">2020. 01. 20</span>
+            </div>
+            <!-- E: 친구 리스트 -->
+            <div  class="invite__item">
+                <span class="invite__name">박사장</span>
+                <span class="invite__state">미가입</span>
+                <span class="invite__date">2020. 01. 15</span>
+            </div>
+            <div  class="invite__item">
+                <span class="invite__name">제시카</span>
+                <span class="invite__state">미가입</span>
+                <span class="invite__date">2020. 01. 11</span>
+            </div>
+            <div  class="invite__item">
+                <span class="invite__name">사모님</span>
+                <span class="invite__state on">가입 완료</span>
+                <span class="invite__date">2020. 01. 15</span>
+            </div>
+            <div  class="invite__item">
+                <span class="invite__name">박다송</span>
+                <span class="invite__state on">가입 완료</span>
+                <span class="invite__date">2020. 01. 11</span>
+            </div>
+            <div  class="invite__item">
+                <span class="invite__name">문광</span>
+                <span class="invite__state on">가입 완료</span>
+                <span class="invite__date">2020. 01. 11</span>
+            </div>
+            <div  class="invite__item">
+                <span class="invite__name">김기사</span>
+                <span class="invite__state">미가입</span>
+                <span class="invite__date">2020. 01. 11</span>
+            </div>
+        </div>
+        <div class="invite__btnbox">
+            <button class="button blue-line" onclick="$('.inviteGuide').show();return false;">친구 초대란?</button>
+            <button class="button blue">나의 초대 링크 복사하기</button>
+        </div>
+    </div>
+</div>
+
+<!-- S: 친구 초대 안내 layer -->
+<div class="layerTopic inviteGuide" style="display: none;">
+    <!-- S: header -->
+    <div class="fix_header">        
+        <div class="detail__topline">
+            <h2>친구 초대 안내</h2>
+            <a href="#" class="detail__rt" onclick="$('.inviteGuide').hide();return false;"><i class="xi-close"></i><span class="blind">닫기</span></a>
+        </div>
+    </div>
+    <div class="layerTopic__cont">
+        <div class="inviteGuide__section1">
+            <h3 class="inviteGuide__title">친구 초대란 ?</h3>
+            <div class="inviteGuide__desc">
+                선생님의 초대 링크를 공유받은 친구가 인터엠디에 가입 하는 경우 선생님께 인터엠디 포인트몰에서 사용하실 수 있는 포인트가 지급됩니다.
+            </div>
+            <h3 class="inviteGuide__title">초대 방법</h3>
+            <div class="inviteGuide__desc">
+                1) 미가입 친구에게 나의 초대 링크 발송<br>
+                2) 친구가 초대 수락<br>
+                3) 친구가 인터엠디 회원가입
+            </div>
+            <h3 class="inviteGuide__title">친구 초대 현황 확인</h3>
+            <div class="inviteGuide__desc">
+                [ 마이페이지 > Activity > 친구초대 ]에서 초대 링크를 수락한 친구가 노출됩니다.
+                <div class="inviteGuide__graybox">
+                    *미가입 : 친구 초대 링크 수락 후, 아직 인터엠디에 가입 하지않은 상태
+                </div>
+            </div>
+        </div>
+        <div class="inviteGuide__section2">
+            <h3 class="inviteGuide__title2">유의사항</h3>
+            <ul class="inviteGuide__desc2">
+                <li>친구 초대는 의사 회원만 참여 가능하며, 의대생 회원은 해당 되지 않습니다.</li>
+                <li>친구 초대는 인터엠디에 가입한 이력이 없는 신규 고객만 초 대 할 수 있습니다.</li>
+                <li>한 명의 친구를 두 사람 이상이 초대할 경우, 먼저 수락한 사 람의 초 대만 받을 수 있습니다.</li>
+                <li>포인트는 친구가 가입 완료 시 지급 되며, 포인트가 적립되지 않은 경우, 1:1 문의에 남겨주시기 바랍니다.<br>( PC : 우측상단 고객센터 > 1:1 문의 ,  Mobile : 더보기  > 1:1 문의 )</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- E: 친구 초대 안내 layer -->
+
+</body>
+</html>

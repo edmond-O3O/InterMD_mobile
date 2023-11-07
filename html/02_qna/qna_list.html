@@ -1,0 +1,649 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Inter MD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+    <meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+    <link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="../../js/plugins/jquery-3.2.1.js"></script>
+    <script src="../../js/plugins/swiper_3.3.1.js"></script>
+    <script src="../../js/ui_script_m.js"></script>   
+</head>
+<body>
+<div id="ptrMain">
+
+
+
+
+	<div class="page_qna">
+		<!-- S: 필터 (신규) -->
+		<div class="filterBar">
+			<div class="filterBar__lt">
+				<div class="filterBtnBox"> <!-- 20210622 수정 : filterBtnBox -->
+					<button class="filterBtn on" onclick="filterBtnOnOff($(this))">전체</button>
+					<button class="filterBtn" onclick="filterBtnOnOff($(this))">관심토픽</button>
+					<button class="filterBtn" onclick="filterBtnOnOff($(this))">미답질문</button>
+					<span class="filterBtn--bg"></span> <!-- 20210622 수정 -->
+				</div>
+				<script>
+					// bg출력을 위해 첫번째 요소 초기 활성화
+					$('.filterBtn').first().trigger('click');
+				</script>
+			</div>
+			<div class="filterBar__rt">
+				<button type="button" class="filterList__select" onclick="filterSelectOnOff($(this))">최신순</button>
+				<div class="filterList">
+					<!-- S: 필터 리스트 -->
+					<div class="filterList__wrap">
+						<button class="filterList__item on" onclick="filterSelectMotion($(this))"><span class="filterList__text">최신순</span></button>
+						<button class="filterList__item" onclick="filterSelectMotion($(this))"><span class="filterList__text">인기순</span></button>
+						<button class="filterList__item" onclick="filterSelectMotion($(this))"><span class="filterList__text">조회순</span></button>
+						<button class="filterList__item" onclick="filterSelectMotion($(this))"><span class="filterList__text">좋아요순</span></button>
+					</div>
+					<!-- E: 필터 리스트 -->
+					<div class="filterList__dim" ontouchStart="$('.filterList__select').removeClass('on');disableScroll();return false;"></div>
+				</div>
+			</div>
+		</div>
+		<!-- E: 필터 -->
+
+		<!-- S: 미답 질문 > 카테고리 (신규) -->
+		<div class="subCate">
+			<a href="#" class="subCate__item on">신경과 질문</a>
+			<a href="#" class="subCate__item">전체 질문</a>
+		</div>
+		<!-- E: 미답 질문 > 카테고리 -->
+
+		<!-- S: 관심토픽 헤더 -->
+		<div class="topic__header">
+			<div class="topic__text"><span class="topic__no">4</span>개의 토픽이 설정되었습니다.</div>
+			<div class="topic__btbox"><a href="#">토픽설정</a></div>
+		</div>
+		<!-- E: 관심토픽 헤더 -->
+
+		<div id="qna_list_container">
+			<div class="banner">
+				<a href="#"><img src="http://placehold.it/750x80" alt=""></a>
+			</div>
+			<!-- S: card -->
+			<div class="card">
+				<div class="card__header">
+					<!-- QnA설문형 : 구조변경 -->
+					<div class="surveyWrap">
+						<!-- S: category badge -->
+						<div class="surveyBadge">
+							<div class="surveyBadgeInner">
+								<div class="swiper-wrapper">
+									<span class="swiper-slide surveyBadge__item urgent">URGENT</span>
+									<span class="swiper-slide surveyBadge__item">마취통증의학과</span>
+									<span class="swiper-slide surveyBadge__item">가정의학과</span>
+								</div>
+							</div>
+						</div>
+						<!-- E: category badge -->
+						
+						<!-- S: Question Type -->
+						<div class="surveyLabel">
+							<div class="surveyLabel__item">설문형</div>
+							<div class="surveyLabel__item surveyLabel__item--ing">진행형</div>
+						</div>
+						<!-- E: Question Type -->
+					</div>
+					<!-- //QnA설문형 : 구조변경 -->
+				</div>
+				<div class="card__content">
+					<!-- S: 본문 -->
+					<a href="#">
+						<span class="card__subject qnalist"><span class="text">응급실에서 결핵이 의심되는 환자인데 객담검사 등을 거부하고 귀가 원하는 경우 어떻게 처방</span></span>
+						<span class="card__desc">
+							<span class="text">
+								응급실에 내원환자 중 보호자 없고 엑스레이 및 ct 촬영 후 결핵이 의심되어 입원해서 검사 더 해보자고 했는데 거부하고 귀가한다고 했을때 어떻게 처방시나요? 
+							</span>
+							<!-- 이미지 img, 동영상 movie, 2개이상일때 more 추가 -->
+							<span class="img" style="background-image:url('https://file.intermd.co.kr/Thumb_upload/201810/23/43BBCF8A-8A6A-42F5-9F8F-76E5E53609C3_201810231626291.jpeg')"></span>
+							<!-- 
+							<span class="img more" style="background-image:url('https://file.intermd.co.kr/Thumb_upload/201810/23/43BBCF8A-8A6A-42F5-9F8F-76E5E53609C3_201810231626291.jpeg')"></span>
+							<span class="movie" style="background-image:url('https://file.intermd.co.kr/Thumb_upload/201810/23/43BBCF8A-8A6A-42F5-9F8F-76E5E53609C3_201810231626291.jpeg')"></span>
+							<span class="movie more" style="background-image:url('https://file.intermd.co.kr/Thumb_upload/201810/23/43BBCF8A-8A6A-42F5-9F8F-76E5E53609C3_201810231626291.jpeg')"></span> 
+							-->										
+							<!-- 첨부파일 -->
+							<div class="atchbox__file">
+								<div class="filewrap">
+									<span class="file_name">KakaoTalk_Video_20180604_1452_40_160.mp4</span>
+									<span class="file_size">397.9KB</span>
+								</div>
+							</div>
+						</span>
+					</a>
+					<!-- E: 본문 -->
+				</div>
+				<!-- S: 좋아요, 답글달기, 공유하기 수 -->
+				<div class="card__aside">
+					<div class="lt">
+						<span class="el like">
+							<i class="fa fa-thumbs-up"><span class="blind">좋아요수</span></i>
+							<span class="no">3명</span>
+						</span>
+					</div>
+					<div class="rt">
+						<span class="el reply">
+							<i class="xi-comment"><span class="blind">답글수</span></i>
+							<span class="no">0</span>
+						</span>
+						<span class="el view">
+							<i class="xi-eye"><span class="blind">조회수</span></i>
+							<span class="no">10</span>
+						</span>
+						<span class="el date"><span class="no">5분전</span></span>
+					</div>
+				</div>
+				<!-- S: 좋아요, 답글달기, 공유하기 버튼 -->
+				<ul class="card__btns">
+					<li><a href="#" class="on"><i class="fa fa-thumbs-up"></i><span class="text">좋아요</span></a></li>
+					<li><a href="#" class="dot"><i class="xi-comment"></i><span class="text">첫답글달기</span></a></li>
+					<li><a href="#"><i class="fa fa-share-alt"></i><span class="text">공유하기</span></a></li>
+				</ul>
+				<!-- E: 좋아요, 답글달기, 공유하기 버튼 -->
+			</div>
+			<!-- E: card -->	
+			<!-- 220921 : 의대생 Q&A 추가 -->
+			<div class="card studentQna__card">
+				<div class="card__content">
+					<div class="studentQna__top">
+						<a href="">
+							<p class="studentQna__tit">의대생 질문</p>
+							<span class="studentQna__desc">의대생들이 선배님들의 답변을 기다리고 있어요!</span>
+						</a>
+					</div>
+					<div class="studentQna__list">
+						<ul>
+							<li>
+								<a href="">
+									<div class="question">
+										<span class="questionIco"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+    <defs>
+        <path id="uzlhmh7sqa" d="M0 0L16 0 16 16 0 16z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <mask id="k40k5hk6tb" fill="#fff">
+                        <use xlink:href="#uzlhmh7sqa"/>
+                    </mask>
+                    <path fill="#3F92F0" d="M8 2C4.692 2 2 4.692 2 8s2.692 6 6 6 6-2.692 6-6-2.692-6-6-6m0 14c-4.411 0-8-3.589-8-8 0-4.41 3.589-8 8-8s8 3.59 8 8c0 4.411-3.589 8-8 8" mask="url(#k40k5hk6tb)"/>
+                </g>
+                <rect width="9" height="2" x="7.889" y="11.389" fill="#3F92F0" rx="1" transform="rotate(45 12.39 12.39)"/>
+            </g>
+        </g>
+    </g>
+</svg>
+</span>
+										<span class="questionText">진로결정에 도움을 받고 싶습니다!</span>
+									</div>
+									<span class="answer">답변하러 가기</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="question">
+										<span class="questionIco"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+    <defs>
+        <path id="uzlhmh7sqa" d="M0 0L16 0 16 16 0 16z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <mask id="k40k5hk6tb" fill="#fff">
+                        <use xlink:href="#uzlhmh7sqa"/>
+                    </mask>
+                    <path fill="#3F92F0" d="M8 2C4.692 2 2 4.692 2 8s2.692 6 6 6 6-2.692 6-6-2.692-6-6-6m0 14c-4.411 0-8-3.589-8-8 0-4.41 3.589-8 8-8s8 3.59 8 8c0 4.411-3.589 8-8 8" mask="url(#k40k5hk6tb)"/>
+                </g>
+                <rect width="9" height="2" x="7.889" y="11.389" fill="#3F92F0" rx="1" transform="rotate(45 12.39 12.39)"/>
+            </g>
+        </g>
+    </g>
+</svg>
+</span>
+										<span class="questionText">공부가 너무 어려워요 ㅠ</span>
+									</div>
+									<span class="answer">답변하러 가기</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<div class="question">
+										<span class="questionIco"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+    <defs>
+        <path id="uzlhmh7sqa" d="M0 0L16 0 16 16 0 16z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <mask id="k40k5hk6tb" fill="#fff">
+                        <use xlink:href="#uzlhmh7sqa"/>
+                    </mask>
+                    <path fill="#3F92F0" d="M8 2C4.692 2 2 4.692 2 8s2.692 6 6 6 6-2.692 6-6-2.692-6-6-6m0 14c-4.411 0-8-3.589-8-8 0-4.41 3.589-8 8-8s8 3.59 8 8c0 4.411-3.589 8-8 8" mask="url(#k40k5hk6tb)"/>
+                </g>
+                <rect width="9" height="2" x="7.889" y="11.389" fill="#3F92F0" rx="1" transform="rotate(45 12.39 12.39)"/>
+            </g>
+        </g>
+    </g>
+</svg>
+</span>
+										<span class="questionText">군의관? 공보의?</span>
+									</div>
+									<span class="answer">답변하러 가기</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- //220921 : 의대생 Q&A 추가 -->
+			<!-- S: card -->
+			<div class="card">
+				<div class="card__header">
+					<!-- QnA설문형 : 구조변경 -->
+					<div class="surveyWrap">
+						<!-- S: category badge -->
+						<div class="surveyBadge">
+							<div class="surveyBadgeInner">
+								<div class="swiper-wrapper">
+									<span class="swiper-slide surveyBadge__item">정신건강의학과</span>
+									<span class="swiper-slide surveyBadge__item">방사선종야학과</span>
+									<span class="swiper-slide surveyBadge__item">정신건강의학과</span>
+									<span class="swiper-slide surveyBadge__item">정신건강의학과</span>
+								</div>
+							</div>
+						</div>
+						<!-- E: category badge -->
+						
+						<!-- S: Question Type -->
+						<div class="surveyLabel">
+							<div class="surveyLabel__item">설문형</div>
+							<div class="surveyLabel__item surveyLabel__item--end">종료</div>
+						</div>
+						<!-- E: Question Type -->
+					</div>
+					<!-- //QnA설문형 : 구조변경 -->
+				</div>
+				<div class="card__content">
+					<!-- S: 본문 -->
+					<a href="#">
+						<span class="card__patient">환자정보 : 35세 남성 서초구</span>
+						<span class="card__subject qnalist"><span class="text">응급실에서 결핵이 의심되는 환자</span></span>
+						<span class="card__desc img"> <!-- 이미지 있을경우 img -->
+							<span class="text">
+								지인분이 불면증을 호소합니다. 일단 수면위생이 좋지않아 환경개선부터 말씀을
+							</span>
+							<!-- <span class="img" style="background-image:url('https://file.intermd.co.kr/Thumb_upload/201810/23/43BBCF8A-8A6A-42F5-9F8F-76E5E53609C3_201810231626291.jpeg')"></span> -->
+							<span class="img more" style="background-image:url('https://file.intermd.co.kr/Thumb_upload/201810/23/43BBCF8A-8A6A-42F5-9F8F-76E5E53609C3_201810231626291.jpeg')"></span>
+							<!-- 
+							<span class="movie" style="background-image:url('https://file.intermd.co.kr/Thumb_upload/201810/23/43BBCF8A-8A6A-42F5-9F8F-76E5E53609C3_201810231626291.jpeg')"></span>
+							<span class="movie more" style="background-image:url('https://file.intermd.co.kr/Thumb_upload/201810/23/43BBCF8A-8A6A-42F5-9F8F-76E5E53609C3_201810231626291.jpeg')"></span> 
+							-->
+							<!-- 첨부파일 -->
+							<div class="atchbox__file">
+								<div class="filewrap">
+									<span class="file_name">KakaoTalk_Video_20180604_1452_40_160.mp4</span>
+									<span class="file_size">397.9KB</span>
+								</div>
+							</div>
+						</span>
+					</a>
+					<!-- E: 본문 -->
+				</div>
+				<div class="card__aside">
+					<div class="lt">
+						<span class="el like">
+							<i class="fa fa-thumbs-up"><span class="blind">좋아요수</span></i>
+							<span class="no">3명</span>
+						</span>
+					</div>
+					<div class="rt">
+						<span class="el reply">
+							<i class="xi-comment"><span class="blind">답글수</span></i>
+							<span class="no">4</span>
+						</span>
+						<span class="el view">
+							<i class="xi-eye"><span class="blind">조회수</span></i>
+							<span class="no">10</span>
+						</span>
+						<span class="el date"><span class="no">5분전</span></span>
+					</div>
+				</div>
+				<ul class="card__btns">
+					<li><a href="#"><i class="fa fa-thumbs-up"></i><span class="text">좋아요</span></a></li>
+					<li><a href="#"><i class="xi-comment"></i><span class="text">답글달기</span></a></li>
+					<li><a href="#"><i class="fa fa-share-alt"></i><span class="text">공유하기</span></a></li>
+				</ul>
+			</div>
+			<!-- E: card -->
+			<!-- S: card -->
+			<div class="card">
+				<div class="card__header">
+					<!-- QnA설문형 : 구조변경 -->
+					<div class="surveyWrap">
+						<!-- S: category badge -->
+						<div class="surveyBadge">
+							<div class="surveyBadgeInner">
+								<div class="swiper-wrapper">
+									<span class="swiper-slide surveyBadge__item">정신건강의학과</span>
+									<span class="swiper-slide surveyBadge__item">방사선종야학과</span>
+									<span class="swiper-slide surveyBadge__item">정신건강의학과</span>
+									<span class="swiper-slide surveyBadge__item">정신건강의학과</span>
+								</div>
+							</div>
+						</div>
+						<!-- E: category badge -->
+						
+						<!-- S: Question Type -->
+						<div class="surveyLabel">
+							<div class="surveyLabel__item">설문형</div>
+							<div class="surveyLabel__item surveyLabel__item--end">종료</div>
+						</div>
+						<!-- E: Question Type -->
+					</div>
+					<!-- //QnA설문형 : 구조변경 -->
+				</div>
+				<div class="card__content">
+					<!-- S: 본문 -->
+					<a href="#">
+						<span class="card__subject qnalist"><span class="text">병원 홍보를 위해</span></span>
+						<span class="card__desc img">
+							<span class="text">
+								병원 홍보를 위해 사은품 등을 나누어 주는 것, 병원 내부에 커피, 다과 등을 두는 것 등은 다 환자 유인행위로 불법인가요? 아니면 가격에 따라 불법여부가 달라지나요? 가격에 따라 달라진다면 그 가격은 얼마이고, 그 가격은 그 물품을 구매한 가격이 기준인가요?
+							</span>
+							<!-- <span class="img" style="background-image:url('https://file.intermd.co.kr/Thumb_upload/201810/23/43BBCF8A-8A6A-42F5-9F8F-76E5E53609C3_201810231626291.jpeg')"></span> -->
+							<!-- <span class="img more" style="background-image:url('https://file.intermd.co.kr/Thumb_upload/201810/23/43BBCF8A-8A6A-42F5-9F8F-76E5E53609C3_201810231626291.jpeg')"></span> -->
+							<span class="movie" style="background-image:url('https://file.intermd.co.kr/Thumb_upload/201810/23/43BBCF8A-8A6A-42F5-9F8F-76E5E53609C3_201810231626291.jpeg')"></span>
+							<!-- 
+							<span class="movie more" style="background-image:url('https://file.intermd.co.kr/Thumb_upload/201810/23/43BBCF8A-8A6A-42F5-9F8F-76E5E53609C3_201810231626291.jpeg')"></span> 
+							-->					
+							<!-- 첨부파일 -->
+							<div class="atchbox__file">
+								<div class="filewrap">
+									<span class="file_name">KakaoTalk_Video_20180604_1452_40_160.mp4</span>
+									<span class="file_size">397.9KB</span>
+								</div>
+							</div>
+						</span>
+					</a>
+					<!-- E: 본문 -->
+				</div>
+				<div class="card__aside">
+					<div class="lt">
+						<span class="el like">
+							<i class="fa fa-thumbs-up"><span class="blind">좋아요수</span></i>
+							<span class="no">3명</span>
+						</span>
+					</div>
+					<div class="rt">
+						<span class="el reply">
+							<i class="xi-comment"><span class="blind">답글수</span></i>
+							<span class="no">4</span>
+						</span>
+						<span class="el view">
+							<i class="xi-eye"><span class="blind">조회수</span></i>
+							<span class="no">10</span>
+						</span>
+						<span class="el date"><span class="no">5분전</span></span>
+					</div>
+				</div>
+				<ul class="card__btns">
+					<li><a href="#"><i class="fa fa-thumbs-up"></i><span class="text">좋아요</span></a></li>
+					<li><a href="#"><i class="xi-comment"></i><span class="text">답글달기</span></a></li>
+					<li><a href="#"><i class="fa fa-share-alt"></i><span class="text">공유하기</span></a></li>
+				</ul>
+			</div>
+			<!-- E: card -->
+			<!-- S: card -->
+			<div class="card">
+				<div class="card__header">
+					<!-- QnA설문형 : 구조변경 -->
+					<div class="surveyWrap">
+						<!-- S: category badge -->
+						<div class="surveyBadge">
+							<div class="surveyBadgeInner">
+								<div class="swiper-wrapper">
+									<span class="swiper-slide surveyBadge__item">정신건강의학과</span>
+									<span class="swiper-slide surveyBadge__item">방사선종야학과</span>
+									<span class="swiper-slide surveyBadge__item">정신건강의학과</span>
+									<span class="swiper-slide surveyBadge__item">정신건강의학과</span>
+								</div>
+							</div>
+						</div>
+						<!-- E: category badge -->
+						
+						<!-- S: Question Type -->
+						<div class="surveyLabel">
+							<div class="surveyLabel__item">설문형</div>
+							<div class="surveyLabel__item surveyLabel__item--end">종료</div>
+						</div>
+						<!-- E: Question Type -->
+					</div>
+					<!-- //QnA설문형 : 구조변경 -->
+				</div>
+				<div class="card__content">
+					<!-- S: 본문 -->
+					<a href="#">
+						<span class="card__subject qnalist"><span class="text">응급실에서 결핵이 의심되는 환자</span></span>
+						<span class="card__desc">
+							<span class="text">
+								지인분이 불면증을 호소합니다. 일단 수면위생이 좋지않아 환경개선부터 말씀을
+							</span>	
+							<span class="movie more" style="background-image:url('https://file.intermd.co.kr/Thumb_upload/201810/23/43BBCF8A-8A6A-42F5-9F8F-76E5E53609C3_201810231626291.jpeg')"></span> 
+						</span>
+					</a>
+					<!-- E: 본문 -->
+				</div>
+				<div class="card__aside">
+					<div class="lt">
+						<span class="el like">
+							<i class="fa fa-thumbs-up"><span class="blind">좋아요수</span></i>
+							<span class="no">3명</span>
+						</span>
+					</div>
+					<div class="rt">
+						<span class="el reply">
+							<i class="xi-comment"><span class="blind">답글수</span></i>
+							<span class="no">4</span>
+						</span>
+						<span class="el view">
+							<i class="xi-eye"><span class="blind">조회수</span></i>
+							<span class="no">10</span>
+						</span>
+						<span class="el date"><span class="no">5분전</span></span>
+					</div>
+				</div>
+				<ul class="card__btns">
+					<li><a href="#"><i class="fa fa-thumbs-up"></i><span class="text">좋아요</span></a></li>
+					<li><a href="#"><i class="xi-comment"></i><span class="text">답글달기</span></a></li>
+					<li><a href="#"><i class="fa fa-share-alt"></i><span class="text">공유하기</span></a></li>
+				</ul>
+			</div>
+			<!-- E: card -->
+			<!-- S: card -->
+			<div class="card">
+				<div class="card__header">
+					<!-- QnA설문형 : 구조변경 -->
+					<div class="surveyWrap">
+						<!-- S: category badge -->
+						<div class="surveyBadge">
+							<div class="surveyBadgeInner">
+								<div class="swiper-wrapper">
+									<span class="swiper-slide surveyBadge__item">정신건강의학과</span>
+									<span class="swiper-slide surveyBadge__item">방사선종야학과</span>
+									<span class="swiper-slide surveyBadge__item">정신건강의학과</span>
+									<span class="swiper-slide surveyBadge__item">정신건강의학과</span>
+								</div>
+							</div>
+						</div>
+						<!-- E: category badge -->
+						
+						<!-- S: Question Type -->
+						<div class="surveyLabel">
+							<div class="surveyLabel__item">설문형</div>
+							<div class="surveyLabel__item surveyLabel__item--end">종료</div>
+						</div>
+						<!-- E: Question Type -->
+					</div>
+					<!-- //QnA설문형 : 구조변경 -->
+				</div>
+				<div class="card__content">
+					<!-- S: 본문 -->
+					<a href="#">
+						<span class="card__subject qnalist"><span class="text">응급실에서 결핵이 의심되는 환자</span></span>
+						<span class="card__desc">
+							<span class="text">
+								지인분이 불면증을 호소합니다. 일단 수면위생이 좋지않아 환경개선부터 말씀을 드렸으나 순응도는 매우 낮구요..
+								어디선가 자낙스를 받아오셔서 PRN 으로 드시는데요..
+								아직까진 의존성은 안보이고.. 심할때만 드시는 식으로 유지합니다만..
+								벤조나 졸피뎀등을 PRN 으로 유지하는게 적절한 처방인지요?
+								두번째로 수면제는 모두 내성과 의존성을 가지고 있다고 봐야하나요? 종류별로 그나마 내성과 의존이 적은 건 무엇인가요?	
+							</span>	
+						</span>
+					</a>
+					<!-- E: 본문 -->
+				</div>
+				<div class="card__aside">
+					<div class="lt">
+						<span class="el like">
+							<i class="fa fa-thumbs-up"><span class="blind">좋아요수</span></i>
+							<span class="no">3명</span>
+						</span>
+					</div>
+					<div class="rt">
+						<span class="el reply">
+							<i class="xi-comment"><span class="blind">답글수</span></i>
+							<span class="no">4</span>
+						</span>
+						<span class="el view">
+							<i class="xi-eye"><span class="blind">조회수</span></i>
+							<span class="no">10</span>
+						</span>
+						<span class="el date"><span class="no">5분전</span></span>
+					</div>
+				</div>
+				<ul class="card__btns">
+					<li><a href="#"><i class="fa fa-thumbs-up"></i><span class="text">좋아요</span></a></li>
+					<li><a href="#"><i class="xi-comment"></i><span class="text">답글달기</span></a></li>
+					<li><a href="#"><i class="fa fa-share-alt"></i><span class="text">공유하기</span></a></li>
+				</ul>
+			</div>
+			<!-- E: card -->
+			<!-- S: card -->
+			<div class="card">
+				<div class="card__header">
+					<!-- QnA설문형 : 구조변경 -->
+					<div class="surveyWrap">
+						<!-- S: category badge -->
+						<div class="surveyBadge">
+							<div class="surveyBadgeInner">
+								<div class="swiper-wrapper">
+									<span class="swiper-slide surveyBadge__item">정신건강의학과</span>
+									<span class="swiper-slide surveyBadge__item">방사선종야학과</span>
+									<span class="swiper-slide surveyBadge__item">정신건강의학과</span>
+									<span class="swiper-slide surveyBadge__item">정신건강의학과</span>
+								</div>
+							</div>
+						</div>
+						<!-- E: category badge -->
+						
+						<!-- S: Question Type -->
+						<div class="surveyLabel">
+							<div class="surveyLabel__item">설문형</div>
+							<div class="surveyLabel__item surveyLabel__item--end">종료</div>
+						</div>
+						<!-- E: Question Type -->
+					</div>
+					<!-- //QnA설문형 : 구조변경 -->
+				</div>
+				<div class="card__content">
+					<!-- S: 본문 -->
+					<a href="#">
+						<span class="card__subject qnalist"><span class="text">응급실에서 결핵이 의심되는 환자</span></span>
+						<span class="card__desc">
+							<span class="text">
+								지인분이 불면증을 호소합니다. 일단 수면위생이 좋지않아 
+							</span>	
+							<!-- 첨부파일 -->
+							<div class="atchbox__file">
+								<div class="filewrap">
+									<span class="file_name">KakaoTalk_Video_20180604_1452_40_160.mp4</span>
+									<span class="file_size">397.9KB</span>
+								</div>
+							</div>
+						</span>
+					</a>
+					<!-- E: 본문 -->
+				</div>
+				<div class="card__aside">
+					<div class="lt">
+						<span class="el like">
+							<i class="fa fa-thumbs-up"><span class="blind">좋아요수</span></i>
+							<span class="no">3명</span>
+						</span>
+					</div>
+					<div class="rt">
+						<span class="el reply">
+							<i class="xi-comment"><span class="blind">답글수</span></i>
+							<span class="no">4</span>
+						</span>
+						<span class="el view">
+							<i class="xi-eye"><span class="blind">조회수</span></i>
+							<span class="no">10</span>
+						</span>
+						<span class="el date"><span class="no">5분전</span></span>
+					</div>
+				</div>
+				<ul class="card__btns">
+					<li><a href="#"><i class="fa fa-thumbs-up"></i><span class="text">좋아요</span></a></li>
+					<li><a href="#"><i class="xi-comment"></i><span class="text">답글달기</span></a></li>
+					<li><a href="#"><i class="fa fa-share-alt"></i><span class="text">공유하기</span></a></li>
+				</ul>
+			</div>
+			<!-- E: card -->	
+		</div>
+		<!-- QnA설문형 : 추가 -->
+		<script>
+			var swiper = new Swiper(".surveyBadgeInner", {
+				slidesPerView: "auto",
+				freeMode: true,
+			});
+		</script>
+		<!-- //QnA설문형 : 추가 -->
+	</div>
+
+	<!-- bottom fix (신규) -->
+	<div class="fixBtm">
+		<a href="#top" class="goToTop hide" onclick="$('html').stop().animate({ scrollTop:0 }, 800 );return false;"><span class="blind">맨 위로 이동</span></a>
+		<a href="#" class="btnWrite">Q&A 작성하기</a>
+	</div>
+	<!-- // bottom fix -->
+
+
+
+
+</div>
+<!-- S: 당겨서 새로고침 <div id="ptrMain"> .. </div> 영역에서 작동합니다. -->
+<script src="../../js/plugins/pullToRefresh.js"></script>
+<script>
+    PullToRefresh.init({
+        mainElement: '#ptrMain',
+        onRefresh: function() { 
+            alert('refresh') 
+        }
+    });
+</script>
+<!-- E: 당겨서 새로고침 -->   
+</body>
+</html>

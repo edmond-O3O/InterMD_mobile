@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Inter MD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+    <meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+    <link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="../../js/plugins/jquery-3.2.1.js"></script>
+    <script src="../../js/plugins/swiper_3.3.1.js"></script>
+    <script src="../../js/ui_script_m.js"></script>   
+    <link rel="stylesheet" type="text/css" href="/mobile/styles/framework.css">
+</head>
+<body class="setting">
+    <div id="page-wrap">
+        <div id="page-content" class="page-content bg_fff" style="padding-bottom: 0px; min-height: 812px;">
+           <div class="top_fixed_wrap top_fixed_wrap2">
+                <h2>설정<a href="javascript:void(0);" class="right" id="back-button"><i class="xi-close"></i></a></h2> 
+            </div>
+            <div id="page-content-scroll" style="padding-bottom: 0px;">
+                <!--Enables this element to be scrolled -->
+                <div class="setting-wrap marginTop05">
+                    <div class="l_r_padding bg_fff">
+                        <div class="toggle">
+<!--                        <a href="#" style="margin: 3px 0 0;" class="toggle-1 toggle-trigger"> <i class="bg-green-dark"></i> <span></span> <i class="bg-white"></i> </a>   -->
+                            <h3 style="padding-top: 4px!important;" class="border-bottom paddingBottom10">푸시 수신 설정</h3> </div>
+                        <div class="setting-box" style="padding-top: 14px;">
+                            <div class="toggle toggle-active">
+                                <a href="#" class="toggle-1 toggle-trigger"> <i class="bg-green-dark"></i> <span></span> <i class="bg-white"></i> </a>
+                                <p class="font-r">내 질문 알림</p>
+                                <p>내 질문에 답글 등록 시, 답글 요청 시</p>
+                            </div>
+                        </div>
+                        <div class="setting-box">
+                            <div class="toggle toggle-active">
+                                <a href="#" class="toggle-1 toggle-trigger"> <i class="bg-green-dark"></i> <span></span> <i class="bg-white"></i> </a>
+                                <p class="font-r">내 포스팅글 알림</p>
+                                <p>내 포스팅에 답글 등록 시</p>
+                            </div>
+                        </div>
+                        <!-- 
+                        <div class="setting-box">
+                            <div class="toggle">
+                                <a href="#" class="toggle-1 toggle-trigger"> <i class="bg-green-dark"></i> <span></span> <i class="bg-white"></i> </a>
+                                <p class="font-r">새 글 알림</p>
+                                <p>읽지 않은 알림이 있을 시</p>
+                            </div>
+                        </div>
+                         -->
+                        <div class="setting-box">
+                            <div class="toggle toggle-active">
+                                <a href="#" class="toggle-1 toggle-trigger"> <i class="bg-green-dark"></i> <span></span> <i class="bg-white"></i> </a>
+                                <p class="font-r">메시지 알림</p>
+                                <p>새 메시지 수신 시</p>
+                            </div>
+                        </div>
+                        <div class="setting-box">
+                            <div class="toggle toggle-active">
+                                <a href="#" class="toggle-1 toggle-trigger"> <i class="bg-green-dark"></i> <span></span> <i class="bg-white"></i> </a>
+                                <p class="font-r">공지사항 알림</p>
+                                <p>새 글 업데이트 시</p>
+                            </div>
+                        </div>
+                        <div class="setting-box paddingBottom10 border-bottom" style="margin-bottom: 10px;">
+                            <div class="toggle toggle-active">
+                                <a href="#" class="toggle-1 toggle-trigger"> <i class="bg-green-dark"></i> <span></span> <i class="bg-white"></i> </a>
+                                <p class="font-r">서비스 알림</p>
+                                <p>유익한 콘텐츠와 운영진 메시지</p>
+                            </div>
+                        </div>
+                        <h3 class="border-bottom paddingBottom10 marginBottom10"><a href="javascript:fn_goPage('tos');">이용약관</a></h3>
+                        <h3 class="border-bottom paddingBottom10 marginBottom10"><a href="javascript:fn_goPage('privacy');">개인정보보호</a></h3>
+                        <!-- <h3 class="border-bottom paddingBottom10 marginBottom10"><a href="#">오픈소스 라이센스</a></h3> -->
+                        <h3 class="border-bottom paddingBottom10" id="appVersion">버전 2.1.0.0<span class="right regular"> 최신버전</span></h3> 
+                    </div>
+                    <div class="logout"><a href="javascript:fn_logout();" class="light-gray">로그아웃</a></div>
+                </div>
+            </div>
+            <!--E:page-content-scroll-->
+        </div>
+        <!--E:page-content-->
+    </div>
+
+<!-- S: 당겨서 새로고침 <div id="ptrMain"> .. </div> 영역에서 작동합니다. -->
+<script src="../../js/plugins/pullToRefresh.js"></script>
+<script>
+    PullToRefresh.init({
+        mainElement: '#ptrMain',
+        onRefresh: function() { 
+            alert('refresh') 
+        }
+    });
+</script>
+<!-- E: 당겨서 새로고침 -->   
+</body>
+</html>
