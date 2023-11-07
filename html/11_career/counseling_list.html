@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Inter MD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+    <meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+    <link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="../../js/plugins/jquery-3.2.1.js"></script>
+    <script src="../../js/plugins/swiper_3.3.1.js"></script>
+    <script src="../../js/ui_script_m.js"></script>   
+</head>
+<body>
+
+
+    
+
+    <div class="page_career contentBody">
+        <div class="careerSnb__box">
+            <a href="#" class="careerSnb__item">초빙 공고</a>
+            <a href="#" class="careerSnb__item on">진로 상담</a>
+        </div>
+        
+        <div id="ptrMain">
+            <!-- S: 필터 -->
+            <div class="filterBar">
+                <div class="filterBar__lt">
+                    <div class="filterBtnBox"> <!-- 20210622 수정 : filterBtnBox -->
+                        <button class="filterBtn" onclick="filterBtnOnOff($(this))">전체</button>
+                        <button class="filterBtn" onclick="filterBtnOnOff($(this))">진로</button>
+                        <button class="filterBtn" onclick="filterBtnOnOff($(this))">개원/경영</button>
+                        <button class="filterBtn" onclick="filterBtnOnOff($(this))">기타</button>
+                        <span class="filterBtn--bg"></span> <!-- 20210622 수정 -->
+                        <script>
+                            // bg출력을 위해 첫번째 요소 초기 활성화
+                            $('.filterBtn').first().trigger('click');
+                        </script>
+                    </div>
+                </div>
+                <div class="filterBar__rt">
+                    <button type="button" class="filterList__select" onclick="filterSelectOnOff($(this))">최신순</button>
+                    <div class="filterList">
+                        <!-- S: 필터 리스트 -->
+                        <div class="filterList__wrap">
+                            <button class="filterList__item on" onclick="filterSelectMotion($(this))"><span class="filterList__text">최신순</span></button>
+                            <button class="filterList__item" onclick="filterSelectMotion($(this))"><span class="filterList__text">인기순</span></button>
+                            <button class="filterList__item" onclick="filterSelectMotion($(this))"><span class="filterList__text">조회순</span></button>
+                            <button class="filterList__item" onclick="filterSelectMotion($(this))"><span class="filterList__text">좋아요순</span></button>
+                        </div>
+                        <!-- E: 필터 리스트 -->
+                        <div class="filterList__dim" ontouchStart="$('.filterList__select').removeClass('on');disableScroll();return false;"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- E: 필터 -->
+
+            <div class="careerContainer">
+                <!-- S: banner -->
+                <div class="banner">
+                    <a href="#"><img src="http://placehold.it/750x96" alt=""></a>
+                </div>
+                <!-- E: banner -->
+                
+                <!-- S: card -->
+                <div class="card">
+                    <div class="card__header">
+                        <!-- S: category badge -->
+                        <div class="lt badgebox">
+                            <span class="badge_round">개원/경영</span>
+                        </div>
+                        <!-- E: badge -->
+                    </div>
+                    <div class="card__content">
+                        <!-- S: 본문 -->
+                        <a href="#">
+                            <span class="card__subject qnalist"><span class="text">응급실에서 결핵이 의심되는 환자인데 객담검사 등을 거부하고 귀가 원하는 경우 어떻게 처방</span></span>
+                            <span class="card__desc img"> <!-- 이미지 있을경우 img -->
+                                <span class="text">
+                                    응급실에 내원환자 중 보호자 없고 엑스레이 및 ct 촬영 후 결핵이 의심되어 입원해서 검사 더 해보자고 했는데 거부하고 귀가한다고 했을때 어떻게 처방시나요? 
+                                </span>
+                                <!-- 이미지 img, 동영상 movie, 2개이상일때 more 추가 -->
+                                <span class="img" style="background-image:url('https://file.intermd.co.kr/Thumb_upload/201810/23/43BBCF8A-8A6A-42F5-9F8F-76E5E53609C3_201810231626291.jpeg')"></span>
+                                <!-- 
+                                <span class="img more" style="background-image:url('https://file.intermd.co.kr/Thumb_upload/201810/23/43BBCF8A-8A6A-42F5-9F8F-76E5E53609C3_201810231626291.jpeg')"></span>
+                                <span class="movie" style="background-image:url('https://file.intermd.co.kr/Thumb_upload/201810/23/43BBCF8A-8A6A-42F5-9F8F-76E5E53609C3_201810231626291.jpeg')"></span>
+                                <span class="movie more" style="background-image:url('https://file.intermd.co.kr/Thumb_upload/201810/23/43BBCF8A-8A6A-42F5-9F8F-76E5E53609C3_201810231626291.jpeg')"></span> 
+                                -->										
+                                <!-- 첨부파일 -->
+                                <div class="atchbox__file">
+                                    <div class="filewrap">
+                                        <span class="file_name">KakaoTalk_Video_20180604_1452_40_160.mp4</span>
+                                        <span class="file_size">397.9KB</span>
+                                    </div>
+                                </div>
+                            </span>
+                        </a>
+                        <!-- E: 본문 -->
+                    </div>
+                    <!-- S: 좋아요, 답글달기, 공유하기 수 -->
+                    <div class="card__aside">
+                        <div class="lt">
+                            <span class="el like">
+                                <i class="fa fa-thumbs-up"><span class="blind">좋아요수</span></i>
+                                <span class="no">3명</span>
+                            </span>
+                        </div>
+                        <div class="rt">
+                            <span class="el reply">
+                                <i class="xi-comment"><span class="blind">답글수</span></i>
+                                <span class="no">0</span>
+                            </span>
+                            <span class="el view">
+                                <i class="xi-eye"><span class="blind">조회수</span></i>
+                                <span class="no">10</span>
+                            </span>
+                            <span class="el date"><span class="no">5분전</span></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- E: card -->
+                
+                <!-- S: card -->
+                <div class="card">
+                    <div class="card__header">
+                        <!-- S: category badge -->
+                        <div class="lt badgebox">
+                            <span class="badge_round">진로/경력개발</span>
+                        </div>
+                        <!-- E: badge -->
+                    </div>
+                    <div class="card__content">
+                        <!-- S: 본문 -->
+                        <a href="#">
+                            <span class="card__subject qnalist"><span class="text">응급실에서 결핵이 의심되는 환자인데 객담검사 등을 거부하고 귀가 원하는 경우 어떻게 처방</span></span>
+                            <span class="card__desc">
+                                <span class="text">
+                                    응급실에 내원환자 중 보호자 없고 엑스레이 및 ct 촬영 후 결핵이 의심되어 입원해서 검사 더 해보자고 했는데 거부하고 귀가한다고 했을때 어떻게 처방시나요? 
+                                </span>
+                            </span>
+                        </a>
+                        <!-- E: 본문 -->
+                    </div>
+                    <!-- S: 좋아요, 답글달기, 공유하기 수 -->
+                    <div class="card__aside">
+                        <div class="lt">
+                            <span class="el like">
+                                <i class="fa fa-thumbs-up"><span class="blind">좋아요수</span></i>
+                                <span class="no">3명</span>
+                            </span>
+                        </div>
+                        <div class="rt">
+                            <span class="el reply">
+                                <i class="xi-comment"><span class="blind">답글수</span></i>
+                                <span class="no">0</span>
+                            </span>
+                            <span class="el view">
+                                <i class="xi-eye"><span class="blind">조회수</span></i>
+                                <span class="no">10</span>
+                            </span>
+                            <span class="el date"><span class="no">5분전</span></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- E: card -->
+            </div>
+        </div>
+    </div>
+
+    <!-- bottom fix -->
+    <div class="fixBtm">
+        <a href="#top" class="goToTop hide" onclick="$('html').stop().animate({ scrollTop:0 }, 800 );return false;"><span class="blind">맨 위로 이동</span></a>
+        <a href="#" class="btnWrite">진로상담 작성하기</a>
+    </div>
+    <!-- // bottom fix -->
+
+
+
+
+<!-- S: 당겨서 새로고침 <div id="ptrMain"> .. </div> 영역에서 작동합니다. -->
+<script src="../../js/plugins/pullToRefresh.js"></script>
+<script>
+    PullToRefresh.init({
+        mainElement: '#ptrMain',
+        onRefresh: function() { 
+            alert('refresh') 
+        }
+    });
+</script>
+<!-- E: 당겨서 새로고침 -->   
+</body>
+</html>

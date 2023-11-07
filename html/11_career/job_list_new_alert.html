@@ -1,0 +1,313 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Inter MD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+    <meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+    <link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="../../js/plugins/jquery-3.2.1.js"></script>
+    <script src="../../js/plugins/swiper_3.3.1.js"></script>
+    <script src="../../js/ui_script_m.js"></script>
+    <link type="text/css" rel="stylesheet" href="../../font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+    
+    <div class="page_career contentBody">
+        <!-- <div class="careerSnb__box">
+            <a href="#" class="careerSnb__item on">초빙 공고</a>
+            <a href="#" class="careerSnb__item">진로 상담</a>
+        </div> -->
+        
+        <div id="ptrMain">
+            <!-- S: 초빙공고개선 / 추가 -->
+            <div class="careerNewSearch">
+                <div class="careerNewSearch__header">
+                    <div class="careerNewSearch__headerPush">
+                        <label>
+                            <input type="checkbox">
+                            <p>알림 설정</p>
+                        </label>
+                    </div>
+                    <div class="careerNewSearch__headerBtn">
+                        <button>초빙 공고 조건검색</button>
+                    </div>
+
+                    <!-- S:초빙공고알림메세지 -->
+                    <div class="careerNewAlert">
+                        <p></p>
+                    </div>
+                    <script>
+                        let pushCheck = $(".careerNewSearch__headerPush input");
+
+                        pushCheck.on("change", function(){
+                            if($(this).is(":checked") == true){
+                                $(".careerNewAlert p").text("공고 알림이 설정되었습니다.");
+                                carrerAlert();
+                            } else {
+                                $(".careerNewAlert p").text("공고 알림이 해제되었습니다.");
+                                carrerAlert();
+                            }
+                        })
+
+                        function carrerAlert(){
+                            $(".careerNewAlert").fadeIn(1000);
+                            setTimeout(function(){
+                                $(".careerNewAlert").fadeOut(1000);
+                            },2000)
+                        }
+                    </script>
+                    <!-- E:초빙공고알림메세지 -->
+                </div>
+                <ul class="careerNewSearch__list">
+                    <li>전문의</li>
+                    <li>일반의</li>
+                    <li>정신건강의학과</li>
+                    <li>일반병원</li>
+                    <li>전문의</li>
+                    <li>일반의</li>
+                    <li>정신건강의학과</li>
+                    <li>일반병원</li>
+                </ul>
+                <script>
+                    $(document).on('click', '.careerNewSearch__list li', function(){
+                        $(this).remove();
+                    });
+                </script>
+            </div>
+            <div class="careerNewList">
+                <div class="banner">
+                    <a href="#"><img src="http://placehold.it/750x96" alt=""></a>
+                </div>
+
+                <div class="careerNewList__item new">
+                    <a href="">
+                        <div class="careerNewList__row">
+                            <div class="careerNewList__hospital">
+                                <p>덕수요양병원</p>
+                            </div>
+                        </div>
+                        <div class="careerNewList__row">
+                            <p class="careerNewList__subject">평일 야간당직 선생님 모십니다.</p>
+                        </div>
+                        <div class="careerNewList__row">
+                            <ul class="careerNewList__cate">
+                                <li>전문의</li>
+                                <li>소아청소년과</li>
+                                <li>경기 의정부시</li>
+                                <li>월~토(격주휴무)</li>
+                                <li>연봉 Gross 35000이상</li>
+                            </ul>
+                        </div>
+                        <div class="careerNewList__row">
+                            <div class="careerNewList__like">
+                                <i class="fa fa-thumbs-up"></i>3
+                            </div>
+                            <div class="careerNewList__info">
+                                <ul class="careerNewList__label">
+                                    <li class="urgency">긴급초빙</li>
+                                    <li class="popularity">인기공고</li>
+                                </ul>
+                                <p class="careerNewList__deadline">마감 D-5</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="careerNewList__item new">
+                    <a href="">
+                        <div class="careerNewList__row">
+                            <div class="careerNewList__hospital">
+                                <p>덕수요양병원</p>
+                            </div>
+                        </div>
+                        <div class="careerNewList__row">
+                            <p class="careerNewList__subject">평일 야간당직 선생님 모십니다.</p>
+                        </div>
+                        <div class="careerNewList__row">
+                            <ul class="careerNewList__cate">
+                                <li>전문의</li>
+                                <li>소아청소년과</li>
+                                <li>경기 의정부시</li>
+                                <li>월~토(격주휴무)</li>
+                                <li>연봉 Gross 35000이상</li>
+                            </ul>
+                        </div>
+                        <div class="careerNewList__row">
+                            <div class="careerNewList__like">
+                                <i class="fa fa-thumbs-up"></i>3
+                            </div>
+                            <div class="careerNewList__info">
+                                <ul class="careerNewList__label">
+                                    <li class="urgency">긴급초빙</li>
+                                    <li class="popularity">인기공고</li>
+                                </ul>
+                                <p class="careerNewList__deadline">마감 D-5</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="careerNewList__item end">
+                    <a href="">
+                        <div class="careerNewList__row">
+                            <div class="careerNewList__hospital">
+                                <p>덕수요양병원</p>
+                            </div>
+                        </div>
+                        <div class="careerNewList__row">
+                            <p class="careerNewList__subject">영등포 요양병원 평일 야간당직 선생님 모십니다.영등포 요양병원 평일 야간당직 선생님 모십니다.</p>
+                        </div>
+                        <div class="careerNewList__row">
+                            <ul class="careerNewList__cate">
+                                <li>전문의</li>
+                                <li>소아청소년과</li>
+                                <li>경기 의정부시</li>
+                                <li>월~토(격주휴무)</li>
+                                <li>연봉 Gross 35000이상</li>
+                            </ul>
+                        </div>
+                        <div class="careerNewList__row">
+                            <div class="careerNewList__like">
+                                <i class="fa fa-thumbs-up"></i>3
+                            </div>
+                            <div class="careerNewList__info">
+                                <ul class="careerNewList__label">
+                                    <li class="urgency">긴급초빙</li>
+                                    <li class="popularity">인기공고</li>
+                                </ul>
+                                <p class="careerNewList__deadline">~ 11/10 (수)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="banner">
+                    <a href="#"><img src="http://placehold.it/750x96" alt=""></a>
+                </div>
+                
+                <div class="careerNewList__item">
+                    <a href="">
+                        <div class="careerNewList__row">
+                            <div class="careerNewList__hospital">
+                                <p>덕수요양병원</p>
+                            </div>
+                        </div>
+                        <div class="careerNewList__row">
+                            <p class="careerNewList__subject">영등포 요양병원 평일 야간당직 선생님 모십니다.영등포 요양병원 평일 야간당직 선생님 모십니다.</p>
+                        </div>
+                        <div class="careerNewList__row">
+                            <ul class="careerNewList__cate">
+                                <li>전문의</li>
+                                <li>소아청소년과</li>
+                                <li>경기 의정부시</li>
+                                <li>월~토(격주휴무)</li>
+                                <li>연봉 Gross 35000이상</li>
+                            </ul>
+                        </div>
+                        <div class="careerNewList__row">
+                            <div class="careerNewList__like">
+                                <i class="fa fa-thumbs-up"></i>3
+                            </div>
+                            <div class="careerNewList__info">
+                                <ul class="careerNewList__label">
+                                    <li class="urgency">긴급초빙</li>
+                                    <li class="popularity">인기공고</li>
+                                </ul>
+                                <p class="careerNewList__deadline">~ 11/10 (수)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="careerNewList__item">
+                    <a href="">
+                        <div class="careerNewList__row">
+                            <div class="careerNewList__hospital">
+                                <p>덕수요양병원</p>
+                            </div>
+                        </div>
+                        <div class="careerNewList__row">
+                            <p class="careerNewList__subject">영등포 요양병원 평일 야간당직 선생님 모십니다.영등포 요양병원 평일 야간당직 선생님 모십니다.</p>
+                        </div>
+                        <div class="careerNewList__row">
+                            <ul class="careerNewList__cate">
+                                <li>전문의</li>
+                                <li>소아청소년과</li>
+                                <li>경기 의정부시</li>
+                                <li>월~토(격주휴무)</li>
+                                <li>연봉 Gross 35000이상</li>
+                            </ul>
+                        </div>
+                        <div class="careerNewList__row">
+                            <div class="careerNewList__like">
+                                <i class="fa fa-thumbs-up"></i>3
+                            </div>
+                            <div class="careerNewList__info">
+                                <p class="careerNewList__deadline">~ 11/10 (수)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="careerNewList__item">
+                    <a href="">
+                        <div class="careerNewList__row">
+                            <div class="careerNewList__hospital">
+                                <p>덕수요양병원</p>
+                            </div>
+                        </div>
+                        <div class="careerNewList__row">
+                            <p class="careerNewList__subject">영등포 요양병원 평일 야간당직 선생님 모십니다.영등포 요양병원 평일 야간당직 선생님 모십니다.</p>
+                        </div>
+                        <div class="careerNewList__row">
+                            <ul class="careerNewList__cate">
+                                <li>전문의</li>
+                                <li>소아청소년과</li>
+                                <li>경기 의정부시</li>
+                                <li>월~토(격주휴무)</li>
+                                <li>연봉 Gross 35000이상</li>
+                            </ul>
+                        </div>
+                        <div class="careerNewList__row">
+                            <div class="careerNewList__like">
+                                <i class="fa fa-thumbs-up"></i>3
+                            </div>
+                            <div class="careerNewList__info">
+                                <ul class="careerNewList__label">
+                                    <li class="urgency">긴급초빙</li>
+                                    <li class="popularity">인기공고</li>
+                                </ul>
+                                <p class="careerNewList__deadline">~ 11/10 (수)</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- E: 초빙공고개선 / 추가 -->
+        </div>
+    </div>
+
+    <!-- bottom fix -->
+    <div class="fixBtm">
+        <a href="#top" class="goToTop hide" onclick="$('html').stop().animate({ scrollTop:0 }, 800 );return false;"><span class="blind">맨 위로 이동</span></a>
+    </div>
+    <!-- // bottom fix -->
+
+
+
+<!-- S: 당겨서 새로고침 <div id="ptrMain"> .. </div> 영역에서 작동합니다. -->
+<script src="../../js/plugins/pullToRefresh.js"></script>
+<script>
+    PullToRefresh.init({
+        mainElement: '#ptrMain',
+        onRefresh: function() { 
+            alert('refresh') 
+        }
+    });
+</script>
+<!-- E: 당겨서 새로고침 -->   
+</body>
+</html>

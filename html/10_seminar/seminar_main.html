@@ -1,0 +1,300 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Inter MD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+    <meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+    <link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="../../js/plugins/jquery-3.2.1.js"></script>
+    <script src="../../js/plugins/swiper_3.3.1.js"></script>
+    <script src="../../js/ui_script_m.js"></script>   
+</head>
+<body>
+<div id="ptrMain">
+
+
+    
+    <!-- S: webinar -->
+    <div class="webinarMain__wrap mainContent">
+        <!-- live 지금진행중 -->
+        <div class="webinarLive">
+            <h2 class="webinarLive__title"><span>LIVE.</span> 지금 진행중</h2>
+            <div class="webinarLive__swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <!-- content -->
+                        <article class="webinarItem--live">
+                            <a href="#">
+                                <div class="webinarItem__top">
+                                    <span class="webinarItem__date">11.17(목) 13:00 </span>
+                                    <div class="webinarItem__topRt">
+                                        <button class="webinarItemBtn__question">질문</button>
+                                    </div>
+                                </div>
+                                <div class="webinarItem__cont">
+                                    <h1 class="webinarItem__topic">#1.Reassuring CV benefit of T2D patients from EMP</h1>
+                                    <div class="webinarItem__lecturer">
+                                        <span class="webinarItem__lecturerName">CHAIR.차봉수 교수님</span>
+                                        <span class="webinarItem__lecturerOffice">신촌세브란스병원 </span>                                        
+                                    </div>
+                                    <div class="webinarItem__lecturer">
+                                        <span class="webinarItem__lecturerName">김유리 교수님</span>
+                                        <span class="webinarItem__lecturerOffice">동국대학교 일산병원 심장혈관내과 </span>                                        
+                                    </div>
+                                    <div class="webinarItem__lecturer">
+                                        <span class="webinarItem__lecturerName">홍경순 교수님</span>
+                                        <span class="webinarItem__lecturerOffice">한림대학교 춘천성심병원 내분비대사외과 </span>                                        
+                                    </div>
+                                    <div class="webinarItem__linebox">
+                                        <div class="webinarItem__logo" style="color:#009594">Jardiance</div>
+                                        <div class="webinarItem__tag">
+                                            <span>마취통증의학과</span>
+                                            <span>직업환경의학과</span>
+                                            <span>갑상선내분비외과</span>
+                                        </div>
+                                    </div>
+                                    <div class="webinarItem__btngroup">
+                                        <button class="webinarItemBtn__enter"><span>입장하기</span></button>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                        <!-- // content -->
+                    </div>
+
+                    <div class="swiper-slide">
+                        <article class="webinarItem--live">
+                            <a href="#">
+                                <div class="webinarItem__top">
+                                    <span class="webinarItem__date">11.18(금) 18:00 </span>
+                                </div>
+                                <div class="webinarItem__cont">
+                                    <h1 class="webinarItem__topic">만성B형간염 치료 목표에 따른 HBV 약제 선택 기준과 최신 약제인 베믈리디의 역할</h1>
+                                    <div class="webinarItem__lecturer">
+                                        <span class="webinarItem__lecturerName">CHAIR.박중열 교수님</span>
+                                        <span class="webinarItem__lecturerOffice">서울아산병원​ 내분비내과 </span>                                        
+                                    </div>
+                                    <div class="webinarItem__lecturer">
+                                        <span class="webinarItem__lecturerName">홍경순 교수님</span>
+                                        <span class="webinarItem__lecturerOffice">한림대학교 춘천성심병원 내분비대사외과 </span>                                        
+                                    </div>
+                                    <div class="webinarItem__linebox">
+                                        <div class="webinarItem__logo" style="color:#008cd6">InterMD Original</div>
+                                        <div class="webinarItem__tag">
+                                            <span>마취통증의학과</span>
+                                            <span>직업환경의학과</span>
+                                            <span>갑상선내분비외과</span>
+                                        </div>
+                                    </div>
+                                    <div class="webinarItem__btngroup">
+                                        <button class="webinarItemBtn__enter"><span>입장하기</span></button>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="webinarLive__pagination"></div>
+            <script>
+                $(function(){
+                    if($('.webinarLive__swiper .swiper-slide').length>1){ // 컨텐츠 2개 이상일때 swipe 실행
+                        var swiperRank = new Swiper('.webinarLive__swiper', {
+                            slidesPerView: 'auto',
+                            preventClicks: true,
+                            preventClicksPropagation: false,
+                            observer: true,
+                            observeParents: true,
+                            loop: true,
+                            pagination: '.webinarLive__pagination',
+                            paginationClickable: true,
+                            autoplay: 3000
+                        });
+                    }
+                })
+            </script>
+        </div>
+        <!-- // live 지금진행중 -->
+        <div class="webinarMain">
+            <div class="webinarMain__top">
+                <h2 class="webinarMain__title">세미나 일정</h2>
+                <a href="#" class="webinarMain__btn">브랜드 보기</a>
+            </div>
+            <div class="webinarBrandCate">
+                <div class="swiper-wrapper">
+                    <a href="#" class="swiper-slide webinarBrandCate__item on"><span class="webinarBrandCate__itemText">전체</span></a>
+                    <a href="#" class="swiper-slide webinarBrandCate__item"><span class="webinarBrandCate__itemImg" style="background-image:url('https://file.intermd.co.kr/upload/202006/01/mo브랜드로고_202006011023351.png')"></span><span class="blind">InterMD Original</span></a>
+                    <a href="#" class="swiper-slide webinarBrandCate__item"><span class="webinarBrandCate__itemImg" style="background-image:url('http://placehold.it/128x128')"></span><span class="blind">HARVON</span></a>
+                    <a href="#" class="swiper-slide webinarBrandCate__item"><span class="webinarBrandCate__itemImg" style="background-image:url('http://placehold.it/128x128')"></span><span class="blind">HARVON</span></a>
+                    <a href="#" class="swiper-slide webinarBrandCate__item"><span class="webinarBrandCate__itemImg" style="background-image:url('http://placehold.it/128x128')"></span><span class="blind">HARVON</span></a>
+                    <a href="#" class="swiper-slide webinarBrandCate__item"><span class="webinarBrandCate__itemImg" style="background-image:url('http://placehold.it/128x128')"></span><span class="blind">HARVON</span></a>
+                    <a href="#" class="swiper-slide webinarBrandCate__item"><span class="webinarBrandCate__itemImg" style="background-image:url('http://placehold.it/128x128')"></span><span class="blind">HARVON</span></a>
+                    <a href="#" class="swiper-slide webinarBrandCate__item"><span class="webinarBrandCate__itemImg" style="background-image:url('http://placehold.it/128x128')"></span><span class="blind">HARVON</span></a>
+                    <a href="#" class="swiper-slide webinarBrandCate__item"><span class="webinarBrandCate__itemImg" style="background-image:url('http://placehold.it/128x128')"></span><span class="blind">HARVON</span></a>
+                </div>
+            </div>
+            <script>
+                var swiper = new Swiper('.webinarBrandCate', {
+                    slidesPerView: 'auto',
+                    preventClicks: true,
+                    preventClicksPropagation: false,
+                    observer: true,
+                    observeParents: true,
+                    
+                    onTap: function(swiper, event){
+                        var clickidx = swiper.clickedIndex;
+                        if(clickidx != undefined) {
+                            swiper.slides.removeClass('on').eq(clickidx).addClass('on');
+                            swiper.slideTo(clickidx -2, 300);
+                        }
+                    }
+                });
+                
+            </script>
+            
+            <div class="webinarSnb__box">
+                <a href="#" class="webinarSnb__item">준비중</a>
+                <a href="#" class="webinarSnb__item on">다시보기</a>
+            </div>
+
+            <div class="webinarList">
+                <div class="webinarList__nodata">
+                    <h2 class="webinarList__nodataTitle">현재 준비중인 세미나가 없습니다.</h2>
+                    <div class="webinarList__nodataDesc">
+                        <span>다시보기</span>에서 종료된 세미나<br>
+                        VOD를 보실 수 있습니다.
+                    </div>
+                </div>
+                <div class="webinarList__nodata">
+                    <h2 class="webinarList__nodataTitle">현재 등록된 VOD가 없습니다.</h2>
+                    <div class="webinarList__nodataDesc">
+                        <span>준비중</span>에서 예정된 세미나를<br>
+                        확인하실 수 있습니다.
+                    </div>
+                </div>
+                <!-- content -->
+                <article class="webinarItem--main">
+                    <a href="#">
+                        <div class="webinarItem__top">
+                            <span class="webinarItem__date">11.17(목) 13:00 </span>
+                            <!-- <span class="webinarBadge__VOD">VOD</span> -->
+                            <div class="webinarItem__topRt">
+                                <button class="webinarItemBtn__register">사전등록</button>
+                                <!-- <span class="webinarItem__register">사전등록 완료</span> -->
+                            </div>
+                        </div>
+                        <div class="webinarItem__cont">
+                            <h1 class="webinarItem__topic">
+                                19:00~19:10 Opening<br> 
+19:10~20:10 바쁜 진료 환경에서 도움이 되는 요통*환자 관리법; 약제 선택의 Paradigm shift<br> 
+20:10~21:10 NSAIDs를 통한 비수술적 OA/RA 통증 관리와 안전한 약제 선택<br> 
+21:10~21:40 Q&A / Discussion<br>
+<div style="font-size:12px">*Disclaimer: LBP caused by operation, OA, Ankylosing Spondylitis(celecoxib), neuropathic pain(pregabalin)</div>
+                            </h1>
+                            <div class="webinarItem__lecturer">
+                                <span class="webinarItem__lecturerName">CHAIR.차봉수 교수님</span>
+                                <span class="webinarItem__lecturerOffice">분당서울대학교병원 신촌세브란스병원 서울강남가톨릭병원 </span>                                        
+                            </div>
+                            <div class="webinarItem__linebox">
+                                <div class="webinarItem__logo" style="color:#009594">Jardiance</div>
+                                <div class="webinarItem__tag">
+                                    <span>마취통증의학과</span>
+                                    <span>직업환경의학과</span>
+                                    <span>갑상선내분비외과</span>
+                                </div>
+                            </div>
+                            <div class="webinarItem__btngroup">
+                                <button class="webinarItemBtn__enter"><span>상세보기</span></button>
+                            <!-- <button class="webinarItemBtn__enter"><span>VOD 다시보기</span></button> -->
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- // content -->
+                
+                <article class="webinarItem--main">
+                    <a href="#">
+                        <div class="webinarItem__top">
+                            <span class="webinarItem__date">11.17(목) 13:00 </span>
+                            <div class="webinarItem__topRt">
+                                <span class="webinarItem__register">사전등록 완료</span>
+                            </div>
+                        </div>
+                        <div class="webinarItem__cont">
+                            <h1 class="webinarItem__topic">만성B형간염 치료 목표에 따른 HBV 약제 선택 기준과 최신 약제인 베믈리디의 역할</h1>
+                            <div class="webinarItem__lecturer">
+                                <span class="webinarItem__lecturerName">CHAIR.차봉수 교수님</span>
+                                <span class="webinarItem__lecturerOffice">신촌세브란스병원 </span>                                        
+                            </div>
+                            <div class="webinarItem__lecturer">
+                                <span class="webinarItem__lecturerName">김유리 교수님</span>
+                                <span class="webinarItem__lecturerOffice">동국대학교 일산병원 심장혈관내과 </span>                                        
+                            </div>
+                            <div class="webinarItem__lecturer">
+                                <span class="webinarItem__lecturerName">홍경순 교수님</span>
+                                <span class="webinarItem__lecturerOffice">한림대학교 춘천성심병원 내분비대사외과 </span>                                        
+                            </div>
+                            <div class="webinarItem__linebox">
+                                <div class="webinarItem__logo" style="color:#008cd6">InterMD Original</div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+                <article class="webinarItem--main">
+                    <a href="#">
+                        <div class="webinarItem__top">
+                            <span class="webinarItem__date">11.17(목) 13:00 </span><span class="webinarBadge__VOD">VOD</span>
+                        </div>
+                        <div class="webinarItem__cont">
+                            <h1 class="webinarItem__topic">만성B형간염 치료 목표에 따른 HBV 약제 선택 기준과 최신 약제인 베믈리디의 역할</h1>
+                            <div class="webinarItem__lecturer">
+                                <span class="webinarItem__lecturerName">홍경순 교수님</span>
+                                <span class="webinarItem__lecturerOffice">한림대학교 춘천성심병원 내분비대사외과 </span>                                        
+                            </div>
+                            <div class="webinarItem__linebox">
+                                <div class="webinarItem__logo" style="color:#009594">Jardiance</div>
+                                <div class="webinarItem__tag">
+                                    <span>마취통증의학과</span>
+                                    <span>직업환경의학과</span>
+                                    <span>갑상선내분비외과</span>
+                                </div>
+                            </div>
+                            <div class="webinarItem__btngroup">
+                                <button class="webinarItemBtn__enter"><span>VOD 다시보기</span></button>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </div>
+    <!-- E: webinar -->
+
+    <!-- bottom fix -->
+    <div class="fixBtm">
+        <a href="#top" class="goToTop hide" onclick="$('html').stop().animate({ scrollTop:0 }, 800 );return false;"><span class="blind">맨 위로 이동</span></a>
+    </div>
+    <!-- // bottom fix -->
+
+
+
+</div>
+<!-- S: 당겨서 새로고침 <div id="ptrMain"> .. </div> 영역에서 작동합니다. -->
+<script src="../../js/plugins/pullToRefresh.js"></script>
+<script>
+    PullToRefresh.init({
+        mainElement: '#ptrMain',
+        onRefresh: function() { 
+            alert('refresh') 
+        }
+    });
+</script>
+<!-- E: 당겨서 새로고침 -->   
+</body>
+</html>

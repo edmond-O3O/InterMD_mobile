@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> Inter MD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+<script src="../../js/plugins/swiper_3.3.1.js"></script>
+<script src="../../js/ui_script_m.js"></script>
+<body>
+
+<!-- S: header -->
+<div class="detail__topline">
+    <h2>연수교육 일정</h2>
+    <a href="#" class="detail__rt"><i class="xi-close"></i><span class="blind">닫기</span></a>
+</div>
+<!-- E: header -->
+
+
+<div class="schedule__banner swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><a href="#"><img src="https://source.unsplash.com/random/750x324" alt=""></a></div>
+        <div class="swiper-slide"><a href="#"><img src="https://file.intermd.co.kr/upload/201904/18/PC%EC%BB%A4%EB%84%A5%ED%8A%B8%EC%83%81%EB%8B%A8_201904181029371.png" alt=""></a></div>
+        <div class="swiper-slide"><a href="#"><img src="https://file.intermd.co.kr/upload/201909/11/%ED%9A%8C%EC%9B%90%ED%98%9C%ED%83%9D_201909111136591.png" alt=""></a></div>
+        <div class="swiper-slide"><a href="#"><img src="https://file.intermd.co.kr/upload/201904/18/PC%EC%BB%A4%EB%84%A5%ED%8A%B8%EC%83%81%EB%8B%A8_201904181029371.png" alt=""></a></div>
+    </div>
+    <div class="schedule__pagination"></div>
+</div>
+<script>
+    $(function(){
+        var swiperRank = new Swiper('.schedule__banner', {
+            slidesPerView: 'auto',
+            preventClicks: true,
+            preventClicksPropagation: false,
+            observer: true,
+            observeParents: true,
+            loop: true,
+            pagination: '.schedule__pagination',
+            paginationClickable: true,
+            autoplay: 3000
+        });
+    })
+</script>
+
+<h3 class="comm__h3title">인터엠디가 추천하는 연수교육</h3>
+<div class="schedule__list">
+    <div class="schedule__item">
+        <a href="#">
+            <div class="img" style="background-image:url('https://file.intermd.co.kr/upload/201807/03/201807031604071.png')"></div>
+            <!-- <div class="img" style="background-image:url('https://file.intermd.co.kr/upload/201807/03/201807031604071.png')"></div> -->
+            <div class="schedule__textbox">
+                <i class="badge">사전등록중</i>
+                <div class="subject">대한흉부심장혈관외과의사회</div>
+                <div class="date">2019.07.22</div>
+                <div class="detail">
+                    <span class="region">서울특별시</span>동국대병원 지하 1층 제3세미나실
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<hr class="line">
+
+<h3 class="comm__h3title">필수평점 연수교육</h3>
+<div class="schedule__list">
+    <div class="schedule__item">
+        <a href="#">
+            <div class="img" style="background-image:url('https://file.intermd.co.kr/upload/201807/03/201807031604071.png')"></div>
+            <div class="schedule__textbox">
+                <i class="badge">사전등록중</i>
+                <div class="subject">대한흉부심장혈관외과의사회 2019년 추계학술대회</div>
+                <div class="date">2019.07.22</div>
+                <div class="detail">
+                    <span class="region">서울특별시</span>동국대병원 지하 1층 제3세미나실
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="schedule__item">
+        <a href="#">
+            <div class="img" style="background-image:url('https://file.intermd.co.kr/upload/201807/03/201807031604071.png')"></div>
+            <div class="schedule__textbox">
+                <div class="subject">The 63rd Annual Congress of the Korean Orthopaedic Association Orthopaedic Association</div>
+                <div class="date">2019.07.22</div>
+                <div class="detail">
+                    <span class="region">부산광역시</span>부산성모병원 4층 베네딕토홀
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="schedule__item">
+        <a href="#">
+            <div class="img" style="background-image:url('https://file.intermd.co.kr/upload/201807/03/201807031604071.png')"></div>
+            <div class="schedule__textbox">
+                <div class="subject">대한흉부심장혈관외과의사회</div>
+                <div class="date">2019.07.22</div>
+                <div class="detail">
+                    <span class="region">부산광역시</span>부산성모병원 4층
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="schedule__guide">
+    본 일정은 KMA 교육센터에서 제공하는<br>
+    필수 연수교육 일정입니다.
+</div>
+
+</body>
+</html>

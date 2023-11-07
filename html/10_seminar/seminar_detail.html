@@ -1,0 +1,511 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">    
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> Inter MD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+<script src="../../js/plugins/swiper_3.3.1.js"></script>
+<script src="../../js/ui_script_m.js"></script>
+<body>
+
+<!-- S: header -->
+<div class="detail__topline">
+    <h2>Kanarb</h2>
+    <a href="#" class="detail__rt"><i class="xi-close"></i><span class="blind">닫기</span></a>
+</div>
+<!-- E: header -->
+
+<div class="webinar__content--detail"> <!-- class --detail -->
+    <div class="webinarDet">
+        <!-- 영상 -->
+        <div class="webinarDet__videoBox">
+            <div class="webinarDet__video">            
+                <video style="position:absolute;top:0;left:0;width:100%; height:100%" controls playsinline poster="https://tf20.intermd.co.kr/upload/201912/04/InterMD_201912041008340_65c023a9.gif">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+        </div>
+
+        <!-- S: 웨비나 정보 -->
+        <div class="webinarDet__infoBox">
+            <!-- 웨비나 info -->
+            <div class="webinarDet__summary">
+                <div class="webinarDet__summaryTitle">재발성요로감염(방광염/전립선염)의 진단과 치료-실제적접근에 대한 방법</div>
+                <div class="webinarDet__summaryMid">
+                    <span class="webinarBadge__live">LIVE</span>
+                    <span class="webinarBadge__close">종료</span>
+                    <span class="webinarBadge__VOD">VOD</span>
+                    <span class="webinarBadge__ready">준비중</span>
+                    <span class="webinarBadge__poll">Poll</span>
+                    <span class="webinarDet__summaryDate">03.02(화) 18:00</span>
+                </div>
+                <div class="webinarDet__summaryBtns">
+                    <button type="button" class="webinarDet__btnRegister">사전등록</button>
+                    <button type="button" class="webinarDet__btnQna" onclick="FieldShow()">Q&amp;A</button>
+                    <button type="button" class="webinarDet__btnShare" onclick="$('#menu-9').show().addClass('on');">공유하기</button>
+                    <button type="button" class="webinarDet__btnQuestion" onclick="FieldShow()">질문하기</button>
+                    <!-- 설문조사 버튼 추가 20200413 -->
+                    <button type="button" class="webinarDet__btnSurvey" onclick="$('.webinarDet__surveyBox').show();"><span>설문조사</span></button> 
+                </div>
+
+                <!-- S: 230227_v-Detailing 예약 바로가기 추가 -->
+                <div class="webinarDet__vDtBtn">
+                    <a href="">
+                        <div class="tit">v-Detailing 예약 바로가기<i class="xi-angle-right"></i></div>
+                        <span class="desc">원하는 시간에 1:1 화상면담에 참여하세요!</span>
+                    </a>
+                </div>
+                <!-- E: 230227_v-Detailing 예약 바로가기 추가 -->
+            </div>
+        
+            <!-- lecturer -->
+            <div class="webinarDet__lecturer" id="lecturer1">
+                <div class="webinarDet__profile">
+                    <span class="webinarDet__profileImg" style="background-image:url()"></span>
+                    <span class="webinarDet__profileTitle">CHAIR.차봉수 교수님</span>
+                    <div class="webinarDet__profileDesc">신촌세브란스병원 비뇨기과</div>
+                </div>
+                <div class="webinarDet__body">
+                    <div class="webinarDet__bodyContent">
+                        #학력<br>
+                        - 1 가톨릭대학교 의학 학사<br>
+                        - 2 가톨릭대학교 비뇨기과학 석사<br>
+                        - 3 가톨릭대학교 비뇨기과학 박사<br>
+                        - 4 가톨릭대학교 비뇨기과학 박사<br>
+                        - 5 가톨릭대학교 비뇨기과학 박사<br>
+                        <br>
+                        #경력<br>
+                        -성빈센트병원 비뇨기암센터장(현)<br>
+                        -성빈센트병원 비뇨의학과 임상과장(현)<br>
+                        <br>
+                        #학회활동<br>
+                        -대한비뇨의학회 기획이사<br>
+                        -대한요로생식기감염학회 이사<br>
+                        -아시아요로생식기감염학회부회장<br>
+                        -대한전립선학회협력부회장<br>
+                        (끝)
+                    </div>
+                    <a href="#lecturer1" class="webinarDet__bodyBtn" onclick="$(this).closest('.webinarDet__body').toggleClass('unfold');"><span class="blind">약력 더보기</span></a>
+                </div>
+            </div>
+        
+            <!-- lecturer -->
+            <div class="webinarDet__lecturer" id="lecturer2">
+                <div class="webinarDet__profile">
+                    <span class="webinarDet__profileImg" style="background-image:url()"></span>
+                    <span class="webinarDet__profileTitle">CHAIR.손석구 교수님</span>
+                    <div class="webinarDet__profileDesc">순천향병원 호흡기내과</div>
+                </div>
+                <div class="webinarDet__body">
+                    <div class="webinarDet__bodyContent">
+                        #학력<br>
+                        -가톨릭대학교 의학 학사<br>
+                        -가톨릭대학교 비뇨기과학 석사<br>
+                        -가톨릭대학교 비뇨기과학 박사<br>
+                        <br>
+                        #경력<br>
+                        -성빈센트병원 비뇨기암센터장(현)<br>
+                        -성빈센트병원 비뇨의학과 임상과장(현)<br>
+                        <br>
+                        #학회활동<br>
+                        -대한비뇨의학회 기획이사<br>
+                        -대한요로생식기감염학회 이사<br>
+                        -아시아요로생식기감염학회부회장<br>
+                        -대한전립선학회협력부회장<br>
+                    </div>
+                    <a href="#lecturer2" class="webinarDet__bodyBtn" onclick="$(this).closest('.webinarDet__body').toggleClass('unfold');"><span class="blind">약력 더보기</span></a>
+                </div>
+            </div>
+        
+            <!-- lecturer -->
+            <div class="webinarDet__lecturer">
+                <div class="webinarDet__profile">
+                    <span class="webinarDet__profileImg" style="background-image:url()"></span>
+                    <span class="webinarDet__profileTitle">CHAIR.손석구 교수님</span>
+                    <div class="webinarDet__profileDesc">순천향병원 호흡기내과</div>
+                </div>
+                <div class="webinarDet__body">
+                    #학력<br>
+                    -가톨릭대학교 의학 학사<br>
+                    -가톨릭대학교 비뇨기과학 석사<br>
+                    -가톨릭대학교 비뇨기과학 박사<br>
+                    <br>
+                    #경력<br>
+                    -성빈센트병원 비뇨기암센터장(현)<br>
+                    -성빈센트병원 비뇨의학과 임상과장(현)<br>
+                    <br>
+                    #학회활동<br>
+                    -대한비뇨의학회 기획이사<br>
+                    -대한요로생식기감염학회 이사<br>
+                    -아시아요로생식기감염학회부회장<br>
+                    -대한전립선학회협력부회장<br>
+                </div>
+            </div>
+        
+            <!-- S: 학회안내 -->
+            <div class="webinarSmnDesc">
+                <h3 class="webinarSmnDesc__h3">Information</h3 class="webinarSmnDesc__h3">
+                <dl class="webinarSmnDesc__top">
+                    <dt>세미나명</dt>
+                    <dd>Kanarb</dd>
+                    <dt>이메일</dt>
+                    <dd><a href="mailto:lee_diane_nina@lilly.com">lee_diane_nina@lilly.com</a></dd>
+                    <dt>홈페이지</dt>
+                    <dd><a href="https://www.lilly.co.kr" target="_blank">https://www.lilly.co.kr</a></dd>
+                </dl>
+                <div class="webinarSmnDesc__text">
+                    안녕하십니까? 선생님의 건승과 발전을 기원드리며, 저희 한국 릴리에서는 선생님과 뜻깊은 시간을 나누고자 합니다. Jardiance Web Symposium은 온라인을 통해 만나보실 수 있는 심포지엄으로 SGLT-2억제제 계열의 자디앙과 함께 유익한 정보를 만나보시는 소중한 계기가 될 것입니다. 당뇨병 치료와 관련하여 보다 다양한 고견을 나누어 보실 수 있도록 프로그램을 준비 하였습니다. 모쪼록 많은 관심과 참여 부탁드립니다. 감사합니다. 한국릴리
+                    드림.
+                </div>
+            </div>
+            <!-- E: 학회안내 -->
+        </div>
+        <!-- E: 웨비나 정보 -->
+
+        <!-- S: 실시간 QnA, 질문하기 -->
+        <div class="webinarDet__questionBox" style="display: none;">
+            <div class="webinarDet__questionBoxInr">
+                <div class="webinarDet__layerTitle">
+                    <h3 class="webinarDet__layerH3">실시간 Q&amp;A</h3>
+                    <!-- <h3 class="webinarDet__layerH3">질문하기</h3> -->
+                    <button type="button" class="webinarDet__layerClose" onclick="FieldHide()"><i class="xi-close"></i><span class="blind">닫기</span></button>
+                </div>
+                    
+                <!--S: 작성폼 -->
+                <div class="webinarField">
+                    <div class="webinarField__text">*채택된 질문은 방송으로 답변을 드립니다.</div>
+                    <!-- <div class="webinarField__text">*등록된 질문은 회원님의 이메일로 답변을 드립니다.</div> -->
+                    <div class="webinarField__content">
+                        <!-- S: 텍스트 입력 영역 -->
+                        <div class="webinarField__input">
+                            <textarea name="text" class="webinarField__textarea" placeholder="내용을 입력해주세요."></textarea>
+                        </div>
+                    </div>
+                    <div class="webinarField__btn">
+                        <!-- <button type="submit" class="btn_msg"><span class="blind">전송</span></button> -->
+                        <button type="submit" class="btn_msg on"><span class="blind">전송</span></button>
+                    </div>
+                </div>
+                <!--E: 작성폼 -->
+            </div>
+        </div>
+        <!-- E: 실시간 QnA, 질문하기 -->
+
+        <!-- S: 설문하기 20200413 -->
+        <div class="webinarDet__surveyBox" style="display: none;">
+            <div class="webinarDet__surveyBoxInr">
+                <div class="webinarDet__layerTitle">
+                    <h3 class="webinarDet__layerH3">설문조사</h3>
+                    <button type="button" class="webinarDet__layerClose" onclick="$('.webinarDet__surveyBox').hide();return false;"><i class="xi-close"></i><span class="blind">닫기</span></button>
+                </div>
+                    
+                <!--S: 작성폼 -->
+                <div class="webinarDet__surveyBoxCont">
+                    <div class="webinarDet__surveyBoxForm">
+                        <div class="pollDetail__desc">
+                            의료법 '정보 누설 금지' 조항에 따르면, 의료인이나 의료기관 종사자는 법이 정한 특별한 경우 외에는 의료 업무나 관련 서류 등의 정보를 다른 사람에게 누설하거나 발표하지 못하게 규정되어 있습니다. 하지만, 북한병사 논란에 이어 최근 강서구 PC방 사건 등을 통해 의료인에 의해 환자의 정보가 공개된 바 있어 이에 대한 논란이 일고 있습니다.
+                        </div>
+                        <div class="poll__list">
+                            <ul>
+                                <li>
+                                    <!-- checkbox button -->
+                                    <div class="poll__dt"><span class="bul">질문1</span>새로운 의약품에 대한 정보는 어디에서 확인하시나요? <span class="s_text">(복수선택 가능)</span></div>
+                                    <div class="poll__dd">
+                                        <span class="inputbox__checkbox"> <label><input type="checkbox" name=""><span class="text">지인 추천</span></label> </span>
+                                        <span class="inputbox__checkbox"> <label><input type="checkbox" name=""><span class="text">커뮤니티 내 추천/홍보글</span></label> </span>
+                                        <span class="inputbox__checkbox"> <label><input type="checkbox" name=""><span class="text">네이버 키워드 광고 (의학지식 검색 중 검색 결과에 추천사이트로 표시되어 알게 됨)</span></label> </span>
+                                        <span class="inputbox__checkbox"> <label><input type="checkbox" name=""><span class="text">페이스북 광고 및 이벤트</span></label> </span>
+                                        <span class="inputbox__checkbox"> <label><input type="checkbox" name=""><span class="text">언론기사/잡지</span></label> </span>
+                                        <span class="inputbox__checkbox"> <label><input type="checkbox" name=""><span class="text">학회</span></label> </span>
+                                        <span class="inputbox__complex">
+                                            <span class="inputbox__checkbox"> <label><input type="checkbox" name="" value=""><span class="text">기타</span></label> </span>
+                                            <span class="inputbox__text"><input type="text" name="" value="" placeholder="기타사항을 작성해 주세요."></span>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <!-- Radio button -->
+                                    <div class="poll__dt"><span class="bul">질문2</span>환자와의 라포형성, 경험상 치료에 도움이 되시나요?다지 선다형</div>
+                                    <div class="poll__dd">
+                                        <span class="inputbox__radio"> <label><input type="radio" name="" value=""><span class="text">도움이 된다.</span></label> </span>
+                                        <span class="inputbox__radio"> <label><input type="radio" name="" value=""><span class="text">도움이 되지 않는다.</span></label> </span>
+                                        <span class="inputbox__complex">
+                                            <span class="inputbox__radio"> <label><input type="radio" name="" value=""><span class="text">기타</span></label> </span>
+                                            <span class="inputbox__text"><input type="text" name="" value="" placeholder="기타사항을 작성해 주세요."></span>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <!-- 서술형 -->
+                                    <div class="poll__dt"><span class="bul">질문4</span>환자와의 라포형성, 경험상 치료에 도움이 되시나요?환자와의 라포형성, 경험상 치료에 도움이 되시나요? 서술형</div>
+                                    <div class="poll__dd">
+                                        <textarea name="" id="" rows="5" class="inputbox__textarea" placeholder="기타 의견을 기술해주세요."></textarea>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="webinarDet__surveyBoxBtn">
+                        <button class="button blue">보내기</button>
+                    </div>
+                </div>
+                <!--E: 작성폼 -->
+            </div>
+        </div>
+        <!-- E: 설문하기 -->
+
+
+        <script>
+            // 비디오 영역외 스크롤 처리
+            $(window).resize(function(){
+                var wbnOtherSize = $('.webinarDet__videoBox').outerHeight()+$('.detail__topline').outerHeight();
+                $('.webinarDet__infoBox').css('height','calc(100vh - '+ wbnOtherSize +'px)' )
+                $('.webinarDet__surveyBoxCont').css('height','calc(100vh - '+ (wbnOtherSize + $('.webinarDet__layerTitle').outerHeight()) +'px)' ) // 설문조사 높이 조정
+            }).trigger('resize');
+
+            // 질문필드 show hide
+            function FieldShow(){
+                // $('.webinarDet__infoBox').hide();
+                $('.webinarDet__questionBox').show().addClass('on');
+                $('.webinarField__textarea').focus();
+            }
+            function FieldHide(){
+                // $('.webinarDet__infoBox').show();
+                $('.webinarDet__questionBox').removeClass('on').delay(500).hide(0);
+                $('.webinarField__textarea').focusout();
+            }
+
+        </script>
+    </div>
+</div>
+
+
+<div id="menu-9" class="share" style="display:none">
+    <div class="share__inner">
+        <div class="share__item">
+            <button onclick="gfn_shareLinkCopy()">
+                <span class="icon_url"></span>
+                <hidden type="text" name="pop_share_url" id="_pop_share_url" value="https://www.intermd.co.kr/" readonly="readonly">
+                <div class="share__text">URL 복사</div>
+            </hidden></button>
+        </div>
+        <div class="share__item">
+            <button onclick="gfn_shareLink()">
+                <span class="icon_app"></span>
+                <div class="share__text">앱으로 공유</div>
+            </button>
+        </div>
+        <button class="share__btn" onclick="$('#menu-9').removeClass('on').delay(500).hide(0);return false;"><i class="xi-close"></i><span class="blind">닫기</span></button>			
+    </div>
+    <div class="share__dim" ontouchstart="$('#menu-9').removeClass('on').delay(500).hide(0);return false;"></div>
+</div>
+
+<!-- S: 230119_페이지 자동 이동 팝업 -->
+<div class="webinarAlertModal ">
+    <div class="webinarAlertModal__cont">
+        <a href="" class="webinarAlertModal__close"><i class="xi-close-thin"></i></a>
+        <div class="webinarAlertModal__checkIco">
+            <i class="xi-check"></i>
+        </div>
+        <div class="webinarAlertModal__text">
+            <span>3초 뒤</span><br>
+            해당 제약사 웹세미나 페이지로<br>
+            바로 이동합니다.
+        </div>
+        <button class="webinarAlertModal__bottomBtn">바로 이동</button>
+    </div>
+    <div class="webinarAlertModal__bg"></div>
+</div>
+<!-- E: 230119_페이지 자동 이동 팝업 -->
+
+<!-- S: 230227_디테일카드팝업 -->
+<div class="vDtCardPopup active">
+    <div class="vDtCardPopup__cont">
+        <div class="vDtCardPopup__top">
+            <div class="tit">지금 바로 담당자를 만나보세요.</div>
+            <div class="desc">비대면 화상통화 상담이 가능합니다.</div>
+        </div>
+        <div class="vDtCardPopup__swiper swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide vDtCardPopup__card">
+                    <a href="" class="card">
+                        <div class="cardTop bg1">
+                            <div class="opacity"></div>
+                            <div class="logo">
+                                <img src="https://via.placeholder.com/200x100">
+                            </div>
+                        </div>
+                        <div class="cardBottom">
+                            <div class="cardProfile">
+                                <div class="cardPhoto">
+                                    <div class="cardPop">
+                                        <strong>38명</strong> 참여!
+                                    </div>
+                                    <img src="https://tw20.intermd.co.kr/image/profile_no.jpg" alt="">
+                                </div>
+                                <p class="cardName">이지안 MR</p>
+                                <p class="cardAffiliation">보령제약</p>
+                            </div>
+
+                            <div class="cardDetail">
+                                <p class="cardTxt">신장애</p>
+                                <div class="cardTag">
+                                    <ul class="swiper-wrapper">
+                                        <li class="swiper-slide">타이레놀</li>
+                                        <li class="swiper-slide">타이레놀 A</li>
+                                        <li class="swiper-slide">아스트라 제네카</li>
+                                        <li class="swiper-slide">아목시실린</li>
+                                        <li class="swiper-slide">탁센</li>
+                                        <li class="swiper-slide">후시딘</li>
+                                        <li class="swiper-slide">이지엔</li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide vDtCardPopup__card">
+                    <a href="" class="card">
+                        <div class="cardTop bg2">
+                            <div class="opacity"></div>
+                            <div class="logo">
+                                <img src="https://via.placeholder.com/200x100">
+                            </div>
+                        </div>
+                        <div class="cardBottom">
+                            <div class="cardProfile">
+                                <div class="cardPhoto">
+                                    <div class="cardPop">
+                                        <strong>38명</strong> 참여!
+                                    </div>
+                                    <img src="https://tw20.intermd.co.kr/image/profile_no.jpg" alt="">
+                                </div>
+                                <p class="cardName">이지안 MR</p>
+                                <p class="cardAffiliation">보령제약</p>
+                            </div>
+
+                            <div class="cardDetail">
+                                <p class="cardTxt">신장애</p>
+                                <div class="cardTag">
+                                    <ul class="swiper-wrapper">
+                                        <li class="swiper-slide">타이레놀</li>
+                                        <li class="swiper-slide">타이레놀 A</li>
+                                        <li class="swiper-slide">아스트라 제네카</li>
+                                        <li class="swiper-slide">아목시실린</li>
+                                        <li class="swiper-slide">탁센</li>
+                                        <li class="swiper-slide">후시딘</li>
+                                        <li class="swiper-slide">이지엔</li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide vDtCardPopup__card">
+                    <a href="" class="card">
+                        <div class="cardTop bg3">
+                            <div class="opacity"></div>
+                            <div class="logo">
+                                <img src="https://via.placeholder.com/200x100">
+                            </div>
+                        </div>
+                        <div class="cardBottom">
+                            <div class="cardProfile">
+                                <div class="cardPhoto">
+                                    <div class="cardPop">
+                                        <strong>38명</strong> 참여!
+                                    </div>
+                                    <img src="https://tw20.intermd.co.kr/image/profile_no.jpg" alt="">
+                                </div>
+                                <p class="cardName">이지안 MR</p>
+                                <p class="cardAffiliation">보령제약</p>
+                            </div>
+
+                            <div class="cardDetail">
+                                <p class="cardTxt">신장애</p>
+                                <div class="cardTag">
+                                    <ul class="swiper-wrapper">
+                                        <li class="swiper-slide">타이레놀</li>
+                                        <li class="swiper-slide">타이레놀 A</li>
+                                        <li class="swiper-slide">아스트라 제네카</li>
+                                        <li class="swiper-slide">아목시실린</li>
+                                        <li class="swiper-slide">탁센</li>
+                                        <li class="swiper-slide">후시딘</li>
+                                        <li class="swiper-slide">이지엔</li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <div class="vDtCardPopup__bg"></div>
+</div>
+<script>
+    var badgeSwiper;
+    var spaceMargin = 6;
+    /* S: 230315_스크립트 수정 */
+    $(function(){
+        badgeSwiper = new Swiper('.cardTag', {
+            slidesPerView: 'auto',
+            spaceBetween: spaceMargin,
+            preventClicks: true,
+            preventClicksPropagation: false,
+            observer: true,
+            observeParents: true,
+            loop: false,
+            freeMode: true,
+        });
+    })
+    $(document).ready(function() {
+        var badge = [];
+        var badgeWidth = 0;
+        var marginRight = spaceMargin;
+        badge = $('.cardTag .swiper-slide');
+        var $wrapper = $('.cardTag .swiper-wrapper');
+        for(var i=0; i<badge.length; i++){
+            badgeWidth += badge[i].offsetWidth;
+            badgeWidth += marginRight*badge.length
+        }
+        if(badgeWidth > $wrapper[0].offsetWidth){
+            $('.cardTag').addClass('overflow');
+        }
+    });    
+    /* E: 230315_스크립트 수정 */
+    var vDtCardSwiper = new Swiper(".vDtCardPopup__swiper", {
+        slidesPerView: "1.6",
+        spaceBetween: 15,
+        centeredSlides: true,
+        pagination: ".swiper-pagination",
+    });
+
+    $(".webinarDet__vDtBtn").click(function(e){
+        e.preventDefault();
+        $(".vDtCardPopup").addClass("active");			
+        vDtCardSwiper.update();
+        vDtCardSwiper.slideTo(0,0,false);
+    });
+
+    $(".vDtCardPopup__bg").click(function(){
+        $(".vDtCardPopup").removeClass("active");
+    });
+</script>
+<!-- E: 230227_디테일카드팝업 -->
+
+</body>
+</html>

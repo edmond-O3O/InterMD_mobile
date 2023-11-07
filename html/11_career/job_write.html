@@ -1,0 +1,678 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes, viewport-fit=cover" />
+<link rel="shortcut icon" href="https://file.intermd.co.kr/interMD-Favicon32.ico">
+<title>InterMD</title>
+<meta property="fb:app_id" content="339657186446847" />
+<meta property="og:url"           content="https://www.intermd.co.kr" />
+<meta property="og:title"         content="의사만을 위한 Professional Knowledge Place" id="metaTitle" />
+<meta property="og:description"   content="의사만을 위한 Professional Knowledge Place" />
+<meta property="og:image"         content="https://file.intermd.co.kr/InterMD_logo_v2.png" />
+
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/style.css?v=201902150">
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/framework.css?v=20190215">
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://www.intermd.co.kr/mobile/styles/swiper.min.css">
+<!--font-->
+<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/font/noto_v3.css">
+<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/xeicon/xeicon.min.css">
+<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--custom-->
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/base.css?v=20190215">  
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/custom.css?v=20190215">  
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/sub.css?v=20190215">  
+<link type="text/css" rel="stylesheet" href="https://www.intermd.co.kr/mobile/styles/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="https://www.intermd.co.kr/mobile/styles/xpull.css">
+
+<script type="text/javascript" src="https://www.intermd.co.kr/mobile/scripts/jquery.js"></script>
+<script type="text/javascript" src="https://www.intermd.co.kr/mobile/scripts/custom.js"></script>
+
+
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+
+
+
+
+
+<body class="modal write_modal_wrap posting-qna">
+    <div id="page-wrap">
+        <div id="page-content" class="page-content bg_fff">
+            <div id="page-content-scroll">
+                <div class="top_fixed_wrap line">
+                    <h2>초빙 공고 작성하기<a href="javascript:void(0);" class="right" onclick="javascript:fn_goExit();"><i class="xi-close"></i></a></h2> 
+                </div>
+                
+                
+                <div class="write_modal_container write_modal_container02">
+                    
+                    <div class="careerWriteJob">
+                    <form id="frmSavePosting" name="frmSavePosting" method="post">
+		            	<input type="hidden" id="tempCheck" name="tempCheck" value=""/>	    <!-- 임시저장 여부 확인 -->
+		            	<input type="hidden" id="postingTempYn" name="postingTempYn" value="N" />
+						<input type="hidden" id="postingReadCnt" name="postingReadCnt" value="0" />
+						<input type="hidden" id="postingPseq" name="postingPseq" value="" />
+						<input type="hidden" name="postingType" />
+						<input type="hidden" name="blacklistYn" value="N" />
+						<input type="hidden" name="readCnt" value="0" />
+						<input type="hidden" name="likeCnt" value="0" />
+						<input type="hidden" name="bookmarkCnt" value="0" />
+						<input type="hidden" name="shareCnt" value="0" />
+						<input type="hidden" name="replyCnt" value="0" />
+						<input type="hidden" name="fileListJ" value="" />
+						<input type="hidden" id="preUrl" name="preUrl" value="" />
+                        
+                        <div class="careerWriteJob__title">제목 및 내용 <i class="careerWriteJob__essential">*</i></div>
+                        
+                        <div class="careerWriteJob__section">
+                            <div class="careerWriteJob__article">
+                                <div class="text_write_area">
+                                    <textarea name="" id="" class="write__textarea subject" placeholder="공고 제목을 입력해주세요."></textarea>
+                                </div>
+
+                                <div class="text_write_area careerNewWrite__pic">
+                                    <div class="modal_text_block">
+                                        <div id="hospitalFile" style="border-right: 1px solid rgba(0,0,0,0.1); border-left: 1px solid rgba(0,0,0,0.1);">
+                                            <div id="div_attachedhospitalFile" class="attached">
+                                                <div id="div_uihospitalFile" class="attach">
+                                                    <ul id="ul_media_hospitalFile">
+                                                        <li class="attach_img c_img" style="background-image:url(https://tf20.intermd.co.kr/Thumb_upload/202201/05/InterMD_202201051104211_3a9b3b74.jpg)">
+                                                            <i class="delete xi-close-thin"></i>
+                                                        </li>
+                                                        <li class="attach_img c_img" style="background-image:url(https://tf20.intermd.co.kr/Thumb_upload/202201/05/InterMD_202201051104212_7e2a8c78.jpg)">
+                                                            <i class="delete xi-close-thin"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div id="div_hospitalFile"></div>
+                                            </div>
+                                            <div class="modal_attach_comment" style="border-top: 1px solid rgba(0,0,0,0.1);">
+                                            <span class="file_wrap file">
+                                                <button type="button"></button>
+                                            </span>
+                                            <span class="file_txt">병원 사진을 첨부해주세요. (최대 3장)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="text_write_area">
+                                    <div class="modal_text_block">
+                                        <div class="text_write_area">
+                                            <textarea id="postingContent" name="postingContent" placeholder="상세내용을 입력해주세요." class="write__textarea" rows="12"></textarea>
+                                        </div>
+                                        <div class="modal_attach_comment" id="posting_file_layer">
+                                            <div id="div_attachedposting_file_layer">
+                                                <div id="div_uiposting_file_layer">
+                                                    <ul id="ul_media_posting_file_layer"></ul>
+                                                </div>
+                                                <div id="div_posting_file_layer"></div>
+                                            </div>
+                                            <div class="modal_attach_comment">
+                                                <!-- <span class="file_wrap images">
+                                                    <input type="file" multiple="multiple" name="file" accept="image/*, video/*">
+                                                </span> -->
+                                                <span class="file_wrap file">
+                                                    <input type="file" multiple="multiple" name="file">
+                                                </span>
+                                                <span class="file_txt">사진/영상/파일 최대 10개 가능</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="careerWriteJob__title">병원 정보</div>
+                        <div class="careerWriteJob__section">
+                            <div class="careerWriteJob__article">
+                                <div class="careerWriteJob__titleDep2">병원명 <i class="careerWriteJob__essential">*</i></div>
+                                <input type="text" class="form__ipt" placeholder="병원명을 입력해주세요." autocomplete="off" maxlength="50">
+                            </div>
+
+                            <div class="careerWriteJob__article">
+                                <div class="careerWriteJob__titleDep2">병원 주소 <i class="careerWriteJob__essential">*</i></div>
+                                <input type="text" class="form__ipt" placeholder="병원 주소를 입력해주세요." autocomplete="off" maxlength="150">
+                            </div>
+
+                            <div class="careerWriteJob__article">
+                                <div class="careerWriteJob__titleDep2">연락처 <i class="careerWriteJob__essential">*</i></div>
+                                <input type="text" class="form__ipt" placeholder="연락처를 입력해주세요." autocomplete="off" maxlength="20">
+                            </div>
+
+                            <div class="careerWriteJob__article">
+                                <div class="careerWriteJob__titleDep2">홈페이지</div>
+                                <input type="text" class="form__ipt" placeholder="홈페이지를 입력해주세요." autocomplete="off" maxlength="100">
+                            </div>
+                        </div>
+
+                        <div class="careerWriteJob__title">상세 모집 정보 <i class="careerWriteJob__essential">*</i></div>
+                        <div class="careerWriteJob__section">
+                            <div class="careerWriteJob__article">
+                                <div class="careerWriteJob__titleDep2">초빙 유형 <i class="careerWriteJob__essential">*</i></div>
+
+                                <ul class="careerWriteJob__topic careerWriteJob__topic--column4">
+                                    <li>
+                                        <input type="checkbox" name="invType_group" value="전문의" id="invType_01">
+                                        <label for="invType_01">
+                                            <p>전문의</p>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="invType_group" value="일반의" id="invType_02">
+                                        <label for="invType_02">
+                                            <p>일반의</p>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="invType_group" value="전임의" id="invType_03">
+                                        <label for="invType_03">
+                                            <p>전임의</p>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="invType_group" value="전공의" id="invType_04">
+                                        <label for="invType_04">
+                                            <p>전공의</p>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="invType_group" value="대진의" id="invType_05">
+                                        <label for="invType_05">
+                                            <p>대진의</p>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="invType_group" value="당직의" id="invType_06">
+                                        <label for="invType_06">
+                                            <p>당직의</p>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="invType_group" value="스팟 (아르바이트)" id="invType_07">
+                                        <label for="invType_07">
+                                            <p>스팟<br>(아르바이트)</p>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="invType_group" value="기타" id="invType_08">
+                                        <label for="invType_08">
+                                            <p>기타</p>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>                            
+
+                            <div class="careerWriteJob__article">
+                                <div class="careerWriteJob__titleDep2">
+                                    초빙 과목 <i class="careerWriteJob__essential">*</i><span class="careerWriteJob__sideTitle">최대 5개까지 선택 가능합니다.</span>
+                                </div>
+
+                                <ul class="careerWriteJob__topic careerWriteJob__topic--column4">
+                                    <li><input type="checkbox" name="invSubject_group" value="일반의" id="invSubject_01">
+                                        <label for="invSubject_01">
+                                            <p>일반의</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="invSubject_group" value="가정의학과" id="invSubject_02">
+                                        <label for="invSubject_02">
+                                            <p>가정의학과</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="invSubject_group" value="결핵과" id="invSubject_03">
+                                        <label for="invSubject_03">
+                                            <p>결핵과</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="invSubject_group" value="내과" id="invSubject_04">
+                                        <label for="invSubject_04">
+                                            <p>내과</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="invSubject_group" value="마취통증의학과" id="invSubject_05">
+                                        <label for="invSubject_05">
+                                            <p>마취통증의학과</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="invSubject_group" value="방사선종양학과" id="invSubject_06">
+                                        <label for="invSubject_06">
+                                            <p>방사선종양학과</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="invSubject_group" value="병리과" id="invSubject_07">
+                                        <label for="invSubject_07">
+                                            <p>병리과</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="invSubject_group" value="비뇨의학과" id="invSubject_08">
+                                        <label for="invSubject_08">
+                                            <p>비뇨의학과</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="invSubject_group" value="산부인과" id="invSubject_09">
+                                        <label for="invSubject_09">
+                                            <p>산부인과</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="invSubject_group" value="성형외과" id="invSubject_10">
+                                        <label for="invSubject_10">
+                                            <p>성형외과</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="invSubject_group" value="소아청소년과" id="invSubject_11">
+                                        <label for="invSubject_11">
+                                            <p>소아청소년과</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="invSubject_group" value="신경과" id="invSubject_12">
+                                        <label for="invSubject_12">
+                                            <p>신경과</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="invSubject_group" value="신경외과" id="invSubject_13">
+                                        <label for="invSubject_13">
+                                            <p>신경외과</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="invSubject_group" value="안과" id="invSubject_14">
+                                        <label for="invSubject_14">
+                                            <p>안과</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="invSubject_group" value="영상의학과" id="invSubject_15">
+                                        <label for="invSubject_15">
+                                            <p>영상의학과</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="invSubject_group" value="예방의학과" id="invSubject_16">
+                                        <label for="invSubject_16">
+                                            <p>예방의학과</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="invSubject_group" value="외과" id="invSubject_17">
+                                        <label for="invSubject_17">
+                                            <p>외과</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="invSubject_group" value="응급의학과" id="invSubject_18">
+                                        <label for="invSubject_18">
+                                            <p>응급의학과</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="invSubject_group" value="이비인후과" id="invSubject_19">
+                                        <label for="invSubject_19">
+                                            <p>이비인후과</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="invSubject_group" value="재활의학과" id="invSubject_20">
+                                        <label for="invSubject_20">
+                                            <p>재활의학과</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="invSubject_group" value="정신건강의학과" id="invSubject_21">
+                                        <label for="invSubject_21">
+                                            <p>정신건강의학과</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="invSubject_group" value="정형외과" id="invSubject_22">
+                                        <label for="invSubject_22">
+                                            <p>정형외과</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="invSubject_group" value="직업환경의학과" id="invSubject_23">
+                                        <label for="invSubject_23">
+                                            <p>직업환경의학과</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="invSubject_group" value="진단검사의학과" id="invSubject_24">
+                                        <label for="invSubject_24">
+                                            <p>진단검사의학과</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="invSubject_group" value="피부과" id="invSubject_25">
+                                        <label for="invSubject_25">
+                                            <p>피부과</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="invSubject_group" value="행의학과" id="invSubject_26">
+                                        <label for="invSubject_26">
+                                            <p>행의학과</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="invSubject_group" value="흉부외과" id="invSubject_27">
+                                        <label for="invSubject_27">
+                                            <p>흉부외과</p>
+                                        </label>
+                                    </li>
+                                </ul>
+                                <!-- S: checkbox 5개 선택 script -->
+                                <script>
+                                    $("input[type='checkbox']").on("click", function(){
+                                        let cnt = $("input:checkbox[name=invSubject_group]:checked").length;
+
+                                        if(cnt > 5){
+                                            $(this).prop("checked", false);
+                                            // S: 5개 이상 클릭시 alert
+                                            // 필요 없을 시 삭제 가능
+                                            if (cnt = 5) {
+                                                alert("최대 5개까지 선택 가능합니다");
+                                            }
+                                            // S: 5개 이상 클릭시 alert
+                                        }
+                                    });
+                                </script>
+                                <!-- E: checkbox 5개 선택 script -->
+                            </div>
+
+                            <div class="careerWriteJob__article">
+                                <div class="careerWriteJob__titleDep2">병원 타입 <i class="careerWriteJob__essential">*</i></div>
+
+                                <ul class="careerWriteJob__topic careerWriteJob__topic--column4">
+                                    <li><input type="checkbox" name="hospitalType_group" value="상급종합병원" id="hospitalType_01">
+                                        <label for="hospitalType_01">
+                                            <p>상급종합병원</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="hospitalType_group" value="종합병원" id="hospitalType_02">
+                                        <label for="hospitalType_02">
+                                            <p>종합병원</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="hospitalType_group" value="대학병원" id="hospitalType_03">
+                                        <label for="hospitalType_03">
+                                            <p>대학병원</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="hospitalType_group" value="전문병원" id="hospitalType_04">
+                                        <label for="hospitalType_04">
+                                            <p>전문병원</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="hospitalType_group" value="일반병원" id="hospitalType_05">
+                                        <label for="hospitalType_05">
+                                            <p>일반병원</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="hospitalType_group" value="요양병원" id="hospitalType_06">
+                                        <label for="hospitalType_06">
+                                            <p>요양병원</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="hospitalType_group" value="보건소" id="hospitalType_07">
+                                        <label for="hospitalType_07">
+                                            <p>보건소</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="hospitalType_group" value="의원" id="hospitalType_08">
+                                        <label for="hospitalType_08">
+                                            <p>의원</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="hospitalType_group" value="기타" id="hospitalType_09">
+                                        <label for="hospitalType_09">
+                                            <p>기타</p>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="careerWriteJob__article">
+                                <div class="careerWriteJob__titleDep2">급여 타입 <i class="careerWriteJob__essential">*</i></div>
+
+                                <div class="careerWriteJob__pay">
+                                    <div class="payType__Select">
+                                        <select name="" id="" class="form__select">
+                                            <option value="">전체</option>
+                                            <option value="pay_year">연봉</option>
+                                            <option value="pay_month">월급</option>
+                                            <option value="pay_day">일급</option>
+                                            <option value="pay_perUse">건별</option>
+                                            <option value="pay_consult">면접 시 협의</option>
+                                        </select>
+                                    </div>
+                                    <div class="payType__Tax">
+                                        <label class="rdobox">
+                                            <input type="radio" name="payTypeGroup" id="" class="rdoboxIpt"> <span class="rdoboxTxt">Net</span>
+                                        </label>
+                                        <label class="rdobox">
+                                            <input type="radio" name="payTypeGroup" id="" class="rdoboxIpt"> <span class="rdoboxTxt">Gross</span>
+                                        </label>
+                                    </div>
+                                    <div class="payType__Value">
+                                        <input type="number" placeholder="0" class="form__ipt">
+                                        <span>만원</span>
+                                    </div>
+                                    <div class="payType__Range">
+                                        <div class="payType__RangeLt">
+                                            <input type="number" placeholder="0" class="form__ipt">
+                                            <span>만원</span>
+                                        </div>
+                                        <div class="payType__RangeCt">~</div>
+                                        <div class="payType__RangeRt">
+                                            <input type="number" placeholder="0" class="form__ipt">
+                                            <span>만원</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    $('.payType__Select select').on("change", function(){
+                                        // $('.payType__Select select option').eq(1);
+                                        let result = $(this).val();
+                                        let payTax = $('.payType__Tax');
+                                        let payValue = $('.payType__Value');
+                                        let payRange = $('.payType__Range');
+
+                                        if (result === 'pay_year' || result === 'pay_month') {
+                                            payValue.hide();
+                                            payTax.show();
+                                            payRange.show();
+                                        } else if (result === 'pay_day' || result === 'pay_perUse') {
+                                            payValue.show();
+                                            payTax.hide();
+                                            payRange.hide();
+                                        } else {
+                                            payValue.hide();
+                                            payTax.hide();
+                                            payRange.hide();
+                                        }
+                                    });
+                                </script>
+                            </div>
+
+                            <div class="careerWriteJob__article">
+                                <div class="careerWriteJob__titleDep2">근무 지역 <i class="careerWriteJob__essential">*</i></div>
+                                <div class="careerWriteJob__region">
+                                    <select name="" id="" class="form__select topic__halfLt">
+                                        <option value="">시/도</option>
+                                    </select>
+                                    <select name="" id="" class="form__select topic__halfRt">
+                                        <option value="">시/군/구</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="careerWriteJob__article">
+                                <div class="careerWriteJob__titleDep2">근무 요일 <i class="careerWriteJob__essential">*</i></div>
+                                <ul class="careerWriteJob__topic careerWriteJob__topic--column4">
+                                    <li><input type="radio" name="weekType_group" value="월~금" id="weekType_01">
+                                        <label for="weekType_01">
+                                            <p>월~금</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="radio" name="weekType_group" value="월~토" id="weekType_02">
+                                        <label for="weekType_02">
+                                            <p>월~토</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="radio" name="weekType_group" value="월~일" id="weekType_03">
+                                        <label for="weekType_03">
+                                            <p>월~일</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="radio" name="weekType_group" value="월~토(격주)" id="weekType_04">
+                                        <label for="weekType_04">
+                                            <p>월~토(격주)</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="radio" name="weekType_group" value="주말" id="weekType_05">
+                                        <label for="weekType_05">
+                                            <p>주말</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="radio" name="weekType_group" value="요일협의" id="weekType_06">
+                                        <label for="weekType_06">
+                                            <p>요일협의</p>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="careerWriteJob__article">
+                                <div class="careerWriteJob__titleDep2">근무 시간</div>
+                                <input type="text" class="form__ipt" placeholder="근무 시간을 입력해주세요." autocomplete="off" maxlength="50">
+                            </div>
+
+                            <div class="careerWriteJob__article">
+                                <div class="careerWriteJob__titleDep2">접수 기간 <i class="careerWriteJob__essential">*</i></div>
+                                <div class="careerWriteJob__datepicker">
+                                    <input type="text" id="datepicker_start" class="form__ipt datepicker__columnLt" placeholder="시작일" autocomplete="off">
+                                    <span class="datepicker__columnCt">~</span>
+                                    <input type="text" id="datepicker_end" class="form__ipt datepicker__columnRt" placeholder="마감일" autocomplete="off">
+                                    <label class="chbox"><input type="checkbox" name="" id="" class="chboxIpt"> <span class="chboxTxt">채용 시 마감</span></label>
+        
+                                    <!-- S: 달력 plugin -->
+                                    <script src="../../js/jquery-ui/jquery-ui.js"></script>
+                                    <link rel="stylesheet" href="../../js/jquery-ui/jquery-ui.css">
+                                    <script>
+                                        $(".careerWriteJob__datepicker .chbox").on("click", function(){
+                                            let careerWriteChk = $(this).children("input:checkbox[class='chboxIpt']").is(":checked");
+                                            let careerWriteChkTarget = $(this).siblings(".form__ipt");
+
+                                            if(careerWriteChk == true){
+                                                careerWriteChkTarget.attr("disabled", true);
+                                                careerWriteChkTarget.val('');
+                                            } else {
+                                                careerWriteChkTarget.attr("disabled", false);
+                                            }
+                                        });
+                                        
+                                        $.datepicker.setDefaults({
+                                            dateFormat: 'yymmdd',
+                                            prevText: '이전 달',
+                                            nextText: '다음 달',
+                                            monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                                            monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                                            dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+                                            dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+                                            dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+                                            showMonthAfterYear: true,
+                                            yearSuffix: '년'
+                                        });
+        
+                                        $( function() {                                            
+                                            $( "#datepicker_start" ).datepicker({ dateFormat: 'yy-mm-dd' });
+                                            $( "#datepicker_end" ).datepicker({ dateFormat: 'yy-mm-dd' });
+                                        } );
+                                    </script>
+                                    <!-- E: 달력 plugin -->
+                                </div>
+                            </div>
+
+                            <div class="careerWriteJob__article">
+                                <div class="careerWriteJob__titleDep2">접수 방법 <i class="careerWriteJob__essential">*</i></div>
+                                <ul class="careerWriteJob__topic careerWriteJob__topic--column4">
+                                    <li><input type="checkbox" name="applyType_group" value="방문" id="applyType_01">
+                                        <label for="applyType_01">
+                                            <p>방문</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="applyType_group" value="홈페이지" id="applyType_02">
+                                        <label for="applyType_02">
+                                            <p>홈페이지</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="applyType_group" value="이메일" id="applyType_03">
+                                        <label for="applyType_03">
+                                            <p>이메일</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="applyType_group" value="전화" id="applyType_04">
+                                        <label for="applyType_04">
+                                            <p>전화</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="applyType_group" value="FAX" id="applyType_05">
+                                        <label for="applyType_05">
+                                            <p>FAX</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="applyType_group" value="인터엠디 메시지" id="applyType_06">
+                                        <label for="applyType_06">
+                                            <p>인터엠디 메시지</p>
+                                        </label>
+                                    </li>
+                                    <li><input type="checkbox" name="applyType_group" value="우편" id="applyType_07">
+                                        <label for="applyType_07">
+                                            <p>우편</p>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="careerWriteJob__article">
+                                <div class="careerWriteJob__titleDep2">제출 서류</div>
+                                <input type="text" class="form__ipt" placeholder="제출 서류를 입력해주세요." autocomplete="off" maxlength="50">
+                            </div>
+                        </div>
+
+                        <div class="careerWriteJob__title">문의 사항</div>
+                        <div class="careerWriteJob__section">
+                            <div class="careerWriteJob__article">
+                                <div class="careerWriteJob__titleDep2">담당자</div>
+                                <input type="text" class="form__ipt" placeholder="담당자명을 입력해주세요." autocomplete="off" maxlength="20">
+                            </div>
+
+                            <div class="careerWriteJob__article">
+                                <div class="careerWriteJob__titleDep2">연락처</div>
+                                <input type="text" class="form__ipt" placeholder="연락처를 입력해주세요." autocomplete="off" maxlength="20">
+                            </div>
+
+                            <div class="careerWriteJob__article">
+                                <div class="careerWriteJob__titleDep2">이메일</div>
+                                <input type="email" class="form__ipt" placeholder="이메일을 입력해주세요." autocomplete="off" maxlength="30" autocapitalize="off">
+                            </div>
+                        </div>
+
+                    </form>
+                    </div>
+                </div>
+                <div class="fixed_wrap">
+                    <!-- 새 작성 or 임시저장 글 작성 -->
+                    <div class="double-type">
+                        <!-- <a href="#" class="button button-teal">임시저장</a> -->
+                        <a href="#" class="button button-teal line2" id="writeDraft">임시저장<span class="s_text">(저장위치 : 마이페이지 &gt; Draft)</span></a>
+                        <a href="#" class="button button-blue">등록</a>
+                    </div>
+                </div>
+                
+                <div class="textlayer_ty2 save">
+					<div class="text">
+						임시저장 되었습니다.
+					</div>
+				</div>
+				<div class="textlayer_ty2 autoSave">
+					<div class="text">
+						자동 임시저장 되었습니다.
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title> Inter MD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="https://www.intermd.co.kr/favicon.ico">	
+<meta name="description" content="인터엠디 | 의사가 묻고 의사가 답하는 Professional Q&amp;A Place, InterMD">
+
+<link href="../../css/style_mobile.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css" media="all" />
+<script src="../../js/plugins/jquery-3.2.1.js"></script>
+<script src="../../js/plugins/swiper_3.3.1.js"></script>
+<script src="../../js/ui_script_m.js"></script>    
+<body class="bg_fff">
+
+<!-- S: header -->
+<div class="detail__topline">
+    <h2>이벤트</h2>
+    <a href="#" class="detail__rt"><i class="xi-close"></i><span class="blind">닫기</span></a>
+</div>
+<!-- E: header -->
+
+		<!-- S: 필터 (신규) -->
+		<div class="filterBar">
+			<div class="filterBtnBox"> <!-- 20210622 수정 : filterBtnBox -->
+				<button class="filterBtn on" onclick="filterBtnOnOff($(this))">진행중</button>
+				<button class="filterBtn" onclick="filterBtnOnOff($(this))">종료</button>
+				<span class="filterBtn--bg"></span> <!-- 20210622 수정 -->
+			</div>
+			<script>
+				// bg출력을 위해 첫번째 요소 초기 활성화
+				$('.filterBtn').first().trigger('click');
+			</script>
+		</div>
+		<!-- E: 필터 -->
+
+<div class="event__list">
+	<div class="event__item--ongoing">
+		<a href="#">
+			<i class="badge">제휴이벤트</i>
+			<div class="image" style="background-image:url('https://tf20.intermd.co.kr/upload/201912/10/20_201912101829591.png')"></div>
+			<div class="content">
+				<div class="date">
+					<span class="start">09.16</span>
+					<span class="end">10.11</span>
+				</div>
+				<div class="desc"><span class="ellipsis">선생님, 인터엠디를 마음껏 사용해보세요. 참여하시는 모든 분들께 푸짐한 선물을 드립니다!</span></div>
+			</div>
+		</a>
+	</div>
+	<div class="event__item--ongoing">
+		<a href="#">
+			<div class="image" style="background-image:url('https://file.intermd.co.kr/upload/201909/24/KakaoTalk_20190924_141949719_201909241842461.png')"></div>
+			<div class="content">
+				<div class="date">
+					<span class="start">09.16</span>
+					<span class="end">10.11</span>
+				</div>
+				<div class="desc"><span class="ellipsis">참여하시는 분들께 푸짐한 선물을!</span></div>
+			</div>
+		</a>
+	</div>
+</div>
+
+<hr class="line">
+
+<!-- 
+	<h3 class="comm__h3title">지난 이벤트</h3>
+	<div class="event__list">
+		<div class="event__item--closed">
+			<a href="#">
+				<div class="image" style="background-image:url('https://file.intermd.co.kr/upload/201909/24/KakaoTalk_20190924_141949719_201909241842461.png')"></div>
+				<div class="content">
+					<div class="date">
+						<span class="start">09.16</span>
+						<span class="end">10.11</span>
+					</div>
+					<div class="desc"><span class="ellipsis">참여하시는 분들께 푸짐한 선물을!</span></div>
+				</div>
+			</a>
+		</div>
+	</div>
+-->
+
+
+</body>
+</html>
